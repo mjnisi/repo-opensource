@@ -1,0 +1,6 @@
+<ehcache>
+	<cache name="security-user" maxElementsInMemory="5000"
+		eternal="false" timeToIdleSeconds="300"
+		overflowToDisk="false" diskPersistent="false"
+		memoryStoreEvictionPolicy="LRU" />
+</ehcache>

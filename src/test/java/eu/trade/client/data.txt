@@ -1,0 +1,1453 @@
+05.01.01.010#Accessions to the WTO#ACTIVE#trade#02/06/2010
+05.01.01.010.110#WTO Candidate Country#ACTIVE#trade#02/06/2010
+05.01.01.010.110.010#Afghanistan#ACTIVE#trade#02/06/2010
+05.01.01.010.110.020#Algeria#ACTIVE#trade#02/06/2010
+05.01.01.010.110.030#Andorra#ACTIVE#trade#02/06/2010
+05.01.01.010.110.040#Azerbaijan#ACTIVE#trade#02/06/2010
+05.01.01.010.110.050#Bahamas#ACTIVE#trade#02/06/2010
+05.01.01.010.110.060#Belarus#ACTIVE#trade#02/06/2010
+05.01.01.010.110.070#Bhutan#ACTIVE#trade#02/06/2010
+05.01.01.010.110.080#Bosnia and Herzegovina#ACTIVE#trade#02/06/2010
+05.01.01.010.110.090#Comoros#ACTIVE#trade#02/06/2010
+05.01.01.010.110.100#Equatorial Guinea#ACTIVE#trade#02/06/2010
+05.01.01.010.110.110#Ethiopia#ACTIVE#trade#02/06/2010
+05.01.01.010.110.120#Iran#ACTIVE#trade#02/06/2010
+05.01.01.010.110.130#Iraq#ACTIVE#trade#02/06/2010
+05.01.01.010.110.140#Kazakhstan#ACTIVE#trade#02/06/2010
+05.01.01.010.110.150#Lao People's Democratic Republic#ACTIVE#trade#02/06/2010
+05.01.01.010.110.160#Lebanese Republic#ACTIVE#trade#02/06/2010
+05.01.01.010.110.170#Liberia Republic#ACTIVE#trade#02/06/2010
+05.01.01.010.110.180#Libyan Arab Jamahiriya#ACTIVE#trade#02/06/2010
+05.01.01.010.110.190#Montenegro#ACTIVE#trade#02/06/2010
+05.01.01.010.110.200#Russian Federation#ACTIVE#trade#02/06/2010
+05.01.01.010.110.210#Samoa#ACTIVE#trade#02/06/2010
+05.01.01.010.110.220#Sao Tom‚ and Principe#ACTIVE#trade#02/06/2010
+05.01.01.010.110.230#Serbia#ACTIVE#trade#02/06/2010
+05.01.01.010.110.240#Seychelles#ACTIVE#trade#02/06/2010
+05.01.01.010.110.250#Sudan#ACTIVE#trade#02/06/2010
+05.01.01.010.110.260#Tajikistan#ACTIVE#trade#02/06/2010
+05.01.01.010.110.270#Uzbekistan#ACTIVE#trade#02/06/2010
+05.01.01.010.110.280#Vanuatu#ACTIVE#trade#02/06/2010
+05.01.01.010.110.290#Yemen#ACTIVE#trade#02/06/2010
+05.01.01.010.120#WTO Accessions - General Issues#ACTIVE#trade#14/10/2010
+05.01.01.020#Customs and Trade Facilitation#ACTIVE#trade#02/06/2010
+05.01.01.020.010#TF in DDA#ACTIVE#trade#02/06/2010
+05.01.01.020.010.010#Industry papers , consultations, meetings#ACTIVE#trade#02/06/2010
+05.01.01.020.010.020#TF Notes#ACTIVE#trade#02/06/2010
+05.01.01.020.010.030#Studies & articles#ACTIVE#trade#02/06/2010
+05.01.01.020.010.040#WTO submissions and documents#ACTIVE#trade#02/06/2010
+05.01.01.020.010.050#TF Briefings#ACTIVE#trade#12/07/2010
+05.01.01.020.010.060#TF Reports#ACTIVE#trade#12/07/2010
+05.01.01.020.010.070#TF Presentations#ACTIVE#trade#12/07/2010
+05.01.01.020.010.080#TF Project Financing#ACTIVE#trade#12/08/2010
+05.01.01.020.020#TF in FTAs#ACTIVE#trade#02/06/2010
+05.01.01.020.030#WCO and other international organisations#ACTIVE#trade#02/06/2010
+05.01.01.030#Legal Aspects of Trade Policy#ACTIVE#trade#02/06/2010
+05.01.01.030.010#Administration and Briefings#ACTIVE#trade#02/06/2010
+05.01.01.030.020#Dispute Settlement #ACTIVE#trade#02/06/2010
+05.01.01.030.020.010#Dispute settlement - Cases#ACTIVE#trade#19/08/2010
+05.01.01.030.020.020#Dispute Settlements - Committees#ACTIVE#trade#19/08/2010
+05.01.01.030.020.030#Dispute Settlement - DSB meetings and instructions#ACTIVE#trade#14/09/2010
+05.01.01.030.020.040#Dispute Settlement - Internal institutional on WTO disputes#ACTIVE#trade#17/09/2010
+05.01.01.030.030#Trade Barriers Regulation#ACTIVE#trade#02/06/2010
+05.01.01.030.040#Legal advice#ACTIVE#trade#02/07/2010
+05.01.01.030.040.010#Legal advice- By issue#ACTIVE#trade#08/09/2010
+05.01.01.030.040.030#Legal advice - Institutional matters#ACTIVE#trade#08/09/2010
+05.01.01.030.040.040#Legal advice - Litigation#ACTIVE#trade#08/09/2010
+05.01.01.030.040.070#Legal advice on EU rules#ACTIVE#trade#08/09/2010
+05.01.01.030.040.080#Legal advice on MS rules#ACTIVE#trade#08/09/2010
+05.01.01.030.040.090#Legal advice on Third countries#ACTIVE#trade#08/09/2010
+05.01.01.030.040.110#Legal advice - Infringement proceedings#ACTIVE#trade#23/06/2011
+05.01.01.030.050#Negotiations#ACTIVE#trade#02/07/2010
+05.01.01.030.050.010#Bilateral negotiations#ACTIVE#trade#14/09/2010
+05.01.01.030.050.030#WTO DSU(Dispute Settlement Understanding)#ACTIVE#trade#14/09/2010
+05.01.01.030.050.040#FTA model texts#ACTIVE#trade#14/09/2010
+05.01.01.030.050.050#Investor-State DS#ACTIVE#trade#14/09/2010
+05.01.01.030.050.060#Legal Scrubbing#ACTIVE#trade#18/03/2011
+05.01.01.030.050.070#Free Trade Agreement coordination#ACTIVE#trade#21/03/2012
+05.01.01.040#Doha Development Agenda (DDA) - High Level/Horizontal Meetings#ACTIVE#trade#02/06/2010
+05.01.01.050#Doha Development Agenda (DDA) - Negotiating Group (NG) on Regional Trade Agreements (RTAs) and WTO submissions#ACTIVE#trade#02/06/2010
+05.01.01.060#Doha Development Agenda (DDA) - Non Agricultural Market Access (NAMA) NTBs / Tariffs#ACTIVE#trade#02/06/2010
+05.01.01.065#Doha Development Agenda (DDA) - Agriculture#ACTIVE#trade#09/08/2010
+05.01.01.070#Doha Development Agenda (DDA) - Briefings and Coordination#ACTIVE#trade#02/06/2010
+05.01.01.080#Doha Development Agenda (DDA) - Reference documents#ACTIVE#trade#12/11/2010
+05.01.01.090#Doha Development Agenda (DDA) - Outreach#ACTIVE#trade#02/06/2010
+05.01.01.090.010#DDA - Outreach - ACPs#ACTIVE#trade#10/11/2010
+05.01.01.090.030#DDA - Outreach - Non-EU Europe#ACTIVE#trade#10/11/2010
+05.01.01.090.040#DDA - Outreach - Asia#ACTIVE#trade#10/11/2010
+05.01.01.090.050#DDA - Outreach - Pacific#ACTIVE#trade#10/11/2010
+05.01.01.090.060#DDA - Outreach - North America#ACTIVE#trade#10/11/2010
+05.01.01.090.070#DDA - Outreach - South America#ACTIVE#trade#10/11/2010
+05.01.01.090.090#DDA - Outreach - Business & International Organisations#ACTIVE#trade#10/11/2010
+05.01.01.090.100#DDA - Outreach - NGOs and Civil Society#ACTIVE#trade#10/11/2010
+05.01.01.100#GATT (General Agreement on Tariffs and Trade) Articles and Agreements#ACTIVE#trade#02/06/2010
+05.01.01.100.020#Negotiations under Article XXIV.6#ACTIVE#trade#02/06/2010
+05.01.01.100.020.010#Negotiations under Article XXIV.6 - 2007 Enlargement#ACTIVE#trade#08/11/2010
+05.01.01.100.020.020#Croatia's accession#ACTIVE#trade#12/07/2012
+05.01.01.100.030#Negotiations under Article XXVIII#ACTIVE#trade#02/06/2010
+05.01.01.110#OECD#ACTIVE#trade#02/06/2010
+05.01.01.110.010#OECD -Accession#ACTIVE#trade#02/06/2010
+05.01.01.110.010.010#Chile#ACTIVE#trade#02/06/2010
+05.01.01.110.010.020#OECD - Accession#ACTIVE#trade#02/06/2010
+05.01.01.110.010.030#Israel#ACTIVE#trade#02/06/2010
+05.01.01.110.010.040#Russia#ACTIVE#trade#02/06/2010
+05.01.01.110.010.060#OCDE - Accession - EU#ACTIVE#trade#12/11/2010
+05.01.01.110.020#OECD - Coordination-ISG#ACTIVE#trade#02/06/2010
+05.01.01.110.020.010#ISG meetings#ACTIVE#trade#02/06/2010
+05.01.01.110.030#OECD - Cross-cutting issues#ACTIVE#trade#02/06/2010
+05.01.01.110.030.020#ECSS#ACTIVE#trade#02/06/2010
+05.01.01.110.030.050#EU role in OECD#ACTIVE#trade#12/11/2010
+05.01.01.110.030.060#General information#ACTIVE#trade#06/05/2011
+05.01.01.110.040#OECD - EDRC#ACTIVE#trade#02/06/2010
+05.01.01.110.040.010#euro area#ACTIVE#trade#02/06/2010
+05.01.01.110.040.020#EU-27#ACTIVE#trade#02/06/2010
+05.01.01.110.050#OECD - Enhanced Engagement#ACTIVE#trade#02/06/2010
+05.01.01.110.060#OECD - Ministerial Conferences#ACTIVE#trade#02/06/2010
+05.01.01.110.070#Trade Committee / Working Party#ACTIVE#trade#02/06/2010
+05.01.01.120#Origin Marking#ACTIVE#trade#02/06/2010
+05.01.01.130#Relations with  International Monetary Fund#ACTIVE#trade#02/06/2010
+05.01.01.140#Sustainable Development including SIAs (Sustainability Impact Assessments)#ACTIVE#trade#02/06/2010
+05.01.01.150#Trade and Competition/Subsidies/State Owned Enterprises#ACTIVE#trade#02/06/2010
+05.01.01.160#Trade and Development #ACTIVE#trade#02/06/2010
+05.01.01.160.010#Special Session of CTD#ACTIVE#trade#05/08/2010
+05.01.01.160.010.010#CTD Meetings/briefings#ACTIVE#trade#10/08/2010
+05.01.01.160.010.020#CTD Monitoring Mechanism#ACTIVE#trade#10/08/2010
+05.01.01.160.010.030#CTD Agreement Specific Proposal#ACTIVE#trade#10/08/2010
+05.01.01.160.020#Special Differential Treatment in WTO Rules#ACTIVE#trade#10/08/2010
+05.01.01.160.030#Trade & Development - United Nations#ACTIVE#trade#23/03/2011
+05.01.01.160.030.010#United Nations General Assembly#ACTIVE#trade#23/03/2011
+05.01.01.160.030.020#Millenium Development Goals#ACTIVE#trade#23/03/2011
+05.01.01.160.030.030#Least Developed Countries IV#ACTIVE#trade#23/03/2011
+05.01.01.160.040#Trade & Development - World Bank#ACTIVE#trade#23/03/2011
+05.01.01.160.050#Trade & Development - United Nations Conference on Trade and Development#ACTIVE#trade#24/06/2011
+05.01.01.160.060#Trade & Development - World Trade Organisation#ACTIVE#trade#24/06/2011
+05.01.01.160.070#Trade & Development - Aid for Trade#ACTIVE#trade#24/06/2011
+05.01.01.160.080#Trade & Development - Enhaced Integrated Framework#ACTIVE#trade#24/06/2011
+05.01.01.160.090#Trade & Development ? Trade and Investment for Development Communication#ACTIVE#trade#03/08/2011
+05.01.01.160.100#Trade & Development ? Trade and Natural Disasters#ACTIVE#trade#03/08/2011
+05.01.01.170#Trade and social development#ACTIVE#trade#02/06/2010
+05.01.01.180#Trade Policy Review Mechanism (TPRM)#ACTIVE#trade#02/06/2010
+05.01.01.180.010#EU TPR#ACTIVE#trade#02/06/2010
+05.01.01.180.020#Monitoring Trade Restrictive Measures#ACTIVE#trade#02/06/2010
+05.01.01.180.030#WTO Annual Reports#ACTIVE#trade#10/08/2010
+05.01.01.180.040#Reform#ACTIVE#trade#02/06/2010
+05.01.01.180.050#WTO members TPRs#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010#WTO members TPRs - Africa#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.010#Angola#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.020#Mauritius#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.030#Benin, Burkina Faso and Mali#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.040#Cameroon and Gabon#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.050#Chad#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.060#Democratic Republic of the Congo#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.070#Djibouti#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.080#East Africa Community#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.090#Kenya, Tanzania and Uganda#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.100#Madagascar#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.110#Malawi#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.120#The Gambia#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.130#Togo#ACTIVE#trade#02/06/2010
+05.01.01.180.050.010.140#Nigeria#ACTIVE#trade#03/12/2010
+05.01.01.180.050.010.150#Egypt#ACTIVE#trade#03/12/2010
+05.01.01.180.050.010.160#Mauritania and Guinee Conakry#ACTIVE#trade#03/12/2010
+05.01.01.180.050.010.170#Republic of Congo#ACTIVE#trade#10/12/2010
+05.01.01.180.050.010.180#Trade Policy Review - Zimbabwe#ACTIVE#trade#30/05/2011
+05.01.01.180.050.010.190#Ivory Coast and Guinea Bissau#ACTIVE#trade#09/12/2011
+05.01.01.180.050.010.200#Trade Policy Review - Central African Republic#ACTIVE#trade#23/01/2013
+05.01.01.180.050.020#WTO members TPRs - Americas#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.010#Argentina#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.020#Belize#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.030#Brazil#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.040#Canada#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.050#Colombia#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.060#El Salvador#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.070#Guatemala#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.080#Honduras#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.090#Nicaragua#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.100#United States#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.110#Uruguay#ACTIVE#trade#02/06/2010
+05.01.01.180.050.020.120#Costa Rica#ACTIVE#trade#10/08/2010
+05.01.01.180.050.020.130#Dominican Republic#ACTIVE#trade#10/08/2010
+05.01.01.180.050.020.140#Eastern Caribean States (OECS)#ACTIVE#trade#10/08/2010
+05.01.01.180.050.020.150#Jamaica#ACTIVE#trade#03/12/2010
+05.01.01.180.050.020.160#Paraguay#ACTIVE#trade#03/12/2010
+05.01.01.180.050.020.170#Ecuador#ACTIVE#trade#03/12/2010
+05.01.01.180.050.020.180#Trinidad and Tobago#ACTIVE#trade#09/12/2011
+05.01.01.180.050.020.190#Mexico#ACTIVE#trade#22/01/2013
+05.01.01.180.050.020.200#Suriname#ACTIVE#trade#23/01/2013
+05.01.01.180.050.020.210#Peru#ACTIVE#trade#24/01/2013
+05.01.01.180.050.030#WTO members TPRs - Asia#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.010#Bangladesh#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.020#China#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.030#Chinese Taipei#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.040#Hong Kong,China#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.050#India#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.060#Japan#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.070#Korea#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.080#Malaysia#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.090#Pakistan#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.100#Macao China#ACTIVE#trade#22/01/2013
+05.01.01.180.050.030.110#Singapore#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.120#Sri Lanka#ACTIVE#trade#02/06/2010
+05.01.01.180.050.030.130#Cambodia#ACTIVE#trade#03/12/2010
+05.01.01.180.050.030.140#Philippines#ACTIVE#trade#03/12/2010
+05.01.01.180.050.030.150#Thailand#ACTIVE#trade#03/12/2010
+05.01.01.180.050.030.160#Nepal#ACTIVE#trade#03/12/2010
+05.01.01.180.050.030.170#Indonesia#ACTIVE#trade#22/01/2013
+05.01.01.180.050.030.180#Vietnam#ACTIVE#trade#24/01/2013
+05.01.01.180.050.030.190#Kyrgyz. Rep.#ACTIVE#trade#24/01/2013
+05.01.01.180.050.050#WTO members TPRs Europe#ACTIVE#trade#02/06/2010
+05.01.01.180.050.070#WTO members TPRs - Oceania#ACTIVE#trade#02/06/2010
+05.01.01.180.050.070.010#Australia#ACTIVE#trade#02/06/2010
+05.01.01.180.050.070.020#Fiji#ACTIVE#trade#02/06/2010
+05.01.01.180.050.070.030#New Zeland#ACTIVE#trade#02/06/2010
+05.01.01.180.050.070.040#Papua New Guinea#ACTIVE#trade#10/08/2010
+05.01.01.180.050.080#Other WTO members TPRs#ACTIVE#trade#02/06/2010
+05.01.01.180.050.080.040#Israel#ACTIVE#trade#02/06/2010
+05.01.01.180.050.080.050#Jordan#ACTIVE#trade#02/06/2010
+05.01.01.180.050.080.060#Kyrgyz Republic#ACTIVE#trade#02/06/2010
+05.01.01.180.050.080.080#Oman#ACTIVE#trade#02/06/2010
+05.01.01.180.050.080.090#Turkey#ACTIVE#trade#02/06/2010
+05.01.01.180.050.080.100#United Arab Emirates#ACTIVE#trade#02/06/2010
+05.01.01.180.050.080.110#Saudi Arabia#ACTIVE#trade#03/12/2010
+05.01.01.180.050.080.120#Kuwait#ACTIVE#trade#03/12/2010
+05.01.01.180.050.090#WTO members TPRs - Annual Programme #ACTIVE#trade#20/01/2011
+05.01.01.190#Trade Related Assistance#ACTIVE#trade#02/06/2010
+05.01.01.200#Trade related Energy issues and WTO#ACTIVE#trade#02/06/2010
+05.01.01.200.010#Energy in WTO accessions#ACTIVE#trade#02/06/2010
+05.01.01.200.020#Energy Policy Development in the WTO#ACTIVE#trade#02/06/2010
+05.01.01.210#WTO cross-cutting issues#ACTIVE#trade#02/06/2010
+05.01.01.210.010#WTO Cross-Cutting Issues - Horizontal matters#ACTIVE#trade#11/08/2010
+05.01.01.210.010.010#WTO Cross-Cutting Issues - Notes and Briefings#ACTIVE#trade#11/08/2010
+05.01.01.210.010.020#WTO Cross-Cutting Issues - Reports from Geneva#ACTIVE#trade#18/11/2010
+05.01.01.210.010.020.010#WTO Cross-Cutting Issues - Reports from Geneva - Weekly reports#ACTIVE#trade#18/11/2010
+05.01.01.210.010.020.020#WTO Cross-Cutting Issues - Reports from Geneva - Administrative matters#ACTIVE#trade#18/11/2010
+05.01.01.210.010.030#WTO Cross-Cutting Issues - Macroeconomic Issues#ACTIVE#trade#18/11/2010
+05.01.01.210.010.040#WTO Cross - Cutting Issues - WTO Ministerial Conferences#ACTIVE#trade#30/05/2011
+05.01.01.220#WTO Council and Committees#ACTIVE#trade#02/06/2010
+05.01.01.220.010#Committees / Council for trade in goods#ACTIVE#trade#02/06/2010
+05.01.01.220.010.010#Committees#ACTIVE#trade#02/06/2010
+05.01.01.220.010.010.010#Committee on Balance of Payments Restrictions#ACTIVE#trade#02/06/2010
+05.01.01.220.010.010.020#Committee on Regional Trade Agreements#ACTIVE#trade#02/06/2010
+05.01.01.220.010.010.020.010#CRTA - Reports, Instructions#ACTIVE#trade#10/08/2010
+05.01.01.220.010.010.020.020#CRTA - Notes#ACTIVE#trade#10/08/2010
+05.01.01.220.010.010.020.030#EU RTAs#ACTIVE#trade#10/08/2010
+05.01.01.220.010.010.020.040#Analysis RTAs#ACTIVE#trade#10/08/2010
+05.01.01.220.010.010.030#Committee on Budget, Finance and Administration#ACTIVE#trade#22/10/2010
+05.01.01.220.010.020#Council for Trade in Goods and its subcommittees#ACTIVE#trade#02/06/2010
+05.01.01.220.010.020.010#Customs Valuation#ACTIVE#trade#02/06/2010
+05.01.01.220.010.020.020#Import Licensing#ACTIVE#trade#02/06/2010
+05.01.01.220.010.020.030#Market Access#ACTIVE#trade#02/06/2010
+05.01.01.220.010.020.040#Rules of Origin (Non Preferential)#ACTIVE#trade#02/06/2010
+05.01.01.220.010.020.040.010#Harmonisation ARO#ACTIVE#trade#06/08/2010
+05.01.01.220.010.020.040.020#RoO non preferential - Origin Marking#ACTIVE#trade#06/08/2010
+05.01.01.220.010.020.040.030#RoO - Non preferential certificats#ACTIVE#trade#06/08/2010
+05.01.01.220.010.020.040.040#RoO - Non preferential - Others#ACTIVE#trade#06/08/2010
+05.01.01.220.010.020.050#Trade-related Investment Measures#ACTIVE#trade#02/06/2010
+05.01.01.220.010.020.060#Working Party on State Trading Enterprises#ACTIVE#trade#02/06/2010
+05.01.01.220.010.020.070#Council for Trade in Goods#ACTIVE#trade#01/12/2010
+05.01.01.220.020#TBT Committee (Mission reports)#ACTIVE#trade#06/08/2010
+05.01.01.220.030#General Council#ACTIVE#trade#22/10/2010
+05.01.01.220.040#Working Group on Trade, Debt and Finance#ACTIVE#trade#18/05/2011
+05.01.01.220.050#Council for Trade in Services#ACTIVE#trade#17/10/2012
+05.01.01.240#WTO Market Access#ACTIVE#trade#02/06/2010
+05.01.01.240.010#Non Tariff Barriers (NTBs) and Non Tariff Measures (NTMs) and Customs Issues#ACTIVE#trade#02/06/2010
+05.01.01.240.020#Statistical Information Systems#ACTIVE#trade#02/06/2010
+05.01.01.240.030#Tariffs#ACTIVE#trade#02/06/2010
+05.01.01.240.040#Trade and Security Issues#ACTIVE#trade#02/06/2010
+05.01.01.240.050#WTO Sector Agreements (ITA, Pharma)#ACTIVE#trade#02/06/2010
+05.01.01.240.050.010#ITA#ACTIVE#trade#06/08/2010
+05.01.01.240.050.020#WTO - Andorra#ACTIVE#trade#06/08/2010
+05.01.01.240.050.030#Pharma#ACTIVE#trade#06/08/2010
+05.01.01.240.060#WTO Committee on Market Access#ACTIVE#trade#22/03/2012
+05.01.01.250#WTO Agriculture non-DDA#ACTIVE#trade#09/08/2010
+05.01.01.250.010#Agriculture non-DDA - Notifications#ACTIVE#trade#11/08/2010
+05.01.01.250.020#Agriculture non-DDA - Regular Agriculture Committee#ACTIVE#trade#11/08/2010
+05.01.01.260#G20 Trade Policy Issues#ACTIVE#trade#08/11/2010
+05.01.01.260.010#G20 Trade Policy Issues - Summits#ACTIVE#trade#08/11/2010
+05.01.01.260.020#G20 Trade Policy Issues - Sherpa Meetings#ACTIVE#trade#08/11/2010
+05.01.01.260.030#G20 Trade Policy Issues - Energy Experts Group#ACTIVE#trade#08/11/2010
+05.01.01.260.040#G20 Trade Policy Issues - Macroeconomic Issues#ACTIVE#trade#08/11/2010
+05.01.01.260.050#G20 Trade Policy Issues - Development Working Group#ACTIVE#trade#08/11/2010
+05.01.01.270#Future Multilateral Trade Agenda and WTO reform#ACTIVE#trade#08/11/2010
+05.01.01.270.010#Future multilateral trade agenda and WTO reform - WTO Eminent Persons Group#ACTIVE#trade#08/11/2010
+05.01.01.270.020#Future multilateral trade agenda and WTO reform - Other#ACTIVE#trade#08/11/2010
+05.01.01.270.030#Future multilateral trade agenda and WTO reform - WTO Public Forums#ACTIVE#trade#18/11/2010
+05.01.01.280#WTO Project Financing#ACTIVE#trade#08/11/2010
+05.01.01.290#G8 Trade policy issues#ACTIVE#trade#02/03/2011
+05.01.01.290.010#G8 Trade Policy Issues - Summits#ACTIVE#trade#02/03/2011
+05.01.01.290.020#G8 Trade Policy Issues - Sherpa Meetings#ACTIVE#trade#02/03/2011
+05.01.02.010#Other regional processes#ACTIVE#trade#02/06/2010
+05.01.02.010.010#ACP (Africa-Caribbean-Pacific)#ACTIVE#trade#02/06/2010
+05.01.02.010.010.010#EPA - Economic Partnership Agreements#ACTIVE#trade#02/06/2010
+05.01.02.010.010.010.010#EPA - related issues#ACTIVE#trade#11/08/2010
+05.01.02.010.010.010.020#Member States#ACTIVE#trade#11/08/2010
+05.01.02.010.010.010.023#Development#ACTIVE#trade#14/07/2010
+05.01.02.010.010.010.030#EPA Communication#ACTIVE#trade#11/08/2010
+05.01.02.010.010.010.040#Agreements#ACTIVE#trade#13/07/2011
+05.01.02.010.010.010.050#Horizontal issues#ACTIVE#trade#13/07/2011
+05.01.02.010.010.040#ACP - Agriculture#ACTIVE#trade#10/08/2010
+05.01.02.010.010.050#Cotonou Agreement#ACTIVE#trade#24/11/2011
+05.01.02.010.010.060#ACP Development Co-operation#ACTIVE#trade#25/11/2011
+05.01.02.010.010.070#ACP - SPS (Sanitary and phytosanitary measures) - TBT (Technical barriers to trade)#ACTIVE#trade#08/06/2012
+05.01.02.010.020#SAARC#ACTIVE#trade#16/08/2010
+05.01.02.010.030#Africa#ACTIVE#trade#02/06/2010
+05.01.02.010.040#ASEAN Region#ACTIVE#trade#02/06/2010
+05.01.02.010.050#ASEM REGION#ACTIVE#trade#02/06/2010
+05.01.02.010.060#COTONOU Institutions#ACTIVE#trade#02/06/2010
+05.01.02.010.090#European Neighbourhood (Eastern Partnership, Black Sea region...)#ACTIVE#trade#02/06/2010
+05.01.02.010.100#Outermost regions#ACTIVE#trade#02/06/2010
+05.01.02.010.110#Overseas Countries and Territories (OCTs)#ACTIVE#trade#02/06/2010
+05.01.02.020#Regions and Countries#ACTIVE#trade#02/06/2010
+05.01.02.020.010#Australasia#ACTIVE#trade#02/06/2010
+05.01.02.020.020#West Balkans and Turkey#ACTIVE#trade#02/06/2010
+05.01.02.020.020.010#Albania#ACTIVE#trade#02/06/2010
+05.01.02.020.020.020#Bosnia-Herzegovina#ACTIVE#trade#02/06/2010
+05.01.02.020.020.030#Croatia#ACTIVE#trade#02/06/2010
+05.01.02.020.020.040#FYROM (Former Yougoslav Republic of Macedonia)#ACTIVE#trade#02/06/2010
+05.01.02.020.020.050#West Balkans & Turkey - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.020.060#Serbia #ACTIVE#trade#02/06/2010
+05.01.02.020.020.070#Montenegro#ACTIVE#trade#27/07/2010
+05.01.02.020.020.080#Kosovo#ACTIVE#trade#27/07/2010
+05.01.02.020.020.090#Turkey#ACTIVE#trade#02/08/2010
+05.01.02.020.030#Caribbean#ACTIVE#trade#02/06/2010
+05.01.02.020.040#Central Africa#ACTIVE#trade#02/06/2010
+05.01.02.020.050#Western Europe#ACTIVE#trade#02/06/2010
+05.01.02.020.050.020#EEA(European Economic Area) - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.050.030#Micro States#ACTIVE#trade#02/06/2010
+05.01.02.020.050.040#Switzerland#ACTIVE#trade#02/06/2010
+05.01.02.020.050.050#Iceland#ACTIVE#trade#27/07/2010
+05.01.02.020.050.060#Liechtenstein#ACTIVE#trade#27/07/2010
+05.01.02.020.050.070#Norway#ACTIVE#trade#02/08/2010
+05.01.02.020.050.080#Faroes Islands#ACTIVE#trade#02/08/2010
+05.01.02.020.060#Far East#ACTIVE#trade#02/06/2010
+05.01.02.020.060.010#China#ACTIVE#trade#02/06/2010
+05.01.02.020.060.010.010#CHina - Intellectual Property#ACTIVE#trade#02/06/2010
+05.01.02.020.060.010.030#China - bilateral meetings#ACTIVE#trade#22/10/2010
+05.01.02.020.060.010.040#China - overall strategy and specific issues#ACTIVE#trade#22/10/2010
+05.01.02.020.060.010.050#China - stakeholders#ACTIVE#trade#22/10/2010
+05.01.02.020.060.010.060#China - Services#ACTIVE#trade#18/04/2013
+05.01.02.020.060.010.070#China - Investment#ACTIVE#trade#20/05/2011
+05.01.02.020.060.020#Hong Kong#ACTIVE#trade#02/06/2010
+05.01.02.020.060.020.010#Hong Kong - Horizontal Issues#ACTIVE#trade#10/02/2011
+05.01.02.020.060.020.020#Hong Kong -  Intellectual Property (IP) & Public Procurement#ACTIVE#trade#10/02/2011
+05.01.02.020.060.020.030#Hong Kong - Reports and Information#ACTIVE#trade#10/02/2011
+05.01.02.020.060.020.040#Hong Kong - Contacts with Industry#ACTIVE#trade#10/02/2011
+05.01.02.020.060.020.050#Hong Kong - Free Trade Agreements (FTA)#ACTIVE#trade#10/02/2011
+05.01.02.020.060.020.060#Hong Kong - Overall Relations and Strategy#ACTIVE#trade#10/02/2011
+05.01.02.020.060.030#Japan#ACTIVE#trade#02/06/2010
+05.01.02.020.060.030.010#Japan - Horizontal Issues#ACTIVE#trade#16/08/2010
+05.01.02.020.060.030.020#Japan - Intellectual Property & Public Procurement#ACTIVE#trade#16/08/2010
+05.01.02.020.060.030.030#Japan - High Level Group#ACTIVE#trade#28/10/2010
+05.01.02.020.060.030.040#Japan - Bilateral Trade Relations - Correspondance#ACTIVE#trade#28/10/2010
+05.01.02.020.060.030.060#Japan - Impact Assessment#ACTIVE#trade#28/10/2010
+05.01.02.020.060.030.070#Japan - EU / Japan Summits#ACTIVE#trade#28/10/2010
+05.01.02.020.060.030.080#Japan - Reports from the Delegation - Trade and Political#ACTIVE#trade#28/01/2011
+05.01.02.020.060.030.090#Japan - Services#ACTIVE#trade#20/05/2011
+05.01.02.020.060.030.100#Japan - Investment#ACTIVE#trade#20/05/2011
+05.01.02.020.060.050#Macao#ACTIVE#trade#02/06/2010
+05.01.02.020.060.060#Mongolia#ACTIVE#trade#02/06/2010
+05.01.02.020.060.070#North Korea#ACTIVE#trade#02/06/2010
+05.01.02.020.060.080#South Korea#ACTIVE#trade#02/06/2010
+05.01.02.020.060.090#Taiwan#ACTIVE#trade#02/06/2010
+05.01.02.020.070#Latin America#ACTIVE#trade#02/06/2010
+05.01.02.020.070.010#Andean Community#ACTIVE#trade#02/06/2010
+05.01.02.020.070.010.010#Bolivia#ACTIVE#trade#02/06/2010
+05.01.02.020.070.010.020#Colombia#ACTIVE#trade#02/06/2010
+05.01.02.020.070.010.030#Ecuador#ACTIVE#trade#02/06/2010
+05.01.02.020.070.010.040#Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.070.010.050#Peru#ACTIVE#trade#02/06/2010
+05.01.02.020.070.020#Central America#ACTIVE#trade#02/06/2010
+05.01.02.020.070.020.010#Costa Rica#ACTIVE#trade#02/06/2010
+05.01.02.020.070.020.020#El Salvador#ACTIVE#trade#02/06/2010
+05.01.02.020.070.020.030#Guatemala#ACTIVE#trade#02/06/2010
+05.01.02.020.070.020.040#Honduras#ACTIVE#trade#02/06/2010
+05.01.02.020.070.020.050#Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.070.020.060#Nicaragua#ACTIVE#trade#02/06/2010
+05.01.02.020.070.020.070#Panama#ACTIVE#trade#02/06/2010
+05.01.02.020.070.030#Chile#ACTIVE#trade#02/06/2010
+05.01.02.020.070.060#Latin America - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.070.070#Mercosur#ACTIVE#trade#02/06/2010
+05.01.02.020.070.070.010#Argentina#ACTIVE#trade#02/06/2010
+05.01.02.020.070.070.020#Brazil#ACTIVE#trade#02/06/2010
+05.01.02.020.070.070.030#Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.070.070.040#Paraguay#ACTIVE#trade#02/06/2010
+05.01.02.020.070.070.050#Uruguay#ACTIVE#trade#02/06/2010
+05.01.02.020.070.070.060#Venezuela#ACTIVE#trade#12/07/2010
+05.01.02.020.070.080#Mexico#ACTIVE#trade#02/06/2010
+05.01.02.020.080#Mediterranean#ACTIVE#trade#02/06/2010
+05.01.02.020.080.010#Algeria#ACTIVE#trade#02/06/2010
+05.01.02.020.080.020#Union for the Mediterranean (EUROMED)#ACTIVE#trade#02/06/2010
+05.01.02.020.080.030#Egypt#ACTIVE#trade#02/06/2010
+05.01.02.020.080.040#Mediterranean - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.080.050#Israel#ACTIVE#trade#02/06/2010
+05.01.02.020.080.060#Jordan#ACTIVE#trade#02/06/2010
+05.01.02.020.080.070#Lebanon#ACTIVE#trade#02/06/2010
+05.01.02.020.080.080#Libya#ACTIVE#trade#02/06/2010
+05.01.02.020.080.090#Morocco#ACTIVE#trade#02/06/2010
+05.01.02.020.080.100#Palestinian Authority#ACTIVE#trade#02/06/2010
+05.01.02.020.080.110#Syria#ACTIVE#trade#02/06/2010
+05.01.02.020.080.120#Tunisia#ACTIVE#trade#02/06/2010
+05.01.02.020.090#Middle East and GCC (Gulf Cooperation Coucil)#ACTIVE#trade#02/06/2010
+05.01.02.020.090.010#Bahrain#ACTIVE#trade#02/06/2010
+05.01.02.020.090.020#GCC Horizontal issues (Gulf Cooperation Council)#ACTIVE#trade#02/06/2010
+05.01.02.020.090.040#Iran#ACTIVE#trade#02/06/2010
+05.01.02.020.090.050#Iraq#ACTIVE#trade#02/06/2010
+05.01.02.020.090.060#Kuwait#ACTIVE#trade#02/06/2010
+05.01.02.020.090.070#Oman#ACTIVE#trade#02/06/2010
+05.01.02.020.090.080#Qatar#ACTIVE#trade#02/06/2010
+05.01.02.020.090.090#Saudi Arabia#ACTIVE#trade#02/06/2010
+05.01.02.020.090.100#United Arab Emirates#ACTIVE#trade#02/06/2010
+05.01.02.020.090.110#Yemen#ACTIVE#trade#02/06/2010
+05.01.02.020.100#North America#ACTIVE#trade#02/06/2010
+05.01.02.020.100.010#Canada#ACTIVE#trade#02/06/2010
+05.01.02.020.100.010.020#Canada - Public Procurement#ACTIVE#trade#16/08/2010
+05.01.02.020.100.010.030#Canada - Textile#ACTIVE#trade#03/03/2011
+05.01.02.020.100.010.040#Canada - High level meetings#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.050#Canada - Country profile including provinces / Delegation reports#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.060#Canada - Delegation /General#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.070#Canada - CETA#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.090#Canada - Briefings, Notes and Letters#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.100#Canada - Trade and Investment Sub-Committee (TISC)#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.110#Canada - Bilateral Trade Issues#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.130#Canada - WTO (including disputes)#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.140#Canada - Relations with others Institutions#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.150#Canada - Stakeholders#ACTIVE#trade#16/03/2011
+05.01.02.020.100.010.160#Canada - Access to documents#ACTIVE#trade#12/04/2011
+05.01.02.020.100.010.180#Canada - Investment#ACTIVE#trade#20/05/2011
+05.01.02.020.100.040#USA#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.010#USA - Bilateral trade and economic issues#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.020#USA - Business and outreach#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.030#USA - Country profile,  Economic reporting and Legislation#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.040#USA - Horizontal briefings, notes and letters#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.050#USA - Institutions and other organisations#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.080#USA - Policy approach#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.090#USA - TEC#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.100#USA - Third countries#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.110#USA - WTO#ACTIVE#trade#02/06/2010
+05.01.02.020.100.040.130#USA - Public Procurement and Intellectual Property#ACTIVE#trade#27/07/2010
+05.01.02.020.100.040.140#USA - Sectors coordination#ACTIVE#trade#17/02/2011
+05.01.02.020.100.040.150#USA - Investment#ACTIVE#trade#17/02/2011
+05.01.02.020.100.040.170#USA - Business and outreach (non TEC)#ACTIVE#trade#17/02/2011
+05.01.02.020.100.040.190#USA - Access to documents#ACTIVE#trade#12/04/2011
+05.01.02.020.110#Pacific#ACTIVE#trade#02/06/2010
+05.01.02.020.110.010#Cook Islands#ACTIVE#trade#02/06/2010
+05.01.02.020.110.020#Pacific (EPA) regional negotiations#ACTIVE#trade#02/06/2010
+05.01.02.020.110.030#Fiji#ACTIVE#trade#02/06/2010
+05.01.02.020.110.040#Paciifc - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.110.050#Kiribati#ACTIVE#trade#02/06/2010
+05.01.02.020.110.060#Marshall#ACTIVE#trade#02/06/2010
+05.01.02.020.110.070#Micronesia#ACTIVE#trade#02/06/2010
+05.01.02.020.110.080#Nauru#ACTIVE#trade#02/06/2010
+05.01.02.020.110.090#Niue#ACTIVE#trade#02/06/2010
+05.01.02.020.110.100#Palau#ACTIVE#trade#02/06/2010
+05.01.02.020.110.110#Papua New Guinea#ACTIVE#trade#02/06/2010
+05.01.02.020.110.120#Samoa#ACTIVE#trade#02/06/2010
+05.01.02.020.110.130#Solomon Islands#ACTIVE#trade#02/06/2010
+05.01.02.020.110.140#Tonga#ACTIVE#trade#02/06/2010
+05.01.02.020.110.150#Tuvalu#ACTIVE#trade#02/06/2010
+05.01.02.020.110.160#Vanuatu#ACTIVE#trade#02/06/2010
+05.01.02.020.120#Russia and CIS (Commonwealth of Independent States)#ACTIVE#trade#02/06/2010
+05.01.02.020.120.010#Armenia#ACTIVE#trade#02/06/2010
+05.01.02.020.120.020#Azerbaijan#ACTIVE#trade#02/06/2010
+05.01.02.020.120.030#Belarus#ACTIVE#trade#02/06/2010
+05.01.02.020.120.040#Georgia#ACTIVE#trade#02/06/2010
+05.01.02.020.120.050#Russia, Central Asia and CIS - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.120.060#Kazakhstan#ACTIVE#trade#02/06/2010
+05.01.02.020.120.070#Kyrgyzstan#ACTIVE#trade#02/06/2010
+05.01.02.020.120.080#Moldova#ACTIVE#trade#02/06/2010
+05.01.02.020.120.090#Regional Organisations#ACTIVE#trade#02/06/2010
+05.01.02.020.120.100#Russia#ACTIVE#trade#02/06/2010
+05.01.02.020.120.110#Tajikistan#ACTIVE#trade#02/06/2010
+05.01.02.020.120.120#Turkmenistan#ACTIVE#trade#02/06/2010
+05.01.02.020.120.130#Ukraine#ACTIVE#trade#02/06/2010
+05.01.02.020.120.140#Uzbekistan#ACTIVE#trade#02/06/2010
+05.01.02.020.130#South Asia#ACTIVE#trade#02/06/2010
+05.01.02.020.130.010#Afghanistan#ACTIVE#trade#02/06/2010
+05.01.02.020.130.020#Bangladesh#ACTIVE#trade#02/06/2010
+05.01.02.020.130.030#Bhutan#ACTIVE#trade#02/06/2010
+05.01.02.020.130.040#South Asia - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.130.050#India#ACTIVE#trade#02/06/2010
+05.01.02.020.130.060#Maldives#ACTIVE#trade#02/06/2010
+05.01.02.020.130.070#Nepal#ACTIVE#trade#02/06/2010
+05.01.02.020.130.080#Pakistan#ACTIVE#trade#02/06/2010
+05.01.02.020.130.090#Sri Lanka#ACTIVE#trade#02/06/2010
+05.01.02.020.140#South East Asia#ACTIVE#trade#02/06/2010
+05.01.02.020.140.010#Countries#ACTIVE#trade#02/06/2010
+05.01.02.020.140.020#South East Asia - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.150#Eastern and Southern Africa, Indian Ocean#ACTIVE#trade#02/06/2010
+05.01.02.020.150.010#Countries#ACTIVE#trade#02/06/2010
+05.01.02.020.150.020#Economic Partnership Agreement (EPA) regional negotiations with Eastern and Southern Africa, Indian Ocean#ACTIVE#trade#02/06/2010
+05.01.02.020.150.030#Eastern/Southern Africa - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.150.040#Regional Institutions, Region specific issues#ACTIVE#trade#14/04/2011
+05.01.02.020.150.070#Eastern and Southern Africa, Indian Ocean#INACTIVE#trade#14/04/2011
+05.01.02.020.160#West Africa#ACTIVE#trade#02/06/2010
+05.01.02.020.160.010#Countries#ACTIVE#trade#02/06/2010
+05.01.02.020.160.020#Economic Partnership Agreement (EPA) regional negotiations - West Africa#ACTIVE#trade#02/06/2010
+05.01.02.020.160.030#West Africa - Horizontal Issues#ACTIVE#trade#02/06/2010
+05.01.02.020.170#East African Community - EAC#ACTIVE#trade#16/07/2010
+05.01.02.020.170.010#Countries#ACTIVE#trade#19/07/2010
+05.01.02.020.170.020#Economic Partnership Agreement (EPA) regional negotiations with East African Community#ACTIVE#trade#19/07/2010
+05.01.02.020.170.030#EAC - Horizontal issues#ACTIVE#trade#22/07/2010
+05.01.02.020.180#Southern African Development Community#ACTIVE#trade#22/07/2010
+05.01.02.020.180.010#Countries#ACTIVE#trade#22/07/2010
+05.01.02.020.180.020#SADC - Horizontal issues#ACTIVE#trade#22/07/2010
+05.01.02.020.180.030#Economic Partnership Agreement (EPA) regional negotiations with Southern African Development Community#ACTIVE#trade#22/07/2010
+05.01.02.020.180.040#SACU - Southern African Customs Union#ACTIVE#trade#11/08/2010
+05.01.03.001#Migration and Mobility#INACTIVE#trade#10/01/2013
+05.01.03.002#Migration and Mobility#ACTIVE#trade#10/01/2013
+05.01.03.010#Access to essential medicines#ACTIVE#trade#02/06/2010
+05.01.03.020#Agriculture#ACTIVE#trade#02/06/2010
+05.01.03.020.010#CAP - Common Agricultural Policy#ACTIVE#trade#11/08/2010
+05.01.03.020.020#Agriculture - Sectors#ACTIVE#trade#11/08/2010
+05.01.03.020.050#Agriculture - Biotechnology#ACTIVE#trade#11/08/2010
+05.01.03.020.060#Agriculture - Food Security and other development issues#ACTIVE#trade#11/08/2010
+05.01.03.020.070#Agriculture - State Aid#ACTIVE#trade#11/08/2010
+05.01.03.020.080#Agriculture - SPS related issues#ACTIVE#trade#11/08/2010
+05.01.03.020.090#Agriculture - Economic Analysis#ACTIVE#trade#11/08/2010
+05.01.03.020.100#Agriculture - Other institutions#ACTIVE#trade#11/08/2010
+05.01.03.020.110#Agriculture - Briefings#ACTIVE#trade#11/08/2010
+05.01.03.020.140#Agriculture - General - Contributions to work#ACTIVE#trade#25/08/2010
+05.01.03.030#Competitiveness#ACTIVE#trade#02/06/2010
+05.01.03.040#Corporate Social Responsibility (CSR)#ACTIVE#trade#02/06/2010
+05.01.03.050#Defence#ACTIVE#trade#02/06/2010
+05.01.03.060#E-Commerce#ACTIVE#trade#02/06/2010
+05.01.03.070#Environment#ACTIVE#trade#02/06/2010
+05.01.03.080#Export Related Trade Policy#ACTIVE#trade#02/06/2010
+05.01.03.080.010#Dual-use#ACTIVE#trade#02/06/2010
+05.01.03.080.010.010#Annex I-IV Changes#ACTIVE#trade#13/07/2010
+05.01.03.080.010.020#Dual Use Briefings#ACTIVE#trade#13/07/2010
+05.01.03.080.010.030#Dual Use General#ACTIVE#trade#13/07/2010
+05.01.03.080.010.054#Dual Use Reports#ACTIVE#trade#13/07/2010
+05.01.03.080.010.070#Commission Interservices#ACTIVE#trade#02/06/2010
+05.01.03.080.010.080#Co-ordination Group - Article 18 (until August 2009)#ACTIVE#trade#02/06/2010
+05.01.03.080.010.090#Co-ordination Group - Article 23 (from September 2009)#ACTIVE#trade#02/06/2010
+05.01.03.080.010.100#Council Groups#ACTIVE#trade#02/06/2010
+05.01.03.080.010.120#Export Control Projects#ACTIVE#trade#02/06/2010
+05.01.03.080.010.130#Export Control Regimes#ACTIVE#trade#02/06/2010
+05.01.03.080.010.170#Regulation 428/2009 from September 2009#ACTIVE#trade#02/06/2010
+05.01.03.080.010.180#Relations with non State Parties and EU other Institutions#ACTIVE#trade#02/06/2010
+05.01.03.080.010.190#Relations with Third Countries#ACTIVE#trade#02/06/2010
+05.01.03.080.010.200#Sanctions#ACTIVE#trade#02/06/2010
+05.01.03.080.020#Export credits#ACTIVE#trade#02/06/2010
+05.01.03.090#Fisheries#ACTIVE#trade#02/06/2010
+05.01.03.090.010#Fisheries - General issues#ACTIVE#trade#17/08/2010
+05.01.03.090.020#Fisheries - Illegal Fishing (IUU)#ACTIVE#trade#07/07/2010
+05.01.03.090.030#Fisheries - Rules of origin#ACTIVE#trade#07/07/2010
+05.01.03.090.040#Fisheries - Aquaculture#ACTIVE#trade#07/07/2010
+05.01.03.090.050#Fisheries - GSP#ACTIVE#trade#07/07/2010
+05.01.03.090.060#Fisheries - CFP#ACTIVE#trade#07/07/2010
+05.01.03.090.070#Fisheries - Bilateral Relations - General#ACTIVE#trade#07/07/2010
+05.01.03.090.075#Fisheries - Bilateral Relations - FTAs#ACTIVE#trade#05/05/2011
+05.01.03.090.080#Fisheries - Multilateral Negotiations#ACTIVE#trade#07/07/2010
+05.01.03.090.090#Fisheries - International Organisations#ACTIVE#trade#07/07/2010
+05.01.03.090.100#Fisheries - Regional Fisheries Management Organisations#ACTIVE#trade#07/07/2010
+05.01.03.090.110#Fisheries - Relations with the EP#ACTIVE#trade#07/07/2010
+05.01.03.090.120#Fisheries - Relations with Council#ACTIVE#trade#07/07/2010
+05.01.03.090.130#Fisheries - Relations with the Commission#ACTIVE#trade#07/07/2010
+05.01.03.090.140#Fisheries - Relations with stakeholders#ACTIVE#trade#16/08/2010
+05.01.03.090.150#Fisheries - Product issues (tuna, shrimps, whitefish...)#ACTIVE#trade#17/08/2010
+05.01.03.100#Goods#ACTIVE#trade#02/06/2010
+05.01.03.100.010#Automotives#ACTIVE#trade#02/06/2010
+05.01.03.100.010.010#Automotives - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.010.020#Automotives - Countries -  Specific Activities#ACTIVE#trade#22/07/2010
+05.01.03.100.010.040#Automotives - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.020#Chemicals#ACTIVE#trade#02/06/2010
+05.01.03.100.020.010#Chemicals - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.020.030#Chemicals - Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.020.040#Chemicals - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.030#Aeronautics#ACTIVE#trade#02/06/2010
+05.01.03.100.030.010#Aeronautics - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.030.020#Aeronautics - Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.030.040#Aeronautics - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.040#Construction equipment#ACTIVE#trade#02/06/2010
+05.01.03.100.040.010#Construction equipment - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.040.030#Construction equipment - Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.050#Cosmetics#ACTIVE#trade#02/06/2010
+05.01.03.100.050.010#Cosmetics - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.050.020#Cosmetics - Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.050.040#Cosmetics - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.060#ICT and electric equipment#ACTIVE#trade#02/06/2010
+05.01.03.100.060.010#ICT - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.060.020#ICT - Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.060.040#ICT - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.070#Energy - Policy#ACTIVE#trade#02/06/2010
+05.01.03.100.070.010#Energy- Management#ACTIVE#trade#22/07/2010
+05.01.03.100.070.020#Energy- Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.070.040#Energy - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.090#Machinery#ACTIVE#trade#02/06/2010
+05.01.03.100.090.010#Machinery - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.090.020#Machinery-  Countries -Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.090.040#Machinery - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.100#Non-ferrous metal#ACTIVE#trade#02/06/2010
+05.01.03.100.100.010#Non-ferrous metal - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.100.020#Non-ferrous metal - Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.100.040#Non-ferrous metal - ICT - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.110#Pharmaceuticals#ACTIVE#trade#02/06/2010
+05.01.03.100.110.010#Pharmaceuticals - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.110.020#Pharmaceuticals -  Countries -Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.110.040#Pharmaceuticals - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.120#Raw materials - Policy#ACTIVE#trade#02/06/2010
+05.01.03.100.120.010#Raw materials - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.120.020#Raw materials - Countries specific activities (Conflict Minerals)#ACTIVE#trade#22/07/2010
+05.01.03.100.120.040#Raw materials - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.130#Shipbuilding#ACTIVE#trade#02/06/2010
+05.01.03.100.130.010#Shipbuilding - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.130.020#Shipbuilding-  Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.130.040#Shipbuilding - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.140#Steel#ACTIVE#trade#02/06/2010
+05.01.03.100.140.010#Steel - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.140.020#Steel -  Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.140.040#Steel - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.150#Textiles#ACTIVE#trade#02/06/2010
+05.01.03.100.160#Wood/Paper#ACTIVE#trade#02/06/2010
+05.01.03.100.170#Ceramics and glass#ACTIVE#trade#22/07/2010
+05.01.03.100.180#Footwear and leather#ACTIVE#trade#22/07/2010
+05.01.03.100.190#Oil, gas, electricity, nuclear#ACTIVE#trade#22/07/2010
+05.01.03.100.200#Medical devices#ACTIVE#trade#22/07/2010
+05.01.03.100.210#Other sectors#ACTIVE#trade#22/07/2010
+05.01.03.100.220#Industry General#ACTIVE#trade#22/07/2010
+05.01.03.100.220.010#Industry general - Management#ACTIVE#trade#22/07/2010
+05.01.03.100.220.020#Industry general -  Countries - Specific activities#ACTIVE#trade#22/07/2010
+05.01.03.100.220.030#Industry general - Meetings#ACTIVE#trade#22/07/2010
+05.01.03.100.230#Goods - Bilateral and Multilateral#ACTIVE#trade#22/07/2010
+05.01.03.100.230.010#Goods Bilateral/Multilateral - WTO#ACTIVE#trade#22/07/2010
+05.01.03.100.230.020#Goods/Multilateral-Bilateral - FTA#ACTIVE#trade#22/07/2010
+05.01.03.110#Government procurement#ACTIVE#trade#02/06/2010
+05.01.03.110.010#Government Procurement- BIlateral Relations#ACTIVE#trade#02/06/2010
+05.01.03.110.020#Government Procurement- Horizontal issues#ACTIVE#trade#02/06/2010
+05.01.03.110.020.010#GPA Government Procurement Agreement#ACTIVE#trade#02/06/2010
+05.01.03.110.020.020#MASP Market Access Scheme for Procurement#ACTIVE#trade#02/06/2010
+05.01.03.110.020.030#Defence procurement#ACTIVE#trade#02/06/2010
+05.01.03.110.020.040#Procurement in services#ACTIVE#trade#26/07/2010
+05.01.03.110.020.050#Green procurement and secondary policies#ACTIVE#trade#26/07/2010
+05.01.03.110.020.060#Market access and protectionism#ACTIVE#trade#26/07/2010
+05.01.03.110.020.070#Economics#ACTIVE#trade#26/07/2010
+05.01.03.110.020.080#Modernization Public Procurement Rules#ACTIVE#trade#11/07/2011
+05.01.03.120#Intellectual Property#ACTIVE#trade#02/06/2010
+05.01.03.120.010#Multi-Plurilateral issues - Trade related aspects of intellectual property rights#ACTIVE#trade#02/06/2010
+05.01.03.120.020#Specific Intellectual Property rights/issues#ACTIVE#trade#02/06/2010
+05.01.03.120.030#Intellectual Property Bilateral#ACTIVE#trade#02/06/2010
+05.01.03.120.040#Geographical Indications (GIs)#ACTIVE#trade#26/07/2010
+05.01.03.130#Investment#ACTIVE#trade#02/06/2010
+05.01.03.130.010#EU Investement Policy Development#ACTIVE#trade#02/06/2010
+05.01.03.130.020#Bilateral Investment Issues#ACTIVE#trade#02/06/2010
+05.01.03.130.030#Transitional arrangements for MS BITs (Bilateral Investement Treaties)#ACTIVE#trade#02/06/2010
+05.01.03.130.040#Multilateral Investment Issues#ACTIVE#trade#02/06/2010
+05.01.03.130.050#Internal Investment Regulatory Framework#ACTIVE#trade#02/06/2010
+05.01.03.140#Rules of Origin (Preferential)#ACTIVE#trade#02/06/2010
+05.01.03.140.010#Rules of Origin  - Transversal DDB#ACTIVE#trade#06/08/2010
+05.01.03.140.020#Rules of Origin - GSP#ACTIVE#trade#06/08/2010
+05.01.03.140.030#Rules of Origin - Asia#ACTIVE#trade#06/08/2010
+05.01.03.140.040#Rules of Origin - Africa-Middle East-Pacific#ACTIVE#trade#06/08/2010
+05.01.03.140.050#Rules of Origin - America#ACTIVE#trade#06/08/2010
+05.01.03.140.060#Rules of Origin - Europe and Neighbourhood#ACTIVE#trade#06/08/2010
+05.01.03.140.070#Rules of Origin - Horizontal issues#ACTIVE#trade#06/08/2010
+05.01.03.150#Sanitary and Phytosanitary (SPS) and Biotechnology#ACTIVE#trade#02/06/2010
+05.01.03.150.010#SPS issues by countries and regions#ACTIVE#trade#02/06/2010
+05.01.03.150.020#SPS issues - thematical#ACTIVE#trade#14/07/2010
+05.01.03.160#Science#ACTIVE#trade#02/06/2010
+05.01.03.170#Services#ACTIVE#trade#02/06/2010
+05.01.03.170.010#Background material and analysis on services#ACTIVE#trade#02/06/2010
+05.01.03.170.010.020#Horizontal Trade in Services Issues#ACTIVE#trade#02/06/2010
+05.01.03.170.010.020.010#Horizontal Trade in Services - Competition#ACTIVE#trade#02/06/2010
+05.01.03.170.010.020.020#Horizontal Trade in Services - Modes 1 and 2#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.030#Horizontal Trade in services - Mode 3#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.040#Horizontal Trade in Service - Mode 4#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.050#Taxation#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.060#Public services - utilities#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.070#Balance of Payments safeguards#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.080#Intellectual Property Rights (IPR), including TRIPS#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.090#Data privacy#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.100#Horizontal Trade in services - EU-Member States competence#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.110#Horizontal Trade in Services Issues - Notifications#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.120#Horizontal Trade in Services - Protectionism#ACTIVE#trade#20/05/2011
+05.01.03.170.010.020.130#Horizontal Trade in Services - Direct Effect#ACTIVE#trade#20/05/2011
+05.01.03.170.010.030#Services Sectors#ACTIVE#trade#02/06/2010
+05.01.03.170.010.030.010#Communication and Computer services#ACTIVE#trade#02/06/2010
+05.01.03.170.010.030.020#Financial services#ACTIVE#trade#02/06/2010
+05.01.03.170.010.030.030#Transport and Distribution services#ACTIVE#trade#02/06/2010
+05.01.03.170.010.030.040#Constructions and Related Engineering Services#ACTIVE#trade#20/05/2011
+05.01.03.170.010.030.050#Educational, Health and Social Services#ACTIVE#trade#20/05/2011
+05.01.03.170.010.030.060#Recreational, Cultural and Sporting Services#ACTIVE#trade#20/05/2011
+05.01.03.170.010.030.070#Services Sectors - Logistics, Business and Others Services#ACTIVE#trade#20/05/2011
+05.01.03.170.010.040#Services Trade Statistics and Analysis#ACTIVE#trade#02/06/2010
+05.01.03.170.010.050#Schedules and Most Favoured Nations (MFN) exemptions#ACTIVE#trade#02/06/2010
+05.01.03.170.020#Communication, dialogue and contacts#ACTIVE#trade#02/06/2010
+05.01.03.170.020.010#Access to documents#ACTIVE#trade#02/06/2010
+05.01.03.170.020.020#Civil Society#ACTIVE#trade#02/06/2010
+05.01.03.170.030#Coordination and Dialogue with EU institutions (on services)#ACTIVE#trade#02/06/2010
+05.01.03.170.040#Implementation of International Service Commitments#ACTIVE#trade#02/06/2010
+05.01.03.170.040.010#Bilateral Implementation Issues (other than dispute settlement)#ACTIVE#trade#02/06/2010
+05.01.03.170.040.020#Committee on Regional Trade Agreements#ACTIVE#trade#02/06/2010
+05.01.03.170.040.030#GATS (General Agreement on Trade in Services) Committee on Specific Commitments#ACTIVE#trade#02/06/2010
+05.01.03.170.040.040#GATS (General Agreement on Trade in Services) Committee on Trade in Financial Services#ACTIVE#trade#02/06/2010
+05.01.03.170.040.050#WTO Council  for Trade in Services (CTS)#ACTIVE#trade#02/06/2010
+05.01.03.170.040.060#Transparency#ACTIVE#trade#20/05/2011
+05.01.03.170.050#Legislation on Trade in Services#ACTIVE#trade#02/06/2010
+05.01.03.170.060#Services Negotiations#ACTIVE#trade#02/06/2010
+05.01.03.170.060.010#Bilateral Services Negotiations#ACTIVE#trade#02/06/2010
+05.01.03.170.060.010.010#Countries#ACTIVE#trade#02/06/2010
+05.01.03.170.060.010.030#Bilateral Services Trade horizontal issues#ACTIVE#trade#20/05/2011
+05.01.03.170.060.010.040#Mutual Recognition Agreements#ACTIVE#trade#20/05/2011
+05.01.03.170.060.020#Multilateral Services Negotiations#ACTIVE#trade#02/06/2010
+05.01.03.170.060.020.020#Market Access Negotiations#ACTIVE#trade#02/06/2010
+05.01.03.170.060.020.030#Rules Negotiations#ACTIVE#trade#02/06/2010
+05.01.03.170.060.020.030.010#Working Party on Domestic Regulation#ACTIVE#trade#02/06/2010
+05.01.03.170.060.020.030.020#Working Party on GATS (General Agreement on Trade in Services) rules#ACTIVE#trade#02/06/2010
+05.01.03.170.070#Trade in Services in other international Organisations#ACTIVE#trade#02/06/2010
+05.01.03.190#Technical Barriers to Trade (TBT) - Standards - Certification#ACTIVE#trade#02/06/2010
+05.01.03.190.010#ACCAs (Agreements on Conformity Assessment and Acceptance of Industrial Products)#ACTIVE#trade#02/06/2010
+05.01.03.190.010.010#ACCAs Countries#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.010#ACCAs Albania#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.020#ACCAs Algeria#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.030#ACCAs Bosnia-Herzegovina#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.040#ACCAs - Croatia#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.050#ACCAs Egypt#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.060#ACCAs  Israel#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.070#ACCAs Jordan#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.080#ACCAs - Lebanon#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.090#ACCAs Macedonia#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.100#ACCAs Montenegro#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.110#ACCAs Morocco#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.120#ACCAs - Palestinian Authority#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.130#ACCAs Serbia#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.140#ACCAs Syria#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.150#ACCAs - Tunisia#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.160#ACCAs Turkey#ACTIVE#trade#09/08/2010
+05.01.03.190.010.010.170#ACCAs Ukraine#ACTIVE#trade#09/08/2010
+05.01.03.190.010.020#ACCAs Texts#ACTIVE#trade#09/08/2010
+05.01.03.190.010.030#ACCAs Informations and briefings#ACTIVE#trade#09/08/2010
+05.01.03.190.010.040#ACCAs - other issues#ACTIVE#trade#09/08/2010
+05.01.03.190.020#Horizontal issues#ACTIVE#trade#02/06/2010
+05.01.03.190.030#Mutual Recognition Agreements (MRAs)#ACTIVE#trade#02/06/2010
+05.01.03.190.030.010#MRAs Countries#ACTIVE#trade#09/08/2010
+05.01.03.190.030.030#MRAs Horizontal issues#ACTIVE#trade#09/08/2010
+05.01.03.190.040#PECAs (Protocol to the European Agreement on Conformity Assessment)#ACTIVE#trade#02/06/2010
+05.01.03.190.050#Regulatory Cooperation Agreements#ACTIVE#trade#02/06/2010
+05.01.03.190.060#TBT Committee (specific trade concerns)#ACTIVE#trade#02/06/2010
+05.01.03.190.070#TBT Defensive Cases#ACTIVE#trade#02/06/2010
+05.01.03.190.070.010#TBT Defensive Cases#ACTIVE#trade#09/08/2010
+05.01.03.190.070.020#REACH#ACTIVE#trade#09/08/2010
+05.01.03.190.070.030#Seals#ACTIVE#trade#09/08/2010
+05.01.03.190.070.040#RoHs#ACTIVE#trade#27/08/2010
+05.01.03.190.070.050#Poultry#ACTIVE#trade#27/08/2010
+05.01.03.190.080#TBT Offensive Cases#ACTIVE#trade#02/06/2010
+05.01.03.190.090#TBT Chapters in FTAs and Other Bilateral Negotiations#ACTIVE#trade#02/06/2010
+05.01.03.190.090.010#TBT Chapters - Armenia#ACTIVE#trade#09/08/2010
+05.01.03.190.090.010.010#TBT Chapters-Armenia-Texts#ACTIVE#trade#14/09/2010
+05.01.03.190.090.010.020#TBT Chapters-Armenia-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.190.090.010.030#TBT Chapters-Armenia-Issues#ACTIVE#trade#14/09/2010
+05.01.03.190.090.020#TBT Chapters - ASEAN#ACTIVE#trade#09/08/2010
+05.01.03.190.090.030#TBT Chapters - Canada#ACTIVE#trade#09/08/2010
+05.01.03.190.090.030.010#TBT Chapters-Canada-Texts#ACTIVE#trade#14/09/2010
+05.01.03.190.090.030.020#TBT Chapters-Canada-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.190.090.030.030#TBT Chapters-Canada-Issues#ACTIVE#trade#14/09/2010
+05.01.03.190.090.040#TBT Chapters - EPAs#ACTIVE#trade#09/08/2010
+05.01.03.190.090.050#TBT Chapters - Euromed#ACTIVE#trade#09/08/2010
+05.01.03.190.090.060#TBT Chapters - GCC#ACTIVE#trade#09/08/2010
+05.01.03.190.090.070#TBT Chapters - Georgia#ACTIVE#trade#09/08/2010
+05.01.03.190.090.070.010#TBT Chapters-Georgia-Texts#ACTIVE#trade#14/09/2010
+05.01.03.190.090.070.020#TBT Chapters-Georgia-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.190.090.070.030#TBT Chapters-Georgia-Issues#ACTIVE#trade#14/09/2010
+05.01.03.190.090.080#TBT Chapters - India#ACTIVE#trade#09/08/2010
+05.01.03.190.090.090#TBT Chapters - Libya#ACTIVE#trade#09/08/2010
+05.01.03.190.090.100#TBT Chapters - MERCOSUR#ACTIVE#trade#09/08/2010
+05.01.03.190.090.110#TBT Chapters - Russia PCA#ACTIVE#trade#09/08/2010
+05.01.03.190.090.110.010#TBT Chapters-Russia PCA-Texts#ACTIVE#trade#14/09/2010
+05.01.03.190.090.110.020#TBT Chapters-Russia PCA-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.190.090.110.030#TBT Chapters-Russia PCA-Issues#ACTIVE#trade#14/09/2010
+05.01.03.190.090.120#TBT Chapters - Singapore#ACTIVE#trade#09/08/2010
+05.01.03.190.090.130#TBT Chapters - Ukraine#ACTIVE#trade#09/08/2010
+05.01.03.190.090.130.010#TBT Chapters-Ukraine-Texts#ACTIVE#trade#14/09/2010
+05.01.03.190.090.130.020#TBT Chapters-Ukraine-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.190.090.130.030#TBT Chapters-Ukraine-Issues#ACTIVE#trade#14/09/2010
+05.01.03.190.100#TBT Chapters - MERCOSUR#ACTIVE#trade#27/08/2010
+05.01.03.190.100.010#TBT - MERCOSUR - Texts#ACTIVE#trade#27/08/2010
+05.01.03.190.100.020#TBT - MERCOSUR - Reports#ACTIVE#trade#27/08/2010
+05.01.03.200#Waste#ACTIVE#trade#02/06/2010
+05.01.03.200.010#Waste - Regulation 1418/2007#ACTIVE#trade#14/07/2010
+05.01.03.210#Sustainable development#ACTIVE#trade#15/07/2010
+05.01.03.210.010#Sustainable development - labour and social aspects#ACTIVE#trade#15/07/2010
+05.01.03.210.030#Sustainable development - Biofuels and Biomass#ACTIVE#trade#15/07/2010
+05.01.03.210.040#Sustainable development - forestry#ACTIVE#trade#15/07/2010
+05.01.03.210.050#Sustainable development - FTA policy#ACTIVE#trade#15/07/2010
+05.01.03.210.060#Sustainable Development - biodiversity and environmental aspects#ACTIVE#trade#29/07/2010
+05.01.03.210.070#Sustainable development - multilateral work#ACTIVE#trade#29/07/2010
+05.01.03.210.080#SD - Other EU institutions#ACTIVE#trade#29/07/2010
+05.01.03.210.090#Fair Trade#ACTIVE#trade#24/11/2010
+05.01.03.210.100#Sustainable Development ? trade and development#ACTIVE#trade#01/02/2011
+05.01.03.220#Tariff Negotiations in FTAs#ACTIVE#trade#09/08/2010
+05.01.03.220.010#Tariff Negotiations - Armenia#ACTIVE#trade#10/08/2010
+05.01.03.220.020#Tariff Negotiations - ASEAN#ACTIVE#trade#10/08/2010
+05.01.03.220.030#Tariff Negotiations - Canada#ACTIVE#trade#10/08/2010
+05.01.03.220.040#Tariff Negotiations - Central America#ACTIVE#trade#10/08/2010
+05.01.03.220.050#Tariff Negotiations - China PCA#ACTIVE#trade#10/08/2010
+05.01.03.220.060#Tariff Negotiations - Colombia#ACTIVE#trade#10/08/2010
+05.01.03.220.070#Tariff Negotiations - Ecuador#ACTIVE#trade#10/08/2010
+05.01.03.220.080#Tariff Negotiations - EPAs#ACTIVE#trade#10/08/2010
+05.01.03.220.090#Tariff Negotiations - Euromed#ACTIVE#trade#10/08/2010
+05.01.03.220.100#Tariff Negotiations - GCC#ACTIVE#trade#10/08/2010
+05.01.03.220.110#Tariff  Negotiations - Georgia#ACTIVE#trade#10/08/2010
+05.01.03.220.120#Tariff Negotiations - India#ACTIVE#trade#10/08/2010
+05.01.03.220.130#Tariff Negotiations - Japan#ACTIVE#trade#10/08/2010
+05.01.03.220.140#Tariff Negotiations - Korea#ACTIVE#trade#10/08/2010
+05.01.03.220.150#Tariff Negotiations - Libya#ACTIVE#trade#10/08/2010
+05.01.03.220.160#Tariff Negotiations - MERCOSUR#ACTIVE#trade#10/08/2010
+05.01.03.220.170#Tariff Negotiations - Russia PCA#ACTIVE#trade#10/08/2010
+05.01.03.220.180#Tariff Negotiations - Singapore#ACTIVE#trade#10/08/2010
+05.01.03.220.190#Tariff Negotiations - Ukraine#ACTIVE#trade#10/08/2010
+05.01.03.220.200#Tariff Negotiations - Algeria#ACTIVE#trade#15/11/2010
+05.01.03.220.210#FTAs - NEGOTIATIONS - GENERAL#ACTIVE#trade#25/02/2011
+05.01.03.220.210.010#Timelines for FTA Negotiations#ACTIVE#trade#28/02/2011
+05.01.03.230#NTB Negotiations in FTAs#ACTIVE#trade#09/08/2010
+05.01.03.230.010#NTB Negotiations - Armenia#ACTIVE#trade#09/08/2010
+05.01.03.230.010.010#NTB Negotiations-Armenia-Texts#ACTIVE#trade#14/09/2010
+05.01.03.230.010.020#NTB Negotiations-Armenia-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.230.010.030#NTB Negotiations-Armenia-Issues#ACTIVE#trade#14/09/2010
+05.01.03.230.020#NTB Negotiations - ASEAN#ACTIVE#trade#09/08/2010
+05.01.03.230.030#NTB Negotiations - Canada#ACTIVE#trade#09/08/2010
+05.01.03.230.030.010#NTB Negotiations-Canada-Texts#ACTIVE#trade#14/09/2010
+05.01.03.230.030.020#NTB Negotiations-Canada-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.230.030.030#NTB Negotiations-Canada-Issues#ACTIVE#trade#14/09/2010
+05.01.03.230.040#NTB Negotiations - EPAs#ACTIVE#trade#09/08/2010
+05.01.03.230.050#NTB Negotiations - Euromed#ACTIVE#trade#09/08/2010
+05.01.03.230.060#NTB Negotiations - GCC#ACTIVE#trade#09/08/2010
+05.01.03.230.070#NTB Negotiations - Georgia#ACTIVE#trade#09/08/2010
+05.01.03.230.070.010#NTB Negotiations-Georgia-Texts#ACTIVE#trade#14/09/2010
+05.01.03.230.070.020#NTB Negotiations-Georgia-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.230.070.030#NTB Negotiations-Georgia-Issues#ACTIVE#trade#14/09/2010
+05.01.03.230.080#NTB Negotiations - India#ACTIVE#trade#09/08/2010
+05.01.03.230.090#NTB Negotiations - Libya#ACTIVE#trade#09/08/2010
+05.01.03.230.100#NTB Negotiations - MERCOSUR#ACTIVE#trade#09/08/2010
+05.01.03.230.110#NTB Negotiations - Russia PCA#ACTIVE#trade#09/08/2010
+05.01.03.230.110.010#NTB Negotiations-Russia PCA-Texts#ACTIVE#trade#14/09/2010
+05.01.03.230.110.020#NTB Negotiations-Russia PCA-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.230.110.030#NTB Negotiations-Russia PCA-Issues#ACTIVE#trade#14/09/2010
+05.01.03.230.120#NTB Negotiations - Singapore#ACTIVE#trade#09/08/2010
+05.01.03.230.130#NTB Negotiations - Ukraine#ACTIVE#trade#09/08/2010
+05.01.03.230.130.010#NTB Negotiations-Ukraine-Texts#ACTIVE#trade#14/09/2010
+05.01.03.230.130.020#NTB Negotiations-Ukraine-Meetings#ACTIVE#trade#14/09/2010
+05.01.03.230.130.030#NTB Negotiations-Ukraine-Issues#ACTIVE#trade#14/09/2010
+05.01.03.240#Human rights#ACTIVE#trade#25/11/2010
+05.01.03.240.010#Human rights / Issues#ACTIVE#trade#25/11/2010
+05.01.03.240.020#Human rights / General Policy Development#ACTIVE#trade#25/11/2010
+05.01.03.240.030#Human rights / Briefings and speeches#ACTIVE#trade#25/11/2010
+05.01.03.240.040#Human rights / Impact assessments#ACTIVE#trade#25/11/2010
+05.01.03.240.050#Types of Human rights#ACTIVE#trade#25/11/2010
+05.01.03.240.060#Human rights / Library#ACTIVE#trade#25/11/2010
+05.01.03.240.070#Human Rights: Country  Specific#ACTIVE#trade#01/02/2011
+05.01.03.240.080#Gender Focal Point#ACTIVE#trade#19/07/2012
+05.01.04.001#Trade Strategy#ACTIVE#trade#22/11/2012
+05.01.04.001.010#General Trade Strategy#ACTIVE#trade#22/11/2012
+05.01.04.001.010.010#General Strategy Documents#ACTIVE#trade#22/11/2012
+05.01.04.001.010.020#Trade and growth#ACTIVE#trade#22/11/2012
+05.01.04.001.010.030#Argumentaires on Trade Strategy#ACTIVE#trade#22/11/2012
+05.01.04.001.020#Effectiveness of Trade Policy  (ETP)#ACTIVE#trade#22/11/2012
+05.01.04.001.020.010#Enforcement of the ETP#ACTIVE#trade#22/11/2012
+05.01.04.001.020.020#Trade Added Value of the ETP#ACTIVE#trade#22/11/2012
+05.01.04.001.020.030#News Trade Issues of the ETP#ACTIVE#trade#22/11/2012
+05.01.04.001.030#Free Trade Agreement Coherence#ACTIVE#trade#22/11/2012
+05.01.04.001.030.010#Policy Notes on Coherence#ACTIVE#trade#22/11/2012
+05.01.04.001.030.020#Benchmarking and Analysis#ACTIVE#trade#22/11/2012
+05.01.04.001.040#Trade Policy and External Relations#ACTIVE#trade#22/11/2012
+05.01.04.001.040.010#Strategic Partners#ACTIVE#trade#23/11/2012
+05.01.04.001.040.020#Summits#ACTIVE#trade#23/11/2012
+05.01.04.001.040.030#Relations with EEAS#ACTIVE#trade#23/11/2012
+05.01.04.001.040.040#G8 / G20#ACTIVE#trade#23/11/2012
+05.01.04.001.040.050#Trade and Security#ACTIVE#trade#23/11/2012
+05.01.04.001.050#Trade Policy and Community Policies#ACTIVE#trade#22/11/2012
+05.01.04.001.050.010#Regulatory convergence#ACTIVE#trade#23/11/2012
+05.01.04.001.050.020#Trade and other issues#ACTIVE#trade#23/11/2012
+05.01.04.001.060#Council Working Group Coordination#ACTIVE#trade#22/11/2012
+05.01.04.001.060.010#General Council Working Groups Coordination#ACTIVE#trade#23/11/2012
+05.01.04.001.060.020#Council Working Groups#ACTIVE#trade#23/11/2012
+05.01.04.001.060.020.010#COTRA Council Working Group - USA - Canada#ACTIVE#trade#23/11/2012
+05.01.04.001.060.020.020#COLAT Council Working Group - Amerique Latine - Mercosur#ACTIVE#trade#23/11/2012
+05.01.04.001.060.020.030#COEST Council Working Group - Europe Orientale - Asie Centrale#ACTIVE#trade#23/11/2012
+05.01.04.001.060.020.040#COASI Council Working Group#ACTIVE#trade#23/11/2012
+05.01.04.001.060.030#Politique de S‚curit‚ Commune (PSC) and COREPER#ACTIVE#trade#23/11/2012
+05.01.04.002#Chief Economist#ACTIVE#trade#22/11/2012
+05.01.04.010#Chief Economist mission reports#ACTIVE#trade#05/10/2010
+05.01.04.020#Chief Economist general meeting reports#ACTIVE#trade#05/10/2010
+05.01.04.030#Chief Economist publication authorization requests#ACTIVE#trade#05/10/2010
+05.01.04.040#Chief Economist general administration#ACTIVE#trade#05/10/2010
+05.01.04.050#Chief Economist staff matters#ACTIVE#trade#05/10/2010
+05.01.04.060#Chief Economist cabinet requests and briefing requests#ACTIVE#trade#05/10/2010
+05.01.04.070#Chief Economist trade policy committee#ACTIVE#trade#05/10/2010
+05.01.04.080#Chief Economist multilateral issues#ACTIVE#trade#05/10/2010
+05.01.04.080.010#DDA#ACTIVE#trade#05/10/2010
+05.01.04.080.020#WTO#ACTIVE#trade#06/10/2010
+05.01.04.080.030#IFIs (ECB,WB)#ACTIVE#trade#06/10/2010
+05.01.04.080.040#Dispute settlements#ACTIVE#trade#06/10/2010
+05.01.04.090#Chief Economist bilateral issues#ACTIVE#trade#05/10/2010
+05.01.04.090.010#Asia#ACTIVE#trade#06/10/2010
+05.01.04.090.020#South America#ACTIVE#trade#06/10/2010
+05.01.04.090.030#North America#ACTIVE#trade#06/10/2010
+05.01.04.090.040#Eurasia#ACTIVE#trade#06/10/2010
+05.01.04.090.050#ASEAN#ACTIVE#trade#24/01/2013
+05.01.04.100#Chief Economist investment and services#ACTIVE#trade#05/10/2010
+05.01.04.110#Chief Economist trade and development#ACTIVE#trade#05/10/2010
+05.01.04.110.010#Generalised System of Preferences  GSP & GSP+#ACTIVE#trade#06/10/2010
+05.01.04.110.020#ACP/EPAs#ACTIVE#trade#06/10/2010
+05.01.04.110.030#Other issues#ACTIVE#trade#06/10/2010
+05.01.04.120#Chief Economist IPR and public procurement#ACTIVE#trade#05/10/2010
+05.01.04.130#Chief Economist EU internal policies#ACTIVE#trade#05/10/2010
+05.01.04.130.010#EGF#ACTIVE#trade#06/10/2010
+05.01.04.130.020#Single market#ACTIVE#trade#06/10/2010
+05.01.04.130.030#ECFIN#ACTIVE#trade#06/10/2010
+05.01.04.130.040#Industrial policy#ACTIVE#trade#06/10/2010
+05.01.04.130.050#Agriculture#ACTIVE#trade#06/10/2010
+05.01.04.140#Chief Economist market access and industry#ACTIVE#trade#05/10/2010
+05.01.04.150#Chief Economist  EU 2020 #ACTIVE#trade#05/10/2010
+05.01.04.160#Chief Economist future trade policy#ACTIVE#trade#05/10/2010
+05.01.04.170#Chief Economist AMP and budget#ACTIVE#trade#05/10/2010
+05.01.04.180#Chief Economist seminars and conferences#ACTIVE#trade#05/10/2010
+05.01.04.180.010#GTAP Global Trade Analysis Project#ACTIVE#trade#07/10/2010
+05.01.04.180.020#Experts#ACTIVE#trade#07/10/2010
+05.01.04.180.030#Other issues#ACTIVE#trade#07/10/2010
+05.01.04.180.040#Seminars and Conferences#ACTIVE#trade#07/03/2012
+05.01.04.190#Chief Economist global europe#ACTIVE#trade#05/10/2010
+05.01.04.200#Chief Economist annual activity report#ACTIVE#trade#05/10/2010
+05.01.04.210#Chief Economist statistics requests#ACTIVE#trade#05/10/2010
+05.01.04.220#Chief Economist notes (crisis/recovery,policy notes)#ACTIVE#trade#05/10/2010
+05.01.04.230#Chief Economist framework contract#ACTIVE#trade#05/10/2010
+05.01.04.230.010#framework contract IV#ACTIVE#trade#06/10/2010
+05.01.04.230.020#Chief Economist framework contract#ACTIVE#trade#15/10/2010
+05.01.04.230.030#framework contract III#ACTIVE#trade#15/10/2010
+05.01.04.240#Chief Economist studies#ACTIVE#trade#05/10/2010
+05.01.04.250#Chief Economist - Duty Drawback#ACTIVE#trade#18/11/2010
+05.01.04.251#Chief Economist Free Trade Agreement#ACTIVE#trade#07/03/2012
+05.01.05.010#Analysis of the evolution of the world economy#ACTIVE#trade#02/06/2010
+05.01.05.020#Anti-dumping proceedings#ACTIVE#trade#02/06/2010
+05.01.05.030#Anti-subsidy proceedings#ACTIVE#trade#02/06/2010
+05.01.05.040#Bilateral Relations#ACTIVE#trade#02/06/2010
+05.01.05.040.010#Andean Community#ACTIVE#trade#02/06/2010
+05.01.05.040.020#ASEAN#ACTIVE#trade#02/06/2010
+05.01.05.040.030#Australia#ACTIVE#trade#02/06/2010
+05.01.05.040.040#Brazil#ACTIVE#trade#02/06/2010
+05.01.05.040.050#Canada#ACTIVE#trade#02/06/2010
+05.01.05.040.060#Central America#ACTIVE#trade#02/06/2010
+05.01.05.040.070#China#ACTIVE#trade#02/06/2010
+05.01.05.040.080#Gulf Cooperation Council#ACTIVE#trade#02/06/2010
+05.01.05.040.090#Horizontal issues#ACTIVE#trade#02/06/2010
+05.01.05.040.100#India#ACTIVE#trade#02/06/2010
+05.01.05.040.110#Indonesia#ACTIVE#trade#02/06/2010
+05.01.05.040.120#Iraq#ACTIVE#trade#02/06/2010
+05.01.05.040.130#Israel#ACTIVE#trade#02/06/2010
+05.01.05.040.140#Jordan#ACTIVE#trade#02/06/2010
+05.01.05.040.150#Kazakhstan#ACTIVE#trade#02/06/2010
+05.01.05.040.160#Korea#ACTIVE#trade#02/06/2010
+05.01.05.040.170#Libya#ACTIVE#trade#02/06/2010
+05.01.05.040.180#Pakistan#ACTIVE#trade#02/06/2010
+05.01.05.040.190#Russia#ACTIVE#trade#02/06/2010
+05.01.05.040.200#Seminars#ACTIVE#trade#02/06/2010
+05.01.05.040.210#Singapore#ACTIVE#trade#02/06/2010
+05.01.05.040.220#Thailand#ACTIVE#trade#02/06/2010
+05.01.05.040.230#Turkey#ACTIVE#trade#02/06/2010
+05.01.05.040.240#Ukraine#ACTIVE#trade#02/06/2010
+05.01.05.040.250#Vietnam#ACTIVE#trade#02/06/2010
+05.01.05.050#Follow-up of TDI measures#ACTIVE#trade#02/06/2010
+05.01.05.050.010#Follow-up of cases#ACTIVE#trade#02/06/2010
+05.01.05.050.020#Not product-specific contacts/issues#ACTIVE#trade#02/06/2010
+05.01.05.050.020.010#Associations/companies#ACTIVE#trade#02/06/2010
+05.01.05.050.020.020#Internal H4#ACTIVE#trade#02/06/2010
+05.01.05.050.020.030#Legal Service#ACTIVE#trade#02/06/2010
+05.01.05.050.020.040#Member States#ACTIVE#trade#02/06/2010
+05.01.05.050.020.050#OLAF#ACTIVE#trade#02/06/2010
+05.01.05.050.020.060#TAXUD#ACTIVE#trade#02/06/2010
+05.01.05.050.030#Policy#ACTIVE#trade#02/06/2010
+05.01.05.050.040#Follow-up of expired cases#ACTIVE#trade#21/01/2011
+05.01.05.070#Refunds#ACTIVE#trade#02/06/2010
+05.01.05.070.010#Admissibility procedure#ACTIVE#trade#02/06/2010
+05.01.05.070.020#General Issues#ACTIVE#trade#02/06/2010
+05.01.05.070.030#Policy#ACTIVE#trade#02/06/2010
+05.01.05.080#Safeguards#ACTIVE#trade#02/06/2010
+05.01.05.090#Safeguards proceedings#ACTIVE#trade#02/06/2010
+05.01.05.100#Third country cases#ACTIVE#trade#02/06/2010
+05.01.05.100.010#Argentina#ACTIVE#trade#02/06/2010
+05.01.05.100.020#Brazil#ACTIVE#trade#02/06/2010
+05.01.05.100.030#China#ACTIVE#trade#02/06/2010
+05.01.05.100.040#Domenican Republic#ACTIVE#trade#02/06/2010
+05.01.05.100.050#Egypt#ACTIVE#trade#02/06/2010
+05.01.05.100.060#Gulf Cooperation Council#ACTIVE#trade#02/06/2010
+05.01.05.100.070#Horizontal issues#ACTIVE#trade#02/06/2010
+05.01.05.100.080#India#ACTIVE#trade#02/06/2010
+05.01.05.100.090#Indonesia#ACTIVE#trade#02/06/2010
+05.01.05.100.100#Israel#ACTIVE#trade#02/06/2010
+05.01.05.100.110#Jordan#ACTIVE#trade#02/06/2010
+05.01.05.100.120#Kazakhstan#ACTIVE#trade#02/06/2010
+05.01.05.100.130#Kyrgyzstan#ACTIVE#trade#02/06/2010
+05.01.05.100.140#Mexico#ACTIVE#trade#02/06/2010
+05.01.05.100.150#Morocco#ACTIVE#trade#02/06/2010
+05.01.05.100.160#Pakistan#ACTIVE#trade#02/06/2010
+05.01.05.100.170#Peru#ACTIVE#trade#02/06/2010
+05.01.05.100.180#Philippines#ACTIVE#trade#02/06/2010
+05.01.05.100.190#Russia#ACTIVE#trade#02/06/2010
+05.01.05.100.200#South Africa#ACTIVE#trade#02/06/2010
+05.01.05.100.210#Thailand#ACTIVE#trade#02/06/2010
+05.01.05.100.220#Tunisia#ACTIVE#trade#02/06/2010
+05.01.05.100.230#Turkey#ACTIVE#trade#02/06/2010
+05.01.05.100.240#Ukraine#ACTIVE#trade#02/06/2010
+05.01.05.100.250#Vietnam#ACTIVE#trade#02/06/2010
+05.01.05.100.260#United States#ACTIVE#trade#19/04/2011
+05.01.05.110#Trade Barriers Regulation (TBR)#ACTIVE#trade#02/06/2010
+05.01.05.120#Trade Defence Instruments Issues#ACTIVE#trade#02/06/2010
+05.01.05.120.010#Complaints#ACTIVE#trade#02/06/2010
+05.01.05.120.010.010#Applications#ACTIVE#trade#02/06/2010
+05.01.05.120.010.020#Notices concerning expiry#ACTIVE#trade#02/06/2010
+05.01.05.120.020#Consistency Issues#ACTIVE#trade#02/06/2010
+05.01.05.120.030#Court Cases#ACTIVE#trade#02/06/2010
+05.01.05.120.040#Dispute Settlement Cases#ACTIVE#trade#02/06/2010
+05.01.05.120.050#Information and Communication#ACTIVE#trade#02/06/2010
+05.01.05.120.050.010#Questions on horizontal issues#ACTIVE#trade#02/06/2010
+05.01.05.120.050.020#Questions on specific cases#ACTIVE#trade#02/06/2010
+05.01.05.120.050.030#Notes to all staff - Policy#ACTIVE#trade#10/09/2010
+05.01.05.120.060#Institutional affairs and external relations#ACTIVE#trade#02/06/2010
+05.01.05.120.060.010#Member States#ACTIVE#trade#02/06/2010
+05.01.05.120.060.010.010#AD Committee#ACTIVE#trade#02/06/2010
+05.01.05.120.060.010.020#Administration, organisation#ACTIVE#trade#02/06/2010
+05.01.05.120.070#Legal Issues (AD/AS)#ACTIVE#trade#02/06/2010
+05.01.05.120.080#Market Economy Status#ACTIVE#trade#02/06/2010
+05.01.05.120.100#Political Issues#ACTIVE#trade#02/06/2010
+05.01.05.120.110#(Relations with) Associated Services#ACTIVE#trade#02/06/2010
+05.01.05.120.110.010#DG Competition#ACTIVE#trade#02/06/2010
+05.01.05.120.110.020#Legal Service#ACTIVE#trade#02/06/2010
+05.01.05.120.110.030#TAXUD#ACTIVE#trade#02/06/2010
+05.01.05.120.110.040#DG ENTERPRISE#ACTIVE#trade#19/07/2010
+05.01.05.120.120#(Relations with) International Organisations#ACTIVE#trade#03/06/2010
+05.01.05.120.120.010#OECD#ACTIVE#trade#03/06/2010
+05.01.05.120.130#(Relations with) Stakeholders#ACTIVE#trade#03/06/2010
+05.01.05.120.130.010#Bilateral Meetings#ACTIVE#trade#03/06/2010
+05.01.05.120.130.020#Presentations to Staff#ACTIVE#trade#03/06/2010
+05.01.05.120.130.030#Seminars#ACTIVE#trade#03/06/2010
+05.01.05.120.140#(Relations with the) European Parliament#ACTIVE#trade#03/06/2010
+05.01.05.120.140.010#EP Questions#ACTIVE#trade#03/06/2010
+05.01.05.120.140.020#INTA Committee#ACTIVE#trade#03/06/2010
+05.01.05.120.140.030#Annual Reports#ACTIVE#trade#30/09/2010
+05.01.05.120.150#SMEs#ACTIVE#trade#03/06/2010
+05.01.05.120.150.010#Helpdesk#ACTIVE#trade#03/06/2010
+05.01.05.120.160#TDI Activities Statistics#ACTIVE#trade#03/06/2010
+05.01.05.120.160.010#Reports#ACTIVE#trade#03/06/2010
+05.01.05.120.170#WTO#ACTIVE#trade#03/06/2010
+05.01.05.120.170.010#Subsidy Notifications#ACTIVE#trade#03/06/2010
+05.01.05.120.170.020#WTO Committees#ACTIVE#trade#03/06/2010
+05.01.05.120.170.020.010#AD Committee#ACTIVE#trade#03/06/2010
+05.01.05.120.170.020.020#Safeguards Committee#ACTIVE#trade#03/06/2010
+05.01.05.120.170.020.030#SCM Committee#ACTIVE#trade#03/06/2010
+05.01.05.120.170.030#WTO Rules Negotiations#ACTIVE#trade#03/06/2010
+05.01.05.120.170.040#Other TDI Issues#ACTIVE#trade#31/01/2011
+05.01.05.120.180#14.6 Database#ACTIVE#trade#03/06/2010
+05.01.05.120.190#Total Quality Management#ACTIVE#trade#30/09/2010
+05.01.05.140#TPI - Hearing officer#ACTIVE#trade#27/08/2010
+05.01.05.140.010#TPI - Hearing Office function#ACTIVE#trade#30/08/2010
+05.01.05.140.020#TPI - Hearing Officer Interventions#ACTIVE#trade#30/08/2010
+05.01.06.010#Market Access Database#ACTIVE#trade#03/06/2010
+05.01.06.010.010#Market Access DataBase Annual Reports#ACTIVE#trade#08/07/2010
+05.01.06.010.020#Market Access Contracts Procedure#ACTIVE#trade#08/07/2010
+05.01.06.010.030#Market Access DataBase Meetings#ACTIVE#trade#08/07/2010
+05.01.06.010.040#Market Access DataBase Steering Committee#ACTIVE#trade#08/07/2010
+05.01.06.010.050#Market Access Database correspondence#ACTIVE#trade#05/05/2011
+05.01.06.020#Market Access Issues#ACTIVE#trade#03/06/2010
+05.01.06.030#Market Access Strategy#ACTIVE#trade#03/06/2010
+05.01.06.030.010#Market Access Communication / Seminars#ACTIVE#trade#08/07/2010
+05.01.06.030.030#European Union and other organisations - OECD (Organisation for Economic Cooperation and Development)#ACTIVE#trade#08/07/2010
+05.01.06.030.040#Small Medium Entreprise#ACTIVE#trade#08/07/2010
+05.01.06.030.050#Market Access 133 - TPC Committee#ACTIVE#trade#08/07/2010
+05.01.06.030.060#Market Access Advisory Committe#ACTIVE#trade#08/07/2010
+05.01.06.030.080#Market Access Countries#ACTIVE#trade#08/07/2010
+05.01.06.030.080.010#Africa#ACTIVE#trade#08/07/2010
+05.01.06.030.080.020#America Bilateral#ACTIVE#trade#08/07/2010
+05.01.06.030.080.030#Asia#ACTIVE#trade#08/07/2010
+05.01.06.030.080.040#Australia and Pacific#ACTIVE#trade#08/07/2010
+05.01.06.030.080.050#Europe non EU#ACTIVE#trade#08/07/2010
+05.01.06.030.100#Market Access Partnership#ACTIVE#trade#08/07/2010
+05.01.06.030.130#Market Access Reports#ACTIVE#trade#08/07/2010
+05.01.06.030.140#Market Access Sectors (Wines and Spirits)#ACTIVE#trade#08/07/2010
+05.01.06.030.160#Market Access Working Groups#ACTIVE#trade#08/07/2010
+05.01.06.030.170#Market Access Actions#ACTIVE#trade#08/07/2010
+05.01.06.030.190#Market Access trade coordination - Contribution requests#ACTIVE#trade#09/08/2010
+05.01.07.010#Civil Society Dialogue#ACTIVE#trade#03/06/2010
+05.01.07.020#Export Helpdesk#ACTIVE#trade#03/06/2010
+05.01.07.030#Generalised System of Preferences (GSP)#ACTIVE#trade#03/06/2010
+05.01.07.030.030#GSP General issues#ACTIVE#trade#03/06/2010
+05.01.07.030.050#GSP Legislative procedure#ACTIVE#trade#03/06/2010
+05.01.07.030.060#GSP Promotion#ACTIVE#trade#03/06/2010
+05.01.07.030.080#GSP / GSP+ / EBA Countries#ACTIVE#trade#03/06/2010
+05.01.07.030.100#GSP-EBA (Special arrangement for least-developed countries)#ACTIVE#trade#13/09/2011
+05.01.07.030.110#GSP Inquiries#ACTIVE#trade#13/09/2011
+05.01.07.030.120#Commission expert group on the GSP ? E02836#ACTIVE#trade#22/11/2012
+05.04.04.010#Organisation for Economic Cooperation and Development (OECD)#ACTIVE#trade#03/06/2010
+05.04.04.780#Organisation for Economic Cooperation and Development (OECD) bis#ACTIVE#trade#21/02/2008
+09.01.67.010#DG Trade and the management of the External Service#ACTIVE#trade#03/06/2010
+09.01.67.010.010#EUDEL (Steering Committee for Delegations) Consultations & Meetings#ACTIVE#trade#03/06/2010
+09.01.67.010.020#COMDEL (Comit‚ d‚l‚gation) Written Procedures & Meetings#ACTIVE#trade#03/06/2010
+09.01.67.010.030#Development of the External Service#ACTIVE#trade#03/06/2010
+09.01.67.010.030.010#EEAS : European External Action Service - SEAE : Service Europ‚en pour l'Action Ext‚rieure#ACTIVE#trade#03/06/2010
+09.01.67.010.030.020#Inspections Reports#ACTIVE#trade#03/06/2010
+09.01.67.010.030.030#Workload Assessment & Redeployment 2011#ACTIVE#trade#03/06/2010
+09.01.67.010.030.040#Organigrammes#ACTIVE#trade#03/06/2010
+09.01.67.010.030.050#ICV (indemnit‚s conditions vie) - Rest Leave - Housing#ACTIVE#trade#03/06/2010
+09.01.67.010.030.060#Mandates#ACTIVE#trade#22/07/2010
+09.01.67.010.030.070#AMPs#ACTIVE#trade#22/07/2010
+09.01.67.010.030.080#Argumentaires#ACTIVE#trade#22/07/2010
+09.01.67.010.050#General External Service Matters#ACTIVE#trade#03/06/2010
+09.01.67.030#Staff in Delegations#ACTIVE#trade#03/06/2010
+09.01.67.030.010#DELEGATIONS Staff Appraisal and Promotion Exercise#ACTIVE#trade#03/06/2010
+09.01.67.030.020#Rotation Exercises Trade#ACTIVE#trade#23/07/2010
+09.01.67.030.030#Non-rotation posts Trade#ACTIVE#trade#23/07/2010
+09.01.67.030.040#Officials#ACTIVE#trade#23/07/2010
+09.01.67.030.040.010#Trade Officials#ACTIVE#trade#23/07/2010
+09.01.67.030.040.020#Non-Trade Officials#ACTIVE#trade#23/07/2010
+09.01.67.030.050#ENDs#ACTIVE#trade#23/07/2010
+09.01.67.030.060#JEDs#ACTIVE#trade#23/07/2010
+09.01.67.030.070#Contract and Local Agents#ACTIVE#trade#23/07/2010
+09.01.67.030.080#Prˆts de Dotation posts#ACTIVE#trade#23/07/2010
+09.01.67.030.090#Miscellaneous Trade Relations with Delegations#ACTIVE#trade#23/07/2010
+09.01.67.040#Global governance in DG Trade#ACTIVE#trade#26/07/2010
+09.01.67.050#Groupe Interservices des Comp‚tences Externes (GICE)#ACTIVE#trade#07/02/2012
+09.02.67.010#Coordination and dissemination of external and internal information and communication concerning the DG's policies and activities#ACTIVE#trade#03/06/2010
+09.02.67.010.010#Access to documents#ACTIVE#trade#03/06/2010
+09.02.67.010.020#CIS Net - Courrier du Pr‚sident (CDP)#ACTIVE#trade#03/08/2010
+09.02.67.010.030#Communication Strategy & Coordination#ACTIVE#trade#03/06/2010
+09.02.67.010.040#Internal Communications tools and events#ACTIVE#trade#03/06/2010
+09.02.67.010.050#External Communications tools and events#ACTIVE#trade#11/10/2012
+09.02.67.010.060#Information Request Europe direct#ACTIVE#trade#03/06/2010
+09.02.67.010.070#E-greffe#ACTIVE#trade#04/03/2011
+09.03.67.001#Risk Management#ACTIVE#trade#15/07/2010
+09.03.67.010#Activity Based Management (ABM contributions to central services and implementation in the DG)#ACTIVE#trade#03/06/2010
+09.03.67.020#Annual Strategic Planning and Programming (coordination, preparation, monitoring and reporting)#ACTIVE#trade#03/06/2010
+09.03.67.020.010#Commission Work Programme (DG Trade contribution)#ACTIVE#trade#15/07/2010
+09.03.67.020.020#DG TRADE Management Plans#ACTIVE#trade#15/07/2010
+09.03.67.020.030#MFF & Draft Budget (DG TRADE contribution)#ACTIVE#trade#15/07/2010
+09.03.67.020.040#DG TRADE Financing Decision#ACTIVE#trade#15/07/2010
+09.03.67.020.050#Annual Activity report#ACTIVE#trade#15/07/2010
+09.03.67.020.060#Resources Reports#ACTIVE#trade#07/02/2012
+09.03.67.030#Simplification#ACTIVE#trade#26/11/2010
+09.04.67.010#Ex-post evaluations#ACTIVE#trade#03/06/2010
+09.04.67.020#IA - Impact assessments#ACTIVE#trade#03/06/2010
+09.04.67.030#Coordination with management #ACTIVE#trade#03/06/2010
+09.04.67.040#SIA (sustainability impact assessment)#ACTIVE#trade#01/07/2010
+09.04.67.050#CISNET#ACTIVE#trade#15/11/2010
+09.04.67.060#Coordination with EU institutions#ACTIVE#trade#16/03/2011
+09.04.67.070#Coordination with other Commission services#ACTIVE#trade#02/05/2011
+09.04.67.080#Evaluation - Horizontal issues#ACTIVE#trade#15/06/2011
+09.05.67.010#Coordination of relations with Member States and candidate countries in the DG's policy area#ACTIVE#trade#03/06/2010
+09.05.67.020#Coordination of relations with other Institutions in the DG's policy area#ACTIVE#trade#03/06/2010
+09.05.67.020.040#Council#ACTIVE#trade#03/06/2010
+09.05.67.020.040.010#Council and European Council#ACTIVE#trade#03/06/2010
+09.05.67.020.040.020#COREPER#ACTIVE#trade#07/10/2010
+09.05.67.020.040.030#Trade Policy Committee - TPC#ACTIVE#trade#07/10/2010
+09.05.67.020.040.040#ACP Working Group#ACTIVE#trade#20/01/2011
+09.05.67.020.040.050#Africa Working Group#ACTIVE#trade#03/02/2011
+09.05.67.020.050#European Economic and Social Committee#ACTIVE#trade#03/06/2010
+09.05.67.020.050.010#Resolutions/Reports#ACTIVE#trade#03/06/2010
+09.05.67.020.060#Parliament#ACTIVE#trade#03/06/2010
+09.05.67.020.060.010#Parliament general#ACTIVE#trade#03/06/2010
+09.05.67.020.060.020#Reference documents#ACTIVE#trade#03/06/2010
+09.05.67.020.060.030#MEPs (Members of European Parliament) & Plenary#ACTIVE#trade#03/06/2010
+09.05.67.020.060.040#Flash reports#ACTIVE#trade#03/06/2010
+09.05.67.030#Coordination of relations with other organisations, stakeholders, etc., in the DG's policy area#ACTIVE#trade#03/06/2010
+09.05.67.030.010#Relations with the UN organisations and the Bretton Woods institutions#ACTIVE#trade#03/06/2010
+10.02.01.67.010#AIPN (Autorit‚ Investi du Pouvoir de Nomination)#ACTIVE#trade#03/06/2010
+10.02.01.67.020#Career Guidance#ACTIVE#trade#03/06/2010
+10.02.01.67.030#Complaints - Disciplinary Procedures#ACTIVE#trade#03/06/2010
+10.02.01.67.040#End of Career#ACTIVE#trade#03/06/2010
+10.02.01.67.050#Reorganisation / Organigramme#ACTIVE#trade#03/06/2010
+10.02.01.67.060#Management of external staff#ACTIVE#trade#03/06/2010
+10.02.01.67.060.010#Contract follow up and forecast (CONSO)#ACTIVE#trade#14/09/2011
+10.02.01.67.060.020#Stagiaires#ACTIVE#trade#14/09/2011
+10.02.01.67.060.030#Interimaires#ACTIVE#trade#14/09/2011
+10.02.01.67.060.040#Expert National D‚tach‚#ACTIVE#trade#14/09/2011
+10.02.01.67.060.050#Contractual agents#ACTIVE#trade#14/09/2011
+10.02.01.67.070#Management of permanent posts#ACTIVE#trade#03/06/2010
+10.02.01.67.070.010#Attestation - Certification#ACTIVE#trade#03/06/2010
+10.02.01.67.070.020#Evaluation senior management#ACTIVE#trade#03/06/2010
+10.02.01.67.070.030#Handover note#ACTIVE#trade#03/06/2010
+10.02.01.67.070.040#Rotation#ACTIVE#trade#03/06/2010
+10.02.01.67.070.050#Medaille 20 ans#ACTIVE#trade#28/06/2010
+10.02.01.67.070.060#Mutations#ACTIVE#trade#28/06/2010
+10.02.01.67.070.070#Postes#ACTIVE#trade#28/06/2010
+10.02.01.67.070.080#HR general matters#ACTIVE#trade#28/06/2010
+10.02.01.67.070.090#Recrutement#ACTIVE#trade#28/06/2010
+10.02.01.67.070.100#R‚int‚gration#ACTIVE#trade#28/06/2010
+10.02.01.67.070.110#S‚lection encadrement#ACTIVE#trade#28/06/2010
+10.02.01.67.070.120#Postes sensibles#ACTIVE#trade#28/06/2010
+10.02.01.67.070.130#End of career#ACTIVE#trade#23/07/2010
+10.02.01.67.070.150#D‚tachements#ACTIVE#trade#18/03/2011
+10.02.01.67.070.160#D‚tachement syndical#ACTIVE#trade#15/02/2012
+10.02.01.67.080#Management of temporary agents#ACTIVE#trade#03/06/2010
+10.02.01.67.100#Personnel procedures and policy#ACTIVE#trade#03/06/2010
+10.02.01.67.120#Promotions and staff reports#ACTIVE#trade#03/06/2010
+10.02.01.67.130#Trade Staff in the Delegations#ACTIVE#trade#03/06/2010
+10.02.01.67.140#Training#ACTIVE#trade#03/06/2010
+10.02.01.67.140.010#Human Ressources and External Action Service#ACTIVE#trade#23/06/2010
+10.02.01.67.140.010.010#Bucerius Training#ACTIVE#trade#24/06/2010
+10.02.01.67.140.010.020#EMDO External Management Development Opportunities#ACTIVE#trade#24/06/2010
+10.02.01.67.140.010.030#Erasmus for Ms Officials#ACTIVE#trade#24/06/2010
+10.02.01.67.140.010.040#Etats Membres#ACTIVE#trade#24/06/2010
+10.02.01.67.140.010.050#EUR And Security Defence#ACTIVE#trade#24/06/2010
+10.02.01.67.140.010.060#Fellowships#ACTIVE#trade#24/06/2010
+10.02.01.67.140.020#Budget#ACTIVE#trade#23/06/2010
+10.02.01.67.140.030#DG Trade Training Knowledge#ACTIVE#trade#23/06/2010
+10.02.01.67.140.030.010#DG Trade Training Newcomers#ACTIVE#trade#23/06/2010
+10.02.01.67.140.030.010.010#Induction courses#ACTIVE#trade#23/06/2010
+10.02.01.67.140.030.010.020#Mentoring#ACTIVE#trade#24/06/2010
+10.02.01.67.140.030.020#Trade Policy#ACTIVE#trade#23/06/2010
+10.02.01.67.140.030.020.010#Chief Economist#ACTIVE#trade#24/06/2010
+10.02.01.67.140.030.020.020#Lectures#ACTIVE#trade#24/06/2010
+10.02.01.67.140.030.020.030#Legal Competences#ACTIVE#trade#24/06/2010
+10.02.01.67.140.030.020.040#Trade Defence Instrument#ACTIVE#trade#24/06/2010
+10.02.01.67.140.030.030#Non-Trade Knowldge#ACTIVE#trade#24/06/2010
+10.02.01.67.140.030.030.010#ARES#ACTIVE#trade#24/06/2010
+10.02.01.67.140.030.030.020#INFORMATION SESSIONS#ACTIVE#trade#24/06/2010
+10.02.01.67.140.030.030.030#PROGRAMMING AND BUDGET#ACTIVE#trade#24/06/2010
+10.02.01.67.140.030.030.040#WORKING WITH CAB#ACTIVE#trade#24/06/2010
+10.02.01.67.140.040#DG Trade Training Skills#ACTIVE#trade#23/06/2010
+10.02.01.67.140.040.010#Communication#ACTIVE#trade#24/06/2010
+10.02.01.67.140.040.020#Negotiation#ACTIVE#trade#24/06/2010
+10.02.01.67.140.040.030#Organisation Work and Personnal Development#ACTIVE#trade#24/06/2010
+10.02.01.67.140.040.040#Preparing for Management#ACTIVE#trade#24/06/2010
+10.02.01.67.140.040.050#TQM DIRECTORATE H#ACTIVE#trade#24/06/2010
+10.02.01.67.140.050#DG Trade Away Day and Team Building#ACTIVE#trade#23/06/2010
+10.02.01.67.140.060#External Service#ACTIVE#trade#24/06/2010
+10.02.01.67.140.070#Formations Externes#ACTIVE#trade#24/06/2010
+10.02.01.67.140.080#Languages#ACTIVE#trade#24/06/2010
+10.02.01.67.140.090#Other DGs Training#ACTIVE#trade#24/06/2010
+10.02.01.67.140.100#DG Trade Training Strategy#ACTIVE#trade#24/06/2010
+10.02.01.67.140.100.010#Internal control Standards#ACTIVE#trade#24/06/2010
+10.02.01.67.140.100.020#Learning and Development Framework#ACTIVE#trade#24/06/2010
+10.02.01.67.140.100.030#Human Ressources Scorecards#ACTIVE#trade#06/05/2011
+10.02.01.67.140.110#Egalit‚ des Chances#ACTIVE#trade#21/10/2010
+10.02.01.67.140.120#Politique du bien ˆtre#ACTIVE#trade#21/10/2010
+10.02.01.67.140.130#Volontariat#ACTIVE#trade#18/02/2011
+10.02.01.67.150#GECO (Absences and leave)#ACTIVE#trade#23/06/2010
+10.02.01.67.150.010#Medical Service#ACTIVE#trade#23/06/2010
+10.02.01.67.150.020#Cong‚s pour Convenance Personnelle#ACTIVE#trade#23/06/2010
+10.02.01.67.150.030#Teleworking#ACTIVE#trade#23/06/2010
+10.02.01.67.150.040#Invalidity#ACTIVE#trade#23/06/2010
+10.02.01.67.150.050#Termination of Contract Settlement#ACTIVE#trade#23/06/2010
+10.02.01.67.150.070#Carry Over of Leave Days#ACTIVE#trade#23/06/2010
+10.02.01.67.150.080#Holiday Flexibility & Flexitime#ACTIVE#trade#23/06/2010
+10.02.01.67.150.090#Remboursement Travel Cost#ACTIVE#trade#23/06/2010
+10.02.01.67.150.100#Special Leave Certificates / Long term absences#ACTIVE#trade#23/07/2010
+10.02.01.67.150.110#Permanences#ACTIVE#trade#23/07/2010
+10.02.01.67.150.120#Death#ACTIVE#trade#15/02/2012
+10.02.01.67.150.130#Strikes - GrŠves#ACTIVE#trade#30/10/2012
+10.02.01.67.170#Business Continuity#ACTIVE#trade#14/02/2011
+10.02.01.67.180#Data Protection#ACTIVE#trade#02/03/2011
+10.02.01.67.190#Ethics#ACTIVE#trade#02/03/2011
+10.02.02.67.010#Environmental policy (EMAS)#ACTIVE#trade#27/01/2011
+10.02.02.67.020#Arrangements with the SCIC and DG Translation#ACTIVE#trade#03/06/2010
+10.02.02.67.030#Catering, Conferences/Meeting rooms, Parking#ACTIVE#trade#03/06/2010
+10.02.02.67.040#Office planning and removals#ACTIVE#trade#03/06/2010
+10.02.02.67.050#GBI Gestion des Biens Inventori‚s#ACTIVE#trade#03/06/2010
+10.02.02.67.060#Huissiers / Visitors#ACTIVE#trade#03/06/2010
+10.02.02.67.070#Security and Hygiene#ACTIVE#trade#03/06/2010
+10.02.03.67.010#Financial implementation and procedures#ACTIVE#trade#03/06/2010
+10.02.03.67.010.010#Miscellaneous contributions#ACTIVE#trade#07/07/2010
+10.02.03.67.010.030#Reviews#ACTIVE#trade#07/07/2010
+10.02.03.67.010.030.010#Spring review#ACTIVE#trade#07/07/2010
+10.02.03.67.010.030.020#Autumn review#ACTIVE#trade#07/07/2010
+10.02.03.67.010.040#Programming#ACTIVE#trade#07/07/2010
+10.02.03.67.010.050#Financial initiation#ACTIVE#trade#07/07/2010
+10.02.03.67.010.060#Global envelope#ACTIVE#trade#07/07/2010
+10.02.03.67.010.070#Missions#ACTIVE#trade#07/07/2010
+10.02.03.67.010.080#Year end closure#ACTIVE#trade#07/07/2010
+10.02.03.67.010.090#Financial verification#ACTIVE#trade#07/07/2010
+10.02.03.67.010.100#Accounting#ACTIVE#trade#07/07/2010
+10.02.03.67.010.110#Financial Projects#ACTIVE#trade#15/11/2010
+10.02.03.67.010.120#ABAC and accounting#ACTIVE#trade#07/02/2012
+10.02.03.67.010.120.010#Accounting quality#ACTIVE#trade#07/02/2012
+10.02.03.67.010.120.020#DG Budg. Various contributions#ACTIVE#trade#07/02/2012
+10.02.03.67.010.120.030#Validation local system#ACTIVE#trade#07/02/2012
+10.02.03.67.010.120.040#ABAC#ACTIVE#trade#29/11/2012
+10.02.03.67.010.130#Early warning system#ACTIVE#trade#07/02/2012
+10.02.03.67.010.140#List of contractors#ACTIVE#trade#07/02/2012
+10.02.03.67.010.150#FTS#ACTIVE#trade#07/02/2012
+10.02.03.67.010.170#Saisie - Arrˆts#ACTIVE#trade#07/02/2012
+10.02.03.67.010.200#Local profile management#ACTIVE#trade#07/02/2012
+10.02.03.67.010.210#ACA Meetings#ACTIVE#trade#07/02/2012
+10.02.03.67.099#Management of the charters, subdelegations (including cross subdelegations) and deputisations#ACTIVE#trade#22/03/2013
+10.02.04.67.020#IT Unit Management#ACTIVE#trade#03/06/2010
+10.02.04.67.020.010#IT Programming and Planning#ACTIVE#trade#03/06/2010
+10.02.04.67.020.010.010#IT Master Plan#ACTIVE#trade#03/06/2010
+10.02.04.67.020.010.020#IT SPP#ACTIVE#trade#03/06/2010
+10.02.04.67.020.020#IT Budget, Finance & Contracts#ACTIVE#trade#03/06/2010
+10.02.04.67.020.030#IT Staff (Officials, Spontaneous job applications, External service providers)#ACTIVE#trade#15/11/2010
+10.02.04.67.020.050#IT - ICS, Risk Management & Audits#ACTIVE#trade#15/11/2010
+10.02.04.67.020.060#Administration#ACTIVE#trade#07/03/2011
+10.02.04.67.030#IT  - Information Systems#ACTIVE#trade#03/06/2010
+10.02.04.67.030.010#Information Systems - Horizontal#ACTIVE#trade#18/11/2010
+10.02.04.67.030.020#Trade Policy IS#ACTIVE#trade#18/11/2010
+10.02.04.67.030.030#Trade Defence IS#ACTIVE#trade#18/11/2010
+10.02.04.67.040#IT - Web#ACTIVE#trade#03/06/2010
+10.02.04.67.040.010#Intranet#ACTIVE#trade#03/06/2010
+10.02.04.67.040.010.010#Intranet - DG#ACTIVE#trade#18/11/2010
+10.02.04.67.040.010.020#Intranet - Commission#ACTIVE#trade#18/11/2010
+10.02.04.67.040.020#Internet#ACTIVE#trade#03/06/2010
+10.02.04.67.040.020.010#Internet - DG#ACTIVE#trade#18/11/2010
+10.02.04.67.040.020.020#Internet - Commission#ACTIVE#trade#18/11/2010
+10.02.04.67.040.030#Web - Collaboration#ACTIVE#trade#03/06/2010
+10.02.04.67.050#IT Infrastructure#ACTIVE#trade#03/06/2010
+10.02.04.67.050.010#Hardware & Software#ACTIVE#trade#03/06/2010
+10.02.04.67.050.020#IS Hosting Services#ACTIVE#trade#03/06/2010
+10.02.04.67.050.030#Office Automation Services#ACTIVE#trade#03/06/2010
+10.02.04.67.060#IT Support#ACTIVE#trade#03/06/2010
+10.02.04.67.060.010#IT Helpdesk#ACTIVE#trade#03/06/2010
+10.02.04.67.070#IT Security Implementation#ACTIVE#trade#03/06/2010
+10.02.04.67.070.010#Incidents#ACTIVE#trade#03/06/2010
+10.02.04.67.070.020#IT Services Continuity#ACTIVE#trade#03/06/2010
+10.02.04.67.070.030#IT Security Measures and Systems#ACTIVE#trade#23/11/2010
+10.02.04.67.080#IT in the Commission#ACTIVE#trade#03/06/2010
+10.02.04.67.080.010#IT Governance#ACTIVE#trade#03/06/2010
+10.02.04.67.080.020#IT Strategy & e-Commission#ACTIVE#trade#18/11/2010
+10.02.04.67.080.030#EIF, EIS, IAS#ACTIVE#trade#25/01/2011
+10.02.04.67.080.040#Methodologies#ACTIVE#trade#01/03/2011
+10.02.04.67.080.050#Corporate services#ACTIVE#trade#07/03/2011
+10.02.04.67.090#IT - LISO#ACTIVE#trade#03/06/2010
+10.02.04.67.090.010#IT Security Policy#ACTIVE#trade#03/06/2010
+10.02.04.67.090.030#LISO#ACTIVE#trade#31/01/2011
+10.02.05.67.010#Document and records management policy#ACTIVE#trade#03/06/2010
+10.02.05.67.010.010#Conservation and Archives#ACTIVE#trade#11/09/2013
+10.02.05.67.010.015#Document Management#ACTIVE#trade#11/09/2013
+10.02.05.67.010.020#ARES - Administration tools#ACTIVE#trade#10/08/2010
+10.02.05.67.020#Document management information, communication and support#ACTIVE#trade#03/06/2010
+10.02.05.67.030#Filing and management of the Filing plan (NOMCOM)#ACTIVE#trade#03/06/2010
+10.02.05.67.040#Mail management#ACTIVE#trade#03/06/2010
+10.02.06.67.005#Sensitive documents by Unit#ACTIVE#trade#19/01/2011
+10.02.06.67.005.010#Administrative Sensitive Documents by units#ACTIVE#trade#19/01/2011
+10.02.06.67.005.020#Political sensitive documents by unit#ACTIVE#trade#19/01/2011
+10.02.06.67.010#AST-Networking & Best Practices#ACTIVE#trade#03/06/2010
+10.02.06.67.020#Data protection#ACTIVE#trade#03/06/2010
+10.02.06.67.021#Relations with the Cabinet#ACTIVE#trade#30/06/2010
+10.02.06.67.025#Management Meetings#ACTIVE#trade#09/07/2010
+10.02.06.67.030#Directors and Heads of Unit meetings#ACTIVE#trade#03/06/2010
+10.02.06.67.031#DG Trade Anti-Fraud Strategy#ACTIVE#trade#30/06/2010
+10.02.06.67.040#Internal functioning of units/services#ACTIVE#trade#03/06/2010
+10.02.06.67.040.010#Unit's Meetings#ACTIVE#trade#30/06/2010
+10.02.06.67.040.020#Units/Directorates Procedures#ACTIVE#trade#30/06/2010
+10.02.06.67.040.030#Notes of service#ACTIVE#trade#30/06/2010
+10.02.06.67.040.040#Handover files#ACTIVE#trade#30/06/2010
+10.02.06.67.040.050#General correspondence#ACTIVE#trade#30/06/2010
+10.02.06.67.040.060#Logistics in Directorate and units#ACTIVE#trade#30/06/2010
+10.02.06.67.040.070#Contribution of the units to the horizontal tasks#ACTIVE#trade#30/06/2010
+10.02.06.67.040.080#Directorate /Unit  Missions#ACTIVE#trade#09/02/2011
+10.02.06.67.040.090#Units Financial Issues#ACTIVE#trade#12/01/2012
+10.02.06.67.041#Work Programme#ACTIVE#trade#30/06/2010
+10.02.06.67.050#Monitoring of Audit recommendations#ACTIVE#trade#03/06/2010
+10.02.06.67.060#Monitoring of implementation of Internal Control Standards#ACTIVE#trade#03/06/2010
+10.02.06.67.060.010#ICS 1 - Mission#ACTIVE#trade#09/07/2010
+10.02.06.67.060.020#ICS 2 - Ethics and organisation values#ACTIVE#trade#09/07/2010
+10.02.06.67.060.030#ICS 3 - Staff allocation and mobility#ACTIVE#trade#09/07/2010
+10.02.06.67.060.035#ICS 4 - Staff evaluation and development#ACTIVE#trade#12/07/2010
+10.02.06.67.060.040#ICS 5 - Objectives and performance indicators#ACTIVE#trade#09/07/2010
+10.02.06.67.060.050#ICS 6 - Risk management process#ACTIVE#trade#09/07/2010
+10.02.06.67.060.060#ICS 7 - Operational structure#ACTIVE#trade#09/07/2010
+10.02.06.67.060.070#ICS 8 - Processes and procedures#ACTIVE#trade#09/07/2010
+10.02.06.67.060.080#ICS 9 - Management supervision#ACTIVE#trade#09/07/2010
+10.02.06.67.060.090#ICS 10 - Business Continuity#ACTIVE#trade#09/07/2010
+10.02.06.67.060.100#ICS 11 - Document Management#ACTIVE#trade#09/07/2010
+10.02.06.67.060.110#ICS 12 - Informations and Communications#ACTIVE#trade#09/07/2010
+10.02.06.67.060.130#ICS 13 - Accounting and financial reporting#ACTIVE#trade#09/07/2010
+10.02.06.67.060.140#ICS 14 - Evaluation#ACTIVE#trade#09/07/2010
+10.02.06.67.060.150#ICS 15 - Assessment of Internal Control systems#ACTIVE#trade#09/07/2010
+10.02.06.67.060.160#ICS 16 - Internal Audit Capability#ACTIVE#trade#09/07/2010
+10.02.06.67.060.170#ICC network#ACTIVE#trade#05/10/2010
+10.02.06.67.080#Security#ACTIVE#trade#03/06/2010
+10.04.01.67.010#IAC Charter / Manuals / Procedures#ACTIVE#trade#03/06/2010
+10.04.01.67.011#Audit#ACTIVE#trade#29/06/2010
+10.04.01.67.012#Coordination with IAS#ACTIVE#trade#29/06/2010
+10.04.01.67.012.010#IAS Reports#ACTIVE#trade#22/07/2010
+10.04.01.67.012.020#External Audit and Discharge#ACTIVE#trade#28/07/2010
+10.04.01.67.012.030#Overal Opinion#ACTIVE#trade#28/07/2010
+10.04.01.67.012.050#IAS - Other notes#ACTIVE#trade#28/07/2010
+10.04.01.67.012.060#IAS Planning#ACTIVE#trade#28/07/2010
+10.04.01.67.012.070#IAS audits#ACTIVE#trade#28/07/2010
+10.04.01.67.012.080#IAS - Auditnet, AMS, Issue Track, Training#ACTIVE#trade#28/07/2010
+10.04.01.67.012.090#Quality review#ACTIVE#trade#08/10/2010
+10.04.01.67.013#Coordination with management#ACTIVE#trade#29/06/2010
+10.04.01.67.014#Court of Auditors#ACTIVE#trade#29/06/2010
+10.04.01.67.015#OLAF European Anti-Fraud Office#ACTIVE#trade#29/06/2010
+10.04.01.67.016#CISNET#ACTIVE#trade#02/09/2010
+10.04.01.67.017#Audit and Evaluation Internal Management#ACTIVE#trade#14/09/2010
+10.04.01.67.018#Institut of Internal Auditors - IIA#ACTIVE#trade#15/11/2010
+10.04.01.67.019#Coordination with other DGs#ACTIVE#trade#03/02/2011
+15.01.020#Bilateral Trade Issues#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#29/08/2011
+15.01.030#Sectorial and Thematic Issues#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#29/08/2011
+15.01.040#Trade Analysis#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;echo;eeas;trade#29/08/2011
+15.01.050#Trade Policy Instruments#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#29/08/2011
+15.01.060#Bilateral Market Access Strategy#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#29/08/2011
+15.01.070#Market Access Issues bis#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#29/08/2011
+15.01.080#Development, Sustainable Trade and Civil Society#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#29/08/2011
+15.01.090#European Neighbourhood Trade Questions#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#29/08/2011
+15.01.100#Other Regional Processes#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#29/08/2011
+15.01.100.010#Trade with Africa#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.01.100.020#Trade with ACP (Africa-Caribbean-Pacific)#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.01.100.030#Trade with ASEAN (Association of Southeast Asian Nations)#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.01.100.040#Trade with ASEM (Asia-Europe Meeting)#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.01.100.050#Trade with Candidate countries#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.01.100.060#Trade with Latin America#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.03.010#Multilateral Relations#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#29/08/2011
+15.03.010.010#Relations with groups of countries (except ACP)#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.03.010.020#Relations with Member States#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.03.010.030#Relations with third countries (except ENP)#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.03.010.040#Relations with groups of countries (ACP)#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.03.010.050#European Neighbourhood Policy (ENP)#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#12/10/2011
+15.06.002#World Trade Organisation (WTO)#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#29/08/2011
+15.06.002.002#EU/WTO relations#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.003#Negotiations runds#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.003.001#Doha Development Agenda#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.004#Ministerial meetings#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005#General Council#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005.001#General Affairs#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#18/12/2012
+15.06.002.005.002#Committee on Budget, Finance and Administration#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005.003#Working Group on Notifications#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005.004#Working Group on trade and competition policy#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005.005#Accession new members#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005.006#Committee on Trade and Development#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005.007#Committee on Balance of Payments Restrictions (BOP)#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005.008#Derogations#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005.009#Committee on Regional Trade Agreements#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.005.010#Committee on Trade and Environment#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.006#Council for Trade in Goods#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.006.001#General Affairs#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#18/12/2012
+15.06.002.006.002#Committee on Market Access#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.006.003#Committee on Agriculture#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#30/09/2011
+15.06.002.006.004#Committee on Sanitary and Phytosanitary Measures#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.005#Committee on Technical Barriers to Trade#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.006#Committee on Trade-Related Investment Measures#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.007#Committee Anti-Dumping Practices#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.008#Committee on Customs Valuation#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.009#Agreement on Preshipment Inspection#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.010#Committee on Rules of Origin#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.011#Committee on Import Licensing#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.012#Anti-dumping and Subsidies Committees#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.013#Committee on Safeguards#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.014#Working Party on State Trading Enterprises#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.006.015#Working Group on Trade Facilitation#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.007#Council for Trade in Services#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.007.001#General Affairs#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#18/12/2012
+15.06.002.007.002#Working party on GATS rules#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.007.003#Committee on Specific Commitments#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.007.004#Sectors#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.007.005#GATS 2000 (General Agreement on Trade in Services )#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.008#Council for Trade-Related Aspects of Intellectual Property Rights#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.008.001#General Affairs#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#18/12/2012
+15.06.002.008.002#Geographical indications#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.008.003#Access to medicines#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.008.004#Traditional knowledge#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.009#Dispute Settlement Body (DSB)#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.009.001#General Affairs#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#18/12/2012
+15.06.002.009.002#DSB Reviews#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.009.003#Appellate Body#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.009.004#Dispute Settlement#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.010#Trade Policy Review Body#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#03/10/2011
+15.06.002.090#Plurilateral agreements#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;eeas;trade#05/10/2011
+15.06.002.090.001#Committee on Trade in Civil Aircraft#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#05/10/2011
+15.06.002.090.002#Government Procurement#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#05/10/2011
+15.06.002.090.003#Textiles Monitoring Body#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;eeas;trade#05/10/2011
+15.09.001#Definition and Coordination of the Delegation's general Policy Strategy#ACTIVE#del-belarus;del-cuba;del-dominican;del-ethiopia;del-fyrom;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-usa;del-uzbekistan;del-wto;del-yemen;devco;eeas;trade#30/08/2011
+15.09.001.010#General Management#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;devco;eeas;trade#03/10/2011
+15.09.001.020#Definition of the general policy strategy#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;devco;eeas;trade#03/10/2011
+15.09.001.030#Implementation and follow up of the general policy strategy#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;devco;eeas;trade#03/10/2011
+15.09.001.040#Devolution process (Deconcentration)#ACTIVE#del-argentina;del-belarus;del-bolivia;del-brazil;del-chile;del-colombia;del-cuba;del-dominican;del-ecuador;del-ethiopia;del-fyrom;del-guyana;del-india;del-kenya;del-madagascar;del-malawi;del-mozambique;del-nicaragua;del-pakistan;del-paraguay;del-peru;del-russia;del-switzerland;del-thailand;del-tunisia;del-turkey;del-ukraine;del-ungeneva;del-uruguay;del-usa;del-uzbekistan;del-venezuela;del-wto;del-yemen;devco;eeas;trade#03/10/2011

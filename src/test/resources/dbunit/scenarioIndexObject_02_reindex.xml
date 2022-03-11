@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    
+    <object ID="201" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document STREAM NOT INDEX" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="2" />
+    <property ID="2010" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="101" VALUE="my document" NUMERIC_VALUE="1" />
+    <property ID="2011" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="104" VALUE="cmis:document" NUMERIC_VALUE="2" />
+    
+    <stream ID="201" DATA="TXT_FILE_MARK_4"/>
+  		<property ID="2012" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="120" VALUE="7" NUMERIC_VALUE="7" />
+  		<property ID="2013" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="121" VALUE="plain/text" NUMERIC_VALUE="0" />
+  		<property ID="2014" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="122" VALUE="textFileMark4.txt" NUMERIC_VALUE="0" />
+  		<property ID="2015" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="123" VALUE="201" NUMERIC_VALUE="201" />
+  	
+	
+</dataset>

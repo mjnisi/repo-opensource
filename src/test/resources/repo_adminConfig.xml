@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- Configuration for the admin module security. -->
+	<admin>
+		<!-- ADMIN_TYPE allowed values: "local", "cas". This would imply to load applicationContext-admin-${ADMIN_TYPE}.xml context definition-->
+		<local>
+			<!-- Username and password for the admin user in local security. -->
+			<username>admin</username>
+			<password>admin</password>
+		</local>
+		<cas>
+			<!-- CAS server properties in order to allow authentication and proxy ticket generation. See also web.xml -->
+			<serviceUrl>${SERVER_PATH}/repo/j_spring_cas_security_check</serviceUrl>
+			<loginUrl>https://${ECAS}.cc.cec.eu.int:7002/cas/login</loginUrl>	
+			<validateUrl>https://${ECAS}.cc.cec.eu.int:7002/cas</validateUrl>
+			<proxyTargetService>${PROXY_TARGET_SERVICE}</proxyTargetService>
+			<usersByUsernameQuery>
+				select login,login, decode(is_locked,'T','0','1') from users where login = ?
+			</usersByUsernameQuery>
+			<authoritiesByUsernameQuery>
+				select unique U.LOGIN, O.OPERATION_CODE
+				from USERS U, USER_ROLES UR, ROLES R, ROLE_OPERATIONS RO, OPERATIONS O
+				where U.USER_ID = UR.USER_ID
+				and UR.ROLE_ID = R.ROLE_ID
+				and R.ROLE_ID = RO.ROLE_ID
+				and RO.OPERATION_ID = O.OPERATION_ID
+				and U.LOGIN = ?
+				and O.OPERATION_CODE like 'REPO.%'
+			</authoritiesByUsernameQuery>
+			<!-- These two properties are needed only for the Proxy Ticket generation -->
+			<proxyCallbackUrl>${PROXY_CALLBACK_URL_BASE}${PROXY_CALLBACK_URL_SUFFIX}</proxyCallbackUrl>
+			<proxyCallbackUrlSuffix>${PROXY_CALLBACK_URL_SUFFIX}</proxyCallbackUrlSuffix>
+		</cas>
+	</admin>
+</configuration>
+
+

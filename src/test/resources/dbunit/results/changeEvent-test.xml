@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<change_event CMIS_OBJECT_ID="Test Subfolder 1" USERNAME="admin" CHANGE_LOG_TOKEN="test-change-log-token-1" CHANGE_TYPE="created" REPOSITORY_ID="100" />
+	<change_event CMIS_OBJECT_ID="Test Subfolder 2" USERNAME="admin" CHANGE_LOG_TOKEN="test-change-log-token-2" CHANGE_TYPE="deleted" REPOSITORY_ID="100" />
+	<change_event CMIS_OBJECT_ID="Test Document 3" USERNAME="admin" CHANGE_LOG_TOKEN="test-change-log-token-3" CHANGE_TYPE="updated" REPOSITORY_ID="100" />
+	<change_event CMIS_OBJECT_ID="Test Document 2" USERNAME="admin" CHANGE_LOG_TOKEN="test-change-log-token-4" CHANGE_TYPE="security" REPOSITORY_ID="100" />
+	<change_event CMIS_OBJECT_ID="123" USERNAME="admin" CHANGE_LOG_TOKEN="test-change-log-token" CHANGE_TYPE="created" REPOSITORY_ID="100" />	
+</dataset>

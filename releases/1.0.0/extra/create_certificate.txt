@@ -1,0 +1,5 @@
+In order to generate a SSL certificate issued by the NON-PROD ECAS Certificate Authority, go to https://ecast.cc.cec.eu.int:7002/cas/selfCertWeb/ using your ecas test credentials, fill the form and download the .jks file.
+
+If you have renamed the keystore to repo.ks and specified the keystore alais as repo, you can export the certificate from keystore:
+keytool -export -alias repo -keystore repo.ks -file repo.crt
+

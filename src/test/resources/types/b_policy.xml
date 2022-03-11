@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypePolicyDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>B</cmis:id>
+	<cmis:localName>B</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>B</cmis:displayName>
+	<cmis:queryName>B</cmis:queryName>
+	<cmis:description>B policy</cmis:description>
+	<cmis:baseId>cmis:policy</cmis:baseId>
+	<cmis:parentId>cmis:policy</cmis:parentId>
+	<cmis:creatable>true</cmis:creatable>
+	<cmis:fileable>true</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>true</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>true</cmis:controllablePolicy>
+	<cmis:controllableACL>true</cmis:controllableACL>
+</cmis:type>

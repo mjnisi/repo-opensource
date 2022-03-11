@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypeDocumentDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>slk:publishedAttachment</cmis:id>
+	<cmis:localName>slk:publishedAttachment</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>slk:publishedAttachment</cmis:displayName>
+	<cmis:queryName>slk:publishedAttachment</cmis:queryName>
+	<cmis:description>Published Item</cmis:description>
+	<cmis:baseId>cmis:document</cmis:baseId>
+	<cmis:parentId>cmis:document</cmis:parentId>
+	<cmis:creatable>true</cmis:creatable>
+	<cmis:fileable>true</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>true</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>true</cmis:controllablePolicy>
+	<cmis:controllableACL>true</cmis:controllableACL>
+
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:docTitle</cmis:id>
+		<cmis:localName>slk:docTitle</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:docTitle</cmis:displayName>
+		<cmis:queryName>slk:docTitle</cmis:queryName>
+		<cmis:description>Document's title</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:attachId</cmis:id>
+		<cmis:localName>slk:attachId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:attachId</cmis:displayName>
+		<cmis:queryName>slk:attachId</cmis:queryName>
+		<cmis:description>Original item's id</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:docId</cmis:id>
+		<cmis:localName>slk:docId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:docId</cmis:displayName>
+		<cmis:queryName>slk:docId</cmis:queryName>
+		<cmis:description>Original Document's id</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:saveNb</cmis:id>
+		<cmis:localName>slk:saveNb</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:saveNb</cmis:displayName>
+		<cmis:queryName>slk:saveNb</cmis:queryName>
+		<cmis:description>Item's save number</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyDateTimeDefinition>
+		<cmis:id>slk:docDate</cmis:id>
+		<cmis:localName>slk:docDate</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:docDate</cmis:displayName>
+		<cmis:queryName>slk:docDate</cmis:queryName>
+		<cmis:description>Document's date</cmis:description>
+		<cmis:propertyType>datetime</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyDateTimeDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:caseNumberSector</cmis:id>
+		<cmis:localName>slk:caseNumberSector</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:caseNumberSector</cmis:displayName>
+		<cmis:queryName>slk:caseNumberSector</cmis:queryName>
+		<cmis:description>Document's case numbers+sectors</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>false</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:type</cmis:id>
+		<cmis:localName>slk:type</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:type</cmis:displayName>
+		<cmis:queryName>slk:type</cmis:queryName>
+		<cmis:description>Item's docType</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyDateTimeDefinition>
+		<cmis:id>slk:attachDate</cmis:id>
+		<cmis:localName>slk:attachDate</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:attachDate</cmis:displayName>
+		<cmis:queryName>slk:attachDate</cmis:queryName>
+		<cmis:description>Document's date</cmis:description>
+		<cmis:propertyType>datetime</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyDateTimeDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:access</cmis:id>
+		<cmis:localName>slk:access</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:access</cmis:displayName>
+		<cmis:queryName>slk:access</cmis:queryName>
+		<cmis:description>Item's accessibility</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:comments</cmis:id>
+		<cmis:localName>slk:comments</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:comments</cmis:displayName>
+		<cmis:queryName>slk:comments</cmis:queryName>
+		<cmis:description>Document's case numbers</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:docFlow</cmis:id>
+		<cmis:localName>slk:docFlow</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:docFlow</cmis:displayName>
+		<cmis:queryName>slk:docFlow</cmis:queryName>
+		<cmis:description>Item's docType</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:docMirror</cmis:id>
+		<cmis:localName>slk:docMirror</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:docMirror</cmis:displayName>
+		<cmis:queryName>slk:docMirror</cmis:queryName>
+		<cmis:description>Document's ref of mirror</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>false</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:caseNumber</cmis:id>
+		<cmis:localName>slk:caseNumber</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:caseNumber</cmis:displayName>
+		<cmis:queryName>slk:caseNumber</cmis:queryName>
+		<cmis:description>Document's case numbers</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>false</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:docRegNb</cmis:id>
+		<cmis:localName>slk:docRegNb</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:docRegNb</cmis:displayName>
+		<cmis:queryName>slk:docRegNb</cmis:queryName>
+		<cmis:description>Document's registration number</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:party</cmis:id>
+		<cmis:localName>slk:party</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:party</cmis:displayName>
+		<cmis:queryName>slk:party</cmis:queryName>
+		<cmis:description>Parties</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>false</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:fromTo</cmis:id>
+		<cmis:localName>slk:fromTo</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:fromTo</cmis:displayName>
+		<cmis:queryName>slk:fromTo</cmis:queryName>
+		<cmis:description>Parties</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyDateTimeDefinition>
+		<cmis:id>slk:publicationDate</cmis:id>
+		<cmis:localName>slk:publicationDate</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:publicationDate</cmis:displayName>
+		<cmis:queryName>slk:publicationDate</cmis:queryName>
+		<cmis:description>Item's publication date</cmis:description>
+		<cmis:propertyType>datetime</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyDateTimeDefinition>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:numberInCase</cmis:id>
+		<cmis:localName>slk:numberInCase</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:numberInCase</cmis:displayName>
+		<cmis:queryName>slk:numberInCase</cmis:queryName>
+		<cmis:description>Document's number in the case</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>false</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:versionable>true</cmis:versionable>
+	<cmis:contentStreamAllowed>required</cmis:contentStreamAllowed>
+</cmis:type>

@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4907A3F5-9563-7703-CB11-C824B3CAA578" name="stream">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>ED7C6FF8-44DF-3C54-EE3F-CEF94FBB9D2D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="1A03C310-8EAB-1A25-A1A4-40ECF711D094">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>E7504AE8-5C4C-6350-E53A-A95A646DD6FF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>8ECAD1C5-B9B6-7DE9-85DB-EC8FC5F56C00</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="752B4BE4-C4BF-9224-3451-04AC4223249F" referredColumn="8ECAD1C5-B9B6-7DE9-85DB-EC8FC5F56C00"/>
+</associations>
+</Column>
+<Column name="data" id="06AD7562-DB0F-56A6-0E80-DEC734BBA3D3">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>CBDC3572-CD9F-9AE8-3AC9-2DCE2CB73133</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<domain>36F702F0-FD7D-6C91-1752-C3C584164830</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="63786BDE-6F37-007C-CCD7-DAEBDD9E6DB3" name="pk_stream">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>8B1C5465-213C-896A-9F55-A4D9CE271C28</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A03C310-8EAB-1A25-A1A4-40ECF711D094"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F205182-ED77-3CFB-A9A5-48B528A4A2FA" name="fk_stream_object">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A03C310-8EAB-1A25-A1A4-40ECF711D094"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

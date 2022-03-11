@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypeDocumentDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>trade:document</cmis:id>
+	<cmis:localName>trade:document</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>trade:document</cmis:displayName>
+	<cmis:queryName>trade:document</cmis:queryName>
+	<cmis:description>Trade Document</cmis:description>
+	<cmis:baseId>cmis:document</cmis:baseId>
+	<cmis:parentId>cmis:document</cmis:parentId>
+	<cmis:creatable>true</cmis:creatable>
+	<cmis:fileable>true</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>true</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>true</cmis:controllablePolicy>
+	<cmis:controllableACL>true</cmis:controllableACL>
+	<cmis:typeMutability>
+		<cmis:create>true</cmis:create>
+		<cmis:update>true</cmis:update>
+		<cmis:delete>true</cmis:delete>
+	</cmis:typeMutability>
+	<cmis:propertyBooleanDefinition>
+		<cmis:id>cmis:isLatestMajorVersion</cmis:id>
+		<cmis:localName>cmis:isLatestMajorVersion</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:isLatestMajorVersion</cmis:displayName>
+		<cmis:queryName>cmis:isLatestMajorVersion</cmis:queryName>
+		<cmis:description>If the Document object is the Latest Major Version
+			in its Version Series</cmis:description>
+		<cmis:propertyType>boolean</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:isLatestMajorVersion" />
+	</cmis:propertyBooleanDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:contentStreamId</cmis:id>
+		<cmis:localName>cmis:contentStreamId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:contentStreamId</cmis:displayName>
+		<cmis:queryName>cmis:contentStreamId</cmis:queryName>
+		<cmis:description>Id of the stream</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:contentStreamId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyIntegerDefinition>
+		<cmis:id>cmis:contentStreamLength</cmis:id>
+		<cmis:localName>cmis:contentStreamLength</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:contentStreamLength</cmis:displayName>
+		<cmis:queryName>cmis:contentStreamLength</cmis:queryName>
+		<cmis:description>Length of the content stream (in bytes)</cmis:description>
+		<cmis:propertyType>integer</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:contentStreamLength" />
+	</cmis:propertyIntegerDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:versionSeriesCheckedOutBy</cmis:id>
+		<cmis:localName>cmis:versionSeriesCheckedOutBy</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:versionSeriesCheckedOutBy</cmis:displayName>
+		<cmis:queryName>cmis:versionSeriesCheckedOutBy</cmis:queryName>
+		<cmis:description>If IsVersionSeriesCheckedOut then an identifier for
+			the user who created the Private Working Copy</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:versionSeriesCheckedOutBy" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:objectTypeId</cmis:id>
+		<cmis:localName>cmis:objectTypeId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:objectTypeId</cmis:displayName>
+		<cmis:queryName>cmis:objectTypeId</cmis:queryName>
+		<cmis:description>Id of the object's type</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:objectTypeId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:versionSeriesCheckedOutId</cmis:id>
+		<cmis:localName>cmis:versionSeriesCheckedOutId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:versionSeriesCheckedOutId</cmis:displayName>
+		<cmis:queryName>cmis:versionSeriesCheckedOutId</cmis:queryName>
+		<cmis:description>If IsVersionSeriesCheckedOut the Identifier for the
+			Private Working Copy</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:versionSeriesCheckedOutId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:name</cmis:id>
+		<cmis:localName>cmis:name</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:name</cmis:displayName>
+		<cmis:queryName>cmis:name</cmis:queryName>
+		<cmis:description>Name of the Object</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:name" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:contentStreamMimeType</cmis:id>
+		<cmis:localName>cmis:contentStreamMimeType</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:contentStreamMimeType</cmis:displayName>
+		<cmis:queryName>cmis:contentStreamMimeType</cmis:queryName>
+		<cmis:description>MIME type of the Content Stream</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:contentStreamMimeType" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:versionSeriesId</cmis:id>
+		<cmis:localName>cmis:versionSeriesId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:versionSeriesId</cmis:displayName>
+		<cmis:queryName>cmis:versionSeriesId</cmis:queryName>
+		<cmis:description>ID of the Version Series for this Object</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:versionSeriesId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyDateTimeDefinition>
+		<cmis:id>cmis:creationDate</cmis:id>
+		<cmis:localName>cmis:creationDate</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:creationDate</cmis:displayName>
+		<cmis:queryName>cmis:creationDate</cmis:queryName>
+		<cmis:description>DateTime when the object was created</cmis:description>
+		<cmis:propertyType>datetime</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:creationDate" />
+	</cmis:propertyDateTimeDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>trade:author</cmis:id>
+		<cmis:localName>trade:author</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>trade:author</cmis:displayName>
+		<cmis:queryName>trade:author</cmis:queryName>
+		<cmis:description>Author</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="trade:author" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:changeToken</cmis:id>
+		<cmis:localName>cmis:changeToken</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:changeToken</cmis:displayName>
+		<cmis:queryName>cmis:changeToken</cmis:queryName>
+		<cmis:description>Opaque token used for optimistic locking and
+			concurrency checking</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:changeToken" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyBooleanDefinition>
+		<cmis:id>cmis:isLatestVersion</cmis:id>
+		<cmis:localName>cmis:isLatestVersion</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:isLatestVersion</cmis:displayName>
+		<cmis:queryName>cmis:isLatestVersion</cmis:queryName>
+		<cmis:description>If the Document object is the Latest Version in its
+			Version Series</cmis:description>
+		<cmis:propertyType>boolean</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:isLatestVersion" />
+	</cmis:propertyBooleanDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:versionLabel</cmis:id>
+		<cmis:localName>cmis:versionLabel</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:versionLabel</cmis:displayName>
+		<cmis:queryName>cmis:versionLabel</cmis:queryName>
+		<cmis:description>Textual description the position of an individual
+			object with respect to the version series</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:versionLabel" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyBooleanDefinition>
+		<cmis:id>cmis:isVersionSeriesCheckedOut</cmis:id>
+		<cmis:localName>cmis:isVersionSeriesCheckedOut</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:isVersionSeriesCheckedOut</cmis:displayName>
+		<cmis:queryName>cmis:isVersionSeriesCheckedOut</cmis:queryName>
+		<cmis:description>If there currenly exists a Private Working Copy for
+			this Version Series</cmis:description>
+		<cmis:propertyType>boolean</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:isVersionSeriesCheckedOut" />
+	</cmis:propertyBooleanDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:lastModifiedBy</cmis:id>
+		<cmis:localName>cmis:lastModifiedBy</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:lastModifiedBy</cmis:displayName>
+		<cmis:queryName>cmis:lastModifiedBy</cmis:queryName>
+		<cmis:description>User who last modified the object</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:lastModifiedBy" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:createdBy</cmis:id>
+		<cmis:localName>cmis:createdBy</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:createdBy</cmis:displayName>
+		<cmis:queryName>cmis:createdBy</cmis:queryName>
+		<cmis:description>User who created the object</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:createdBy" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:checkinComment</cmis:id>
+		<cmis:localName>cmis:checkinComment</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:checkinComment</cmis:displayName>
+		<cmis:queryName>cmis:checkinComment</cmis:queryName>
+		<cmis:description>Textual comment associated with the given version</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:checkinComment" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:objectId</cmis:id>
+		<cmis:localName>cmis:objectId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:objectId</cmis:displayName>
+		<cmis:queryName>cmis:objectId</cmis:queryName>
+		<cmis:description>Id of the object</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:objectId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyBooleanDefinition>
+		<cmis:id>cmis:isMajorVersion</cmis:id>
+		<cmis:localName>cmis:isMajorVersion</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:isMajorVersion</cmis:displayName>
+		<cmis:queryName>cmis:isMajorVersion</cmis:queryName>
+		<cmis:description>If the Document object is a Major Version in its
+			Version Series</cmis:description>
+		<cmis:propertyType>boolean</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:isMajorVersion" />
+	</cmis:propertyBooleanDefinition>
+	<cmis:propertyBooleanDefinition>
+		<cmis:id>cmis:isImmutable</cmis:id>
+		<cmis:localName>cmis:isImmutable</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:isImmutable</cmis:displayName>
+		<cmis:queryName>cmis:isImmutable</cmis:queryName>
+		<cmis:description>TRUE if the repository MUST throw and error at any
+			attempt to update or delete the object</cmis:description>
+		<cmis:propertyType>boolean</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:isImmutable" />
+	</cmis:propertyBooleanDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:baseTypeId</cmis:id>
+		<cmis:localName>cmis:baseTypeId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:baseTypeId</cmis:displayName>
+		<cmis:queryName>cmis:baseTypeId</cmis:queryName>
+		<cmis:description>Id of the base object-type for the object</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:baseTypeId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyDateTimeDefinition>
+		<cmis:id>cmis:lastModificationDate</cmis:id>
+		<cmis:localName>cmis:lastModificationDate</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:lastModificationDate</cmis:displayName>
+		<cmis:queryName>cmis:lastModificationDate</cmis:queryName>
+		<cmis:description>DateTime when the object was last modified</cmis:description>
+		<cmis:propertyType>datetime</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:lastModificationDate" />
+	</cmis:propertyDateTimeDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:contentStreamFileName</cmis:id>
+		<cmis:localName>cmis:contentStreamFileName</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:contentStreamFileName</cmis:displayName>
+		<cmis:queryName>cmis:contentStreamFileName</cmis:queryName>
+		<cmis:description>File name of the Content Stream</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:contentStreamFileName" />
+	</cmis:propertyStringDefinition>
+	<cmis:versionable>true</cmis:versionable>
+	<cmis:contentStreamAllowed>required</cmis:contentStreamAllowed>
+</cmis:type>

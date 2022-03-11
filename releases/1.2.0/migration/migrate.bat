@@ -1,0 +1,1 @@
+java -classpath ./dependency/*;./repo-tests.jar;./repo.jar;. eu.trade.repo.migration.CMIS11MigrateRunner

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+
+		<title>Policy Service</title>
+
+		<section>
+			<title>Introduction</title>
+
+			<para>Policies were introduced to include custom logic to the server.
+			Following the CMIS specification, the policies are subtypes of <literal>cmis:policy</literal> and
+			should be assigned to objects.</para>
+
+			<para>A policy is composed by two parts, the logic and the <literal>cmis:policy</literal> subtype.</para>
+
+			<para>The logic of the policy is implemented in Java extending the abstract class
+			<classname>eu.trade.repo.policy.AbstractBasePolicy</classname>. This class
+			implements all the CMIS service methods. For example, if you would like to apply some logic
+			before a document is created,
+			you should overwrite the method <literal>createDocument</literal>.</para>
+
+			<para>A <literal>cmis:policy</literal> subtype is needed to link the Java code with a CMIS object, it's
+			also possible to parameterise the policy behaviour with the policy attributes.</para>
+
+			<para>The policies could be triggered by:</para>
+
+			<itemizedlist>
+				<listitem>CMIS service calls</listitem>
+				<listitem>Server events (startup, shutdown, create or delete repository, change configuration settings) *</listitem>
+				<listitem>Another policy *</listitem>
+				<listitem>Time-based *</listitem>
+			</itemizedlist>
+
+			<para>Some examples of policies could be: quota, notification and initialise.</para>
+
+
+			<!-- ********************** NOTES ***********************
+
+			<para>Notes:</para>
+
+			<itemizedlist>
+				<listitem>It will be executed before and after the intercepted method</listitem>
+				<listitem>get the hieararchy to the root to check the object parents policies</listitem>
+				<listitem>check failing policies</listitem>
+				<listitem>check several policies (implement priority?)</listitem>
+
+				<listitem>policy trigger another policy</listitem>
+			</itemizedlist>
+			-->
+
+		</section>
+
+		<section>
+			<title>Policy life-cycle</title>
+
+			<para>On server startup all the policy types are registered in the system. New policy types cannot be
+			added at runtime but policies of the registered types could be created or modified depending on the security settings.</para>
+
+			<para>See below a diagram with the life-cycle of the policies triggered by CMIS services.</para>
+
+			<para>
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="images/policy/policy_lifecycle.png" scalefit="1" width="100%"/>
+						</imageobject>
+					</mediaobject>
+				</screenshot>
+			</para>
+
+			<orderedlist>
+				<listitem>All CMIS service executions are intercepted and each of the input objects involved are collected.
+				There are services without input objects, services with one single object and services with several objects.
+				For example, the Repository services do not have object parameters,
+				Object services like <literal>createDocument</literal> has one (the parent folder), and <literal>moveObject</literal> has three
+				objects involved (the object to move, the source folder and the target folder).
+				</listitem>
+
+				<listitem>All the applied policies are retrieved for all the objects collected in the previous step.
+					Policies are searched for the current object and for all the parents up to the root folder.</listitem>
+
+				<listitem>For each policy found, a policy context is created and the policy logic is triggered.
+				This step could be used for filtering the CMIS service, and exception could be thrown stopping the execution.</listitem>
+
+				<listitem>The CMIS service is executed. The service call could fail and throw and exception, in this case no
+				more policy logic is executed.</listitem>
+
+				<listitem>For each policy found, a new context is created. The return value of the service call is included to allow
+				modifications. This step could be used for post-processing tasks, like logging or notifications.
+				The logic of the policy after the service call must not interrupt the execution.</listitem>
+			</orderedlist>
+
+			<note>
+				<para>The order of the execution of the policies can not be enforced. Avoid implementing policies
+				that require other policies to be executed or any other kind of dependency.
+				Policies logic should be understood as an atomic and independent operation.</para>
+			</note>
+
+			<important>
+				<para>Rule 1: the policy triggered will be executed considering the level of access
+				of the creator of the policy object. For example, if the policy object was created by Alice,
+				the scope of the execution is limited to the objects Alice can manage.</para>
+
+				<para>Rule 2: A user service execution could only be affected by a policy that the user can
+				read. For example, if the policy object is created with the ACE "editors" cmis:read, only
+				the users with the principal Id "editors" will be affected by the policy process.</para>
+			</important>
+
+
+			<section>
+				<title>Policy Context</title>
+
+				<para>As described previously, a Policy Context will be available to the Policy logic
+				with all the information needed for the implementation.</para>
+
+
+				<variablelist>
+
+					<varlistentry>
+						<term>Policy Object</term>
+						<listitem>Object with the policy information. Often used to parameterise
+						the behaviour of the policy with the policy object properties.</listitem>
+					</varlistentry>
+
+
+					<varlistentry>
+						<term>Applied Object</term>
+						<listitem>Object associated with the triggered policy, could be the direct object in the parameters
+						list of the service or an indirect object like one of the parent folders. The current logged
+						user may not have access to this object.</listitem>
+					</varlistentry>
+
+
+
+					<varlistentry>
+						<term>CMIS Session</term>
+						<listitem>A session with the credentials of the policy object creator.
+						Could be used for interacting with the respository.</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term>Policy State</term>
+						<listitem>PRE or POST, used to differenciate if the logic must be
+						executed before and/or after the service call.</listitem>
+					</varlistentry>
+
+
+					<varlistentry>
+						<term>Return Value</term>
+						<listitem>A reference to the return value of the service call.
+						Only available in the POST step. Could be used to modify the response to the CMIS client.</listitem>
+					</varlistentry>
+
+				</variablelist>
+
+
+			</section>
+
+			<section>
+				<title>Example</title>
+
+
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="images/policy/policy_tree.png" scalefit="1"/>
+						</imageobject>
+					</mediaobject>
+				</screenshot>
+			</section>
+
+
+			<para>In the previous diagram, the circles represents folders, and the squares documents.
+			The lines between these shapes indicates the parent/children relationship.</para>
+
+			<para>A CMIS client starts the service call of the method <literal>createDocument</literal>, the document to
+			be created is D1. In the parameters of the call, F3 is indicated as parent folder.</para>
+
+			<para>The first step in the policies life-cycle is to collect the parameters of CMIS
+			service calls that references Objects, in this example the only object involved is F3.</para>
+
+			<screen>Objects = { F3 }</screen>
+
+			<para>The next step is to find the policies associated to the previous set of Objects.
+			The policy associated with the object F3 is the Notification policy P3.
+			All the ancestors of F3 are consireded for searching policies. In the example the folders
+			F2 and F1 has policies associated, so the policies to be triggered on the creation of the
+			document D1 are P1, P2 and P3.</para>
+
+			<screen>Policies = { P1, P2, P3 }</screen>
+
+			<para>A context is created for each of the policies:</para>
+
+			<screen>context P1 = {
+ Policy Object: P1
+ Applied Object: F1
+ Policy State: PRE
+}
+
+context P2 = {
+ Policy Object: P2
+ Applied Object: F2
+ Policy State: PRE
+}
+
+context P3 = {
+ Policy Object: P3
+ Applied Object: F3
+ Policy State: PRE
+}</screen>
+			<para>All policies are triggered with the correspondent context. The order of the
+			execution is managed by the server. Policies logic must not relay on an specific order.</para>
+
+			<para>As the quota policies are applying a filter to the CMIS service, the logic
+			will be triggered before the service, with the PRE state.
+			The notification policy logic, on the contrary, is going to be executed after the service because
+			it will notify the new document created. It is the responsability of the
+			policy logic developer to use the values of the context to encode the proper behaviour.</para>
+
+			<para>If during the creation of document D1 one of the quota policies contraints is violated, for example the
+			total space of the folder F2 is bigger than 10Mb or the total space of the folder F1 is bigger than 100Mb,
+			the policy logic will throw an Exception and the execution will be stopped.</para>
+
+			<para>If all the policies finish successfully the CMIS service is executed, the <literal>createDocument</literal> method is
+			triggered and the document D1 is created.</para>
+
+			<para>The return value of <literal>createDocument</literal> (the Id of the new object created), is added to all the contexts.
+			The state is also updated to POST and then all the policies are executed again.</para>
+
+			<screen>context P1 = {
+ Policy Object: P1
+ Applied Object: F1
+ Policy State: POST
+ Return Value: D1
+}
+
+context P2 = {
+ Policy Object: P2
+ Applied Object: F2
+ Policy State: POST
+ Return Value: D1
+}
+
+context P3 = {
+ Policy Object: P3
+ Applied Object: F3
+ Policy State: POST
+ Return Value: D1
+}</screen>
+
+			<para>This time, the quota policies are not adding any extra logic in the POST state,
+			but the notification policy will use the return value of the service to compose the message to be sent.</para>
+
+			<!--
+			<para>The policy context contains the following information:
+				execution state [BEFORE|AFTER],
+				[DIRECT|INDIRECT]?,
+				return value of service,
+				policy object,
+				triggered object, (if indirect)
+
+				CMIS session
+			</para>
+			 -->
+		</section>
+
+		<section>
+			<title>How to implement a new policy</title>
+			<para><emphasis>To be updated in future release.</emphasis></para>
+		</section>
+
+		<section>
+			<title>Available policies</title>
+			<para><emphasis>To be updated in future release.</emphasis></para>
+		</section>
+
+
+</chapter>
+

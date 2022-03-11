@@ -1,0 +1,234 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="repository" directorySegmentName="seg_0" id="370C0A03-F7F1-1120-B036-27A95B5F833E">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_acl_propagation" id="04A7FA27-F9E8-E36D-340A-D74AFBE394B9">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_renditions" id="1093C56B-21C0-2B5E-5D37-A2024BA16741">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;none&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_get_descendants" id="18B2B75C-43AC-BBEA-B316-FCDB022557CE">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;F&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_join" id="27160A21-DA36-6468-01E6-9F5EDB3E1BB6">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;none&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_query" id="2FF40925-1BA1-51BE-32ED-50A03E377212">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;none&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="cmis_id" id="36D87D75-095C-C514-0F14-7A031CA1708C">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_pwc_updatable" id="39717EBA-100D-A00F-A92C-32E660F83B0C">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;F&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="authorisation_handler" id="50BDA7DB-8372-C91A-A817-33FFBF618D49">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;builtin&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="id" id="58A38DE6-FAE5-364E-0796-6332A69CC252">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="security_type" id="58AEC8BB-5F5F-2DCB-0175-5D5DCA1EB645">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;SIMPLE&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_pwc_searchable" id="5D43843A-4221-0110-360A-9E2512386DBC">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;F&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="name" id="62637EFE-5811-A9BC-4A96-B5397383BA64">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_version_specific_filing" id="65DE8172-3D41-7170-99F9-AF245D6A6B26">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;F&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="authentication_handler" id="A2562205-611F-1537-22D1-D24B758757C8">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;builtin&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_unfiling" id="AD3928E2-36B2-A336-DBEF-5A470C93F094">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;F&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_acl" id="CA425131-45FB-948A-A8C0-890E18DCBDA2">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;none&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="description" id="CDA6D36C-2D1B-3BF4-886E-CE3D631FF099">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_content_stream_updatability" id="D72B5552-2D44-7D53-A9A9-CC3D53FA41A1">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;none&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_all_versions_searchable" id="EBB218DD-7A21-203E-6DF9-8B95301A0B99">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;F&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_changes" id="EC1C6C12-165A-D910-72BF-54D44FAE9FD7">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;none&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_multifiling" id="F7618546-17DC-8CEE-6089-928204F5FDA1">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;F&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="c_get_folder_tree" id="FDFE2317-01D5-B4C7-91F8-58F8C146AF6B">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>&apos;F&apos;</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_repository" id="D72C818C-8E54-9A89-C8D4-812108033718">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_acl_propagation" id="05258920-8255-C858-6603-26E80D9B5CA3">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_changes" id="0DCA0B3B-47E5-9022-F66F-ACF82B9D7D11">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_pwc_searchable" id="18B321D7-2C2A-1F6D-A235-24083AE0410A">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_pwc_updatable" id="2EBEB7E6-79F2-35B2-6A6D-227E152EFB77">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_security_type" id="34509D0C-3EE9-475B-E587-072CB930ED3F">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_content_stream_updatability" id="4973153E-0FBB-2E07-A089-971EF2C85C2F">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_multifiling" id="576D8837-0B78-E5A8-FBE0-6D035C349CF8">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_query" id="59FEBA10-BA7E-3A4C-B7B2-EF731324F59E">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_all_versions_searchable" id="61DB218C-275E-6AA1-A2E5-B1E5721E492D">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_unfiling" id="657BB935-EFF0-BF86-10D1-F49CD1A754D4">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_join" id="99B0B415-3AC3-253B-8265-E20644D8E95F">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_renditions" id="AA6CDB8A-2C2A-E60C-16AF-4222307A2EBE">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_acl" id="C19F7BF7-122D-C1D2-25F1-9DD3C58FBC04">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_version_specific_filing" id="D40B00C9-23CD-BF42-0002-25D3AF4CF093">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_get_descendants" id="D936B5B6-8066-AEF2-14EF-AC1FB33B836A">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableCheckConstraintOraclev10g" name="ck_get_folder_tree" id="DEEC8DCC-F476-2405-9472-F10C40543FB2">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="uq_repository" id="60B26839-8895-DE9E-EE34-13EF33DBA733">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

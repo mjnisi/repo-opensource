@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd         
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd         
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd   
+       http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd      
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd        
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+
+	<!-- Index -->
+
+	<!-- A. PROPERTIES: -->
+
+	<!-- Class to access the index properties -->
+	<bean id="indexConfigHolder" class="eu.trade.repo.index.impl.IndexConfigHolder" />
+
+	<!-- A.1. INDEX GENERAL PROPERTIES: -->
+	<bean id="indexConfig" factory-bean="combinedConfig"
+		factory-method="getConfiguration">
+		<constructor-arg type="java.lang.String" value="repo/indexConfig" />
+	</bean>
+	<bean id="indexProperties" class="org.apache.commons.configuration.ConfigurationConverter"
+		factory-method="getProperties" lazy-init="false">
+		<constructor-arg>
+			<ref bean="indexConfig" />
+		</constructor-arg>
+	</bean>
+	<bean id="indexPropertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+		lazy-init="false">
+		<property name="propertiesArray">
+			<list>
+				<ref bean="indexProperties" />
+			</list>
+		</property>
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+	</bean>
+
+	<!-- A.2. INDEX INTERNAL DATABASE PROPERTIES: -->
+	<bean id="indexDbConfig" factory-bean="combinedConfig"
+		factory-method="getConfiguration">
+		<constructor-arg type="java.lang.String" value="repo/indexDbConfig" />
+	</bean>
+	<bean id="indexDbProperties" class="org.apache.commons.configuration.ConfigurationConverter"
+		factory-method="getProperties" lazy-init="false">
+		<constructor-arg>
+			<ref bean="indexDbConfig" />
+		</constructor-arg>
+	</bean>
+
+
+	<!-- B. ON DEMAND INDEX -->
+	
+	
+	<bean id="repoTriggerIndexAspect" class="eu.trade.repo.index.triggers.handlers.TriggerIndexAspect" />
+	<bean id="indexStreamChangeListener" class="eu.trade.repo.index.triggers.handlers.StreamChangeListener" />
+
+	<bean id="repoIndexTriggersDelegate" class="eu.trade.repo.index.triggers.IndexTriggersDelegate" />
+	<bean id="repoApplicationContextProvider" class="eu.trade.repo.index.triggers.handlers.ApplicationContextProvider" lazy-init="false"/>
+
+	
+	<!-- index principal class / entry point to manage thread pool of index 
+		tasks -->
+	<bean id="index" class="eu.trade.repo.index.impl.IndexImpl" />
+
+	<!-- index task pool -->
+	<bean id="indexExecutorSelector" class="eu.trade.repo.index.impl.IndexExecutorSelectorImpl" />
+
+	<bean id="indexTaskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="${index.pool.smallTasks.corePoolSize}" />
+		<property name="maxPoolSize" value="${index.pool.smallTasks.maxPoolSize}" />
+		<property name="queueCapacity" value="${index.pool.smallTasks.queueCapacity}" />
+		<property name="threadPriority" value="${index.pool.smallTasks.threadPriority}" />
+		<qualifier value="taskExecutorSmallTasks" />
+	</bean>
+	<bean id="indexTaskExecutorLarge"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="${index.pool.largeTasks.corePoolSize}" />
+		<property name="maxPoolSize" value="${index.pool.largeTasks.maxPoolSize}" />
+		<property name="queueCapacity" value="${index.pool.largeTasks.queueCapacity}" />
+		<property name="threadPriority" value="${index.pool.largeTasks.threadPriority}" />
+		<qualifier value="taskExecutorLargeTasks" />
+	</bean>
+	<bean id="indexTaskExecutorMetadata"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="${index.pool.metadataTasks.corePoolSize}" />
+		<property name="maxPoolSize" value="${index.pool.metadataTasks.maxPoolSize}" />
+		<property name="queueCapacity" value="${index.pool.metadataTasks.queueCapacity}" />
+		<property name="threadPriority" value="${index.pool.metadataTasks.threadPriority}" />
+		<qualifier value="taskExecutorMetadataTasks" />
+	</bean>
+
+	<!-- index task -->
+	<bean id="indexTask" class="eu.trade.repo.index.impl.IndexTaskImpl"
+		scope="prototype" />
+	<bean id="indexTaskServiceFactory"
+		class="org.springframework.beans.factory.config.ServiceLocatorFactoryBean">
+		<property name="serviceLocatorInterface" value="eu.trade.repo.index.IndexTaskServiceFactory" />
+	</bean>
+	<bean id="contentIndexOperator" class="eu.trade.repo.index.impl.ops.ContentIndexOperator" />
+	<bean id="metadataIndexOperator" class="eu.trade.repo.index.impl.ops.MetadataIndexOperator" />
+	<bean id="operatorFactory" class="eu.trade.repo.index.impl.ops.IndexOperatorFactoryImpl">
+		<constructor-arg>
+			<list>
+				<ref bean="contentIndexOperator" />
+				<ref bean="metadataIndexOperator" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<!-- Delegates -->
+	<bean id="jdbcDelegate" class="eu.trade.repo.delegates.JDBCLobDelegate" />
+	<bean id="dbTransientDelegate" class="eu.trade.repo.delegates.JDBCDBTransientDelegate" />
+	<bean id="indexTransientContentDelegate"
+		class="eu.trade.repo.delegates.JDBCIndexTransientContentDelegate">
+		<lookup-method name="createFullTextAnalyzer" bean="fullTextAnalyzer" />
+	</bean>
+	<bean id="indexTransientMetadataDelegate"
+		class="eu.trade.repo.delegates.JDBCIndexTransientMetadataDelegate">
+		<lookup-method name="createFullTextAnalyzer" bean="fullTextAnalyzer" />
+	</bean>
+	<bean id="indexDelegate" class="eu.trade.repo.delegates.JDBCIndexDelegate" />
+	<!-- bean id="indexCounterDelegate" class="eu.trade.repo.delegates.JDBCIndexCounterDelegate" /-->
+	<bean id="indexObjectDelegate" class="eu.trade.repo.delegates.JPAIndexDelegate" />
+
+	<bean id="indexDelegateHelper" class="eu.trade.repo.delegates.JDBCIndexDelegateHelper" />
+	<!-- bean id="indexCounterDelegateHelper" class="eu.trade.repo.delegates.JDBCIndexCounterDelegateHelper" /-->
+
+	<!-- index utility class that holds the maps for thread synchronization -->
+	<bean id="indexSynchronizer" class="eu.trade.repo.index.impl.IndexSynchronizerImpl"
+		lazy-init="false" />
+
+	<!-- synchronization with transaction commit -->
+	<bean id="indexTransactionSynchronization"
+		class="eu.trade.repo.index.txsync.IndexTransactionSynchronization"
+		scope="prototype" />
+	<bean id="indexTransactionSynchronizationServiceFactory"
+		class="org.springframework.beans.factory.config.ServiceLocatorFactoryBean">
+		<property name="serviceLocatorInterface"
+			value="eu.trade.repo.index.txsync.IndexTransactionSynchronizationFactory" />
+	</bean>
+
+
+
+
+	<!-- C. BACKGROUND INDEX -->
+
+	<!-- implementation of background index services -->
+	<bean id="compactTransientDBBackgroundService" class="eu.trade.repo.index.jobs.CompactTransientDBJob" />
+	<bean id="cleanOrphanIndexesBackgroundService" class="eu.trade.repo.index.jobs.CleanOrphanIndexesJob" />
+	<bean id="retryContentIndexesBackgroundService" class="eu.trade.repo.index.jobs.RetryContentIndexesJob" />
+	<bean id="retryMetadataIndexesBackgroundService" class="eu.trade.repo.index.jobs.RetryMetadataIndexesJob" />
+
+	<bean id="jobIndexExecutorsHelper" class="eu.trade.repo.index.jobs.JobIndexExecutorsHelper" />
+
+	<!-- Job clean orphan indexes -->
+	<bean id="indexCleanOrphanIndexesJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="concurrent" value="false" />
+		<property name="targetObject" ref="cleanOrphanIndexesBackgroundService" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+
+	<!-- Jobs complete unfinished indexes -->
+	<bean id="indexRetryContentIndexesInErrorIndexesJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="concurrent" value="false" />
+		<property name="targetObject" ref="retryContentIndexesBackgroundService" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+	<bean id="indexRetryMetadataIndexesInErrorIndexesJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="concurrent" value="false" />
+		<property name="targetObject" ref="retryMetadataIndexesBackgroundService" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+
+	<!-- Job compact database -->
+	<bean id="indexCompactTransientDatabaseJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="concurrent" value="false" />
+		<property name="targetObject" ref="compactTransientDBBackgroundService" />
+		<property name="targetMethod" value="execute" />
+	</bean>
+
+	<!-- Cron Triggers -->
+	<bean id="indexCleanOrphanIndexesTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="indexCleanOrphanIndexesJobDetail" />
+		<property name="cronExpression"
+			value="${index.background.cleanOrphans.cronExpression}" />
+	</bean>
+	<bean id="indexRetryContentIndexesInErrorIndexesTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail"
+			ref="indexRetryContentIndexesInErrorIndexesJobDetail" />
+		<property name="cronExpression"
+			value="${index.background.retryInErrorIndexes.cronExpression.content}" />
+	</bean>
+	<bean id="indexRetryMetadataIndexesInErrorIndexesTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail"
+			ref="indexRetryMetadataIndexesInErrorIndexesJobDetail" />
+		<property name="cronExpression"
+			value="${index.background.retryInErrorIndexes.cronExpression.metadata}" />
+	</bean>
+	<bean id="indexCompactTransientDatabaseTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="indexCompactTransientDatabaseJobDetail" />
+		<property name="cronExpression"
+			value="${index.background.compactTransientDatabase.cronExpression}" />
+	</bean>
+
+	<bean class="eu.trade.repo.index.jobs.ManagedSchedulerFactoryBean">
+		<property name="waitForJobsToCompleteOnShutdown" value="false" />
+		<property name="quartzProperties">
+			<props>
+				<prop key="org.quartz.threadPool.class">org.quartz.simpl.SimpleThreadPool</prop>
+				<prop key="org.quartz.threadPool.threadCount">1</prop>
+				<prop key="org.quartz.threadPool.threadPriority">4</prop>
+			</props>
+		</property>
+		<property name="jobDetails">
+			<list>
+				<ref bean="indexCleanOrphanIndexesJobDetail" />
+				<ref bean="indexRetryContentIndexesInErrorIndexesJobDetail" />
+				<ref bean="indexRetryMetadataIndexesInErrorIndexesJobDetail" />
+				<ref bean="indexCompactTransientDatabaseJobDetail" />
+			</list>
+		</property>
+		<property name="triggers">
+			<list>
+				<ref bean="indexCleanOrphanIndexesTrigger" />
+				<ref bean="indexRetryContentIndexesInErrorIndexesTrigger" />
+				<ref bean="indexRetryMetadataIndexesInErrorIndexesTrigger" />
+				<ref bean="indexCompactTransientDatabaseTrigger" />
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- D. CONTENT EXTRACTION -->
+
+	<!-- Content extractor -->
+	<bean id="contentExtractor" class="eu.trade.repo.index.extractor.ContentExtractorImpl" />
+	<bean id="tika" class="eu.trade.repo.index.extractor.tikaext.Repo" />
+
+	<!-- StreamDAO: blobs -->
+	<bean id="lobHandler" class="eu.trade.repo.delegates.LobHandlerImpl" />
+
+
+	<!-- H2 internal database initialization -->
+	<!-- bean id="org.h2.tools.Server-WebServer" class="org.h2.tools.Server"
+		factory-method="createTcpServer" depends-on="dataSourceTransient"
+		init-method="start" destroy-method="stop" lazy-init="false">
+		<constructor-arg value="-tcp,-tcpAllowOthers,-tcpPort,8043" />
+	</bean -->
+	
+	<!-- bean id="org.h2.tools.Server-TcpServer" class="org.h2.tools.Server"
+                                             factory-method="createTcpServer"
+                                             depends-on="dataSource"
+                                             init-method="start"
+                                             destroy-method="stop"
+                                             lazy-init="false">
+        <constructor-arg value="-tcp,-tcpAllowOthers,-tcpPort,8045" />
+    </bean -->
+
+	<bean id="dataSourceInitializer" class="eu.trade.repo.util.spring.ExtDataSourceInitializer"
+		depends-on="dataSourceTransient">
+		<property name="properties" ref="indexDbProperties" />
+		<property name="dataSource" ref="dataSourceTransient" />
+		<property name="databasePopulator" ref="resourceDatabasePopulator" />
+	</bean>
+
+	<bean id="resourceDatabasePopulator"
+		class="org.springframework.jdbc.datasource.init.ResourceDatabasePopulator">
+		<property name="sqlScriptEncoding" value="UTF-8" />
+		<property name="ignoreFailedDrops" value="true" />
+		<property name="scripts">
+			<array>
+				<value>classpath:h2_index_transient.sql</value>
+			</array>
+		</property>
+	</bean>
+
+
+
+
+	<!-- Jdbc -->
+
+	<!-- Jdbc: Content extractor -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+		<property name="fetchSize" value="${index.fetchSize.content}" />
+	</bean>
+
+	<!-- Jdbc: Index permanent -->
+<!-- 	<bean id="jdbcTxManagerIndex" -->
+<!-- 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
+<!-- 		<property name="dataSource" ref="dataSource" /> -->
+<!-- 		<qualifier value="jdbcTxManagerIndex" /> -->
+<!-- 	</bean> -->
+	<bean id="jdbcTemplateIndex"
+		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg>
+			<bean class="org.springframework.jdbc.core.JdbcTemplate">
+				<property name="dataSource" ref="dataSource" />
+				<property name="fetchSize" value="${index.fetchSize.permanentIndex}" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<!-- Jdbc: Index transient -->
+	<bean id="jdbcTxManagerTransient"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSourceTransient" />
+		<qualifier value="jdbcTxManagerTransient" />
+	</bean>
+	<bean id="jdbcTemplateTransient"
+		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg>
+			<bean class="org.springframework.jdbc.core.JdbcTemplate">
+				<property name="dataSource" ref="dataSourceTransient" />
+				<property name="fetchSize" value="${index.fetchSize.transient}" />
+			</bean>
+		</constructor-arg>
+	</bean>
+	<bean id="dataSourceTransient" class="org.apache.commons.dbcp.BasicDataSourceFactory"
+		factory-method="createDataSource" destroy-method="close">
+		<constructor-arg type="java.util.Properties" ref="indexDbProperties" />
+	</bean>
+
+
+	<!-- Logger Aspect -->
+	<bean id="logAspect" class="eu.trade.repo.index.impl.ReverseIndexLogger" />
+	<aop:config>
+		<aop:aspect id="aspectLoggging" ref="logAspect">
+			<aop:pointcut id="pointCutServices"
+				expression="execution( protected * eu.trade.repo.index.IndexPartOperator.*(..) )" />
+			<aop:around method="logTimeMethod" pointcut-ref="pointCutServices" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>

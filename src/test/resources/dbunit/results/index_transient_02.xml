@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+  <index_transient OBJECT_ID="105" POSITION="1" WORD="one" STEP="1" />
+  <index_transient OBJECT_ID="105" POSITION="2" WORD="two" STEP="1" />
+  <index_transient OBJECT_ID="105" POSITION="3" WORD="three" STEP="1" />
+  <index_transient OBJECT_ID="105" POSITION="4" WORD="four" STEP="1" />
+  <index_transient OBJECT_ID="105" POSITION="5" WORD="one" STEP="1" />
+  <!-- This should not be present because the word limit in the test: 5
+     <index_transient OBJECT_ID="105" POSITION="6" WORD="six" STEP="1" /> -->
+ 
+</dataset>

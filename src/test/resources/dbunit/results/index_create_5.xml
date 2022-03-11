@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<object ID="205" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document in error" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="1" INDEX_TRIES_METADATA="0"/>
+	<property OBJECT_ID="205" OBJECT_TYPE_PROPERTY_ID="108" VALUE="1970-01-01T00:00:00.000Z" NUMERIC_VALUE="0" />
+
+  <index_word REPOSITORY_ID="100" WORD="author"/>
+  <index_word REPOSITORY_ID="100" WORD="document"/>
+  <index_word REPOSITORY_ID="100" WORD="name"/>
+    
+  <index_word_object object_id="205" property_id="33" object_type_property_id="105" FREQUENCY="1" sqrt_frequency="1" />
+  <index_word_object object_id="205" property_id="31" object_type_property_id="101" FREQUENCY="1" sqrt_frequency="1" />
+  <index_word_object object_id="205" property_id="31" object_type_property_id="101" FREQUENCY="1" sqrt_frequency="1" />
+  <index_word_object object_id="205" property_id="33" object_type_property_id="105" FREQUENCY="1" sqrt_frequency="1" />
+   
+  <index_word_position position="1" STEP="1" />
+  <index_word_position position="2" STEP="1" />
+  <index_word_position position="1" STEP="1" />
+  <index_word_position position="2" STEP="1" />
+  
+  
+</dataset>
+

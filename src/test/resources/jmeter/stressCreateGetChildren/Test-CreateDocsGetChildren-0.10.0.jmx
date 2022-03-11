@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9 r1437961">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">2</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">5</stringProp>
+        <longProp name="ThreadGroup.start_time">1373014200000</longProp>
+        <longProp name="ThreadGroup.end_time">1373016600000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">serverdev</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="TODAY" elementType="Argument">
+              <stringProp name="Argument.name">TODAY</stringProp>
+              <stringProp name="Argument.value">${__time(yyyy-MM-dd)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="USER" elementType="Argument">
+              <stringProp name="Argument.name">USER</stringProp>
+              <stringProp name="Argument.value">test</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="PASSWORD" elementType="Argument">
+              <stringProp name="Argument.name">PASSWORD</stringProp>
+              <stringProp name="Argument.value">test</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TEST_REPO_ID" elementType="Argument">
+              <stringProp name="Argument.name">TEST_REPO_ID</stringProp>
+              <stringProp name="Argument.value">tron_dev</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TEST_FOLDER" elementType="Argument">
+              <stringProp name="Argument.name">TEST_FOLDER</stringProp>
+              <stringProp name="Argument.value">jmeter_getChildren</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TEST_DOC" elementType="Argument">
+              <stringProp name="Argument.name">TEST_DOC</stringProp>
+              <stringProp name="Argument.value">jmeter_doc_1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="CONTEXT" elementType="Argument">
+              <stringProp name="Argument.name">CONTEXT</stringProp>
+              <stringProp name="Argument.value">repo</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LOOP_COUNT" elementType="Argument">
+              <stringProp name="Argument.name">LOOP_COUNT</stringProp>
+              <stringProp name="Argument.value">100</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="Content-type" elementType="Header">
+              <stringProp name="Header.name">Content-type</stringProp>
+              <stringProp name="Header.value">multipart/related;start=&quot;&lt;rootpart*PART@example.jaxws.sun.com&gt;&quot;;type=&quot;application/xop+xml&quot;;boundary=&quot;uuid:PART&quot;;start-info=&quot;text/xml&quot;</stringProp>
+            </elementProp>
+            <elementProp name="Accept" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">text/xml, multipart/related</stringProp>
+            </elementProp>
+            <elementProp name="User-Agent" elementType="Header">
+              <stringProp name="Header.name">User-Agent</stringProp>
+              <stringProp name="Header.value">JAX-WS RI 2.1.7-b01-</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Creates a main folder per thread" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getRepositoryInfo" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;ns2:getRepositoryInfo xmlns=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot; xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot;&gt;&#xd;
+		&lt;ns2:repositoryId&gt;${TEST_REPO_ID}&lt;/ns2:repositoryId&gt;&#xd;
+	&lt;/ns2:getRepositoryInfo&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/${CONTEXT}/services/RepositoryService</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="1934237602">&lt;.*getRepositoryInfoResponse.*&gt;&lt;.*repositoryInfo&gt;&lt;.*repositoryId&gt;${TEST_REPO_ID}&lt;/.*repositoryId&gt;.*&lt;.*rootFolderId&gt;.+&lt;/.*rootFolderId&gt;.*&lt;/.*repositoryInfo&gt;&lt;/.*getRepositoryInfoResponse&gt;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">ROOT_ID</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;.*getRepositoryInfoResponse.*&gt;&lt;.*repositoryInfo&gt;&lt;.*repositoryId&gt;${TEST_REPO_ID}&lt;/.*repositoryId&gt;.*&lt;.*rootFolderId&gt;(.+)&lt;/.*rootFolderId&gt;.*&lt;/.*repositoryInfo&gt;&lt;/.*getRepositoryInfoResponse&gt;</stringProp>
+              <stringProp name="RegexExtractor.template"></stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getObjectByPath" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;ns2:getObjectByPath xmlns=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot;&#xd;
+		xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot;&gt;&#xd;
+		&lt;ns2:repositoryId&gt;${TEST_REPO_ID}&lt;/ns2:repositoryId&gt;&#xd;
+		&lt;ns2:path&gt;/massive&lt;/ns2:path&gt;&#xd;
+		&lt;ns2:includeAllowableActions&gt;false&lt;/ns2:includeAllowableActions&gt;&#xd;
+		&lt;ns2:includeRelationships&gt;none&lt;/ns2:includeRelationships&gt;&#xd;
+		&lt;ns2:renditionFilter&gt;cmis:none&lt;/ns2:renditionFilter&gt;&#xd;
+		&lt;ns2:includePolicyIds&gt;false&lt;/ns2:includePolicyIds&gt;&#xd;
+		&lt;ns2:includeACL&gt;false&lt;/ns2:includeACL&gt;&#xd;
+	&lt;/ns2:getObjectByPath&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/${CONTEXT}/services/ObjectService</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">TEST_FOLDER_ID</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;.*getObjectByPathResponse.*&gt;.*&lt;.*?propertyId.*?propertyDefinitionId=.cmis:objectId.*?&gt;.*?&lt;.*?value.*?&gt;(.+?)&lt;/.*?value.*?&gt;.*?&lt;/.*?propertyId&gt;.*&lt;/.*getObjectByPathResponse&gt;</stringProp>
+              <stringProp name="RegexExtractor.template"></stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Test Folder Exists" enabled="false">
+            <stringProp name="IfController.condition">&quot;${TEST_FOLDER_ID_g1}&quot; != &quot;&quot;</stringProp>
+            <boolProp name="IfController.evaluateAll">true</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deleteTree" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;ns2:deleteTree xmlns=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot;&#xd;
+		xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot;&gt;&#xd;
+		&lt;ns2:repositoryId&gt;${TEST_REPO_ID}&lt;/ns2:repositoryId&gt;&#xd;
+		&lt;ns2:folderId&gt;${TEST_FOLDER_ID_g1}&lt;/ns2:folderId&gt;&#xd;
+		&lt;ns2:allVersions&gt;true&lt;/ns2:allVersions&gt;&#xd;
+		&lt;ns2:unfileObjects&gt;delete&lt;/ns2:unfileObjects&gt;&#xd;
+		&lt;ns2:continueOnFailure&gt;true&lt;/ns2:continueOnFailure&gt;&#xd;
+	&lt;/ns2:deleteTree&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/${CONTEXT}/services/ObjectService</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="1411947035">&lt;.*deleteTreeResponse.*&gt;.*&lt;.*failedToDelete/&gt;.*&lt;/.*deleteTreeResponse&gt;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createFolder" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;ns2:createFolder xmlns=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot;&#xd;
+		xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot;&gt;&#xd;
+		&lt;ns2:repositoryId&gt;${TEST_REPO_ID}&lt;/ns2:repositoryId&gt;&#xd;
+		&lt;ns2:properties&gt;&#xd;
+			&lt;propertyId propertyDefinitionId=&quot;cmis:objectTypeId&quot;&gt;&#xd;
+				&lt;value&gt;cmis:folder&lt;/value&gt;&#xd;
+			&lt;/propertyId&gt;&#xd;
+			&lt;propertyString propertyDefinitionId=&quot;cmis:name&quot;&gt;&#xd;
+				&lt;value&gt;${TEST_FOLDER}_${__threadNum}&lt;/value&gt;&#xd;
+			&lt;/propertyString&gt;&#xd;
+		&lt;/ns2:properties&gt;&#xd;
+		&lt;ns2:folderId&gt;${ROOT_ID_g1}&lt;/ns2:folderId&gt;&#xd;
+	&lt;/ns2:createFolder&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/${CONTEXT}/services/ObjectService</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">TEST_FOLDER_ID</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;.*createFolderResponse.*&gt;&lt;.*objectId&gt;(.+)&lt;/.*objectId&gt;&lt;/.*createFolderResponse&gt;</stringProp>
+              <stringProp name="RegexExtractor.template"></stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Creates LOOP_COUNT documents and getChildren" enabled="true"/>
+        <hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Create Objects" enabled="false">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${LOOP_COUNT}</stringProp>
+          </LoopController>
+          <hashTree>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
+              <stringProp name="CounterConfig.start">0</stringProp>
+              <stringProp name="CounterConfig.end"></stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">L1_COUNT</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Document 915" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;ns2:createDocument xmlns=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot; xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot;&gt;&#xd;
+		&lt;ns2:repositoryId&gt;${TEST_REPO_ID}&lt;/ns2:repositoryId&gt;&#xd;
+		&lt;ns2:properties&gt;&#xd;
+			&lt;propertyId propertyDefinitionId=&quot;cmis:objectTypeId&quot;&gt;&#xd;
+				&lt;value&gt;cmis:document&lt;/value&gt;&#xd;
+			&lt;/propertyId&gt;&#xd;
+			&lt;propertyString propertyDefinitionId=&quot;cmis:name&quot;&gt;&#xd;
+				&lt;value&gt;${TEST_DOC}_${__threadNum}_2_${L1_COUNT}&lt;/value&gt;&#xd;
+			&lt;/propertyString&gt;&#xd;
+		&lt;/ns2:properties&gt;&#xd;
+		&lt;ns2:folderId&gt;${TEST_FOLDER_ID_g1}&lt;/ns2:folderId&gt;&#xd;
+		&lt;ns2:contentStream&gt;&#xd;
+			&lt;ns2:length&gt;915&lt;/ns2:length&gt;&#xd;
+			&lt;ns2:mimeType&gt;application/octet-stream&lt;/ns2:mimeType&gt;&#xd;
+			&lt;ns2:filename&gt;jmeter_doc_01&lt;/ns2:filename&gt;&#xd;
+			&lt;ns2:stream&gt;&#xd;
+				&lt;xop:Include xmlns:xop=&quot;http://www.w3.org/2004/08/xop/include&quot; href=&quot;cid:FILE@example.jaxws.sun.com&quot; /&gt;&#xd;
+			&lt;/ns2:stream&gt;&#xd;
+		&lt;/ns2:contentStream&gt;&#xd;
+		&lt;ns2:versioningState&gt;none&lt;/ns2:versioningState&gt;&#xd;
+	&lt;/ns2:createDocument&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART&#xd;
+Content-Id: &lt;FILE@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/octet-stream&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+Issue 11&#xd;
+Please find attached the 11th edition of DG Trade&apos;s Think Tank Watch.&#xd;
+Two issues are clearly dominating the current discussion on EU trade policy: the launch of the TTIP and the ongoing discussions with China on TDI.&#xd;
+While publications and studies on TTIP have been so far mainly positive about its effect and impact, there is now an increasing number of publications and studies with a more critical undertone. On China, there is a lot of press coverage and so far only few researched analyses. We selected a report by ECFT in which it is argued that the EU and China need to cut a deal on TDI/solar panels soon. &#xd;
+For this issue of the TTW, we also selected a number of other relevant publications on TPP, the world trade agenda 2013 and the changes in US energy policy.&#xd;
+You can have easy access to these articles by clicking on the links in the text.&#xd;
+Feedback and suggestions are of course welcome.&#xd;
+--uuid:PART--</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/${CONTEXT}/services/ObjectService</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Content-type" elementType="Header">
+                    <stringProp name="Header.name">Content-type</stringProp>
+                    <stringProp name="Header.value">multipart/related;start=&quot;&lt;rootpart*PART@example.jaxws.sun.com&gt;&quot;;type=&quot;application/xop+xml&quot;;boundary=&quot;uuid:PART&quot;;start-info=&quot;text/xml&quot;</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">text/xml, multipart/related, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2</stringProp>
+                  </elementProp>
+                  <elementProp name="User-Agent" elementType="Header">
+                    <stringProp name="Header.name">User-Agent</stringProp>
+                    <stringProp name="Header.value">JAX-WS RI 2.1.7-b01-</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="createFolder" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;ns2:createFolder xmlns=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot;&#xd;
+		xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot;&gt;&#xd;
+		&lt;ns2:repositoryId&gt;${TEST_REPO_ID}&lt;/ns2:repositoryId&gt;&#xd;
+		&lt;ns2:properties&gt;&#xd;
+			&lt;propertyId propertyDefinitionId=&quot;cmis:objectTypeId&quot;&gt;&#xd;
+				&lt;value&gt;cmis:folder&lt;/value&gt;&#xd;
+			&lt;/propertyId&gt;&#xd;
+			&lt;propertyString propertyDefinitionId=&quot;cmis:name&quot;&gt;&#xd;
+				&lt;value&gt;${TEST_FOLDER}_${__threadNum}_FOLDER_${L1_COUNT}&lt;/value&gt;&#xd;
+			&lt;/propertyString&gt;&#xd;
+		&lt;/ns2:properties&gt;&#xd;
+		&lt;ns2:folderId&gt;${TEST_FOLDER_ID_g1}&lt;/ns2:folderId&gt;&#xd;
+	&lt;/ns2:createFolder&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/${CONTEXT}/services/ObjectService</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+          </hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Get Children" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${LOOP_COUNT}</stringProp>
+          </LoopController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getChildren 10" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;getChildren xmlns=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot; xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot;&gt;&#xd;
+		&lt;repositoryId&gt;${TEST_REPO_ID}&lt;/repositoryId&gt;&#xd;
+		&lt;folderId&gt;${TEST_FOLDER_ID_g1}&lt;/folderId&gt;&#xd;
+		&lt;includeAllowableActions&gt;true&lt;/includeAllowableActions&gt;&#xd;
+		&lt;includeRelationships&gt;both&lt;/includeRelationships&gt;&#xd;
+		&lt;renditionFilter&gt;*&lt;/renditionFilter&gt;&#xd;
+		&lt;maxItems&gt;10&lt;/maxItems&gt;&#xd;
+		&lt;skipCount&gt;10&lt;/skipCount&gt;&#xd;
+		&lt;includePathSegment&gt;true&lt;/includePathSegment&gt;&#xd;
+	&lt;/getChildren&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/${CONTEXT}/services/NavigationService</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="878521656">&lt;.*getChildrenResponse.*&gt;.+&lt;/.*getChildrenResponse&gt;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getChildren 25" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;getChildren xmlns=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot; xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot;&gt;&#xd;
+		&lt;repositoryId&gt;${TEST_REPO_ID}&lt;/repositoryId&gt;&#xd;
+		&lt;folderId&gt;${TEST_FOLDER_ID_g1}&lt;/folderId&gt;&#xd;
+		&lt;includeAllowableActions&gt;true&lt;/includeAllowableActions&gt;&#xd;
+		&lt;includeRelationships&gt;both&lt;/includeRelationships&gt;&#xd;
+		&lt;renditionFilter&gt;*&lt;/renditionFilter&gt;&#xd;
+		&lt;maxItems&gt;25&lt;/maxItems&gt;&#xd;
+		&lt;skipCount&gt;10&lt;/skipCount&gt;&#xd;
+		&lt;includePathSegment&gt;true&lt;/includePathSegment&gt;&#xd;
+	&lt;/getChildren&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/${CONTEXT}/services/NavigationService</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="878521656">&lt;.*getChildrenResponse.*&gt;.+&lt;/.*getChildrenResponse&gt;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getChildren 50" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;getChildren xmlns=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot; xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot;&gt;&#xd;
+		&lt;repositoryId&gt;${TEST_REPO_ID}&lt;/repositoryId&gt;&#xd;
+		&lt;folderId&gt;${TEST_FOLDER_ID_g1}&lt;/folderId&gt;&#xd;
+		&lt;includeAllowableActions&gt;true&lt;/includeAllowableActions&gt;&#xd;
+		&lt;includeRelationships&gt;both&lt;/includeRelationships&gt;&#xd;
+		&lt;renditionFilter&gt;*&lt;/renditionFilter&gt;&#xd;
+		&lt;maxItems&gt;50&lt;/maxItems&gt;&#xd;
+		&lt;skipCount&gt;35&lt;/skipCount&gt;&#xd;
+		&lt;includePathSegment&gt;true&lt;/includePathSegment&gt;&#xd;
+	&lt;/getChildren&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/${CONTEXT}/services/NavigationService</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="878521656">&lt;.*getChildrenResponse.*&gt;.+&lt;/.*getChildrenResponse&gt;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getChildren 100" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;getChildren xmlns=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot; xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot;&gt;&#xd;
+		&lt;repositoryId&gt;${TEST_REPO_ID}&lt;/repositoryId&gt;&#xd;
+		&lt;folderId&gt;${TEST_FOLDER_ID_g1}&lt;/folderId&gt;&#xd;
+		&lt;includeAllowableActions&gt;true&lt;/includeAllowableActions&gt;&#xd;
+		&lt;includeRelationships&gt;both&lt;/includeRelationships&gt;&#xd;
+		&lt;renditionFilter&gt;*&lt;/renditionFilter&gt;&#xd;
+		&lt;maxItems&gt;100&lt;/maxItems&gt;&#xd;
+		&lt;skipCount&gt;0&lt;/skipCount&gt;&#xd;
+		&lt;includePathSegment&gt;true&lt;/includePathSegment&gt;&#xd;
+	&lt;/getChildren&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/${CONTEXT}/services/NavigationService</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="878521656">&lt;.*getChildrenResponse.*&gt;.+&lt;/.*getChildrenResponse&gt;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getChildren All" enabled="false">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">--uuid:PART&#xd;
+Content-Id: &lt;rootpart*PART@example.jaxws.sun.com&gt;&#xd;
+Content-Type: application/xop+xml;charset=utf-8;type=&quot;text/xml&quot;&#xd;
+Content-Transfer-Encoding: binary&#xd;
+&#xd;
+&lt;S:Envelope xmlns:S=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&#xd;
+&lt;S:Header&gt;&#xd;
+	&lt;Security xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&gt;&#xd;
+		&lt;Timestamp xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;&#xd;
+			&lt;Created&gt;${TODAY}&lt;/Created&gt;&#xd;
+			&lt;Expires&gt;${TODAY}&lt;/Expires&gt;&#xd;
+		&lt;/Timestamp&gt;&#xd;
+		&lt;UsernameToken&gt;&#xd;
+			&lt;Username&gt;${USER}&lt;/Username&gt;&#xd;
+			&lt;Password Type=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText&quot;&gt;${PASSWORD}&lt;/Password&gt;&#xd;
+			&lt;Created xmlns=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;${TODAY}&lt;/Created&gt;&#xd;
+		&lt;/UsernameToken&gt;&#xd;
+	&lt;/Security&gt;&#xd;
+&lt;/S:Header&gt;&#xd;
+&lt;S:Body&gt;&#xd;
+	&lt;getChildren xmlns=&quot;http://docs.oasis-open.org/ns/cmis/messaging/200908/&quot; xmlns:ns2=&quot;http://docs.oasis-open.org/ns/cmis/core/200908/&quot;&gt;&#xd;
+		&lt;repositoryId&gt;${TEST_REPO_ID}&lt;/repositoryId&gt;&#xd;
+		&lt;folderId&gt;${TEST_FOLDER_ID_g1}&lt;/folderId&gt;&#xd;
+		&lt;includeAllowableActions&gt;true&lt;/includeAllowableActions&gt;&#xd;
+		&lt;includeRelationships&gt;both&lt;/includeRelationships&gt;&#xd;
+		&lt;renditionFilter&gt;*&lt;/renditionFilter&gt;&#xd;
+		&lt;includePathSegment&gt;true&lt;/includePathSegment&gt;&#xd;
+	&lt;/getChildren&gt;&#xd;
+&lt;/S:Body&gt;&#xd;
+&lt;/S:Envelope&gt;&#xd;
+--uuid:PART--</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">/${CONTEXT}/services/NavigationService</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="878521656">&lt;.*getChildrenResponse.*&gt;.+&lt;/.*getChildrenResponse&gt;</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">2</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>false</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename">Test-CreateDocsGetChildren-measures.jtl</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>false</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+            </value>
+          </objProp>
+          <stringProp name="filename">Test-CreateDocsGetChildren-data.jtl</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

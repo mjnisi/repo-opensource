@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="index_word_object" directorySegmentName="seg_0" id="2B684F2F-807F-C2E6-74BB-467A38370310">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="object_id" id="05E4058C-0391-EBE0-66D1-B167451A8C8E">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="id" id="08AE5B30-5662-7F78-9CDC-4A44A817A47D">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="frequency" id="23C31740-5FE9-F5B1-2614-F32E22124E26">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="sqrt_frequency" id="26E7A411-D189-38DA-51B0-0B661973C4CA">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="word_id" id="65AFA667-54CB-318D-A883-E133FFFDEDB6">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="object_type_property_id" id="85E672F6-6A41-4ABB-E10C-21EFE6281FE9">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>-1</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="property_id" id="86597FEF-A75E-E44A-4D4C-59A9B323B35D">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>-1</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_fk_word_object_dictionary" id="13B78185-8624-EECE-5702-E1F22F1F821D">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_index_word_object" id="39C2FD2B-828A-36B8-E82E-F541AB1BA8AF">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_index_word_object_prop" id="D3E1AF15-9AA5-562E-42DE-64E52D754215">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_index_word_object_bywoject" id="EF06610D-680A-A978-DF93-B3C11683E0D1">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_index_word_object_byword" id="FAD6E196-CB84-434E-E467-024015F4F815">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_word_object_dictionary" id="2B52F0F9-CA3F-91D4-D0AA-61E81836A124">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_index_word_object" id="95BD3BC7-38F0-5E2C-81A3-3637A028E276">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

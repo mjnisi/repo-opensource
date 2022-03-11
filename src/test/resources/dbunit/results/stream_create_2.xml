@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<stream ID="202" DATA="TXT_FILE_MARK_2"/>	
+	<property OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="120" VALUE="63" NUMERIC_VALUE="63" />
+  	<property OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="121" VALUE="plain/text" NUMERIC_VALUE="0" />
+  	<property OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="122" VALUE="TextTestFile.txt" NUMERIC_VALUE="0" />
+  	<property OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="123" VALUE="Test Document WITH STREAM" NUMERIC_VALUE="202" />
+</dataset>

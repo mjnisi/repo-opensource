@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+			http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<!-- Admin module security configuration with CAS and No Proxy Ticket generation. -->
+
+ 	<bean id="serviceProperties" class="org.springframework.security.cas.ServiceProperties">
+		<property name="service" value="#{adminProperties.getProperty('admin.cas.serviceUrl')}" />
+		<property name="sendRenew" value="false" />
+	</bean>
+
+	<bean id="casEntryPoint" class="org.springframework.security.cas.web.CasAuthenticationEntryPoint">
+		<property name="loginUrl" value="#{adminProperties.getProperty('admin.cas.loginUrl')}" />
+		<property name="serviceProperties" ref="serviceProperties" />
+	</bean>
+	
+	<bean id="casFilter" class="org.springframework.security.cas.web.CasAuthenticationFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+	</bean>
+
+	<bean id="securityDataSource" class="org.apache.commons.dbcp.BasicDataSourceFactory" factory-method="createDataSource" destroy-method="close">
+		<constructor-arg type="java.util.Properties" ref="gacaDbProperties" />
+	</bean>
+
+	<bean id="userService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+		<property name="dataSource" ref="securityDataSource" />
+		<property name="usersByUsernameQuery" value="#{adminProperties.getProperty('admin.cas.usersByUsernameQuery')}"/>
+		<property name="authoritiesByUsernameQuery" value="#{adminProperties.getProperty('admin.cas.authoritiesByUsernameQuery')}"/>
+	</bean>
+
+	<bean id="casAuthenticationProvider" class="org.springframework.security.cas.authentication.CasAuthenticationProvider">
+		<property name="serviceProperties" ref="serviceProperties" />
+		<property name="authenticationUserDetailsService">
+			<bean class="org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper">
+				<constructor-arg index="0" ref="userService" />
+			</bean>
+		</property>
+		<property name="ticketValidator">
+			<!-- Service ticket validator is enough. Repo is not going to accept proxy tickets for the admin site. -->
+			<bean class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
+				<constructor-arg index="0" value="#{adminProperties.getProperty('admin.cas.validateUrl')}" />
+			</bean>
+		</property>
+		<property name="key" value="casAuthProvider" />
+	</bean>
+
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider ref="casAuthenticationProvider" />
+	</security:authentication-manager>
+
+	<security:http entry-point-ref="casEntryPoint" use-expressions="true">
+		<security:custom-filter position="CAS_FILTER" ref="casFilter" />
+		<security:intercept-url pattern="/admin" access="isAuthenticated() and hasAnyRole(T(eu.trade.repo.util.Constants).ADMIN_OPS)" />
+		<security:intercept-url pattern="/admin/**" access="isAuthenticated() and hasAnyRole(T(eu.trade.repo.util.Constants).ADMIN_OPS)" />
+		<!-- No proxy ticket generation. Deny access to all. -->
+		<security:intercept-url pattern="/ticket" access="denyAll" />
+		<security:intercept-url pattern="/ticket/**" access="denyAll" />
+	</security:http>
+
+	<security:global-method-security pre-post-annotations="enabled" secured-annotations="enabled" access-decision-manager-ref="accessDecisionManager" />
+	
+	<!-- this voter will have the default attributes -->
+	<bean id="authenticatedVoter" class="org.springframework.security.access.vote.AuthenticatedVoter" />
+	
+	<!-- this voter is specifically defined to modify the role prefix for the method security -->
+	<bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter">
+  		<property name="rolePrefix" value="#{T(eu.trade.repo.util.Constants).REPO_ROL_PREFIX}" />
+	</bean>
+	
+	<bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+		<property name="decisionVoters">
+			<list>
+				<ref bean="authenticatedVoter" />
+				<ref bean="roleVoter" />
+			</list>
+		</property>
+	</bean>
+</beans>

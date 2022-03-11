@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- Configuration for the product properties. -->
+	<orm>
+		<hintCache>org.hibernate.cacheable</hintCache>
+		<hintFetch>org.hibernate.fetchSize</hintFetch>
+		<preparedStatementMaxParameters>1000</preparedStatementMaxParameters> <!-- Underlying database or driver limit for PreparedStatement's parameters number. 0 for unlimited. -->
+		<fetchSizes>
+			<!-- 
+				<fetchSize><query>QUERY_NAME</query><size>FETCH_SIZE</size></fetchSize>
+				If size element is not preent then the default value will be used.
+			-->
+			<defaultSize>1000</defaultSize>
+			<fetchSize><query>ObjectParent.getByPath</query></fetchSize>
+			<fetchSize><query>ObjectParent.getByPathAndDepth</query></fetchSize>
+			<fetchSize><query>ObjectParent.getByPathAndAcl</query></fetchSize>
+			<fetchSize><query>ObjectParent.getByPathAndDepthAndAcl</query></fetchSize>
+			<fetchSize><query>ObjectParent.getFolderByPath</query></fetchSize>
+			<fetchSize><query>ObjectParent.getFolderByPathAndDepth</query></fetchSize>
+			<fetchSize><query>ObjectParent.getFolderByPathAndAcl</query></fetchSize>
+			<fetchSize><query>ObjectParent.getFolderByPathAndDepthAndAcl</query></fetchSize>
+			<fetchSize><query>CmisObject.getChildrenIds</query></fetchSize>
+			<fetchSize><query>CmisObject.getChildrenIdsAcl</query></fetchSize>
+			<fetchSize><query>CmisObject.getChildren</query></fetchSize>
+			<fetchSize><query>CmisObject.getChildrenAcl</query></fetchSize>
+			<fetchSize><query>CmisObject.getObjectsFromIdList</query></fetchSize>
+			<fetchSize><query>CmisObject.getObjectsFromIdListAcl</query></fetchSize>
+		</fetchSizes>
+	</orm>
+</configuration>

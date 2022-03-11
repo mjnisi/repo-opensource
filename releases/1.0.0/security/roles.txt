@@ -1,0 +1,3 @@
+# APP_CODE, ROLE_CODE, NAME, DESCRIPTION, IS_AUTOACTIVATED?, DUMA_REPORT_ROLE
+REPO|REPO.Admin|REPO.Admin|Administrator|false|true
+REPO|REPO.FilingAdmin|REPO.FilingAdmin|Files administrator (no access to admin panel)|false|true

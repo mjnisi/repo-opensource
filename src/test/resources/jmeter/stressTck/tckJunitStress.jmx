@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="2.9 r1437961">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Tck Tests" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">20</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">600</stringProp>
+        <longProp name="ThreadGroup.start_time">1382148000000</longProp>
+        <longProp name="ThreadGroup.end_time">1382335200000</longProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller" enabled="true"/>
+        <hashTree>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testSecurityTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testSecurityTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testRepositoryInfoTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testRepositoryInfoTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testRootFolderTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testRootFolderTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testACLSmokeTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testACLSmokeTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testCreateAndDeleteFolderTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testCreateAndDeleteFolderTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testCreateAndDeleteDocumentTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testCreateAndDeleteDocumentTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testCreateBigDocument" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testCreateBigDocument</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testCreateDocumentWithoutContent" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testCreateDocumentWithoutContent</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testNameCharsetTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testNameCharsetTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testCreateAndDeleteRelationshipTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testCreateAndDeleteRelationshipTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testCreateAndDeleteItemTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testCreateAndDeleteItemTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testUpdateSmokeTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testUpdateSmokeTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testBulkUpdatePropertiesTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testBulkUpdatePropertiesTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testSetAndDeleteContentTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testSetAndDeleteContentTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testChangeTokenTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testChangeTokenTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testContentRangesTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testContentRangesTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testCopyTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testCopyTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testMoveTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testMoveTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testDeleteTreeTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testDeleteTreeTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testOperationContextTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testOperationContextTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testMultifilingTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testMultifilingTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testUnfilingTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testUnfilingTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testQuerySmokeTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testQuerySmokeTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testQueryRootFolderTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testQueryRootFolderTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testQueryForObject" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testQueryForObject</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testQueryLikeTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testQueryLikeTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testContentChangesSmokeTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testContentChangesSmokeTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testVersioningSmokeTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testVersioningSmokeTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testVersionDeleteTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testVersionDeleteTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testVersioningStateCreateTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testVersioningStateCreateTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testCheckedOutTest" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterTck</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testCheckedOutTest</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">test.xml</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>false</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>false</assertions>
+              <subresults>false</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+            </value>
+          </objProp>
+          <stringProp name="filename">C:\Program Files\Dev\apache-jmeter-2.9\bin\aggregate.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Statistics Collector" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1382098200000</longProp>
+        <longProp name="ThreadGroup.end_time">1382101800000</longProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller" enabled="true"/>
+        <hashTree>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="testCollectStats" enabled="true">
+            <stringProp name="junitSampler.classname">eu.trade.jmeter.JMeterStats</stringProp>
+            <stringProp name="junitsampler.constructorstring"></stringProp>
+            <stringProp name="junitsampler.method">testCollectStats</stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">true</stringProp>
+            <stringProp name="junitsampler.append.error">true</stringProp>
+            <stringProp name="junitsampler.append.exception">true</stringProp>
+            <boolProp name="junitsampler.junit4">true</boolProp>
+            <boolProp name="junitsampler.createinstancepersample">true</boolProp>
+          </JUnitSampler>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">testStats.txt</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

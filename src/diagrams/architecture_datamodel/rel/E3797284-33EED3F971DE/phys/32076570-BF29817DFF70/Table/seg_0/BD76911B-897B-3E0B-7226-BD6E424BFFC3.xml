@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="permission" directorySegmentName="seg_0" id="BD76911B-897B-3E0B-7226-BD6E424BFFC3">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="parent_id" id="63A69446-8380-A65A-F54A-C8E1C91796D2">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="name" id="A3AABCB2-757E-4E54-726C-C81E9D3E9B9C">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="id" id="A6084793-84E7-9082-4942-9BDD556BA902">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="repository_id" id="A8B3253D-8204-95E0-E978-68ACFA7104B4">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="description" id="ECF44D93-DDC3-0194-EA3C-D0BDF962B6E6">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_fk_permission_parent" id="2404000C-3EF4-D691-79F8-A86E51AF38C3">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_fk_permission_repository" id="817786AB-F621-8BCF-3C68-689306AC1463">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_permission_repository" id="1F95CA34-D886-1A64-F298-398B8925512D">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_permission_parent" id="C94D4635-1FD7-2D9F-3417-F051D6F6B320">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_permission" id="11D5BB29-069F-D58C-D556-827CFBB6181A">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="uq_permission" id="65790644-37ED-B2C3-EC29-81A33A57F71B">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

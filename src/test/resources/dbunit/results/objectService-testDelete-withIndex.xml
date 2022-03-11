@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<object />
+  	<stream />
+  	
+  	<index_word ID="1" REPOSITORY_ID="100" WORD="convenience" />
+	<index_word ID="2" REPOSITORY_ID="100" WORD="text" />
+  	<index_word ID="3" REPOSITORY_ID="100" WORD="to" />
+  	<index_word ID="4" REPOSITORY_ID="100" WORD="test" />
+  	<index_word ID="5" REPOSITORY_ID="100" WORD="the" />
+  	<index_word ID="6" REPOSITORY_ID="100" WORD="indexing" />
+  	<index_word ID="7" REPOSITORY_ID="100" WORD="process" />
+  
+  	<index_word_object />
+  	<index_word_position />
+</dataset>

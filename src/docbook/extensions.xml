@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+
+	<title>Extensions</title>
+	<abstract>List of extra capabilities that are not covered by CMIS</abstract>
+	<section>
+		<title>Extension Data</title>
+		<section>
+			<title>Index Status</title>
+			<para>
+				In order to provide information about the indexing status for the document objects the following extension data is added under the TDR's namespace <literal>{http://[namespace_url]/repo}</literal>:
+			</para>
+			<itemizedlist>
+				<listitem>
+					<para>indexing</para>
+					<itemizedlist>
+						<listitem>
+							<variablelist>
+								<varlistentry>
+									<term>state</term>
+									<listitem>
+										Enum:
+										<simplelist>
+											<member><literal>NONE</literal> (Indexation pending)</member>
+											<member><literal>INDEXED</literal> (Indexed)</member>
+											<member><literal>ERROR</literal> (Indexation error)</member>
+											<member><literal>NON_INDEXABLE</literal> (Not indexable)</member>
+											<member><literal>PARTIALLY_INDEXED</literal> (Partially indexed. Word limit reached)</member>
+										</simplelist>
+									</listitem>
+								</varlistentry>
+							</variablelist>
+						</listitem>
+						<listitem>
+							<variablelist>
+								<varlistentry>
+									<term>tries</term>
+									<listitem>Integer</listitem>
+								</varlistentry>
+							</variablelist>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</itemizedlist>
+		</section>
+	</section>
+</chapter>

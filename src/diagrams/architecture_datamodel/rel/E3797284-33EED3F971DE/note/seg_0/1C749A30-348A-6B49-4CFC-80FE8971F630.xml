@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Note class="oracle.dbtools.crest.model.design.Note" name="Note_1" directorySegmentName="seg_0" id="1C749A30-348A-6B49-4CFC-80FE8971F630">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:57:00 UTC</createdTime>
+<comment>versionable and content_stream_allowed are only for cmis:document types and its descendans</comment>
+<ownerDesignName>repo</ownerDesignName>
+</Note>

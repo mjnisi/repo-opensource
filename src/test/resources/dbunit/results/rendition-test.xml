@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<rendition OBJECT_ID="101" STREAM_ID="99" MIME_TYPE="mime/tst" LENGTH="20" TITLE="new rendition" KIND="KIND" HEIGHT="10" WIDTH="30" RENDITION_DOCUMENT_ID="docId"/>	
+</dataset>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset depends="scenarioQueryService">
+  
+  <!-- Query tests -->
+  <object ID="110" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="internalTestFolder" INDEX_STATE_CONTENT="0"/>
+  <property ID="100" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Al'len" NUMERIC_VALUE="0" NORMALIZED_VALUE="al'len"/> <!-- cmis:createdBy --> <!-- ? -->
+  <property ID="101" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="25" VALUE="10" NUMERIC_VALUE="10" NORMALIZED_VALUE="" /><!-- cmis:objectId --> 
+  <property ID="102" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="29" VALUE="2010-04-01T11:15:00.000Z" NUMERIC_VALUE="0" NORMALIZED_VALUE="" /><!-- cmis:creationDate --><!-- convert to milliseconds for numeric_value -->
+  <property ID="103" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="51" VALUE="31.499" NUMERIC_VALUE="31.499"  NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <!-- AND/OR tests -->
+  <object ID="111" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="internalTestFolder1" INDEX_STATE_CONTENT="1"/>
+  <property ID="104" OBJECT_ID="111" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Allen" NUMERIC_VALUE="0" NORMALIZED_VALUE="allen"  /> <!-- cmis:createdBy -->
+  <property ID="105" OBJECT_ID="111" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="112" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="internalTestFolder2" INDEX_STATE_CONTENT="1"/>
+  <property ID="106" OBJECT_ID="112" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Jorge" NUMERIC_VALUE="0" NORMALIZED_VALUE="jorge" /> <!-- cmis:createdBy -->
+  <property ID="107" OBJECT_ID="112" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="113" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="internalTestFolder3" INDEX_STATE_CONTENT="1"/>
+  <property ID="108" OBJECT_ID="113" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Jorge" NUMERIC_VALUE="0" NORMALIZED_VALUE="jorge" /> <!-- cmis:createdBy -->
+  <property ID="109" OBJECT_ID="113" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="114" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="internalTestFolder4" INDEX_STATE_CONTENT="1"/>
+  <property ID="110" OBJECT_ID="114" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Jorge" NUMERIC_VALUE="0" NORMALIZED_VALUE="jorge" /> <!-- cmis:createdBy -->
+  <property ID="111" OBJECT_ID="114" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE=""  /><!-- cmis:numberField -->
+  
+  <object ID="115" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="internalTestFolder5" INDEX_STATE_CONTENT="0"/>
+  <property ID="112" OBJECT_ID="115" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Jorge" NUMERIC_VALUE="0" NORMALIZED_VALUE="jorge" /> <!-- cmis:createdBy -->
+  <property ID="113" OBJECT_ID="115" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="116" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="internalTestFolder6" INDEX_STATE_CONTENT="1"/>
+  <property ID="114" OBJECT_ID="116" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Jorgé" NUMERIC_VALUE="0" NORMALIZED_VALUE="jorge" /> <!-- cmis:createdBy -->
+  <property ID="115" OBJECT_ID="116" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE=""  /><!-- cmis:numberField -->
+  
+</dataset>

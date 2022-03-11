@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="01_repo_genesisStructure" id="E3797284-0475-739B-5074-33EED3F971DE" mainViewID="C51D32AE-A0B9-5CCD-91ED-FA455CCB4AE2">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:16 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>01_repo_genesisStructure.sql</fileName>
+<pathName>C:\dev\git\repo\releases\1.0.0\db</pathName>
+<dbType>9</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>01_repo_structure.sql</fileName>
+<pathName>C:\dev\git\repo\releases\1.0.0\db</pathName>
+<dbType>9</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>02_repo_scoreView_oracle.sql</fileName>
+<pathName>C:\dev\git\repo\releases\1.1.0\db\consolidated</pathName>
+<dbType>9</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset depends="scenarioQueryService">
+  
+  <!-- includeInSupertypeQuery = TRUE, PARENT_ID = 21 -->
+  <object_type ID="22" REPOSITORY_ID="1" CMIS_ID="test:orderByProperty1"
+                                         LOCAL_NAME="test:orderByProperty1"
+                                         LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+                                         QUERY_NAME="test:orderByProperty1"
+                                         DISPLAY_NAME="test:orderByProperty1"
+                                         BASE_ID="2" PARENT_ID="21" CREATABLE="T"
+                                         FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T"
+                                         CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T"
+                                         INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+                                         
+  <!-- includeInSupertypeQuery = FALSE, PARENT_ID = 21 -->
+  <object_type ID="23" REPOSITORY_ID="1" CMIS_ID="test:orderByProperty2"
+                                         LOCAL_NAME="test:orderByProperty2"
+                                         LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+                                         QUERY_NAME="test:orderByProperty2"
+                                         DISPLAY_NAME="test:orderByProperty2"
+                                         BASE_ID="2" PARENT_ID="21" CREATABLE="T"
+                                         FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T"
+                                         CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T"
+                                         INCLUDED_IN_SUPERTYPE_QUERY="F" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  
+  <!-- includeInSupertypeQuery = TRUE, PARENT_ID = 23 -->
+  <object_type ID="24" REPOSITORY_ID="1" CMIS_ID="test:orderByProperty2Child"
+                                         LOCAL_NAME="test:orderByProperty2Child"
+                                         LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+                                         QUERY_NAME="test:orderByProperty2Child"
+                                         DISPLAY_NAME="test:orderByProperty2Child"
+                                         BASE_ID="2" PARENT_ID="23" CREATABLE="T"
+                                         FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T"
+                                         CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T"
+                                         INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  
+  <object ID="110" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="internalTestFolder1" INDEX_STATE_CONTENT="0"/>
+  <property ID="122" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="25" VALUE="internalTestFolder1" NUMERIC_VALUE="0" NORMALIZED_VALUE="internaltestfolder1" />
+  <property ID="134" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="28" VALUE="kardaal" NUMERIC_VALUE="0" NORMALIZED_VALUE="kardaal" />
+  <property ID="170" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="111" OBJECT_TYPE_ID="22" CMIS_OBJECT_ID="internalTestFolder2" INDEX_STATE_CONTENT="0"/>
+  <property ID="103" OBJECT_ID="111" OBJECT_TYPE_PROPERTY_ID="28" VALUE="foobar" NUMERIC_VALUE="0" NORMALIZED_VALUE="foober" />
+  <property ID="171" OBJECT_ID="111" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="112" OBJECT_TYPE_ID="23" CMIS_OBJECT_ID="internalTestFolder3" INDEX_STATE_CONTENT="0"/>
+  <property ID="123" OBJECT_ID="112" OBJECT_TYPE_PROPERTY_ID="25" VALUE="internalTestFolder3" NUMERIC_VALUE="0" NORMALIZED_VALUE="internaltestfolder3" />
+  <property ID="135" OBJECT_ID="112" OBJECT_TYPE_PROPERTY_ID="28" VALUE="kardaal" NUMERIC_VALUE="0" NORMALIZED_VALUE="kardaal" />
+  <property ID="172" OBJECT_ID="112" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="113" OBJECT_TYPE_ID="22" CMIS_OBJECT_ID="internalTestFolder4" INDEX_STATE_CONTENT="0"/>
+  <property ID="100" OBJECT_ID="113" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Allen" NUMERIC_VALUE="0" NORMALIZED_VALUE="allen" />
+  <property ID="180" OBJECT_ID="113" OBJECT_TYPE_PROPERTY_ID="48" VALUE="/a/path" NUMERIC_VALUE="0" NORMALIZED_VALUE="/a/path"/>
+  <property ID="101" OBJECT_ID="113" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="114" OBJECT_TYPE_ID="24" CMIS_OBJECT_ID="internalTestFolder5" INDEX_STATE_CONTENT="0"/>
+  <property ID="102" OBJECT_ID="114" OBJECT_TYPE_PROPERTY_ID="28" VALUE="kardaal" NUMERIC_VALUE="0" NORMALIZED_VALUE="kardaal" />
+  <property ID="173" OBJECT_ID="114" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="115" OBJECT_TYPE_ID="24" CMIS_OBJECT_ID="internalTestFolder6" INDEX_STATE_CONTENT="0"/>
+  <property ID="136" OBJECT_ID="115" OBJECT_TYPE_PROPERTY_ID="28" VALUE="kardaal" NUMERIC_VALUE="0" NORMALIZED_VALUE="kardaal" />
+  <property ID="124" OBJECT_ID="115" OBJECT_TYPE_PROPERTY_ID="25" VALUE="internalTestFolder6" NUMERIC_VALUE="0" NORMALIZED_VALUE="internaltestfolder6" />
+  <property ID="174" OBJECT_ID="115" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+
+  <object ID="116" OBJECT_TYPE_ID="5" CMIS_OBJECT_ID="internalTestDocument1" INDEX_STATE_CONTENT="0"/>
+  <property ID="109" OBJECT_ID="116" OBJECT_TYPE_PROPERTY_ID="2" VALUE="internalTestDocument1" NUMERIC_VALUE="0" NORMALIZED_VALUE="internaltestdocument1" />
+  
+  <object ID="117" OBJECT_TYPE_ID="5" CMIS_OBJECT_ID="internalTestDocument2" INDEX_STATE_CONTENT="0"/>
+  <property ID="110" OBJECT_ID="117" OBJECT_TYPE_PROPERTY_ID="2" VALUE="internalTestDocument2" NUMERIC_VALUE="0" NORMALIZED_VALUE="internaltestdocument2" />
+  
+  <object ID="118" OBJECT_TYPE_ID="5" CMIS_OBJECT_ID="internalTestDocument3" INDEX_STATE_CONTENT="0"/>
+  <property ID="111" OBJECT_ID="118" OBJECT_TYPE_PROPERTY_ID="2" VALUE="internalTestDocument3" NUMERIC_VALUE="0" NORMALIZED_VALUE="internaltestdocument3" />
+  
+  <!-- ********** VERSIONING TEST DATA -START- *********** -->
+  
+  <object ID="119" OBJECT_TYPE_ID="6" CMIS_OBJECT_ID="internalTestDocument4" INDEX_STATE_CONTENT="0"/>                                         <!-- nest:special_document -->
+  <property ID="112" OBJECT_ID="119" OBJECT_TYPE_PROPERTY_ID="2" VALUE="internalTestDocument4" NUMERIC_VALUE="0" NORMALIZED_VALUE="internaltestdocument4" />            <!-- cmis:objectId -->
+  <property ID="113" OBJECT_ID="119" OBJECT_TYPE_PROPERTY_ID="11" VALUE="1" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />                               <!-- cmis:isLatestVersion -->
+  <property ID="114" OBJECT_ID="119" OBJECT_TYPE_PROPERTY_ID="13" VALUE="1" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />                               <!-- cmis:isLatestMajorVersion -->
+  <property ID="115" OBJECT_ID="119" OBJECT_TYPE_PROPERTY_ID="15" VALUE="series1" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />                         <!-- cmis:versionSeriesId -->
+  <property ID="121" OBJECT_ID="119" OBJECT_TYPE_PROPERTY_ID="14" VALUE="checked out PrivateWorkingCopy" NUMERIC_VALUE="0" NORMALIZED_VALUE="checked out privateworkingcopy" />  <!-- cmis:versionLabel -->
+  <property ID="125" OBJECT_ID="119" OBJECT_TYPE_PROPERTY_ID="5" VALUE="kardaal" NUMERIC_VALUE="0" NORMALIZED_VALUE="kardaal" />
+  
+  
+  <object ID="120" OBJECT_TYPE_ID="6" CMIS_OBJECT_ID="internalTestDocument4.1" INDEX_STATE_CONTENT="0"/>                                    <!-- nest:special_document -->
+  <property ID="116" OBJECT_ID="120" OBJECT_TYPE_PROPERTY_ID="2" VALUE="internalTestDocument4" NUMERIC_VALUE="0" NORMALIZED_VALUE="internaltestdocument4" />      <!-- cmis:objectId -->
+  <property ID="117" OBJECT_ID="120" OBJECT_TYPE_PROPERTY_ID="11" VALUE="0" NUMERIC_VALUE="1" NORMALIZED_VALUE="" />                         <!-- cmis:isLatestVersion -->
+  <property ID="118" OBJECT_ID="120" OBJECT_TYPE_PROPERTY_ID="13" VALUE="0" NUMERIC_VALUE="1" NORMALIZED_VALUE="" />                         <!-- cmis:isLatestMajorVersion -->
+  <property ID="119" OBJECT_ID="120" OBJECT_TYPE_PROPERTY_ID="15" VALUE="series1" NUMERIC_VALUE="0" NORMALIZED_VALUE="series1"/>                   <!-- cmis:versionSeriesId -->
+  <property ID="120" OBJECT_ID="120" OBJECT_TYPE_PROPERTY_ID="14" VALUE="1.1" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />                       <!-- cmis:versionLabel -->
+  <property ID="126" OBJECT_ID="120" OBJECT_TYPE_PROPERTY_ID="5" VALUE="kardaal" NUMERIC_VALUE="0" NORMALIZED_VALUE="kardaal" />
+  
+  <!-- ********** VERSIONING TEST DATA -END- *********** -->
+  
+  <object_child OBJECT_ID="111" CHILD_OBJECT_ID="113"/>
+  <object_child OBJECT_ID="111" CHILD_OBJECT_ID="119"/>
+  <object_child OBJECT_ID="113" CHILD_OBJECT_ID="112"/>
+  <object_child OBJECT_ID="113" CHILD_OBJECT_ID="114"/>
+  <object_child OBJECT_ID="114" CHILD_OBJECT_ID="115"/>
+  <object_child OBJECT_ID="112" CHILD_OBJECT_ID="116"/>
+  <object_child OBJECT_ID="112" CHILD_OBJECT_ID="118"/>
+  <object_child OBJECT_ID="115" CHILD_OBJECT_ID="117"/>
+  
+  <!-- 
+  <property ID="155805" OBJECT_ID="20778" OBJECT_TYPE_PROPERTY_ID="10213" VALUE="/test5/test" NUMERIC_VALUE="0"/>
+  <object_type_property ID="34" OBJECT_TYPE_ID="2" CMIS_ID="cmis:path"
+  -->
+  <!-- paths -->
+  <property ID="104" OBJECT_ID="111" OBJECT_TYPE_PROPERTY_ID="34" VALUE="/folderA" NUMERIC_VALUE="0" NORMALIZED_VALUE="foldera" />
+  <property ID="105" OBJECT_ID="113" OBJECT_TYPE_PROPERTY_ID="34" VALUE="/folderA/folderB" NUMERIC_VALUE="0" NORMALIZED_VALUE="foldera/folderb"/>
+  <property ID="106" OBJECT_ID="112" OBJECT_TYPE_PROPERTY_ID="34" VALUE="/folderA/folderB/folderC" NUMERIC_VALUE="0" NORMALIZED_VALUE="foldera/folderb/folderc"/>
+  <property ID="107" OBJECT_ID="114" OBJECT_TYPE_PROPERTY_ID="34" VALUE="/folderA/folderB/folderD" NUMERIC_VALUE="0" NORMALIZED_VALUE="foldera/folderb/folderd" />
+  <property ID="108" OBJECT_ID="115" OBJECT_TYPE_PROPERTY_ID="34" VALUE="/folderA/folderB/folderD/folderE" NUMERIC_VALUE="0" NORMALIZED_VALUE="foldera/folderb/folderd/foldere" />
+  
+  <!-- start from 105 -->
+  <acl ID="105" OBJECT_ID="111" PRINCIPAL_ID="/test2" PERMISSION_ID="3"/>
+  <acl ID="106" OBJECT_ID="113" PRINCIPAL_ID="/test2" PERMISSION_ID="1"/>
+  <acl ID="107" OBJECT_ID="112" PRINCIPAL_ID="/test2" PERMISSION_ID="2"/>
+  <acl ID="108" OBJECT_ID="115" PRINCIPAL_ID="/test2" PERMISSION_ID="2"/>
+  <acl ID="109" OBJECT_ID="118" PRINCIPAL_ID="/test2" PERMISSION_ID="2"/>
+  <acl ID="110" OBJECT_ID="117" PRINCIPAL_ID="/test2" PERMISSION_ID="1"/>
+  <acl ID="111" OBJECT_ID="119" PRINCIPAL_ID="/test2" PERMISSION_ID="1"/>
+  
+</dataset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

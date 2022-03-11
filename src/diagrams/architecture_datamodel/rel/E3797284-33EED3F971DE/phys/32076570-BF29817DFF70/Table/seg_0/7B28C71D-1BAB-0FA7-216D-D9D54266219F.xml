@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="index_word_position" directorySegmentName="seg_0" id="7B28C71D-1BAB-0FA7-216D-D9D54266219F">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="position" id="1E7B3245-1CBB-E0F8-CDCB-9E484B4AAB76">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="step" id="8573CAAD-D8CD-FC88-FFF0-7F48E204723A">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<defaultValue>1</defaultValue>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="word_object_id" id="998C7233-990A-D008-E8D7-284730CAFAA9">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_fk_index_word_position" id="573BABE8-8888-2501-2CDA-CDD29BEDFD9B">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_index_word_position" id="98498717-B62B-7A46-C1C3-F014BCB9FB75">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_index_word_position" id="6ADF3354-9880-838C-FF8C-DDDE55D43C2D">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:18:47 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

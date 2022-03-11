@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypeRelationshipDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>invalid:relationship</cmis:id>
+	<cmis:localName>ln:invalid:relationship</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>dn:invalid:relationship</cmis:displayName>
+	<cmis:queryName>invalid:relationship</cmis:queryName>
+	<cmis:description>Trade favourites</cmis:description>
+	<cmis:baseId>cmis:relationship</cmis:baseId>
+	<cmis:parentId>cmis:relationship</cmis:parentId>
+	<cmis:creatable>true</cmis:creatable>
+	<cmis:fileable>true</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>false</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>true</cmis:controllablePolicy>
+	<cmis:controllableACL>true</cmis:controllableACL>
+	<cmis:propertyStringDefinition>
+		<cmis:id>invalid:comments</cmis:id>
+		<cmis:localName>ln:invalid:comments</cmis:localName>
+		<cmis:displayName>dn:invalid:comments</cmis:displayName>
+		<cmis:queryName>invalid:comments</cmis:queryName>
+		<cmis:description>Comments</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	<cmis:allowedSourceTypes>cmis:document</cmis:allowedSourceTypes>
+	<cmis:allowedSourceTypes>cmis:folder</cmis:allowedSourceTypes>
+	<cmis:allowedTargetTypes>cmis:document</cmis:allowedTargetTypes>
+	<cmis:allowedTargetTypes>cmis:folder</cmis:allowedTargetTypes>
+</cmis:type>

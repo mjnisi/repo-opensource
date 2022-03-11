@@ -1,0 +1,25 @@
+10 Threads 
+50 seconds delay (1 thread every 5 seconds)
+5 times
+
+	Only once (by thread)
+		Access to the first repository
+		If the test folder exist, then delete the tree.
+		Anyway, create the test folder (one by thread)
+
+	Loop 1 (tree depth is not configurable but the elements numbers can)
+		Creates a 5 level tree, where every folder in the tree has 2 documents and two subfolders. This sums up to 124 objects by tree.
+		In every level the documents created has different sizes, from 100 bytes to 1Mb.
+		By level and loop:
+			- Creates a folder.
+			- Creates a document.
+			- Gets the object by path.
+			- Gets the object parents.
+			- Gets the repository Info.
+			- Gets the content stream.
+		At the end of each loop, the thread get its tree's descendants. 
+	Loop 2
+		When each thread ends to build up the tree, then it start to move the objects flattening the tree.
+
+At the end of the test one test folder must exist per thread, with 62 folders and documents as children.
+Note: By default the "View results in table" is disabled because it stores all the data sent and received, so the output file would be more than 1Gb.

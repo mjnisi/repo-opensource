@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <!-- Extendde types for repository with 100 ids -->
+
+  <object_type ID="105" REPOSITORY_ID="101" CMIS_ID="nest:document" LOCAL_NAME="nest:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="nest:document" DISPLAY_NAME="nest:document" BASE_ID="101" PARENT_ID="101" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="106" REPOSITORY_ID="101" CMIS_ID="nest:special_document" LOCAL_NAME="nest:special_document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="nest:special_document" DISPLAY_NAME="nest:special_document" BASE_ID="105" PARENT_ID="105" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="107" REPOSITORY_ID="101" CMIS_ID="tron:document" LOCAL_NAME="tron:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="tron:document" DISPLAY_NAME="tron:document" BASE_ID="101" PARENT_ID="101" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="108" REPOSITORY_ID="101" CMIS_ID="nest:folder" LOCAL_NAME="nest:folder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="nest:folder" DISPLAY_NAME="nest:folder" BASE_ID="102" PARENT_ID="102" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="109" REPOSITORY_ID="101" CMIS_ID="trade:document" LOCAL_NAME="trade:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="trade:document" DISPLAY_NAME="trade:document" BASE_ID="101" PARENT_ID="101" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+
+  <object_type_relationship ID="101" OBJECT_TYPE_ID="105" TYPE="SOURCE" referenced_object_type_id="107"/>
+  <object_type_relationship ID="102" OBJECT_TYPE_ID="105" TYPE="SOURCE" referenced_object_type_id="108"/>
+  <object_type_relationship ID="103" OBJECT_TYPE_ID="105" TYPE="SOURCE" referenced_object_type_id="109"/>
+  
+  <!-- nest:document property types -->
+  <object_type_property ID="138" OBJECT_TYPE_ID="105" CMIS_ID="nest:state" LOCAL_NAME="nest:state" QUERY_NAME="nest:state" DESCRIPTION="Document state" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <!-- nest:special_document property types -->
+  <object_type_property ID="139" OBJECT_TYPE_ID="106" CMIS_ID="nest:special_description" LOCAL_NAME="nest:special_description" QUERY_NAME="nest:special_description" DESCRIPTION="Special description" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>
+  <!-- tron:document property types -->
+  <object_type_property ID="140" OBJECT_TYPE_ID="107" CMIS_ID="tron:description" LOCAL_NAME="tron:description" QUERY_NAME="tron:description" DESCRIPTION="Tron document description" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <!-- "nest:folder property types -->
+  <object_type_property ID="141" OBJECT_TYPE_ID="108" CMIS_ID="nest:folder_type" LOCAL_NAME="nest:folder_type" QUERY_NAME="nest:folder_type" DESCRIPTION="Folder Type" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+
+  <!--child of 1 -->
+  <object_type ID="110" REPOSITORY_ID="101" CMIS_ID="test:document" LOCAL_NAME="test:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="test:document" DISPLAY_NAME="test:document" BASE_ID="101" PARENT_ID="101" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>  
+  <object_type_property ID="143" OBJECT_TYPE_ID="110" CMIS_ID="test:prop1" LOCAL_NAME="test:prop1" QUERY_NAME="test:prop1" DESCRIPTION="ID of the parent folder of the folder" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="144" OBJECT_TYPE_ID="110" CMIS_ID="test:prop2" LOCAL_NAME="test:prop2" QUERY_NAME="test:prop2" DESCRIPTION="The fully qualified path to this folder" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="145" OBJECT_TYPE_ID="110" CMIS_ID="test:prop3" LOCAL_NAME="test:prop3" QUERY_NAME="test:prop3" DESCRIPTION="Id&apos;s of the set of Object-types that can be created, moved or filed into this folder" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <!--child of 2 -->
+  <object_type ID="120" REPOSITORY_ID="101" CMIS_ID="test:folder" LOCAL_NAME="test:folder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="test:folder" DISPLAY_NAME="test:folder" BASE_ID="102" PARENT_ID="102" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type_property ID="146" OBJECT_TYPE_ID="120" CMIS_ID="test:prop11" LOCAL_NAME="test:prop11" QUERY_NAME="test:prop11" DESCRIPTION="The fully qualified path to this folder" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="147" OBJECT_TYPE_ID="120" CMIS_ID="test:prop12" LOCAL_NAME="test:prop12" QUERY_NAME="test:prop12" DESCRIPTION="Id&apos;s of the set of Object-types that can be created, moved or filed into this folder" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <!--child of 20 -->
+  <object_type ID="121" REPOSITORY_ID="101" CMIS_ID="test:subfolder" LOCAL_NAME="test:subfolder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="test:subfolder" DISPLAY_NAME="test:subfolder" BASE_ID="102" PARENT_ID="120" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type_property ID="148" OBJECT_TYPE_ID="121" CMIS_ID="test:prop111" LOCAL_NAME="test:prop11" QUERY_NAME="test:prop111" DESCRIPTION="The fully qualified path to this folder" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="149" OBJECT_TYPE_ID="121" CMIS_ID="test:prop121" LOCAL_NAME="test:prop12" QUERY_NAME="test:prop121" DESCRIPTION="Id&apos;s of the set of Object-types that can be created, moved or filed into this folder" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+
+  <property/>
+</dataset>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<object ID="205" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document in error" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="0" INDEX_TRIES_METADATA="1" />
+	
+	<index_word REPOSITORY_ID="100" WORD="author"/>
+    <index_word REPOSITORY_ID="100" WORD="document"/>
+    <index_word REPOSITORY_ID="100" WORD="name"/>
+	
+	<index_word_object />
+	
+	<index_word_position />
+
+</dataset>

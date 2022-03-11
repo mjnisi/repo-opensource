@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<index_word ID="1" REPOSITORY_ID="101" WORD="one"/>
+  	<index_word ID="2" REPOSITORY_ID="101" WORD="two"/>
+  
+  	<index_word_object/>
+  	<index_word_position/>
+</dataset>

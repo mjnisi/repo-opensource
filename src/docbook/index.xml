@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<chapter
+	xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude"
+	version="5.0">
+
+	<title>Indexing Process</title>
+
+
+	<section>
+		<title>Context</title>
+
+		<para>The index is an internal CMIS Server functionality. It is a
+			piece of software at the service of the CMIS query service and it is
+			responsible for populating the data structure needed by the query
+			service to provide full text search in documents.
+		</para>
+
+		<screenshot>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/index_context.png" scalefit="1"
+						width="100%" contentdept="100%" />
+				</imageobject>
+			</mediaobject>
+		</screenshot>
+	</section>
+
+
+	<section>
+		<title>Introduction</title>
+
+		<section>
+			<title>What is it</title>
+
+			<para>It is a part of the full text search system, responsible for preparing the information in a way as to be retrieved as fast as possible by the subsequent
+			search.</para>
+
+			<para>The way it prepares information is a reverse index (see section 'Reverse index'), in a similar way as Lucen does (see section 'Reciprocity between Repo index and Lucene')</para>
+		</section>
+
+		<section>
+			<title>Requirements / Restrictions</title>
+			<itemizedlist>
+				<listitem>
+					<para>The unavailability or failure of the index functionality should not affect the rest of CMIS server processes (beyond the document at hand would not be indexed and would not be found as result of a 'contains' query)</para>
+				</listitem>
+				<listitem>
+					<para>Multi-lingual documents can be indexed</para>
+				</listitem>
+				<listitem>
+					<para>The generated index should be stored in the database to make it more powerful the searching process (pagination, ordering, ...)</para>
+				</listitem>
+			</itemizedlist>
+		</section>
+
+		<section>
+			<title>Integration</title>
+			<orderedlist>
+				<listitem>
+					<para>ATOMIC INDEX:</para>
+					<itemizedlist>
+						<listitem>
+							<para>Launched for every operation where the stream or metadata of a cmis:object are updated</para>
+						</listitem>
+						<listitem>
+							<para>Uses transaction synchronization to avoid interfering with the rest of CMIS processes</para>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+				<listitem>
+					<para>BACKGROUND JOBS:</para>
+					<itemizedlist>
+						<listitem>
+							<para>Jobs scheduled to be launched at certain configured moments</para>
+						</listitem>
+						<listitem>
+							<para>Jobs that launch index operations:</para>
+							<itemizedlist>
+								<listitem>
+									<para>Clean orphan indexes job: delete all remaining information related to deleted cmis:objects</para>
+								</listitem>
+								<listitem>
+									<para>Re-index content/metadata jobs: launch the index process for cmis:objects whose indexes are in error or not done states</para>
+								</listitem>
+							</itemizedlist>
+						</listitem>
+						<listitem>
+							<para>Other jobs related to the index:</para>
+							<itemizedlist>
+								<listitem>
+									<para>Compact transient database job: it aims to improve resources usage. It closes and compacts internal index database at certain configured moments if there are no index processes running.</para>
+								</listitem>
+							</itemizedlist>
+						</listitem>
+					</itemizedlist>
+				</listitem>
+			</orderedlist>
+
+		</section>
+	</section>
+
+	<section>
+		<title>Reverse Index</title>
+
+		<para>
+		The index stores words and statistics in order to make word-based search more efficient. Repo's index, as Lucene's, falls into the family of indexes known as inverted index. This means that given a word, the index can list the documents that contains it.
+		This is the inverse of the natural relationship, in wich documents list words.
+		</para>
+
+		<section>
+			<title>Definitions</title>
+
+			<para>The fundamental concepts in Repo's index are index, indexable objects, content-index, metadata-index, indexable property, word, word-object, word-position and dictionary.</para>
+
+			<para>An index contains a series of indexable objects</para>
+
+			<itemizedlist>
+				<listitem><para>An indexable object is composed by a metadata-index and, optionally, by a content-index.</para></listitem>
+				<listitem><para>A content-index is a set of words (the words contained in a cmis:object related stream)</para></listitem>
+				<listitem><para>A metadata-index is a set of indexable properties ('string' cmis:properties related to the indexable object)</para></listitem>
+				<listitem><para>An indexable property is a set of words (the words contained in the cmis:property's value) </para></listitem>
+				<listitem><para>A word is a string</para></listitem>
+				<listitem><para>A word-object is a word in relation with an indexable object and, optionally, with an indexable property. It contains frequency information.</para></listitem>
+				<listitem><para>A word-position is the position of each occurrence of every word that make up an indexable object.</para></listitem>
+				<listitem><para>A dictionary is a set of words</para></listitem>
+			</itemizedlist>
+
+			<para>Each cmis:repository has its own dictionary.</para>
+			<para>The same string in two different dictionaries is considered as two different words.</para>
+			<para>The same word in the content of an indexable object or in two different metadata-properties is considered a different word-object.</para>
+		</section>
+
+		<section>
+			<title>Repo index structure</title>
+
+			<para>The structure of the Repo index is composed by 3 database tables and 4 fields about indexing state in the cmis:object table.</para>
+
+			<itemizedlist>
+				<listitem><para>INDEX_WORD: contains the words and dictionaries.</para></listitem>
+				<listitem><para>INDEX_WORD_OBJECT: contains word-objects together with information about word's frequency in the indexable object.</para></listitem>
+				<listitem><para>INDEX_WORD_POSITION: contains word-positions ordered within each word-object.</para></listitem>
+			</itemizedlist>
+		</section>
+
+		<section>
+			<title>Reciprocity between Repo index and Lucene</title>
+			<para></para>
+
+			<table>
+				<title>Reciprocity Repo - Lucene</title>
+				<tgroup cols="3">
+					<thead>
+						<row>
+							<entry>Lucene</entry>
+							<entry>Lucene definition</entry>
+							<entry>Repo</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry>Term</entry>
+							<entry>A term is a string. The term dictionary registers information about term's frequency (FreqDelta) and the term's position (ProxDelta)</entry>
+							<entry>Word, Word-object, Word-position</entry>
+						</row>
+						<row>
+							<entry>Field</entry>
+							<entry>A field is a named sequence of fields</entry>
+							<entry>Content, Metadata-property</entry>
+						</row>
+						<row>
+							<entry>Document</entry>
+							<entry>A document is a sequence of fields.</entry>
+							<entry>Indexable object, Metadata</entry>
+						</row>
+					</tbody>
+				</tgroup>
+    		</table>
+
+			<para></para>
+		</section>
+
+	</section>
+
+	<section>
+		<title>Index components</title>
+
+		<section>
+			<title>Index entry points</title>
+
+			<para>The entry points to the index functionality are implementations of the Index interface, specifically subclasses of AbstractIndex:
+			IndexImpl and subclasses of AbstractIndexBackgroundJob.
+			</para>
+			<para>
+			IndexImpl is invoked by the CMIS object service to perform the indexing of single cmis:objects responding to user requests to the CMIS
+			server (atomic index).
+			</para>
+			<para>
+			Subclasses of AbstractIndexBackgroundJob are processes triggered by the system according to crontab-expressions, that look for orphan or unfinished
+			indexes and perform the convenient index operation for each of them.
+			</para>
+
+			<para>
+			The index entry points create IndexTasks with the needed information and pass them to the propper task executor (using IndexExecutorSelector),
+			which in turn will use a ThreadPool to execute the operations specified by IndexTasks. To coordinate the case of having multiple IndexTasks related to
+			the same cmis object, the entry points will use the IndexSynchronizer (thread save).
+			</para>
+
+
+			<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/index/class/1.index_entryPoints.png"
+							scalefit="1" width="100%" contentdept="100%" />
+					</imageobject>
+				</mediaobject>
+			</screenshot>
+
+		</section>
+
+
+		<section>
+			<title>IndexSynchronizer</title>
+
+			<para>The IndexSynchronizer is only a store for IndexTasks. Internally, it delegates to two IndexOperationTypeSynchronizer objects: one to store METADATA index
+			operation type tasks and another to store CONTENT tasks.</para>
+
+			<para>Each IndexOperationTypeSynchronizer manages two maps:</para>
+
+			<itemizedlist>
+				<listitem>
+					<para>
+					"executing map": the map that registers the IndexTasks that can be
+					added to the task executor
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					"waiting map": it is used to know if there is some other IndexTask
+					(apart from executing one) programmed for a CMIS object so the
+					executing task has to stop. Only the last arrived IndexTask is
+					saved in this map.
+					</para>
+				</listitem>
+			</itemizedlist>
+
+			<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/index/class/2.index_task_synchronization.png"
+							scalefit="1" width="100%" contentdept="100%" />
+					</imageobject>
+				</mediaobject>
+			</screenshot>
+		</section>
+
+
+		<section>
+			<title>Index task</title>
+
+			<para>The index task is the object that stores information about the CMIS object to be indexed and the index operation to be performed, as well as the
+			thread (Runnable) that executes the indexing process. It is responsible, based on its information, for selecting the propper index operator wich has
+			the knowledge of the indexing process.
+			</para>
+
+			<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/index/class/3.index_task_and_operator.png"
+							scalefit="1" width="100%" contentdept="100%" />
+					</imageobject>
+				</mediaobject>
+			</screenshot>
+		</section>
+
+		<section>
+			<title>Index Part Operator</title>
+
+			<para>Subclasses of this interface have the knowledge necessary to permform index operations (delete or create) according to
+			the operation type supported (metadata or content).
+			</para>
+
+			<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/index/class/4.index_operators.png"
+							scalefit="1" width="100%" contentdept="100%" />
+					</imageobject>
+				</mediaobject>
+			</screenshot>
+		</section>
+
+		<section>
+			<title>Text analyzers</title>
+
+			<para>Extensions of Lucene analyzers, they are able to interpret a text, read it word by word,
+			and process each word (i.e. normalizing accents, upper/lower cases).
+			</para>
+
+			<para>
+			Because of the need of indexing multi-lingual documents, no stop word list is used.
+			</para>
+
+			<para>Repo is using two different analyzers: </para>
+			<itemizedlist>
+
+				<listitem>
+					<para>
+					FullTextAnalyzer: this is the one used by the index (both content and metadata indexes). It processes contents following the rules below:
+					<itemizedlist>
+						<listitem>
+							<para>Word Break rules from the Unicode Text Segmentation algorithm, as specified in Unicode Standard Annex #29. (StandardTokenizer)</para>
+						</listitem>
+						 <listitem>
+							<para>Converts alphabetic, numeric, and symbolic Unicode characters which are not in the first 127 ASCII characters (the
+							"Basic Latin" Unicode block) into their ASCII equivalents, if one exists.  (ASCIIFoldingFilter)</para>
+						</listitem>
+						<listitem><para>Converts upper case letters into lower case.  (LowerCaseFilter)</para></listitem>
+					</itemizedlist>
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					PropertiesAnalyzer: it is not used by the index. It is used to store normalized values for 'string' cmis:object properties. It's similar to the
+					FullTextAnalyzer except in the way it tokenizes content text. This analyzer emits the entire input as a single token and thus, does not remove any punctuation
+					characters.
+					</para>
+				</listitem>
+			</itemizedlist>
+		</section>
+
+		<section>
+			<title>Content extractor</title>
+
+			<para>Given a CMIS object identifier, the content's extractor
+				constructs pipes that connect the stream related to that object in
+				database with the Tika's component that is able to interpret the stream as a text.
+			</para>
+			<para>The whole stream is not loaded into memory but it loads chunks
+				of the stream on demand.
+			</para>
+
+		</section>
+
+		<section>
+			<title>Transient index</title>
+
+			<para>It is an H2 database embedded in the server to store the
+				temporal information resulting from the content extraction process.
+				This database consists of two tables: transient_index and index_transient_metadata.
+			</para>
+		</section>
+
+		<section>
+			<title>Permanent index</title>
+
+			<para>It is the set of the external database tables used to store the reverse index information. It consist of three database
+			tables: Index_word, Index_word_object and Index_word_position.</para>
+		</section>
+
+
+	</section>
+
+
+
+	<section>
+		<title>Index processes</title>
+
+		<section>
+			<title>How words are extracted?</title>
+			<para>IndexTasks retrieve the information to be indexed from the CMIS database. It retrieves the cmis:object stream for content tasks and
+			the list of 'string' cmis:object properties for metadata tasks. Then the information is processed and saved to the transient index.</para>
+			<section>
+				<title>Content</title>
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="images/index/sequence/process_detail/1.2.1.index_task_content_processToTransient.png"
+								scalefit="1" width="100%" contentdept="100%" />
+						</imageobject>
+					</mediaobject>
+				</screenshot>
+			</section>
+			<section>
+				<title>Metadata</title>
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="images/index/sequence/process_detail/2.2.1.index_task_metadata_processToTransient.png"
+								scalefit="1" width="100%" contentdept="100%" />
+						</imageobject>
+					</mediaobject>
+				</screenshot>
+			</section>
+
+		</section>
+
+		<section>
+			<title>How the index is populated?</title>
+			<para>The process is as follows:</para>
+
+			<orderedlist>
+			<listitem>
+				<para>
+				The entry point create an IndexTask, specifying which index
+				operation (index or delete index) it is to be performed and some
+				other data about the cmis object.
+				</para>
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="images/index/sequence/1.index_triggers.png"
+								scalefit="1" width="100%" contentdept="100%" />
+						</imageobject>
+					</mediaobject>
+				</screenshot>
+			</listitem>
+			<listitem>
+				<para>
+				The entry point use the IndexSynchronizer.putInQueue(IndexTask,
+				waiting) method to check if it is possible to add the IndexTask to
+				task executor.
+				</para>
+				<itemizedlist>
+					<listitem>
+						<para>
+						If it is possible, it adds the index to the task executor, so the
+						IndexTask.doIndex() will be executed.
+						</para>
+					</listitem>
+					<listitem>
+						<para>
+						If not, depending on the "waiting" argument, different things
+						could happen:
+						</para>
+						<itemizedlist>
+							<listitem>
+								<para>
+								waiting = false: the index synchronizer does nothing with the
+								task and neither the entry point, so the IndexTask is lost. It is
+								the way the background jobs act: if the IndexTask cannot be
+								executed directly, it is ignored. This is to avoid stopping an
+								executing atomic task.
+								</para>
+							</listitem>
+							<listitem>
+								<para>
+								waiting = true: the index synchronizer put the IndexTask in the
+								"waiting map".
+								</para>
+							</listitem>
+						</itemizedlist>
+
+					</listitem>
+
+				</itemizedlist>
+			</listitem>
+			<listitem>
+				<para>
+				If the synchronizer returns that is possible to add the IndexTask to a task executor, then the IndexExecutorSelector is invoked to determine which
+				task executor to use. This is done based on the index operation type and the file size to be indexed if the operation type is CONTENT. This way, there
+				is a task executor for metadata tasks, another for small files and the last for big files to be indexed.
+				</para>
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="images/index/sequence/2.index_task_executionSelection.png"
+								scalefit="1" width="100%" contentdept="100%" />
+						</imageobject>
+					</mediaobject>
+				</screenshot>
+			</listitem>
+			<listitem>
+				<para>The IndexTask is executed.</para>
+				<itemizedlist>
+					<listitem>
+						<para>Create index part</para>
+						<screenshot>
+							<mediaobject>
+								<imageobject>
+									<imagedata fileref="images/index/sequence/3.index_task_general_process.png"
+										scalefit="1" width="100%" contentdept="100%" />
+								</imageobject>
+							</mediaobject>
+						</screenshot>
+					</listitem>
+					<listitem>
+						<para>Delete index part</para>
+						<screenshot>
+							<mediaobject>
+								<imageobject>
+									<imagedata fileref="images/index/sequence/process_detail/0.1.2.index_task_common_deletePermanentIndex.png"
+										scalefit="1" width="100%" contentdept="100%" />
+								</imageobject>
+							</mediaobject>
+						</screenshot>
+					</listitem>
+				</itemizedlist>
+				<para>When the task execution finishes, it invokes the IndexSynchronizer.doOnTaskFinished() method.</para>
+			</listitem>
+			<listitem>
+				<para>
+				The IndexSynchronizer removes the IndexTask from the "executing map"
+				and fires and IndexEvent
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+				The IndexImpl listen to that event, retrieves the waiting task for
+				that cmis object from the IndexSynchronizer and begins the process
+				with this other task, if it exists.
+				</para>
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="images/index/sequence/4.index_task_onfinish.png"
+								scalefit="1" width="100%" contentdept="100%" />
+						</imageobject>
+					</mediaobject>
+				</screenshot>
+			</listitem>
+
+		</orderedlist>
+		</section>
+	</section>
+
+
+
+</chapter>
+

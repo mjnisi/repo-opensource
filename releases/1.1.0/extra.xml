@@ -1,0 +1,23 @@
+<project name="project-specific-targets"  basedir=".">
+
+    <target name="extra">
+    	
+<echo>
+	  ###   #     # ######  ####### ######  #######    #    #     # #######
+	   #    ##   ## #     # #     # #     #    #      # #   ##    #    #
+	   #    # # # # #     # #     # #     #    #     #   #  # #   #    #
+	   #    #  #  # ######  #     # ######     #    #     # #  #  #    #
+	   #    #     # #       #     # #   #      #    ####### #   # #    #
+	   #    #     # #       #     # #    #     #    #     # #    ##    #
+	  ###   #     # #       ####### #     #    #    #     # #     #    #
+</echo>
+	
+	<echo>Disable the SOAP stacktrace adding the following content to .profile:</echo>
+    <echo>-Dorg.apache.chemistry.opencmis.stacktrace.disable=true</echo>
+    	
+    <echo>Check installation chapter in the documentation to see the full .profile file.</echo>
+    	
+    </target>
+
+
+</project>

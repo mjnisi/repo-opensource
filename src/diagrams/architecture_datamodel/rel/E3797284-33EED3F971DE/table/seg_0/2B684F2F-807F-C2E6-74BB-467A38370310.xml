@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2B684F2F-807F-C2E6-74BB-467A38370310" name="index_word_object">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>B536370E-0E40-AD53-4351-15B1CF91C1D7</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="08AE5B30-5662-7F78-9CDC-4A44A817A47D">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>0869AE16-120B-6A0B-EB0B-712CF1AAED10</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="word_id" id="65AFA667-54CB-318D-A883-E133FFFDEDB6">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>2DDDADC3-0620-9739-9DB6-DAB9C0C655FB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>28848244-317E-E370-B8DD-D28B0B027589</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="55E14134-F46A-CFFD-98C5-D259FC262A8C" referredColumn="28848244-317E-E370-B8DD-D28B0B027589"/>
+</associations>
+</Column>
+<Column name="object_id" id="05E4058C-0391-EBE0-66D1-B167451A8C8E">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>9E0D7971-F963-5C5C-8466-ECC760FF24B2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="property_id" id="86597FEF-A75E-E44A-4D4C-59A9B323B35D">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-02-10 17:30:52 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>0B1D8B06-64BE-BC42-211D-CE11C5F96B09</importedID>
+<defaultValue>-1</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="object_type_property_id" id="85E672F6-6A41-4ABB-E10C-21EFE6281FE9">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-02-10 17:30:52 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>18E475C6-4A99-4B3B-01FA-621F9E3A8D84</importedID>
+<defaultValue>-1</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="frequency" id="23C31740-5FE9-F5B1-2614-F32E22124E26">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>64833845-5A3A-7C5D-1E1F-F9159A785A29</importedID>
+<nullsAllowed>true</nullsAllowed>
+<defaultValue>0</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sqrt_frequency" id="26E7A411-D189-38DA-51B0-0B661973C4CA">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-02-10 17:30:52 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>4999C763-C0B4-C1B4-D1CA-47A0EA7AEE56</importedID>
+<nullsAllowed>true</nullsAllowed>
+<defaultValue>0</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="95BD3BC7-38F0-5E2C-81A3-3637A028E276" name="pk_index_word_object">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>EE6D7830-DFC0-B4F5-9A6E-69A9038428FD</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08AE5B30-5662-7F78-9CDC-4A44A817A47D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="13B78185-8624-EECE-5702-E1F22F1F821D" name="idx_fk_word_object_dictionary">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>2C930C67-5F2D-A984-1D61-C9594D58EFAF</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65AFA667-54CB-318D-A883-E133FFFDEDB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39C2FD2B-828A-36B8-E82E-F541AB1BA8AF" name="idx_index_word_object">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>DA255928-463F-1453-0FD6-7E7F8DE7F4C9</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05E4058C-0391-EBE0-66D1-B167451A8C8E"/>
+<colUsage columnID="86597FEF-A75E-E44A-4D4C-59A9B323B35D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAD6E196-CB84-434E-E467-024015F4F815" name="idx_index_word_object_byword">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-02-10 17:30:52 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>758A54B7-406C-F9F5-E8CA-46437D7E37BB</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65AFA667-54CB-318D-A883-E133FFFDEDB6"/>
+<colUsage columnID="85E672F6-6A41-4ABB-E10C-21EFE6281FE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF06610D-680A-A978-DF93-B3C11683E0D1" name="idx_index_word_object_bywoject">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-06-04 10:52:05 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>9E4FC542-0024-115A-A6AA-1C0C866722FC</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65AFA667-54CB-318D-A883-E133FFFDEDB6"/>
+<colUsage columnID="05E4058C-0391-EBE0-66D1-B167451A8C8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D3E1AF15-9AA5-562E-42DE-64E52D754215" name="idx_index_word_object_prop">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-06-04 10:52:05 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>99B7F854-0141-5ED8-491E-773479AE8F77</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="86597FEF-A75E-E44A-4D4C-59A9B323B35D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B52F0F9-CA3F-91D4-D0AA-61E81836A124" name="fk_word_object_dictionary">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65AFA667-54CB-318D-A883-E133FFFDEDB6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

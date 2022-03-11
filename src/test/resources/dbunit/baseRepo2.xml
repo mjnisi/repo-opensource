@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <!-- The very basic information of a new repository. ID test_repo_02 IDS from 200 -->
+  <repository ID="201" CMIS_ID="test_repo_02" NAME="test_repo_02" DESCRIPTION="Test repository 02" C_GET_DESCENDANTS="F" C_GET_FOLDER_TREE="F" C_CONTENT_STREAM_UPDATABILITY="none" C_CHANGES="none" C_RENDITIONS="none" C_MULTIFILING="F" C_UNFILING="F" C_VERSION_SPECIFIC_FILING="F" C_PWC_UPDATABLE="F" C_PWC_SEARCHABLE="F" C_ALL_VERSIONS_SEARCHABLE="F" C_QUERY="none" C_JOIN="none" C_ACL="discover" C_ACL_PROPAGATION="objectonly"/>
+  <permission ID="203" REPOSITORY_ID="201" NAME="cmis:all" DESCRIPTION="All"/>
+  <permission ID="202" REPOSITORY_ID="201" NAME="cmis:write" DESCRIPTION="Write" PARENT_ID="203"/>
+  <permission ID="201" REPOSITORY_ID="201" NAME="cmis:read" DESCRIPTION="Read" PARENT_ID="202"/>
+  <permission_mapping ID="201" REPOSITORY_ID="201" KEY="canGetDescendents.Folder" PERMISSION_ID="201"/>
+  <permission_mapping ID="202" REPOSITORY_ID="201" KEY="canGetChildren.Folder" PERMISSION_ID="201"/>
+  <permission_mapping ID="203" REPOSITORY_ID="201" KEY="canGetFolderParent.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="204" REPOSITORY_ID="201" KEY="canGetParents.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="205" REPOSITORY_ID="201" KEY="canCreateDocument.Folder" PERMISSION_ID="202"/>
+  <permission_mapping ID="206" REPOSITORY_ID="201" KEY="canCreateFolder.Folder" PERMISSION_ID="201"/>
+  <permission_mapping ID="207" REPOSITORY_ID="201" KEY="canCreateRelationship.Source" PERMISSION_ID="201"/>
+  <permission_mapping ID="208" REPOSITORY_ID="201" KEY="canCreateRelationship.Target" PERMISSION_ID="201"/>
+  <permission_mapping ID="209" REPOSITORY_ID="201" KEY="canGetProperties.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="210" REPOSITORY_ID="201" KEY="canUpdateProperties.Object" PERMISSION_ID="202"/>
+  <permission_mapping ID="211" REPOSITORY_ID="201" KEY="canMove.Object" PERMISSION_ID="202"/>
+  <permission_mapping ID="212" REPOSITORY_ID="201" KEY="canMove.Target" PERMISSION_ID="201"/>
+  <permission_mapping ID="213" REPOSITORY_ID="201" KEY="canMove.Source" PERMISSION_ID="201"/>
+  <permission_mapping ID="214" REPOSITORY_ID="201" KEY="canDelete.Object" PERMISSION_ID="202"/>
+  <permission_mapping ID="215" REPOSITORY_ID="201" KEY="canViewContent.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="216" REPOSITORY_ID="201" KEY="canSetContent.Document" PERMISSION_ID="202"/>
+  <permission_mapping ID="217" REPOSITORY_ID="201" KEY="canDeleteContent.Document" PERMISSION_ID="202"/>
+  <permission_mapping ID="218" REPOSITORY_ID="201" KEY="canDeleteTree.Folder" PERMISSION_ID="202"/>
+  <permission_mapping ID="219" REPOSITORY_ID="201" KEY="canAddToFolder.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="220" REPOSITORY_ID="201" KEY="canAddToFolder.Folder" PERMISSION_ID="201"/>
+  <permission_mapping ID="221" REPOSITORY_ID="201" KEY="canRemoveFromFolder.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="222" REPOSITORY_ID="201" KEY="canRemoveFromFolder.Folder" PERMISSION_ID="201"/>
+  <permission_mapping ID="223" REPOSITORY_ID="201" KEY="canCheckout.Document" PERMISSION_ID="202"/>
+  <permission_mapping ID="224" REPOSITORY_ID="201" KEY="canCancelCheckout.Document" PERMISSION_ID="202"/>
+  <permission_mapping ID="225" REPOSITORY_ID="201" KEY="canCheckin.Document" PERMISSION_ID="202"/>
+  <permission_mapping ID="226" REPOSITORY_ID="201" KEY="canGetAllVersions.VersionSeries" PERMISSION_ID="201"/>
+  <permission_mapping ID="227" REPOSITORY_ID="201" KEY="canGetObjectRelationships.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="228" REPOSITORY_ID="201" KEY="canAddPolicy.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="229" REPOSITORY_ID="201" KEY="canAddPolicy.Policy" PERMISSION_ID="201"/>
+  <permission_mapping ID="230" REPOSITORY_ID="201" KEY="canRemovePolicy.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="231" REPOSITORY_ID="201" KEY="canRemovePolicy.Policy" PERMISSION_ID="201"/>
+  <permission_mapping ID="232" REPOSITORY_ID="201" KEY="canGetAppliedPolicies.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="233" REPOSITORY_ID="201" KEY="canGetACL.Object" PERMISSION_ID="201"/>
+  <permission_mapping ID="234" REPOSITORY_ID="201" KEY="canApplyACL.Object" PERMISSION_ID="202"/>
+
+  <object_type ID="201" REPOSITORY_ID="201" CMIS_ID="cmis:document" LOCAL_NAME="cmis:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:document" DISPLAY_NAME="cmis:document" BASE_ID="201"  CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="202" REPOSITORY_ID="201" CMIS_ID="cmis:folder" LOCAL_NAME="cmis:folder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:folder" DISPLAY_NAME="cmis:folder" BASE_ID="202"  CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T"/>
+  <object_type ID="203" REPOSITORY_ID="201" CMIS_ID="cmis:policy" LOCAL_NAME="cmis:policy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:policy" DISPLAY_NAME="cmis:policy" BASE_ID="203" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T"/>
+  <object_type ID="204" REPOSITORY_ID="201" CMIS_ID="cmis:relationship" LOCAL_NAME="cmis:relationship" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:relationship" DISPLAY_NAME="cmis:relationship" BASE_ID="204" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T"/>
+
+  <!-- ROOT FOLDER -->
+  <object ID="201" OBJECT_TYPE_ID="202" CMIS_OBJECT_ID="2.ROOT"/>
+  <change_event ID="2" CMIS_OBJECT_ID="201" USERNAME="admin" CHANGE_LOG_TOKEN="test-change-log-token-2" CHANGE_TYPE="created" REPOSITORY_ID="201" CHANGE_TIME="2013-10-18 16:11:04.736"/>
+  <object_type_property ID="201" OBJECT_TYPE_ID="201" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" QUERY_NAME="cmis:name" DESCRIPTION="Name of the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="202" OBJECT_TYPE_ID="201" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" QUERY_NAME="cmis:objectId" DESCRIPTION="Id of the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>                                                                                  
+  <object_type_property ID="203" OBJECT_TYPE_ID="201" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" QUERY_NAME="cmis:baseTypeId" DESCRIPTION="Id of the base object-type for the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="204" OBJECT_TYPE_ID="201" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" QUERY_NAME="cmis:objectTypeId" DESCRIPTION="Id of the object&apos;s type" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="205" OBJECT_TYPE_ID="201" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" QUERY_NAME="cmis:createdBy" DESCRIPTION="User who created the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="206" OBJECT_TYPE_ID="201" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" QUERY_NAME="cmis:creationDate" DESCRIPTION="DateTime when the object was created" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="207" OBJECT_TYPE_ID="201" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" QUERY_NAME="cmis:lastModifiedBy" DESCRIPTION="User who last modified the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="208" OBJECT_TYPE_ID="201" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" QUERY_NAME="cmis:lastModificationDate" DESCRIPTION="DateTime when the object was last modified" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="209" OBJECT_TYPE_ID="201" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" QUERY_NAME="cmis:changeToken" DESCRIPTION="Opaque token used for optimistic locking and concurrency checking" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object_type_property ID="210" OBJECT_TYPE_ID="201" CMIS_ID="cmis:isImmutable" LOCAL_NAME="cmis:isImmutable" QUERY_NAME="cmis:isImmutable" DESCRIPTION="TRUE if the repository MUST throw and error at any attempt to update or delete the object" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="211" OBJECT_TYPE_ID="201" CMIS_ID="cmis:isLatestVersion" LOCAL_NAME="cmis:isLatestVersion" QUERY_NAME="cmis:isLatestVersion" DESCRIPTION="See section 0" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="212" OBJECT_TYPE_ID="201" CMIS_ID="cmis:isMajorVersion" LOCAL_NAME="cmis:isMajorVersion" QUERY_NAME="cmis:isMajorVersion" DESCRIPTION="See section 0" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="213" OBJECT_TYPE_ID="201" CMIS_ID="cmis:isLatestMajorVersion" LOCAL_NAME="cmis:isLatestMajorVersion" QUERY_NAME="cmis:isLatestMajorVersion" DESCRIPTION="See section 0" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="214" OBJECT_TYPE_ID="201" CMIS_ID="cmis:versionLabel" LOCAL_NAME="cmis:versionLabel" QUERY_NAME="cmis:versionLabel" DESCRIPTION="See section 0" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="215" OBJECT_TYPE_ID="201" CMIS_ID="cmis:versionSeriesId" LOCAL_NAME="cmis:versionSeriesId" QUERY_NAME="cmis:versionSeriesId" DESCRIPTION="See section 0" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="216" OBJECT_TYPE_ID="201" CMIS_ID="cmis:isVersionSeriesCheckedOut" LOCAL_NAME="cmis:isVersionSeriesCheckedOut" QUERY_NAME="cmis:isVersionSeriesCheckedOut" DESCRIPTION="See section 0" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="217" OBJECT_TYPE_ID="201" CMIS_ID="cmis:versionSeriesCheckedOutBy" LOCAL_NAME="cmis:versionSeriesCheckedOutBy" QUERY_NAME="cmis:versionSeriesCheckedOutBy" DESCRIPTION="See section 0" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="218" OBJECT_TYPE_ID="201" CMIS_ID="cmis:versionSeriesCheckedOutId" LOCAL_NAME="cmis:versionSeriesCheckedOutId" QUERY_NAME="cmis:versionSeriesCheckedOutId" DESCRIPTION="See section 0" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="219" OBJECT_TYPE_ID="201" CMIS_ID="cmis:checkinComment" LOCAL_NAME="cmis:checkinComment" QUERY_NAME="cmis:checkinComment" DESCRIPTION="See section 0" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="220" OBJECT_TYPE_ID="201" CMIS_ID="cmis:contentStreamLength" LOCAL_NAME="cmis:contentStreamLength" QUERY_NAME="cmis:contentStreamLength" DESCRIPTION="Length of the content stream (in bytes)" PROPERTY_TYPE="integer" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="221" OBJECT_TYPE_ID="201" CMIS_ID="cmis:contentStreamMimeType" LOCAL_NAME="cmis:contentStreamMimeType" QUERY_NAME="cmis:contentStreamMimeType" DESCRIPTION="MIME type of the Content Stream" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="222" OBJECT_TYPE_ID="201" CMIS_ID="cmis:contentStreamFileName" LOCAL_NAME="cmis:contentStreamFileName" QUERY_NAME="cmis:contentStreamFileName" DESCRIPTION="File name of the Content Stream" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="223" OBJECT_TYPE_ID="201" CMIS_ID="cmis:contentStreamId" LOCAL_NAME="cmis:contentStreamId" QUERY_NAME="cmis:contentStreamId" DESCRIPTION="Id of the stream" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  
+  <object_type_property ID="224" OBJECT_TYPE_ID="202" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" QUERY_NAME="cmis:name" DESCRIPTION="Name of the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="225" OBJECT_TYPE_ID="202" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" QUERY_NAME="cmis:objectId" DESCRIPTION="Id of the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="226" OBJECT_TYPE_ID="202" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" QUERY_NAME="cmis:baseTypeId" DESCRIPTION="Id of the base object-type for the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="227" OBJECT_TYPE_ID="202" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" QUERY_NAME="cmis:objectTypeId" DESCRIPTION="Id of the object&apos;s type" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="228" OBJECT_TYPE_ID="202" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" QUERY_NAME="cmis:createdBy" DESCRIPTION="User who created the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="229" OBJECT_TYPE_ID="202" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" QUERY_NAME="cmis:creationDate" DESCRIPTION="Date Time when the object was created" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="230" OBJECT_TYPE_ID="202" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" QUERY_NAME="cmis:lastModifiedBy" DESCRIPTION="User who last modified the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="231" OBJECT_TYPE_ID="202" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" QUERY_NAME="cmis:lastModificationDate" DESCRIPTION="Date Time when the object was last modified" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="232" OBJECT_TYPE_ID="202" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" QUERY_NAME="cmis:changeToken" DESCRIPTION="Token used for optimistic locking and concurrency checking" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object_type_property ID="233" OBJECT_TYPE_ID="202" CMIS_ID="cmis:parentId" LOCAL_NAME="cmis:parentId" QUERY_NAME="cmis:parentId" DESCRIPTION="ID of the parent folder of the folder" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="234" OBJECT_TYPE_ID="202" CMIS_ID="cmis:path" LOCAL_NAME="cmis:path" QUERY_NAME="cmis:path" DESCRIPTION="The fully qualified path to this folder" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="235" OBJECT_TYPE_ID="202" CMIS_ID="cmis:allowedChildObjectTypeIds" LOCAL_NAME="cmis:allowedChildObjectTypeIds" QUERY_NAME="cmis:allowedChildObjectTypeIds" DESCRIPTION="Id&apos;s of the set of Object-types that can be created, moved or filed into this folder" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+
+  <acl ID="200" OBJECT_ID="201" PRINCIPAL_ID="/test" PERMISSION_ID="203"/>
+  <acl ID="201" OBJECT_ID="201" PRINCIPAL_ID="/test2" PERMISSION_ID="201"/>
+  <property/>
+</dataset>

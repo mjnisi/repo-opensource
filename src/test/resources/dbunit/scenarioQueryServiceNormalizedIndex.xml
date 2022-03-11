@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <index_word ID="10000" REPOSITORY_ID="1" WORD="1"/>
+  <index_word ID="10001" REPOSITORY_ID="1" WORD="2"/>
+  <index_word ID="10002" REPOSITORY_ID="1" WORD="choo"/>
+  <index_word ID="10003" REPOSITORY_ID="1" WORD="foo"/>
+  <index_word ID="10004" REPOSITORY_ID="1" WORD="man"/>
+  <index_word ID="10005" REPOSITORY_ID="1" WORD="3"/>
+  <index_word ID="10006" REPOSITORY_ID="1" WORD="5"/>
+  <index_word ID="10007" REPOSITORY_ID="1" WORD="4"/>
+  <index_word ID="10008" REPOSITORY_ID="1" WORD="6"/>
+  <index_word ID="10009" REPOSITORY_ID="1" WORD="7"/>
+  <index_word_object ID="10000" WORD_ID="10000" OBJECT_ID="111" FREQUENCY="1"/>
+  <index_word_object ID="10001" WORD_ID="10001" OBJECT_ID="111" FREQUENCY="1"/>
+  <index_word_object ID="10002" WORD_ID="10002" OBJECT_ID="111" FREQUENCY="1"/>
+  <index_word_object ID="10003" WORD_ID="10003" OBJECT_ID="111" FREQUENCY="1"/>
+  <index_word_object ID="10004" WORD_ID="10004" OBJECT_ID="111" FREQUENCY="1"/>
+  <index_word_object ID="10005" WORD_ID="10000" OBJECT_ID="112" FREQUENCY="1"/>
+  <index_word_object ID="10006" WORD_ID="10001" OBJECT_ID="112" FREQUENCY="1"/>
+  <index_word_object ID="10007" WORD_ID="10005" OBJECT_ID="112" FREQUENCY="1"/>
+  <index_word_object ID="10008" WORD_ID="10006" OBJECT_ID="112" FREQUENCY="1"/>
+  <index_word_object ID="10009" WORD_ID="10002" OBJECT_ID="112" FREQUENCY="1"/>
+  <index_word_object ID="10010" WORD_ID="10003" OBJECT_ID="112" FREQUENCY="1"/>
+  <index_word_object ID="10011" WORD_ID="10004" OBJECT_ID="112" FREQUENCY="1"/>
+  <index_word_object ID="10012" WORD_ID="10001" OBJECT_ID="113" FREQUENCY="1"/>
+  <index_word_object ID="10013" WORD_ID="10005" OBJECT_ID="113" FREQUENCY="1"/>
+  <index_word_object ID="10014" WORD_ID="10007" OBJECT_ID="113" FREQUENCY="1"/>
+  <index_word_object ID="10015" WORD_ID="10008" OBJECT_ID="113" FREQUENCY="1"/>
+  <index_word_object ID="10016" WORD_ID="10002" OBJECT_ID="113" FREQUENCY="1"/>
+  <index_word_object ID="10017" WORD_ID="10003" OBJECT_ID="113" FREQUENCY="1"/>
+  <index_word_object ID="10018" WORD_ID="10004" OBJECT_ID="113" FREQUENCY="1"/>
+  <index_word_object ID="10019" WORD_ID="10000" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10020" WORD_ID="10001" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10021" WORD_ID="10005" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10022" WORD_ID="10007" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10023" WORD_ID="10006" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10024" WORD_ID="10008" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10025" WORD_ID="10009" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10026" WORD_ID="10002" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10027" WORD_ID="10003" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10028" WORD_ID="10004" OBJECT_ID="114" FREQUENCY="1"/>
+  <index_word_object ID="10029" WORD_ID="10000" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_object ID="10030" WORD_ID="10001" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_object ID="10031" WORD_ID="10005" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_object ID="10032" WORD_ID="10007" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_object ID="10033" WORD_ID="10006" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_object ID="10034" WORD_ID="10008" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_object ID="10035" WORD_ID="10009" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_object ID="10036" WORD_ID="10002" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_object ID="10037" WORD_ID="10003" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_object ID="10038" WORD_ID="10004" OBJECT_ID="116" FREQUENCY="1"/>
+  <index_word_position WORD_OBJECT_ID="10000" POSITION="1" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10001" POSITION="2" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10002" POSITION="5" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10003" POSITION="3" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10004" POSITION="4" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10005" POSITION="1" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10006" POSITION="2" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10007" POSITION="3" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10008" POSITION="5" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10009" POSITION="7" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10010" POSITION="4" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10011" POSITION="6" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10012" POSITION="2" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10013" POSITION="3" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10014" POSITION="4" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10015" POSITION="6" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10016" POSITION="7" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10017" POSITION="5" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10018" POSITION="1" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10019" POSITION="1" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10020" POSITION="2" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10021" POSITION="3" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10022" POSITION="4" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10023" POSITION="5" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10024" POSITION="6" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10025" POSITION="7" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10026" POSITION="10" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10027" POSITION="8" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10028" POSITION="9" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10029" POSITION="1" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10030" POSITION="2" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10031" POSITION="3" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10032" POSITION="4" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10033" POSITION="5" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10034" POSITION="6" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10035" POSITION="7" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10036" POSITION="10" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10037" POSITION="8" STEP="1"/>
+  <index_word_position WORD_OBJECT_ID="10038" POSITION="9" STEP="1"/>
+</dataset>

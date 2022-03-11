@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <object OBJECT_TYPE_ID="101" ID="200"/>
+	<stream ID="200" />	
+	<property  OBJECT_ID="200" OBJECT_TYPE_PROPERTY_ID="108" VALUE="1970-01-01T00:00:00.000Z" NUMERIC_VALUE="0" />
+	<property  OBJECT_ID="200" OBJECT_TYPE_PROPERTY_ID="120" VALUE="0" NUMERIC_VALUE="0" />
+  	<property  OBJECT_ID="200" OBJECT_TYPE_PROPERTY_ID="121" VALUE="text/plain" NUMERIC_VALUE="0" />
+  	<property  OBJECT_ID="200" OBJECT_TYPE_PROPERTY_ID="122" VALUE="Test Document 3 Name" NUMERIC_VALUE="0" />
+	<property  OBJECT_ID="200" OBJECT_TYPE_PROPERTY_ID="123" VALUE="Test Document 1" NUMERIC_VALUE="0" />
+
+</dataset>

@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F35ED2C9-5DE2-DC78-1CA5-907BE6821692" name="fk_index_word_repository">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>1CA5E365-B6D2-3E26-22D9-4F3BC4D07558</importedID>
+<containerWithKeyObject>9B2ABF8E-68E1-44E2-9530-1CF3AD6A3A6C</containerWithKeyObject>
+<deleteRule>CASCADE</deleteRule>
+<localFKIndex>58B1BF67-2DCD-D0DE-12EE-B1BA1A06CAAF</localFKIndex>
+<keyObject>D72C818C-8E54-9A89-C8D4-812108033718</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

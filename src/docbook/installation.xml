@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+
+		<title>Deployment Plan</title>
+		<subtitle>Installation steps</subtitle>
+
+		<para>This chapter describes the process of installing the application.
+		The installation process is divided in three parts, actions to be taken
+		before the installation, the intallation of the application and the
+		actions to be taken after the installation.</para>
+
+		<para>The pre-installation steps should be done only once and are not
+		covered by the automatic deployment process. This should be
+		executed manually because is altering configuration files of the system.</para>
+
+		<para>The installation steps are covered by the standard deployment
+		process. All this part could be execute automatically with the deployment
+		script or jenkins job.</para>
+
+		<para>The post-installation steps are administrative interacions with the
+		application running. These operations could be done at any time after the
+		system is started. This covers changing funtional parameters
+		or grant access to users.</para>
+
+		<section>
+			<title>Pre-installation</title>
+
+
+		<section>
+			<title>Compile APR and Tomcat native interface</title>
+
+			<para>Tomcat is able to be configured using several connectors.
+			By default is using a HTTP connector implemented in Java, to
+			improve the performance, Apache Portable Runtime could be configured.</para>
+
+			<blockquote>
+				<attribution>http://tomcat.apache.org/tomcat-7.0-doc/apr.html</attribution>
+
+				<para>Tomcat can use the Apache Portable Runtime to provide
+				superior scalability, performance, and better integration with
+				native server technologies. The Apache Portable Runtime is a
+				highly portable library that is at the heart of Apache HTTP
+				Server 2.x. APR has many uses, including access to advanced
+				IO functionality (such as sendfile, epoll and OpenSSL), OS
+				level functionality (random number generation, system status,
+				etc), and native process handling (shared memory, NT pipes and
+				Unix sockets).</para>
+
+    			<para>These features allows making Tomcat a general purpose
+    			webserver, will enable much better integration with other native
+    			web technologies, and overall make Java much more viable as a
+    			full fledged webserver platform rather than simply a backend
+    			focused technology.</para>
+
+			</blockquote>
+
+			<para>First you need to download the APR package and compile it.
+			Check the Apache APR website to download (http://apr.apache.org/).</para>
+
+<screen>$ bzip2 -cd apr-1.4.8.tar.bz2 | tar xvf -
+$ cd apr-1.4.8
+$ export CFLAGS="-m64"
+$ ./configure --prefix=/data/applications/repo/test_apr_bin
+$ make
+$ mkdir /data/applications/repo/test_apr_bin
+$ make install</screen>
+
+			<para>And then do the same with the Native runtime.
+			Check the Apache Tomcat website to download
+			(http://tomcat.apache.org/download-native.cgi).</para>
+
+<screen>$ gzip -cd tomcat-native-1.1.29-src.tar.gz | tar xvf -
+$ cd tomcat-native-1.1.29-src/jni/native
+$ export CFLAGS="-m64"
+$ ./configure --with-apr=/data/applications/repo/test_apr_bin \
+	--with-java-home=/usr/jdk/instances/jdk1.7.0_40 \
+	--with-ssl=yes \
+	--prefix=/data/applications/repo/test_apr_bin
+$ make
+$ make install
+</screen>
+
+			<important>The previous instructions are for compiling 64 bits binaries,
+			if you would like to compile for 32bits, don't execute the
+			command <literal>export CFLAGS="-m64"</literal>.</important>
+
+		</section>
+
+		<section>
+
+
+			<title>Configuring JVM parameters</title>
+
+			<para>For running properly you need to configure the server to
+			allocate more memory in the permanent generation area and other parameters.</para>
+
+<screen>export LD_LIBRARY_PATH=/data/applications/repo/test_apr_bin/lib
+export JAVA_HOME=/usr/jdk/instances/jdk1.7.0_40
+export JAVA_OPTS="-d64 -Xms1024m -Xmx8192m -XX:PermSize=256m \
+	-Djava.library.path=/data/applications/repo/test_apr_bin/lib \
+	-Djava.awt.headless=true \
+	-Djavax.net.ssl.trustStore=/usr/jdk/instances/jdk1.7.0/jre/lib/security/cacerts \
+	-Dorg.apache.chemistry.opencmis.stacktrace.disable=true";
+export PATH=$JAVA_HOME/bin:$PATH</screen>
+
+			<para>Normally these instructions are saved in the file
+			<filename>$HOME/.profile</filename> to be executed once we log into the
+			system.</para>
+		</section>
+
+
+	</section>
+	<section>
+		<title>Installation</title>
+
+		<section>
+			<title>Creating the database</title>
+
+			<para>Following the standard structure of the deployment process,
+			the database scripts to create all the needed objects are
+			under <filename>/target/release/db</filename>.</para>
+
+			<para>There is an extra file to delete all the database objects.
+			You could use this file in case of uninstall.</para>
+
+		</section>
+
+		<section>
+			<title>Repository configuration files</title>
+
+			<para>Following the standard structure of the deployment process,
+			the configuration files are under <filename>/target/release/config/prod</filename>.</para>
+
+			<para>You need to copy these files in the server path <filename>/data/applications/repo/conf</filename>.
+			</para>
+
+			<para>A <filename>confidential.properties</filename> file must be manually generated with the
+			sensitive information and saved under <filename>/data/applications/repo/conf</filename>.
+			Check the following template:
+			</para>
+
+			<!-- TODO prod config and confidential.properties template -->
+
+			<note>
+				<para>Verify that the path <filename>/data/applications/repo/conf</filename>
+				is configured to be under the classpath of Tomcat. To do so, edit the file
+				<filename>/var/apache/tomcat7/conf/catalina.properties</filename>.</para>
+
+				<para>
+					You must have an entry with the key <literal>common.loader</literal>,
+					if you haven't the mentioned path, add in the begining and separate
+					with the former value using a coma.
+					<example>
+						<title>Apache 7 conf/catalina.properties</title>
+						<literal>common.loader=/data/applications/repo/conf,${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar</literal>
+					</example>
+				</para>
+
+			</note>
+
+		</section>
+
+
+		<section>
+			<title>Deploy war file</title>
+
+			<para>Following the standard structure of the deployment process,
+			the application file is under <filename>/target/release/repo.war</filename>. Copy the
+			war file under <filename>/var/apache/tomcat7/webapps</filename>.</para>
+
+			<note>
+				<para>Before starting Tomcat, please delete the folders <filename>/var/apache/tomcat7/work</filename>
+				and <filename>/var/apache/tomcat7/temp</filename>.</para>
+			</note>
+		</section>
+
+</section>
+<section>
+	<title>Post-installation</title>
+
+
+		<section>
+			<title>Configure the repository instance</title>
+
+			<para>By default the repository server is empty, no repositories are
+			created.</para>
+
+			<para>To create a repository, enter into the administration panel
+			and select the option "create a new repository".</para>
+
+			<para>To enter the repo admin page visit the following link:</para>
+
+			<para><link>http://[url_for_server]:8080/repo/admin</link></para>
+
+			<para>The repo server could host several repositories. Each repository
+			could be configured independently. By default each repository is
+			configured with builtin security handler, review this setting and assign
+			the appropiate handlers.</para>
+
+			<para>Check the security chapter for detailed explanation about the
+			security tab.</para>
+
+		</section>
+
+		<section>
+			<title>ServerAlive page</title>
+
+			<para>To verify the application is running properly, a page was
+			put in place to check the availability of the service:</para>
+
+			<link>http://[url_for_server]:8080/repo/serverAlive.jsp</link>
+
+		</section>
+</section>
+<section>
+	<title>Upgrade from version 1.0.0 to 1.1.0</title>
+
+	<para>For upgrading an installation of version 1.0.0 to 1.1.0 check the following points:</para>
+
+	<itemizedlist>
+		<listitem>Update the .profile, the JAVA_OPTS value has changed. With SOAP binding, in case of error the stacktrace information is disabled since version 1.1.0.</listitem>
+		<listitem>Execute DB scripts.</listitem>
+		<listitem>Rebuild normalized metadata. Metadata is indexed normalized since 1.1.0, existing content MUST be migrated.</listitem>
+	</itemizedlist>
+
+	<section>
+		<title>Update .profile - JVM parameters</title>
+
+		<para>In version 1.0.0, the SOAP binding was exposing internal details in case of error.
+		Since 1.1.0, the stacktrace in the error message is disabled to avoid exposing implementation
+		details.</para>
+
+		<para>To disable the stacktrace add the
+		<literal>org.apache.chemistry.opencmis.stacktrace.disable</literal>
+		variable in the JVM options with any value. See the example below of
+		the .profile content.</para>
+
+<screen>export LD_LIBRARY_PATH=/data/applications/repo/test_apr_bin/lib
+export JAVA_HOME=/usr/jdk/instances/jdk1.7.0_40
+export JAVA_OPTS="-d64 -Xms1024m -Xmx8192m -XX:PermSize=256m \
+	-Djava.library.path=/data/applications/repo/test_apr_bin/lib \
+	-Djava.awt.headless=true \
+	-Djavax.net.ssl.trustStore=/usr/jdk/instances/jdk1.7.0/jre/lib/security/cacerts \
+	-Dorg.apache.chemistry.opencmis.stacktrace.disable=true";
+export PATH=$JAVA_HOME/bin:$PATH</screen>
+	</section>
+
+	<section>
+
+		<title>Execute the DB scripts</title>
+
+		<para>As part of the standard installation process, several DB scripts are needed
+		to be executed to apply the following changes:</para>
+
+		<variablelist>
+			<varlistentry>
+				<term><literal>/releases/1.1.0/db/01_repo_metadataInFullTextSearch.sql</literal></term>
+				<listitem>
+					<para>Metadata is now indexed normalized.</para>
+				</listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><literal>/releases/1.1.0/db/02_repo_scoreViewUpdate.sql</literal></term>
+				<listitem>
+					<para>Update on the score view.</para>
+				</listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><literal>/releases/1.1.0/db/03_repo_indexAndScoreViewUpdate.sql</literal></term>
+				<listitem>
+					<para>Changes in the index tables and score view.</para>
+				</listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><literal>/releases/1.1.0/db/04_repo_changeLogIndex.sql</literal></term>
+				<listitem>
+					<para>New index in change_event to speed up queries in a very active repository.</para>
+				</listitem>
+			</varlistentry>
+
+		</variablelist>
+	</section>
+
+	<section>
+		<title>Rebuild normalized metadata</title>
+
+		<para>Since version 1.1.0 the metadata is indexed normalized. Existing content from version 1.0.0 should
+		be processed to generate the misssing information. To achive this task a tool was created.</para>
+
+		<orderedlist>
+			<listitem>Go to <literal>/releases/1.1.0/extra/</literal></listitem>
+			<listitem>Modify database connection properties in the file: <literal>config/repo-normalizer.properties</literal></listitem>
+			<listitem>Execute from this directory <literal>java -jar repo-normalizer.jar</literal></listitem>
+			<listitem>Wait until the application finish (message: END normalizer will be printed.)</listitem>
+		</orderedlist>
+
+		<note>You can ignore this step if you plan to delete the repositories and create a new ones.</note>
+
+	</section>
+</section>
+
+<section>
+	<title>Upgrade from version 1.1.0 to 1.2.0</title>
+
+	<para>For upgrading an installation of version 1.1.0 to 1.2.0 check the following points:</para>
+
+	<itemizedlist>
+		<listitem>Execute DB scripts.</listitem>
+		<listitem>Migrate existing repositories type definitions to CMIS 1.1.</listitem>
+		<listitem>Migrate existing repositories data to CMIS 1.1.</listitem>
+	</itemizedlist>
+
+	<section>
+		<title>Execute the DB scripts</title>
+
+		<para>As part of the standard installation process, several DB scripts are needed
+		to be executed to apply the following changes:</para>
+
+		<variablelist>
+			<varlistentry>
+				<term><literal>/releases/1.2.0/db/01_repo_idx_property_normalized_value.sql</literal></term>
+				<listitem>
+					<para>Missing index in table property.</para>
+				</listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><literal>/releases/1.2.0/db/02_repo_secondaryTypes.sql</literal></term>
+				<listitem>
+					<para>New table to store secondary types data.</para>
+				</listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><literal>/releases/1.2.0/db/03_repo_ancestors_view.sql</literal></term>
+				<listitem>
+					<para>New view with object ancestors used in in_tree() implementation.</para>
+				</listitem>
+			</varlistentry>
+
+
+			<varlistentry>
+				<term><literal>/releases/1.2.0/db/99_repo_generatePWCProperty.sql</literal></term>
+				<listitem>
+					<para>Generates the data of the new property <literal>cmis:isPrivateWorkingCopy</literal>.</para>
+
+					<important>If this script is executed before the migration of types definitions,
+					no new rows will be inserted. Execute this script after the types definitions migration.</important>
+				</listitem>
+			</varlistentry>
+
+		</variablelist>
+	</section>
+
+
+	<section>
+		<title>Migrate existing repositories type definitions to CMIS 1.1</title>
+
+		<para>In CMIS 1.1 were added several new properties and types, this step will
+		upgrade existing repositories.</para>
+
+		<orderedlist>
+			<listitem>Go to <literal>/releases/1.2.0/migration/</literal></listitem>
+			<listitem>Modify database connection properties in the file: <literal>confidential.properties</literal></listitem>
+			<listitem>Execute from this directory <literal>migrate.bat</literal></listitem>
+			<listitem>Wait until the application finish, a report will me printed with the changes applied</listitem>
+		</orderedlist>
+
+		<para>To execute the process Java 7 must be configured in the system.</para>
+		<para>The script <literal>migrate.bat</literal> was created to be executed under Windows environments, but
+		could be adapted to be executed in other systems like Solaris replacing the path separator <literal>;</literal> by <literal>:</literal>.</para>
+
+		<para>See below a typical output for the repository demo:</para>
+<screen>
+demo
+-------------------------------------------------
+> cmis:item [missing]
+>>> adding cmis:item
+> cmis:secondary [missing]
+>>> adding cmis:secondary
+> cmis:policy
+  .. missing properties [cmis:secondaryObjectTypeIds, cmis:description]
+>>> adding property cmis:secondaryObjectTypeIds
+>>> adding property cmis:description
+  .. cmis:changeToken different
+>>> updating property cmis:changeToken
+  .. cmis:policyText different
+>>> updating property cmis:policyText
+> cmis:folder
+  .. missing properties [cmis:secondaryObjectTypeIds, cmis:description]
+>>> adding property cmis:secondaryObjectTypeIds
+>>> adding property cmis:description
+  .. cmis:allowedChildObjectTypeIds different
+>>> updating property cmis:allowedChildObjectTypeIds
+  .. cmis:changeToken different
+>>> updating property cmis:changeToken
+  .. cmis:parentId different
+>>> updating property cmis:parentId
+> cmis:relationship
+  .. missing properties [cmis:secondaryObjectTypeIds, cmis:description]
+>>> adding property cmis:secondaryObjectTypeIds
+>>> adding property cmis:description
+  .. cmis:targetId different
+>>> updating property cmis:targetId
+  .. cmis:sourceId different
+>>> updating property cmis:sourceId
+  .. cmis:changeToken different
+>>> updating property cmis:changeToken
+> cmis:document
+  .. missing properties [cmis:isPrivateWorkingCopy, cmis:secondaryObjectTypeIds, cmis:description]
+>>> adding property cmis:isPrivateWorkingCopy
+>>> adding property cmis:secondaryObjectTypeIds
+>>> adding property cmis:description
+  .. cmis:changeToken different
+>>> updating property cmis:changeToken
+=================================================
+demo
+-------------------------------------------------
+> cmis:policy
+> cmis:folder
+> cmis:relationship
+> cmis:document
+> cmis:item
+> cmis:secondary
+</screen>
+
+	</section>
+
+	<section>
+		<title>Migrate existing repositories data to CMIS 1.1</title>
+
+		<para>New property <literal>cmis:isPrivateWorkingCopy</literal> must be populated with the proper value.</para>
+		<para>To do so, execute the DB script <literal>/releases/1.2.0/db/99_repo_generatePWCProperty.sql</literal>.</para>
+		<important>
+			This script generates the data of the new property <literal>cmis:isPrivateWorkingCopy</literal>
+			and must be executed after the previous step (type definition migration).
+		</important>
+
+	</section>
+</section>
+</chapter>
+

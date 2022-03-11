@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypePolicyDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>trade:quotaPolicy</cmis:id>
+	<cmis:localName>trade:quotaPolicy</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>trade:quotaPolicy</cmis:displayName>
+	<cmis:queryName>trade:quotaPolicy</cmis:queryName>
+	<cmis:description>Quota policy</cmis:description>
+	<cmis:baseId>cmis:policy</cmis:baseId>
+	<cmis:parentId>cmis:policy</cmis:parentId>
+	<cmis:creatable>true</cmis:creatable>
+	<cmis:fileable>true</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>true</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>true</cmis:controllablePolicy>
+	<cmis:controllableACL>true</cmis:controllableACL>
+	<cmis:propertyIntegerDefinition>
+		<cmis:id>trade:quota</cmis:id>
+		<cmis:localName>trade:quota</cmis:localName>
+		<cmis:displayName>trade:quota</cmis:displayName>
+		<cmis:queryName>trade:quota</cmis:queryName>
+		<cmis:description>Max quota in bytes</cmis:description>
+		<cmis:propertyType>integer</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyIntegerDefinition>
+</cmis:type>

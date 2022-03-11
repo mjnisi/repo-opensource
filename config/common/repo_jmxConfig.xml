@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<repo>
+		<jmx>
+			<rmi>
+				<host>${REPO_JMX_RMI_HOST}</host>
+				<port>${REPO_JMX_RMI_PORT}</port>
+			</rmi>
+			<remote>
+				<authenticationFile>${expr:Thread.currentThread().getContextClassLoader().getResource('jmx_password.properties').getPath()}</authenticationFile>
+				<authorizationFile>${expr:Thread.currentThread().getContextClassLoader().getResource('jmx_access.properties').getPath()}</authorizationFile>
+			</remote>
+			<stats>
+				<defaults>
+					<dir>${REPO_JMX_STATS_DEFAULTS_DIR}</dir>
+					<fileName>statistics</fileName>
+				</defaults>
+				<collectStatsOnStart>${REPO_JMX_STATS_COLLECT_ON_START}</collectStatsOnStart>
+				<pool>
+					<corePoolSize>1</corePoolSize>
+					<maxPoolSize>1</maxPoolSize>
+					<queueCapacity>2147483647</queueCapacity>
+				</pool>
+			</stats>
+		</jmx>
+	</repo>
+</configuration>
+

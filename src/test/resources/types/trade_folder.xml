@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypeFolderDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>trade:folder</cmis:id>
+	<cmis:localName>trade:folder</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>trade:folder</cmis:displayName>
+	<cmis:queryName>trade:folder</cmis:queryName>
+	<cmis:description>trade:folder</cmis:description>
+	<cmis:baseId>cmis:folder</cmis:baseId>
+	<cmis:parentId>cmis:folder</cmis:parentId>
+	<cmis:creatable>true</cmis:creatable>
+	<cmis:fileable>true</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>true</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>false</cmis:controllablePolicy>
+	<cmis:controllableACL>true</cmis:controllableACL>
+	<cmis:propertyStringDefinition>
+		<cmis:id>trade:comments</cmis:id>
+		<cmis:localName>trade:comments</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>trade:comments</cmis:displayName>
+		<cmis:queryName>trade:comments</cmis:queryName>
+		<cmis:description>Folder comments</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="trade:comments" />
+	</cmis:propertyStringDefinition>
+</cmis:type>

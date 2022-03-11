@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+
+		<title>Architecture</title>
+
+		<section>
+			<title>Introduction</title>
+
+			<para>This chapter describes the philosophy, decisions, constraints,
+			justifications, significant elements, and any other overarching
+			aspects of the system that shape the design and implementation.</para>
+		</section>
+
+		<section>
+			<title>Architectural goals and philosophy</title>
+
+			<para>The main goal of this project is to provide CMIS compliant
+			services.</para>
+
+			<para>To reduce the time to provide the services to third parties, a roadmap
+			was designed to incrementally add new funtionalities:</para>
+
+			<variablelist>
+				<title>Roadmap</title>
+				<varlistentry>
+					<term>Release 1.0.0-BETA1</term>
+					<listitem>
+						<itemizedlist>
+							<listitem>Complete CMIS Repository services</listitem>
+							<listitem>Complete CMIS Repository services</listitem>
+							<listitem>Complete CMIS Object services</listitem>
+							<listitem>Complete CMIS Navigation services</listitem>
+							<listitem>Basic security funtionalities</listitem>
+						</itemizedlist>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Release 1.0.0-BETA2</term>
+					<listitem>
+						<itemizedlist>
+							<listitem>Complete CMIS Discovery services (properties and fulltext search)</listitem>
+						</itemizedlist>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Release 1.0.0-BETA3</term>
+					<listitem>
+						<itemizedlist>
+							<listitem>Complete CMIS Versioning services</listitem>
+							<listitem>Complete CMIS Relationship services</listitem>
+							<listitem>Complete security funtionalities</listitem>
+						</itemizedlist>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Release 1.0.0</term>
+					<listitem>
+						<itemizedlist>
+							<listitem>Adminitration panel to manage repositories</listitem>
+							<listitem>Complete CMIS Renditions services</listitem>
+							<listitem>Complete CMIS Multifiling services</listitem>
+							<listitem>Complete CMIS change log</listitem>
+						</itemizedlist>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Release 1.1.0</term>
+					<listitem>
+						<itemizedlist>
+							<listitem>Implement CMIS 1.1 services</listitem>
+						</itemizedlist>
+					</listitem>
+				</varlistentry>
+
+			</variablelist>
+
+
+
+		</section>
+
+
+		<section>
+			<title>Assumptions and dependencies</title>
+
+			<para>The target enviroment is Java 7. Currently using Tomcat 7 but
+			the project is not using any non-standard funtionality of the servlet container.
+			This means could be replaced in the future with no overhead.</para>
+
+			<para>The target Database is Oracle for production and H2 for development and test.
+			As the Entity classes have sequences configured and we have some SQL statetents in
+			the indexing part, we are partially couple to a DB with sequences. In the future
+			we could evaluate other databases like MySQL but this is not in the roadmap for
+			version 1.0.0.</para>
+
+			<simplesect>
+				<title>Tools</title>
+
+				<para>Tools used during the development that ara not part of
+				the final product.</para>
+
+				<itemizedlist>
+						<listitem>Maven (Build automation)</listitem>
+						<listitem>Jenkins (Continuous inetgration tool)</listitem>
+						<listitem>Jira (Issue tracker)</listitem>
+						<listitem>Git (Source control)</listitem>
+						<listitem>Ant (Autodeployment process)</listitem>
+						<listitem>Sonar (Quality check)</listitem>
+						<listitem>JMeter (Stress tests)</listitem>
+						<listitem>JUnit (Unit tests)</listitem>
+						<listitem>DBUnit (Unit tests of the persistence layer)</listitem>
+						<listitem>Docbook (Documentation)</listitem>
+				</itemizedlist>
+			</simplesect>
+
+			<simplesect>
+				<title>Frameworks and libraries</title>
+
+				<para>Components that are part of the product, these are direct
+				dependencies of the package.</para>
+
+				<itemizedlist>
+						<listitem>Spring (IoC, MVC, Security, ORM, etc.)</listitem>
+						<listitem>JPA2 (Hibernate), JDBC</listitem>
+						<listitem>Apache Chemistry OpenCMIS (CMIS client and server framework)</listitem>
+						<listitem>Apache Tiles (Used in the administration panel)</listitem>
+						<listitem>SLF4J (Logging)</listitem>
+						<listitem>H2 (Embedded database engine, used for the tests and indexing)</listitem>
+						<listitem>Apache Commons Configuration</listitem>
+						<listitem>ANTLR (Parsing the CMIS queries)</listitem>
+						<listitem>Lucene (Indexing)</listitem>
+						<listitem>Tika (Extracting textual content from documents)</listitem>
+						<listitem>JMX (MBeans exposed with internal statistics)</listitem>
+
+						<listitem>jQuery</listitem>
+						<listitem>Twitter bootstrap</listitem>
+					</itemizedlist>
+			</simplesect>
+
+			<simplesect>
+				<title>Third parties systems and components</title>
+
+				<para>Systems and components that are not part of the deployable package.</para>
+
+				<itemizedlist>
+						<listitem>Oracle Database (Main persistence system)</listitem>
+					</itemizedlist>
+
+			</simplesect>
+
+
+
+		</section>
+
+
+		<section>
+			<title>Architecturally significant requirements</title>
+
+			<simplesect>
+				<title>Funtional requirements</title>
+
+				<para>The project should satisfy the following funtional requirements:</para>
+
+				<itemizedlist>
+					<listitem>The system should be able to provide CMIS services</listitem>
+					<listitem>Selfcontained, be able to be used with no external dependencies</listitem>
+					<listitem>A server instance may host more than one repository</listitem>
+					<listitem>Implement the capabilities configurable by repository</listitem>
+					<listitem>Cover the code with unit testing.</listitem>
+				</itemizedlist>
+			</simplesect>
+
+			<simplesect>
+				<title>Hardware requirements</title>
+
+				<para>See below the list of requirements related to the hardware infrastructure:</para>
+
+				<itemizedlist>
+					<listitem>
+						<para>Brief description of the application purpose:</para>
+						<para>CMIS 1.1 repository server, this will serve as document repository based
+						on the standards
+						http://en.wikipedia.org/wiki/Content_Management_Interoperability_Services.</para>
+					</listitem>
+
+					<listitem>
+						<para>Specific availability requirements (if any), e.g. if the IS is to be
+						accessible worldwide, 24/7/365 availability is needed and any
+						technical intervention must be kept to a bare minimum:</para>
+						<para>Initially the system will be accessible from the EC network and should be
+						accessible 24/7 (this service will be used by other applications).</para>
+					</listitem>
+
+					<listitem>
+						<para>Local file system needs (if any) and approximative size and growth
+						rate:</para>
+						<para>Minimum usage of file system, only cached and temporary files will be
+						created. A provision of 10Gb could be enough.
+						The information will be stored in the database, in which could be at the
+						Sherlock level (200Gb)</para>
+					</listitem>
+
+					<listitem>
+						<para>Memory requirements,</para>
+						<para>We haven't done memory requirement assessments, standard memory
+						configuration could be applied until stress test will be done.</para>
+					</listitem>
+
+					<listitem>
+						<para>64 bits application or not (for Tomcat parametrisation),</para>
+						<para>Java 7 64 bits and Tomcat 7 64bit. Classpath added to
+						<filename>/data/applications/repo/conf</filename></para>
+					</listitem>
+
+					<listitem>
+						<para>HTTPD server as a front-end (if needed),</para>
+						<para>Yes</para>
+					</listitem>
+
+					<listitem>
+						<para>Dependency on another information system (shared database or service,
+						Trade internal or central (e.g. PDFCode)),</para>
+						<para>None</para>
+					</listitem>
+
+					<listitem>
+						<para>Authentication mechanism (using various Authentication Handlers) or public access,</para>
+					</listitem>
+
+					<listitem>
+						<para>Incoming or outgoing mail,</para>
+						<para>No</para>
+					</listitem>
+
+				</itemizedlist>
+			</simplesect>
+
+			<simplesect>
+				<title>General information</title>
+
+				<variablelist>
+						<varlistentry>
+							<term>Application name</term>
+							<listitem>Trade document repository</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Acronym</term>
+							<listitem>REPO</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Short description</term>
+							<listitem>CMIS 1.1 compliant document repository.</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Maximum acceptable unavailability</term>
+							<listitem>24 hours</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Priority</term>
+							<listitem>high</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>DRP ready</term>
+							<listitem>yes</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Performance email</term>
+							<listitem>no</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Url to page with all links of application</term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Sensitive data</term>
+							<listitem>yes - Limited High</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>IT Classification</term>
+							<listitem>Specific</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Authentication</term>
+							<listitem>customizable</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>DB type</term>
+							<listitem>Oracle 11</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Technologies used</term>
+							<listitem>Java 7 64bits; Tomcat 7;</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Filesystem used</term>
+							<listitem>10GB</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Database size</term>
+							<listitem>200GB</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>Memory requirements</term>
+							<listitem>Default memory configuration</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>HTTPD server</term>
+							<listitem>required</listitem>
+						</varlistentry>
+					</variablelist>
+			</simplesect>
+		</section>
+
+		<section>
+			<title>Decisions, constraints, and justifications</title>
+
+			<para>There are several constraits</para>
+			<itemizedlist>
+				<listitem>Use standards</listitem>
+				<listitem>Be vendor independent</listitem>
+				<listitem>Use existing components, and adapt them base on our needs</listitem>
+			</itemizedlist>
+
+			<section>
+				<title>Relational database</title>
+
+				<para>The decision to use relational databases was taken because
+				several factors:</para>
+
+				<simplesect>
+					<title>Transactions</title>
+					<para>With a relational database system, we don't need to
+					implement a transaction layer. All important database providers
+					implements transactions, and this helps us to focus more on the
+					business and less in the infrastructure.</para>
+				</simplesect>
+
+				<simplesect>
+					<title>Concurrency</title>
+					<para>within an alternative storage like a file system we
+					could experiment issues with concurrent users (e.g. locking
+					of files). The database implements a concurrency control
+					out-of-the-box.</para>
+				</simplesect>
+
+				<simplesect>
+					<title>Consistency</title>
+					<para>with referential integrity all the relations between
+					the different parts are managed at the database level. The
+					data consistency is improved and the complexity of
+					maintenance reduced.</para>
+				</simplesect>
+
+				<simplesect>
+					<title>Known technology</title>
+					<para>Databases are a known and reliable technology</para>
+				</simplesect>
+
+				<simplesect>
+					<title>Simplicity</title>
+					<para>Using only one persistence system will reduce the
+					complexity. For queries paginated and sorted would be very
+					complex and bad performance to query two systems and merge
+					the results.</para>
+				</simplesect>
+
+			</section>
+
+			<section>
+				<title>Persist index data in relational database</title>
+
+
+			<para>The decision to implement our own persistence implementation
+			of indexing system was made based on the following reasons:</para>
+
+			<simplesect>
+				<title>Vendor independence</title>
+
+				<para>Despite we could use vendor specific solutions, was
+				decided not to use them to have a solution more portable and independent.</para>
+				<para>This is very convenient for the tests. We could easily change from
+				from a database product to other one.</para>
+			</simplesect>
+
+			<simplesect>
+				<title>Easy integrability with other components</title>
+				<para>Persisting the index information in the database is
+				giving us the oportunity to integrate with the other components
+				easily.
+				</para><para>To implement the discovery services it's needed to combine
+				filters using both, the object metadata and the index data, keeping
+				both information in the same system reduces the complexity and
+				improves the performance.</para>
+			</simplesect>
+
+			<simplesect>
+				<title>Performance</title>
+
+				<para>A common issue of combining information from
+				several sources is the pagination and sorting.</para>
+				<para>For example,
+				If the end user asks the documents that contains
+				the word China and the author 'Alice':</para>
+
+				<example>
+					<title>CMIS query</title>
+					<screen>select * from cmis:document where contains('China') and cmis:createdBy = 'Alice'</screen>
+				</example>
+
+				<para>The system needs to search in two subsystems: the
+				metadata subsystem for the author and the fulltext search
+				subsystem to filter by the word.</para>
+
+				<para>As the user is only interesed on a page of the results,
+				we could not filter the results in the subsystems. So this
+				ends up with a query on the fulltext search subsystem
+				with all the documents with the word 'China'.</para>
+
+				<para>Keeping both subsystems together eliminates this
+				issue and make the queries using less resources and more
+				scalable.</para>
+			</simplesect>
+
+			</section>
+
+		</section>
+
+
+		<section>
+			<title>Key abstractions</title>
+
+
+			<section>
+				<title>Deployment diagram</title>
+
+
+				<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/architecture_deployment_diagram.png" />
+					</imageobject>
+				</mediaobject>
+			</screenshot>
+
+				<para>A deployment diagram in the Unified Modeling Language
+				models the physical deployment of artifacts on nodes.</para>
+
+				<para>The following diagram was intentionally simplied in terms of
+				internal components, as the goal of the model is to represent
+				the interactions with external services.</para>
+
+				<para>The CMIS client is connected to the application and profiting
+				the CMIS bindings, is executing the services.</para>
+
+				<para>The application is persisting most of the data in a relational
+				database.</para>
+
+				<para>The security component is dealing with an authentication
+				service and an authorisation service. For simplicity in the
+				diagram is only represented one security component, but could
+				be divided into two different scopes: CMIS security related and
+				web application security related.</para>
+
+				<para>For accessing the administration panel of the repositories,
+				the application is using an authentication and authorisation service.
+				Only to point out that both parts of the security are independent and
+				could be configured with different providers.</para>
+
+				<para>The index component is saving temporary
+				information in the filesystem. An embeded database is storing
+				the words of the documents to later process and build the
+				permanent index data.</para>
+
+				<para>The configuration files are under the filesystem, Tomcat
+				is able to read these files because the path was added in the classpath.</para>
+
+			</section>
+		</section>
+
+
+		<section>
+			<title>Layers or architectural framework</title>
+
+			<para>The application could be divided in several layers: database,
+			persistence, service and CMIS layer; but there are other components
+			as well that could interact at several point on the system: Security,
+			Index and Query.</para>
+
+			<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/architecture_layers.png" />
+					</imageobject>
+				</mediaobject>
+			</screenshot>
+
+			<para>In the previous diagram, there are there main subsystems: the
+			database, the application itself and the CMIS client.</para>
+
+			<para>The database it's an external layer that stores all the
+			information of the repository. We kept this component vendor
+			independent using JPA2 and JDBC.
+			Currently we are using Oracle Database and H2.</para>
+
+			<para>The application subsystem is comunicating with the Database
+			with JPA2 Entities and JDBC. On top of the Entities we have
+			an instance of <classname>javax.persistence.EntityManager</classname>
+			for the <acronym>CRUD</acronym> operations, and selectors for
+			the queries.</para>
+
+			<para>For retriving and storing the files into the database
+			and the indexing process, JDBC is used instead JPA2. The Delegates
+			have the reponsability to group the JDBC code.</para>
+
+			<para>The service layer is the responsible of implementing all
+			the interactions with the repository using Entities instances.
+			Up to this point there's no dependency on Apache Chemistry OpenCMIS.</para>
+
+			<note>The repository service layer is independent of Apache
+			Chemistry OpenCMIS,	but we are using the enumerations from them.
+			Was decided to use the enumeration for avoid duplication.
+			In the improvable case we will implement the server with another
+			framework we could decide to keep the enumerations from Apache
+			Chemistry OpenCMIS of have a local copy.</note>
+
+			<para>The CMIS service layer is transforming the data coming
+			from the client into our model. Once the data is translated, a
+			method in the service layer is used.</para>
+
+			<para>From bottom to top:</para>
+
+			<variablelist>
+				<varlistentry>
+					<term>Database</term>
+					<listitem>Stores all the information of the repostitory.</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Entities</term>
+					<listitem>JPA2 Entities mapped to database tables.</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Entity Manager</term>
+					<listitem>Managing the CRUD operations of the Entities</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Selectors</term>
+					<listitem>Implementing the entities queries.</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Delegates</term>
+					<listitem>Contains the code to interact with the Database that is not covered by
+					selectors and Entity Manager.</listitem>
+				</varlistentry>
+
+				<varlistentry>
+					<term>Query</term>
+					<listitem>Implements the parsing and execution of CMIS queries.</listitem>
+				</varlistentry>
+
+				<varlistentry>
+					<term>Index</term>
+					<listitem>Implements the indexing of the files.</listitem>
+				</varlistentry>
+
+				<varlistentry>
+					<term>Services</term>
+					<listitem>Contains the internal logic of the repository.</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>CMIS Services</term>
+					<listitem>This layer transforms from Apache Chemistry OpenCMIS Interfaces to our Entities data structure.</listitem>
+				</varlistentry>
+
+				<varlistentry>
+					<term>Security</term>
+					<listitem>This is an horizontal component, manages the security.</listitem>
+				</varlistentry>
+
+				<varlistentry>
+					<term>CMIS client</term>
+					<listitem>Any application of framework that implements CMIS standard.</listitem>
+				</varlistentry>
+			</variablelist>
+
+
+
+			<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/architecture_persistence.png" />
+					</imageobject>
+				</mediaobject>
+			</screenshot>
+
+			<section>
+				<title>Database</title>
+
+				<para>The database design it's following the next principles:</para>
+				<itemizedlist>
+					<listitem>Try to define as much constraints into the
+					database definition. If a column only allows 'T' or 'F'
+					create a check constraint to apply this rule.</listitem>
+
+					<listitem>The delete should run on cascade, this means
+					deleting a row in a table will delete all related data.
+					The main reason is to keep the data consistency.</listitem>
+
+					<listitem>Use a single numeric column for primary keys,
+					populated by sequences. This makes the JPA and relational
+					maintenance easier and cleaner.</listitem>
+
+					<listitem>All the primary keys are populated by a sequence.</listitem>
+
+					<listitem>Several tables includes cmis_id or cmis_object_id,
+					these columns with prefix cmis_ stores the CMIS (client
+					point of view) ids, like <literal>cmis:folder</literal>
+					or <literal>cmis:name</literal>.</listitem>
+
+					<listitem>All Objects in the repository have a property
+					called ObjectId that saves an opaque unique key. This
+					information is saved in two places, into the regular
+					property structure and in the object table. This is for
+					checking the uniqueness and for faster query searches.</listitem>
+				</itemizedlist>
+			</section>
+
+
+			<section>
+				<title>Persistence Layer</title>
+
+				<para>The persistence layer relies on the database and it's using
+				JPA and JDBC technologies like Hibernate or Spring JDBC Template.</para>
+
+				<itemizedlist>
+					<listitem>Every Table in the database has their correspondence
+					JPA entity (except many to many relationship tables).</listitem>
+
+					<listitem>Every Entity extends <classname>eu.trade.repo.model.DBEntity</classname>.</listitem>
+
+					<listitem>All entities relationships will be defines as <literal>LAZY</literal>
+					explicitly and when needed a query with join fetch with be created.
+					</listitem>
+
+					<listitem>All the JPA queries will be named queries defined in the entity with
+					annotations. See the section below for the naming contentions.</listitem>
+
+				</itemizedlist>
+
+				<section>
+					<title>Selectors</title>
+
+					<para>The selectors are responsible to retrieve information from
+					the database. The <classname>EntityManager</classname> could retrieve the objects using the
+					primary key, but most of the time the input parameters are different.</para>
+
+					<para>There is a selector class per Entity and all the
+					methods in the selector should return instances of this Entity.</para>
+
+					<note>All the queries executed must be named queries, there is a proxy
+					wrapping the <classname>EntityManager</classname> that will throw an exception if you
+					try to use non named queries. See the next section for details
+					about the naming conventions of named queries.</note>
+
+					<para>By default the collections of the Entities are configured as
+					<literal>LAZY</literal>, so the queries used in the selectors have to
+					explicitily indicate <literal>join fetch</literal> when needed.</para>
+
+					<para>There is a second level cache configured for caching the
+					Objects and the queries. Most of the Entities that are prone to
+					be static, like <classname>Repository</classname> or <classname>ObjectType</classname>
+					are cached, so don't use <literal>join fetch</literal> with these entities.</para>
+
+					<para>Verify the files <filename>ehcache.xml</filename> and <filename>persistence.xml</filename>
+					to check what Entities are cached and how. The <classname>EntityManager</classname> proxy is
+					enabling the query cache if the named query prefix corresponds to a classname in the file
+					<filename>ehcache.xml</filename>.</para>
+				</section>
+
+				<section>
+					<title>Named queries conventions</title>
+
+					<para>The entity queries are named as:</para>
+
+
+					<itemizedlist>
+
+					<listitem>
+						<para>
+							<literal><replaceable>EntityName</replaceable>.by_<replaceable>Attribute</replaceable></literal>
+							for 'dry' entities, all props lazy loaded eg. <literal>permission.by_name</literal> for
+							the query to retrieve a Permission obj. with all associations lazily loaded.
+						</para>
+					</listitem>
+					<listitem>
+						<para>
+							<literal><replaceable>EntityName</replaceable>.with_<replaceable>Association</replaceable></literal>
+							for entities with some associations resolved.
+							Eg. <literal>permission.with_parent</literal> for a <literal>Permission</literal>
+							object with the parent association resolved/fetched.
+						</para>
+					</listitem>
+					<listitem>
+						<para>
+							<literal><replaceable>EntityName</replaceable>.with_dependencies</literal>
+							for a fetch with all associations resolved/fetched.
+						</para>
+					</listitem>
+
+					</itemizedlist>
+
+					<para>Similarly, the selector offers methods:</para>
+
+					<itemizedlist>
+						<listitem>
+							<para>
+								<literal>get<replaceable>EntityName</replaceable></literal>
+								for an entity with no associations resolved. Eg. <literal>getPermission</literal>
+							</para>
+						</listitem>
+						<listitem>
+							<para>
+								<literal>get<replaceable>EntityName</replaceable>With<replaceable>Association</replaceable></literal>
+								 for an entity with some associations resolved. Eg. <literal>getPermissionWithParent</literal>
+							</para>
+						</listitem>
+						<listitem>
+							<para>
+								<literal>load<replaceable>EntityName</replaceable></literal>
+								for an entity with all assocs resolved. Eg. <literal>loadPermission</literal>
+							</para>
+						</listitem>
+					</itemizedlist>
+				</section>
+			</section>
+
+			<section>
+				<title>Delegates</title>
+
+				<para>The delegates are responsible to implement the interactions
+				with the database that are not covered by the Entity Manager
+				and the selectors.</para>
+
+				<para>For example, the delegates implement the stream
+				manipulation not covered by JPA.</para>
+
+			</section>
+
+
+
+
+
+			<section>
+				<title>Service layer</title>
+
+				<para>The service layer is the core of the application, all the
+				business logic is implemented at this level.</para>
+
+				<para>There is a class per CMIS service type, and by design there
+				is no interlinking between services. A service class could use
+				selectors, delegates and components but never will use another
+				service.</para>
+
+			</section>
+
+			<section>
+				<title>CMIS layer</title>
+
+				<para>This layer is connecting the Service layer and the
+				Apache Chemistry Open CMIS bindings. By design this later should be
+				as minimal as possible, it translates the data coming from
+				Chemistry bindings to our model Entities and call the related
+				service.</para>
+
+				<para>There is a class per CMIS service type and several helper
+				classes to transform from and to our model classes.</para>
+			</section>
+
+
+			<section>
+				<title>Package distribution</title>
+
+				<simplesect>
+					<title><literal>eu.trade.repo</literal></title>
+					<para>Contains the service class <classname>eu.trade.repo.RepoService</classname> that
+					aggregates of all the services provided by the server. The service layer was
+					divided into classes and then combined into the previous class with a proxy pattern.</para>
+
+					<para>This package also contains the service factory <classname>eu.trade.repo.RepoServiceFactory</classname>,
+					that with <classname>eu.trade.repo.web.CmisLifecycleBean</classname> both are the
+					the entry point of the Apache Chemistry OpenCMIS server bindings.</para>
+				</simplesect>
+
+				<simplesect>
+					<title><literal>eu.trade.repo.delegates</literal></title>
+
+					<para>All the delegate classes are under this package.</para>
+
+					<para>A delegate is reponsible of altering the content of the
+					database and retriving data with JDBC. Currently there are
+					delegates for managing the persist and retrival of documents in
+					the relational database, and the index generation.</para>
+
+				</simplesect>
+
+				<simplesect>
+					<title><literal>eu.trade.repo.index</literal></title>
+					<para>You could find in this package and subpackages all the classes
+					related with the indexing process.</para>
+
+					<para>For further details, read the chapter of Indexing.</para>
+				</simplesect>
+
+				<simplesect>
+					<title><literal>eu.trade.repo.mbean</literal></title>
+					<para>The application is exposing throw JMX valuable information about the
+					usage of the server. This package includes the Mbeans with these values, for
+					example call count, total time, last time, average in 5,10 and 15 minutes, etc.</para>
+
+					<para>To see the complete list of Mbeans read the section JMX of this chapter.</para>
+				</simplesect>
+
+				<simplesect>
+					<title><literal>eu.trade.repo.model</literal></title>
+					<para>This package contains the JPA2 entities. All entities
+					extends the class <classname>eu.trade.repo.model.DBEntitity</classname>.</para>
+
+					<para>Each entity may have named queries defined, please check
+					the naming convention in the persistence layer section.</para>
+
+					<variablelist>
+						<title>Entities</title>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.Acl</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.CMISObject</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.DBEntity</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.ObjectType</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.ObjectTypeProperty</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.ObjectTypeRelationship</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.Permission</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.PermissionMapping</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.Property</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.Rendition</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.Repository</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.SecurityHandler</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.Word</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.WordObject</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.WordPosition</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.WordPositionId</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+
+					</variablelist>
+
+
+					<variablelist>
+						<title>Enums</title>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.ActionParameter</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.HandlerType</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.IndexingState</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term><classname>eu.trade.repo.model.SecurityType</classname></term>
+							<listitem></listitem>
+						</varlistentry>
+					</variablelist>
+				</simplesect>
+
+				<simplesect>
+					<title><literal>eu.trade.repo.query</literal></title>
+					<para>Contains the Query component, that includes the parsing
+					of the CMIS query and the JPA query	generation based on the
+					parsed information.</para>
+
+					<para>The CMIS query is parsed using ANTLR 3, we've created
+					a grammar file that generates the tree structure, AST.</para>
+
+					<para>The AST is traversed and generates a JPA query with
+					the interface <classname>javax.persistence.criteria.CriteriaBuilder</classname>
+					from JPA.</para>
+				</simplesect>
+
+				<simplesect>
+					<title><literal>eu.trade.repo.security</literal></title>
+					<para></para>
+				</simplesect>
+
+
+				<simplesect>
+					<title><literal>eu.trade.repo.selectors</literal></title>
+					<para>All the selector are under this package </para>
+				</simplesect>
+
+
+				<simplesect>
+					<title><literal>eu.trade.repo.service</literal></title>
+					<para>Contains the main business logic of the application.
+					Could be divided in several subpackages:</para>
+
+					<simplelist>
+						<member>
+							<literal>eu.trade.repo.service</literal>
+							This package is the core of the application,
+							this receives and returns Entity instances.
+							It's designed for not to have any dependency with
+							Apache Chemistry OpenCMIS.
+						</member>
+						<member>
+							<literal>eu.trade.repo.service.cmis</literal>
+							This package uses the previous package and
+							translates the data coming from the CMIS client to
+							our model classes (JPA Entities). By design, this
+							package should not contain logic.
+						</member>
+						<member>
+							<literal>eu.trade.repo.service.cmis.data.in</literal>
+							This package is resposible to transform the data
+							structures from the Apache Chemistry OpenCMIS into
+							our model classes.
+						</member>
+						<member>
+							<literal>eu.trade.repo.service.cmis.data.out</literal>
+							This package is resposible to transform the data our
+							model data structures to the Apache Chemistry OpenCMIS
+							interfaces.
+						</member>
+						<member>
+							<literal>eu.trade.repo.service.interfaces</literal>
+							Interfaces for our services. the implementation of these
+							interfaces are under the package <literal>eu.trade.repo.service</literal>.
+						</member>
+					</simplelist>
+				</simplesect>
+
+				<simplesect>
+					<title><literal>eu.trade.repo.stats</literal></title>
+					<para></para>
+				</simplesect>
+
+				<simplesect>
+					<title><literal>eu.trade.repo.util</literal></title>
+					<para>Utility and miscellane package.</para>
+				</simplesect>
+
+				<simplesect>
+					<title><literal>eu.trade.repo.web</literal></title>
+					<para>The administration panel an the ECAS ticket generator code
+					are under this package.</para>
+				</simplesect>
+
+			</section>
+
+			<section>
+				<title>Server statistics</title>
+				<subtitle>JMX</subtitle>
+
+			</section>
+			<section>
+				<title>Logging</title>
+			</section>
+		</section>
+
+
+		<section>
+			<title>Architectural views</title>
+			<para><emphasis>To be updated in future release.</emphasis></para>
+		</section>
+
+</chapter>
+

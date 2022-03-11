@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypeFolderDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>trade:email</cmis:id>
+	<cmis:localName>trade:email</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>trade:email</cmis:displayName>
+	<cmis:queryName>trade:email</cmis:queryName>
+	<cmis:description>trade:email</cmis:description>
+	<cmis:baseId>cmis:folder</cmis:baseId>
+	<cmis:parentId>cmis:folder</cmis:parentId>
+	<cmis:creatable>true</cmis:creatable>
+	<cmis:fileable>true</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>true</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>false</cmis:controllablePolicy>
+	<cmis:controllableACL>true</cmis:controllableACL>
+	<cmis:typeMutability>
+		<cmis:create>true</cmis:create>
+		<cmis:update>true</cmis:update>
+		<cmis:delete>true</cmis:delete>
+	</cmis:typeMutability>
+	<cmis:propertyStringDefinition>
+		<cmis:id>to</cmis:id>
+		<cmis:localName>to</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>to</cmis:displayName>
+		<cmis:queryName>to</cmis:queryName>
+		<cmis:description>To</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="to" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:allowedChildObjectTypeIds</cmis:id>
+		<cmis:localName>cmis:allowedChildObjectTypeIds</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:allowedChildObjectTypeIds</cmis:displayName>
+		<cmis:queryName>cmis:allowedChildObjectTypeIds</cmis:queryName>
+		<cmis:description>Id's of the set of Object-types that can be created,
+			moved or filed into this folder</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>false</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:allowedChildObjectTypeIds" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:path</cmis:id>
+		<cmis:localName>cmis:path</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:path</cmis:displayName>
+		<cmis:queryName>cmis:path</cmis:queryName>
+		<cmis:description>The fully qualified path to this folder</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:path" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:objectTypeId</cmis:id>
+		<cmis:localName>cmis:objectTypeId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:objectTypeId</cmis:displayName>
+		<cmis:queryName>cmis:objectTypeId</cmis:queryName>
+		<cmis:description>Id of the object's type</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:objectTypeId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:name</cmis:id>
+		<cmis:localName>cmis:name</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:name</cmis:displayName>
+		<cmis:queryName>cmis:name</cmis:queryName>
+		<cmis:description>Name of the object</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:name" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>subject</cmis:id>
+		<cmis:localName>subject</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>subject</cmis:displayName>
+		<cmis:queryName>subject</cmis:queryName>
+		<cmis:description>Subject</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="subject" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyDateTimeDefinition>
+		<cmis:id>cmis:creationDate</cmis:id>
+		<cmis:localName>cmis:creationDate</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:creationDate</cmis:displayName>
+		<cmis:queryName>cmis:creationDate</cmis:queryName>
+		<cmis:description>Date Time when the object was created</cmis:description>
+		<cmis:propertyType>datetime</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:creationDate" />
+	</cmis:propertyDateTimeDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>from</cmis:id>
+		<cmis:localName>from</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>from</cmis:displayName>
+		<cmis:queryName>from</cmis:queryName>
+		<cmis:description>From</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="from" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:changeToken</cmis:id>
+		<cmis:localName>cmis:changeToken</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:changeToken</cmis:displayName>
+		<cmis:queryName>cmis:changeToken</cmis:queryName>
+		<cmis:description>Token used for optimistic locking and concurrency
+			checking</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:changeToken" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:lastModifiedBy</cmis:id>
+		<cmis:localName>cmis:lastModifiedBy</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:lastModifiedBy</cmis:displayName>
+		<cmis:queryName>cmis:lastModifiedBy</cmis:queryName>
+		<cmis:description>User who last modified the object</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:lastModifiedBy" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:createdBy</cmis:id>
+		<cmis:localName>cmis:createdBy</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:createdBy</cmis:displayName>
+		<cmis:queryName>cmis:createdBy</cmis:queryName>
+		<cmis:description>User who created the object</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:createdBy" />
+	</cmis:propertyStringDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:objectId</cmis:id>
+		<cmis:localName>cmis:objectId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:objectId</cmis:displayName>
+		<cmis:queryName>cmis:objectId</cmis:queryName>
+		<cmis:description>Id of the object</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:objectId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:baseTypeId</cmis:id>
+		<cmis:localName>cmis:baseTypeId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:baseTypeId</cmis:displayName>
+		<cmis:queryName>cmis:baseTypeId</cmis:queryName>
+		<cmis:description>Id of the base object-type for the object</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:baseTypeId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyIdDefinition>
+		<cmis:id>cmis:parentId</cmis:id>
+		<cmis:localName>cmis:parentId</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:parentId</cmis:displayName>
+		<cmis:queryName>cmis:parentId</cmis:queryName>
+		<cmis:description>PropertyType.ID.value() of the parent folder of the
+			folder</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:parentId" />
+	</cmis:propertyIdDefinition>
+	<cmis:propertyDateTimeDefinition>
+		<cmis:id>cmis:lastModificationDate</cmis:id>
+		<cmis:localName>cmis:lastModificationDate</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>cmis:lastModificationDate</cmis:displayName>
+		<cmis:queryName>cmis:lastModificationDate</cmis:queryName>
+		<cmis:description>Date Time when the object was last modified</cmis:description>
+		<cmis:propertyType>datetime</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readonly</cmis:updatability>
+		<cmis:inherited>true</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="cmis:lastModificationDate" />
+	</cmis:propertyDateTimeDefinition>
+</cmis:type>

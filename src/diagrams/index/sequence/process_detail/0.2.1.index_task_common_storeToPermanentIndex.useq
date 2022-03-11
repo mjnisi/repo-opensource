@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.4" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="eu.trade.repo.index.impl.IndexTaskImpl" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/IndexTaskImpl.java" binary="false" label="indexTaskImpl" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="100" y="0"/>    
+    <execution id="2">      
+      <position height="21" width="7" x="58" y="1845"/>    
+    </execution>  
+  </object>  
+  <object id="3" language="java" name="eu.trade.repo.index.impl.ops.AbstractIndexOperator" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/ops/AbstractIndexOperator.java" binary="false" 
+    label="contentIndexOperator" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1040" y="0"/>    
+    <execution id="4">      
+      <position height="1979" width="0" x="0" y="78"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="1771" width="0" x="0" y="120"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="21" width="0" x="0" y="1944"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="167" width="0" x="0" y="193"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="162" width="0" x="0" y="818"/>    
+    </execution>    
+    <execution id="21">      
+      <position height="449" width="0" x="0" y="1421"/>    
+    </execution>    
+    <execution id="27">      
+      <position height="191" width="0" x="0" y="1487"/>    
+    </execution>  
+  </object>  
+  <object id="32" language="java" name="eu.trade.repo.delegates.AbstractJDBCIndexTransientDelegate" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/delegates/AbstractJDBCIndexTransientDelegate.java" binary="false" 
+    label="jdbcIndexTransientContentDelegate" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="982" y="0"/>    
+    <execution id="25">      
+      <position height="116" width="235" x="1062" y="843"/>    
+    </execution>    
+    <execution id="34">      
+      <position height="21" width="0" x="0" y="884"/>    
+    </execution>    
+    <execution id="23">      
+      <position height="121" width="235" x="1062" y="218"/>    
+    </execution>    
+    <execution id="38">      
+      <position height="21" width="0" x="0" y="258"/>    
+    </execution>    
+    <execution id="31">      
+      <position height="128" width="235" x="402" y="1529"/>    
+    </execution>    
+    <execution id="42">      
+      <position height="21" width="0" x="0" y="1575"/>    
+    </execution>  
+  </object>  
+  <object id="45" language="java" name="eu.trade.repo.delegates.JDBCIndexDelegate" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/delegates/JDBCIndexDelegate.java" binary="false" label="jdbcIndexDelegate" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1476" y="0"/>    
+    <execution id="15">      
+      <position height="315" width="135" x="1422" y="378"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="280" width="135" x="1422" y="1016"/>    
+    </execution>    
+    <execution id="55">      
+      <position height="21" width="0" x="0" y="1127"/>    
+    </execution>    
+    <execution id="57">      
+      <position height="88" width="0" x="0" y="1187"/>    
+    </execution>    
+    <execution id="47">      
+      <position height="70" width="0" x="0" y="420"/>    
+    </execution>    
+    <execution id="49">      
+      <position height="143" width="0" x="0" y="529"/>    
+    </execution>    
+    <execution id="67">      
+      <position height="21" width="0" x="0" y="630"/>    
+    </execution>    
+    <execution id="29">      
+      <position height="134" width="135" x="641" y="1715"/>    
+    </execution>    
+    <execution id="73">      
+      <position height="21" width="7" x="705" y="1807"/>    
+    </execution>  
+  </object>  
+  <object id="74" language="java" name="eu.trade.repo.delegates.JPAIndexDelegate" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/delegates/JPAIndexDelegate.java" binary="false" label="jpaIndexDelegate" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1193" y="0"/>    
+    <execution id="11">      
+      <position height="21" width="126" x="1537" y="2015"/>    
+    </execution>  
+  </object>  
+  <object id="75" language="java" name="javax.persistence.EntityManager" project="repo" 
+    file="C:/Dev/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar" 
+    binary="true" label="entityManager" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>  
+  </object>  
+  <object id="76" language="java" name="org.springframework.transaction.support.AbstractPlatformTransactionManager" 
+    project="repo" file="C:/Dev/.m2/repository/org/springframework/spring-tx/3.2.3.RELEASE/spring-tx-3.2.3.RELEASE.jar" 
+    binary="true" label="transactionManager" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="51">      
+      <position height="21" width="0" x="0" y="1039"/>    
+    </execution>    
+    <execution id="63">      
+      <position height="21" width="0" x="0" y="557"/>    
+    </execution>    
+    <execution id="69">      
+      <position height="21" width="241" x="1018" y="1736"/>    
+    </execution>  
+  </object>  
+  <object id="77" language="java" name="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate" 
+    project="repo" 
+    file="C:/Dev/.m2/repository/org/springframework/spring-jdbc/3.2.3.RELEASE/spring-jdbc-3.2.3.RELEASE.jar" 
+    binary="true" label="jdbcTemplate" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="53">      
+      <position height="21" width="0" x="0" y="1069"/>    
+    </execution>    
+    <execution id="36">      
+      <position height="21" width="0" x="0" y="917"/>    
+    </execution>    
+    <execution id="61">      
+      <position height="21" width="0" x="0" y="448"/>    
+    </execution>    
+    <execution id="65">      
+      <position height="21" width="0" x="0" y="585"/>    
+    </execution>    
+    <execution id="40">      
+      <position height="21" width="0" x="0" y="297"/>    
+    </execution>    
+    <execution id="59">      
+      <position height="21" width="0" x="0" y="1233"/>    
+    </execution>    
+    <execution id="44">      
+      <position height="21" width="0" x="0" y="1615"/>    
+    </execution>    
+    <execution id="71">      
+      <position height="21" width="204" x="1263" y="1759"/>    
+    </execution>  
+  </object>  
+  <message id="5" operation="storeToPermanentIndex(java.lang.Integer,java.lang.Integer):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="hasToStop():boolean">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </message>  
+  <message id="8" operation="deleteTransientIndexPartByObjectId(java.lang.Integer,int):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" 
+    operation="updateObjectIndexingState(java.lang.Integer,eu.trade.repo.model.IndexingState,eu.trade.repo.index.model.IndexOperation.IndexOperationType):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" 
+    operation="obtainWordPageFromTransientByObjectId(java.lang.Integer,int,int):java.util.List&lt;String&gt;">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" 
+    operation="writeWordPage(java.lang.Integer,java.lang.Integer,java.util.List&lt;java.lang.String&gt;):java.util.Map&lt;String,WordDTO&gt;">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" 
+    operation="obtainWordObjectFromTransientByObjectId(java.lang.Integer,java.util.List&lt;java.lang.String&gt;):java.util.List&lt;TransientDTO&gt;">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="18" 
+    operation="writeWordObjectPage(java.lang.Integer,java.lang.Integer,java.util.List&lt;eu.trade.repo.index.model.TransientDTO&gt;,java.util.Map&lt;java.lang.String,eu.trade.repo.index.model.WordDTO&gt;,eu.trade.repo.index.model.IndexOperation.IndexOperationType):java.util.Map&lt;String,? extends IWordObjectExtractor&gt;">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>  
+  <message id="20" 
+    operation="writeWordPositionPagesRelatedToWordList(java.lang.Integer,java.lang.Integer,java.util.List&lt;java.lang.String&gt;,java.util.Map&lt;java.lang.String,? extends eu.trade.repo.index.model.IWordObjectExtractor&gt;,int):void">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>  
+  <message id="22" operation="obtainWordPageByObjectId(java.lang.Integer,int,int):java.util.List&lt;String&gt;">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="23"/>  
+  </message>  
+  <message id="24" 
+    operation="obtainWordObjectPageByObjectId(java.lang.Integer,java.util.List&lt;java.lang.String&gt;):java.util.List&lt;TransientDTO&gt;">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="25"/>  
+  </message>  
+  <message id="26" 
+    operation="obtainWordPositionPageFromTransientByObjectId(java.lang.Integer,java.util.List&lt;java.lang.String&gt;,int,int):java.util.List&lt;TransientDTO&gt;">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="27"/>  
+  </message>  
+  <message id="28" 
+    operation="writeWordPositionPage(java.lang.Integer,java.lang.Integer,java.util.List&lt;eu.trade.repo.index.model.TransientDTO&gt;,java.util.Map&lt;java.lang.String,T&gt;):void">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="29"/>  
+  </message>  
+  <message id="30" operation="obtainWordPageByObjectId(java.lang.Integer,int,int):java.util.List&lt;String&gt;">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="31"/>  
+  </message>  
+  <message id="33">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="34"/>  
+  </message>  
+  <message id="35" 
+    operation="query(java.lang.String,org.springframework.jdbc.core.namedparam.SqlParameterSource,org.springframework.jdbc.core.RowMapper&lt;T&gt;):java.util.List&lt;T&gt;">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="36"/>  
+  </message>  
+  <message id="37">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="38"/>  
+  </message>  
+  <message id="39" 
+    operation="query(java.lang.String,org.springframework.jdbc.core.namedparam.SqlParameterSource,org.springframework.jdbc.core.RowMapper&lt;T&gt;):java.util.List&lt;T&gt;">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="40"/>  
+  </message>  
+  <message id="41">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="42"/>  
+  </message>  
+  <message id="43" 
+    operation="query(java.lang.String,org.springframework.jdbc.core.namedparam.SqlParameterSource,org.springframework.jdbc.core.RowMapper&lt;T&gt;):java.util.List&lt;T&gt;">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="44"/>  
+  </message>  
+  <message id="46" 
+    operation="obtainWordsByRepositoryIdAndList(java.lang.Integer,java.util.List&lt;java.lang.String&gt;):java.util.Map&lt;String,WordDTO&gt;">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="47"/>  
+  </message>  
+  <message id="48" 
+    operation="writeWords(java.lang.Integer,java.lang.Integer,java.util.List&lt;java.lang.String&gt;):void">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="49"/>  
+  </message>  
+  <message id="50" 
+    operation="getTransaction(org.springframework.transaction.TransactionDefinition):org.springframework.transaction.TransactionStatus">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="51"/>  
+  </message>  
+  <message id="52" operation="batchUpdate(java.lang.String,java.util.Map[]&lt;java.lang.String,?&gt;):int[]">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="53"/>  
+  </message>  
+  <message id="54" operation="commit(org.springframework.transaction.TransactionStatus):void">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="55"/>  
+  </message>  
+  <message id="56" 
+    operation="obtainContentWordObjectList(java.lang.Integer,java.util.Map&lt;java.lang.String,eu.trade.repo.index.model.WordDTO&gt;):java.util.Map&lt;String,WordObjectDTO&gt;">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="57"/>  
+  </message>  
+  <message id="58" 
+    operation="query(java.lang.String,org.springframework.jdbc.core.namedparam.SqlParameterSource,org.springframework.jdbc.core.ResultSetExtractor&lt;T&gt;):T">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="59"/>  
+  </message>  
+  <message id="60" 
+    operation="query(java.lang.String,org.springframework.jdbc.core.namedparam.SqlParameterSource,org.springframework.jdbc.core.ResultSetExtractor&lt;T&gt;):T">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="61"/>  
+  </message>  
+  <message id="62" 
+    operation="getTransaction(org.springframework.transaction.TransactionDefinition):org.springframework.transaction.TransactionStatus">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="63"/>  
+  </message>  
+  <message id="64" 
+    operation="batchUpdate(java.lang.String,org.springframework.jdbc.core.namedparam.SqlParameterSource[]):int[]">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="65"/>  
+  </message>  
+  <message id="66" operation="commit(org.springframework.transaction.TransactionStatus):void">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="67"/>  
+  </message>  
+  <message id="68" 
+    operation="getTransaction(org.springframework.transaction.TransactionDefinition):org.springframework.transaction.TransactionStatus">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="69"/>  
+  </message>  
+  <message id="70" operation="batchUpdate(java.lang.String,java.util.Map[]&lt;java.lang.String,?&gt;):int[]">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="71"/>  
+  </message>  
+  <message id="72" operation="commit(org.springframework.transaction.TransactionStatus):void">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="73"/>  
+  </message>
+</sequence-diagram>

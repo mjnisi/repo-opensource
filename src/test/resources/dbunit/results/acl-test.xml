@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<acl OBJECT_ID="100" PRINCIPAL_ID="test pid" PERMISSION_ID="100"/>	
+</dataset>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypeFolderDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>trade:folder2</cmis:id>
+	<cmis:localName>trade:folder2</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>trade:folder2</cmis:displayName>
+	<cmis:queryName>trade:folder2</cmis:queryName>
+	<cmis:description>trade:folder2</cmis:description>
+	<cmis:baseId>cmis:folder</cmis:baseId>
+	<cmis:parentId>cmis:folder</cmis:parentId>
+	<cmis:creatable>true</cmis:creatable>
+	<cmis:fileable>true</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>true</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>false</cmis:controllablePolicy>
+	<cmis:controllableACL>true</cmis:controllableACL>
+
+	<cmis:propertyStringDefinition>
+		<cmis:id>trade:status</cmis:id>
+		<cmis:localName>trade:status</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo
+		</cmis:localNamespace>
+		<cmis:displayName>trade:status</cmis:displayName>
+		<cmis:queryName>trade:status</cmis:queryName>
+		<cmis:description>Status</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:openChoice>false</cmis:openChoice>
+		<cmis:defaultValue />
+		<cmis:choice>
+			<cmis:value>ACTIVE</cmis:value>
+		</cmis:choice>
+		<cmis:choice>
+			<cmis:value>INACTIVE</cmis:value>
+		</cmis:choice>	
+	</cmis:propertyStringDefinition>
+
+	<cmis:propertyStringDefinition>
+		<cmis:id>trade:title</cmis:id>
+		<cmis:localName>trade:title</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo
+		</cmis:localNamespace>
+		<cmis:displayName>trade:title</cmis:displayName>
+		<cmis:queryName>trade:title</cmis:queryName>
+		<cmis:description>Title</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="trade:title" />
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyIdDefinition>
+		<cmis:id>trade:headingCode</cmis:id>
+		<cmis:localName>trade:headingCode</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo
+		</cmis:localNamespace>
+		<cmis:displayName>trade:headingCode</cmis:displayName>
+		<cmis:queryName>trade:headingCode</cmis:queryName>
+		<cmis:description>Heading code</cmis:description>
+		<cmis:propertyType>id</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="trade:headingCode" />
+	</cmis:propertyIdDefinition>
+
+	<cmis:propertyStringDefinition>
+		<cmis:id>trade:serviceOwner</cmis:id>
+		<cmis:localName>trade:serviceOwner</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo
+		</cmis:localNamespace>
+		<cmis:displayName>trade:serviceOwner</cmis:displayName>
+		<cmis:queryName>trade:serviceOwner</cmis:queryName>
+		<cmis:description>Service owner</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>true</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+		<cmis:defaultValue />
+		<cmis:choice displayName="trade:serviceOwner" />
+	</cmis:propertyStringDefinition>
+</cmis:type>

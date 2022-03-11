@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset depends="scenarioQueryService">
+  
+  <object ID="110" OBJECT_TYPE_ID="2" CMIS_OBJECT_ID="testFolder1" INDEX_STATE_CONTENT="0"/>
+  <property ID="100" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="35" VALUE="2" NUMERIC_VALUE="0" NORMALIZED_VALUE="" /> <!-- multi-valued property: cmis:allowedChildObjectTypeIds -->
+  <property ID="101" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="35" VALUE="21" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />
+  <property ID="102" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="35" VALUE="22" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />
+  <property ID="109" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="24" VALUE="testFolder1" NUMERIC_VALUE="0" NORMALIZED_VALUE="testfolder1" /> <!-- cmis:name -->
+  
+  <object ID="111" OBJECT_TYPE_ID="2" CMIS_OBJECT_ID="testFolder2" INDEX_STATE_CONTENT="0"/>
+  <property ID="103" OBJECT_ID="111" OBJECT_TYPE_PROPERTY_ID="35" VALUE="2" NUMERIC_VALUE="0" NORMALIZED_VALUE="" /> <!-- multi-valued property: cmis:allowedChildObjectTypeIds -->
+  <property ID="104" OBJECT_ID="111" OBJECT_TYPE_PROPERTY_ID="35" VALUE="21" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />
+  <property ID="105" OBJECT_ID="111" OBJECT_TYPE_PROPERTY_ID="35" VALUE="23" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />
+  <property ID="110" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="24" VALUE="testFolder2" NUMERIC_VALUE="0" NORMALIZED_VALUE="testfolder2" /> <!-- cmis:name -->
+  
+  <object ID="112" OBJECT_TYPE_ID="2" CMIS_OBJECT_ID="testFolder3" INDEX_STATE_CONTENT="0"/>
+  <property ID="106" OBJECT_ID="112" OBJECT_TYPE_PROPERTY_ID="35" VALUE="2" NUMERIC_VALUE="0" NORMALIZED_VALUE="" /> <!-- multi-valued property: cmis:allowedChildObjectTypeIds -->
+  <property ID="107" OBJECT_ID="112" OBJECT_TYPE_PROPERTY_ID="35" VALUE="23" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />
+  <property ID="108" OBJECT_ID="112" OBJECT_TYPE_PROPERTY_ID="35" VALUE="24" NUMERIC_VALUE="0" NORMALIZED_VALUE="" />
+  <property ID="111" OBJECT_ID="110" OBJECT_TYPE_PROPERTY_ID="24" VALUE="testFolder3" NUMERIC_VALUE="0" NORMALIZED_VALUE="testfolder3" /> <!-- cmis:name -->
+  
+  <!-- TODO: multi-valued tests with other data types -->
+  
+  <object_child OBJECT_ID="109" CHILD_OBJECT_ID="110"/>
+  <object_child OBJECT_ID="109" CHILD_OBJECT_ID="111"/>
+  <object_child OBJECT_ID="109" CHILD_OBJECT_ID="112"/>
+  
+  <acl ID="105" OBJECT_ID="110" PRINCIPAL_ID="/test2" PERMISSION_ID="3"/>
+  <acl ID="106" OBJECT_ID="111" PRINCIPAL_ID="/test2" PERMISSION_ID="3"/>
+  <acl ID="107" OBJECT_ID="112" PRINCIPAL_ID="/test2" PERMISSION_ID="3"/>
+  
+</dataset>

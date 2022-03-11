@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<object_type REPOSITORY_ID="100" CMIS_ID="test:type"
+		LOCAL_NAME="test:type" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+		QUERY_NAME="test:type" DISPLAY_NAME="test:type" BASE_ID="101"
+		PARENT_ID="110" CREATABLE="F" FILEABLE="F" QUERYABLE="F"
+		CONTROLLABLE_POLICY="F" CONTROLLABLE_ACL="F" FULLTEXT_INDEXED="F"
+		INCLUDED_IN_SUPERTYPE_QUERY="F" VERSIONABLE="F"
+		CONTENT_STREAM_ALLOWED="allowed" DESCRIPTION="test Desc" />
+</dataset>

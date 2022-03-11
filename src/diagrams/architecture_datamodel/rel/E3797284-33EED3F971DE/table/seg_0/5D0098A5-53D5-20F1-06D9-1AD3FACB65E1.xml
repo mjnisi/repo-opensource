@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5D0098A5-53D5-20F1-06D9-1AD3FACB65E1" name="repository_policy">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:06:29 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>139CC481-6E6B-91C0-0759-5064861C5543</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="repository_id" id="B41D03E2-6B09-2105-9503-2AAF29D870FF">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:06:29 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>F1398ED9-01B8-4B47-2488-545FD647C31E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>58A38DE6-FAE5-364E-0796-6332A69CC252</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E61AFF73-6F73-0801-C4F1-2C66D9952E7E" referredColumn="58A38DE6-FAE5-364E-0796-6332A69CC252"/>
+</associations>
+</Column>
+<Column name="object_type_id" id="B4031C1D-9778-0C8D-7403-3AE5E33CE501">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:06:29 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>87808A54-0B52-580F-2F0B-FF03C6EB25B0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>DED28FFE-C239-B554-7783-0F2BFF635C57</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D4B413ED-91DC-4CF4-C57E-38755ACF2C18" referredColumn="DED28FFE-C239-B554-7783-0F2BFF635C57"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="40238794-F209-47A1-1941-D8B02B7FCD8F" name="pk_repository_policy">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:06:29 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>BE796BBF-7CF9-CF91-B296-3AAB42A6F289</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B41D03E2-6B09-2105-9503-2AAF29D870FF"/>
+<colUsage columnID="B4031C1D-9778-0C8D-7403-3AE5E33CE501"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF138210-AE9E-1CFC-DB16-32114C564CAB" name="idx_fk_repository_policy_repo">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:06:29 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>034BEF0C-A426-E445-89BA-3CC8C7DBB8FE</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B41D03E2-6B09-2105-9503-2AAF29D870FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62EA8612-AFCA-70DD-445C-A9501DB48F76" name="idx_fk_repository_policy_type">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:06:29 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>691DA76D-A43B-62C8-889B-EBC46940DC74</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4031C1D-9778-0C8D-7403-3AE5E33CE501"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CCC0AF74-CC69-1CCE-7FDD-F1F6D5C4E0B6" name="fk_repository_policy_repo">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:06:29 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B41D03E2-6B09-2105-9503-2AAF29D870FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F965AF80-DAF7-C9EB-1685-05ED592E890A" name="fk_repository_policy_type">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:06:29 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4031C1D-9778-0C8D-7403-3AE5E33CE501"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

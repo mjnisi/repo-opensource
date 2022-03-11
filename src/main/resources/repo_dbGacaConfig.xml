@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <driverClassName>oracle.jdbc.OracleDriver</driverClassName>
+  <url>${GACA_DB_URL}</url>
+  <username>${GACA_DB_USERNAME}</username>
+  <password>${GACA_DB_PASSWORD}</password>
+  <validationQuery>SELECT 1 FROM DUAL</validationQuery>
+  <defaultAutoCommit>false</defaultAutoCommit>
+  <maxWait>60000</maxWait> <!-- 60 seconds to obtain a connection -->
+</configuration>
+

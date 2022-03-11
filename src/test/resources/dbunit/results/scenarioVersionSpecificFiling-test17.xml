@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+ 
+  <object_child OBJECT_ID="1" CHILD_OBJECT_ID="2"/>
+  <object_child OBJECT_ID="1" CHILD_OBJECT_ID="3"/>
+  <object_child OBJECT_ID="1" CHILD_OBJECT_ID="4"/>
+  <object_child OBJECT_ID="1" CHILD_OBJECT_ID="5"/>
+  <object_child OBJECT_ID="1" CHILD_OBJECT_ID="6"/>
+  <object_child OBJECT_ID="1" CHILD_OBJECT_ID="7"/>
+  <object_child OBJECT_ID="7" CHILD_OBJECT_ID="8"/>
+  <object_child OBJECT_ID="7" CHILD_OBJECT_ID="9"/>
+  <object_child OBJECT_ID="7" CHILD_OBJECT_ID="10"/>
+  
+  <!-- 
+   moved from:
+   /disaggregated/draft/draft.txt (11)
+   /disaggregated/approved/approved.txt (12)
+   /disaggregated/published/published.txt (13)
+   
+   to:
+   /disaggregated/draft.txt
+   /disaggregated/approved.txt
+   /disaggregated/published.txt
+   -->
+  <object_child OBJECT_ID="7" CHILD_OBJECT_ID="11"/>
+  <object_child OBJECT_ID="7" CHILD_OBJECT_ID="12"/>
+  <object_child OBJECT_ID="7" CHILD_OBJECT_ID="13"/>
+   
+</dataset>

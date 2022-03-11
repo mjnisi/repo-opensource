@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	
+	<properties fileName="repo-normalizer.properties" delimiterParsingDisabled="true" />
+<!-- 		<xml config-name="repo/dbConfig" fileName="repo_dbConfig.xml" delimiterParsingDisabled="true"> -->
+<!-- 			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" /> -->
+<!-- 		</xml> -->
+	
+</configuration>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<security>
+		<cacheEnabled>true</cacheEnabled>
+		<userSessionLimit>4</userSessionLimit>
+		<authenticationHandler>
+			<name>builtin</name> <!-- see eu.trade.repo.util.Constants#BUILTIN -->
+			<description>Predefined set of users for administration tasks.</description>
+			<enabled>${BUILTIN_ENABLED}</enabled>
+			<class>eu.trade.repo.security.impl.BuiltinAuthenticationHandler</class>
+			<properties>
+				<user>
+					<name>admin</name>
+					<password>adminadmin</password>
+				</user>
+				<user>
+					<name>test</name>
+					<password>******</password>
+				</user>
+				<user>
+					<name>test2</name>
+					<password>******</password>
+				</user>
+			</properties>
+		</authenticationHandler>
+
+		<authorizationHandler>
+			<name>builtin</name> <!-- see eu.trade.repo.util.Constants#BUILTIN -->
+			<description>Predefined set of Principal Ids for builtin users.</description>
+			<enabled>${BUILTIN_ENABLED}</enabled>
+			<class>eu.trade.repo.security.impl.BuiltinAuthorizationHandler</class>
+			<properties>
+				<user>
+					<name>admin</name>
+					<isAdmin>true</isAdmin>
+					<principalIds></principalIds>
+				</user>
+				<user>
+					<name>test</name>
+					<isAdmin>false</isAdmin>
+					<principalIds>reader,writer</principalIds>
+				</user>
+				<user>
+					<name>test2</name>
+					<isAdmin>false</isAdmin>
+					<principalIds>nest.admin,reader</principalIds>
+				</user>
+			</properties>
+		</authorizationHandler>
+
+
+	</security>
+</configuration>

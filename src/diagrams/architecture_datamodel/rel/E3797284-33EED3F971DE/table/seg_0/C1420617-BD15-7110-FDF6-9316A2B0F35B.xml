@@ -1,0 +1,181 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C1420617-BD15-7110-FDF6-9316A2B0F35B" name="property">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>584BD672-6148-0FB1-C563-4B652AA2C81C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="EDFEEAED-5F2A-899A-6470-0746D8C9DB26">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>AC711342-6BDF-FF7C-65AC-678901E66C48</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="object_id" id="EBB8F191-FE54-5389-C999-5DC8BB50CA2D">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>584EEAB0-218F-23E3-C115-BFAF3845F910</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>8ECAD1C5-B9B6-7DE9-85DB-EC8FC5F56C00</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8A03C358-35A7-33A3-BBBA-3D9CD1D925C0" referredColumn="8ECAD1C5-B9B6-7DE9-85DB-EC8FC5F56C00"/>
+</associations>
+</Column>
+<Column name="object_type_property_id" id="CB7B6A3A-D595-EDDB-5CD2-48EEA4E5744B">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>499225D7-CF45-4F99-60F9-4B6EA1EEF2A5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>39547547-12D3-D317-04E7-85AAA8F9EA82</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96992675-B21D-1804-CBBD-BF5F016AABBF" referredColumn="39547547-12D3-D317-04E7-85AAA8F9EA82"/>
+</associations>
+</Column>
+<Column name="value" id="D0A52D7C-5FC8-1879-5D25-17CB47E3F4E0">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>AB68E879-B27A-9383-F2E9-D9D52BF8A536</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>3F7779E2-1707-FE6F-CDF5-C1011A4C8FDE</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numeric_value" id="991AD72B-0C19-E005-F9D6-33642EAD8D2D">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>ACD2D106-D6C1-6DC4-577D-DFB8D896F67F</importedID>
+<defaultValue>0</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="normalized_value" id="806C2DAA-70AF-0A90-4506-F5F8F50632C3">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-02-10 17:30:52 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>4B87A6AC-87EC-9D0B-49BE-E0EB94F2C8F3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>3F7779E2-1707-FE6F-CDF5-C1011A4C8FDE</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A9AB70C7-C62A-55C1-59F1-FB6F400424E6" name="pk_property">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>C240C628-5AA5-9CD5-8F11-BE57FE2BBC8A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDFEEAED-5F2A-899A-6470-0746D8C9DB26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="26D9E101-E008-6F4A-684E-AA2FF2485CA9" name="idx_property_value">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>3A0125F0-90D0-DD92-F153-612521C8D0D0</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB7B6A3A-D595-EDDB-5CD2-48EEA4E5744B"/>
+<colUsage columnID="D0A52D7C-5FC8-1879-5D25-17CB47E3F4E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="85563BC5-2A80-17D0-7AFD-3D8BC0E76E22" name="idx_property_numeric_value">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>B9ABCA96-2C81-F1F6-2F1C-8ACD00FBE35C</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB7B6A3A-D595-EDDB-5CD2-48EEA4E5744B"/>
+<colUsage columnID="991AD72B-0C19-E005-F9D6-33642EAD8D2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6DC6E6B9-9430-FA80-661B-2D32A81AAD57" name="idx_fk_property_object">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>CA6DCCE7-78F2-4A46-F568-B17E91D52FD8</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EBB8F191-FE54-5389-C999-5DC8BB50CA2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FDFFA7B-B470-86BB-1404-2A78D977C639" name="idx_fk_property_obj_type_prope">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>6D5484DA-13FB-0BA0-323A-63A8F47CCAA7</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB7B6A3A-D595-EDDB-5CD2-48EEA4E5744B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1DC8D729-06D5-7AB3-DBC7-1BE2A4E28C7D" name="idx_property_normalized_value">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-08-06 15:20:26 UTC</createdTime>
+<ownerDesignName>architecture_datamodel</ownerDesignName>
+<importedID>0D34D6DF-6739-A3D3-707A-C762D6333A3F</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB7B6A3A-D595-EDDB-5CD2-48EEA4E5744B"/>
+<colUsage columnID="806C2DAA-70AF-0A90-4506-F5F8F50632C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6D88154D-990C-B272-5570-EC51CB7A5EBD" name="fk_property_obj_type_property">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB7B6A3A-D595-EDDB-5CD2-48EEA4E5744B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="495100A1-28EC-386E-12EC-93DCA6DFD1DF" name="fk_property_object">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EBB8F191-FE54-5389-C999-5DC8BB50CA2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

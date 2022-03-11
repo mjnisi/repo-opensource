@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B28C71D-1BAB-0FA7-216D-D9D54266219F" name="index_word_position">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>73771C72-69C7-D7EA-DED4-326864E09100</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="word_object_id" id="998C7233-990A-D008-E8D7-284730CAFAA9">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>DC209BAB-AA7C-FEE3-34A4-CC9B7D789AA0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>08AE5B30-5662-7F78-9CDC-4A44A817A47D</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="47ADADEF-AEEC-EFA7-4E52-138648EF791A" referredColumn="08AE5B30-5662-7F78-9CDC-4A44A817A47D"/>
+</associations>
+</Column>
+<Column name="position" id="1E7B3245-1CBB-E0F8-CDCB-9E484B4AAB76">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>C559E2D8-3C1E-7D97-80F1-3F61C9B2E440</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="step" id="8573CAAD-D8CD-FC88-FFF0-7F48E204723A">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>F0D96306-5DC1-B9FC-F798-DB21309C17EC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<defaultValue>1</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6ADF3354-9880-838C-FF8C-DDDE55D43C2D" name="pk_index_word_position">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>25B0735D-2747-46AB-91C2-6D8821D047C7</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="998C7233-990A-D008-E8D7-284730CAFAA9"/>
+<colUsage columnID="1E7B3245-1CBB-E0F8-CDCB-9E484B4AAB76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="573BABE8-8888-2501-2CDA-CDD29BEDFD9B" name="idx_fk_index_word_position">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>34D5EE29-21D7-B0AA-4D2F-27610A77F57F</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="998C7233-990A-D008-E8D7-284730CAFAA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98498717-B62B-7A46-C1C3-F014BCB9FB75" name="fk_index_word_position">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="998C7233-990A-D008-E8D7-284730CAFAA9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

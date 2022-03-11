@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset depends="scenarioQueryService">
+  
+  <!-- includeInSupertypeQuery = TRUE, PARENT_ID = 21 -->
+  <object_type ID="22" REPOSITORY_ID="1" CMIS_ID="test:orderByProperty1"
+                                         LOCAL_NAME="test:orderByProperty1"
+                                         LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+                                         QUERY_NAME="test:orderByProperty1"
+                                         DISPLAY_NAME="test:orderByProperty1"
+                                         BASE_ID="2" PARENT_ID="21" CREATABLE="T"
+                                         FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T"
+                                         CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T"
+                                         INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+                                         
+  <!-- includeInSupertypeQuery = FALSE, PARENT_ID = 21 -->
+  <object_type ID="23" REPOSITORY_ID="1" CMIS_ID="test:orderByProperty2"
+                                         LOCAL_NAME="test:orderByProperty2"
+                                         LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+                                         QUERY_NAME="test:orderByProperty2"
+                                         DISPLAY_NAME="test:orderByProperty2"
+                                         BASE_ID="2" PARENT_ID="21" CREATABLE="T"
+                                         FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T"
+                                         CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T"
+                                         INCLUDED_IN_SUPERTYPE_QUERY="F" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  
+  <!-- includeInSupertypeQuery = TRUE, PARENT_ID = 23 -->
+  <object_type ID="24" REPOSITORY_ID="1" CMIS_ID="test:orderByProperty2Child"
+                                         LOCAL_NAME="test:orderByProperty2Child"
+                                         LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+                                         QUERY_NAME="test:orderByProperty2Child"
+                                         DISPLAY_NAME="test:orderByProperty2Child"
+                                         BASE_ID="2" PARENT_ID="23" CREATABLE="T"
+                                         FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T"
+                                         CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T"
+                                         INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  
+  <object ID="110" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="internalTestFolder1" INDEX_STATE_CONTENT="0"/>
+  <object ID="111" OBJECT_TYPE_ID="22" CMIS_OBJECT_ID="internalTestFolder2" INDEX_STATE_CONTENT="0"/>
+  <object ID="112" OBJECT_TYPE_ID="23" CMIS_OBJECT_ID="internalTestFolder3" INDEX_STATE_CONTENT="0"/>
+  
+  <object ID="113" OBJECT_TYPE_ID="22" CMIS_OBJECT_ID="internalTestFolder4" INDEX_STATE_CONTENT="0"/>
+  <property ID="100" OBJECT_ID="113" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Allen" NUMERIC_VALUE="0" NORMALIZED_VALUE="allen"/> <!-- cmis:createdBy -->
+  <property ID="101" OBJECT_ID="113" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE="" /><!-- cmis:numberField -->
+  
+  <object ID="114" OBJECT_TYPE_ID="24" CMIS_OBJECT_ID="internalTestFolder5" INDEX_STATE_CONTENT="0"/>
+  <property ID="102" OBJECT_ID="114" OBJECT_TYPE_PROPERTY_ID="28" VALUE="kardaal" NUMERIC_VALUE="0" NORMALIZED_VALUE="kardaal" /> <!-- cmis:createdBy -->
+  
+  <property ID="103" OBJECT_ID="111" OBJECT_TYPE_PROPERTY_ID="28" VALUE="foobar" NUMERIC_VALUE="0" NORMALIZED_VALUE="foobar" /> <!-- cmis:createdBy -->
+  
+  <object ID="119" OBJECT_TYPE_ID="6" CMIS_OBJECT_ID="internalTestDocument1" INDEX_STATE_CONTENT="0"/>
+  <property ID="104" OBJECT_ID="119" OBJECT_TYPE_PROPERTY_ID="28" VALUE="kardaal" NUMERIC_VALUE="0" NORMALIZED_VALUE="kardaal" /> <!-- cmis:createdBy -->
+  
+  <object_child OBJECT_ID="111" CHILD_OBJECT_ID="113"/>
+  <object_child OBJECT_ID="111" CHILD_OBJECT_ID="119"/>
+  <object_child OBJECT_ID="113" CHILD_OBJECT_ID="112"/>
+  <object_child OBJECT_ID="113" CHILD_OBJECT_ID="114"/>
+  
+  <!-- start from 105 -->
+  <acl ID="105" OBJECT_ID="102" PRINCIPAL_ID="/test" PERMISSION_ID="1"/>
+  <acl ID="106" OBJECT_ID="102" PRINCIPAL_ID="/test2" PERMISSION_ID="2"/>
+  <acl ID="107" OBJECT_ID="113" PRINCIPAL_ID="/test" PERMISSION_ID="1"/>
+  <acl ID="108" OBJECT_ID="113" PRINCIPAL_ID="/test2" PERMISSION_ID="2"/>
+  <acl ID="109" OBJECT_ID="111" PRINCIPAL_ID="/test2" PERMISSION_ID="2"/>
+  <acl ID="110" OBJECT_ID="119" PRINCIPAL_ID="/test2" PERMISSION_ID="1"/>
+  
+</dataset>

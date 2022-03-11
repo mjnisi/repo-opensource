@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+		
+  <!-- ROOT FOLDER -->
+  <object ID="1" OBJECT_TYPE_ID="2" CMIS_OBJECT_ID="ROOT.1"/>
+  
+  <object ID="100" OBJECT_TYPE_ID="10" CMIS_OBJECT_ID="Test Document"/>
+  <object ID="101" OBJECT_TYPE_ID="20" CMIS_OBJECT_ID="Test Folder"/>
+  <object ID="102" OBJECT_TYPE_ID="21" CMIS_OBJECT_ID="Test Subfolder"/>
+
+  <object ID="103" OBJECT_TYPE_ID="1" CMIS_OBJECT_ID="document1"/>
+  <object ID="104" OBJECT_TYPE_ID="1" CMIS_OBJECT_ID="document2"/>
+  <object ID="105" OBJECT_TYPE_ID="1" CMIS_OBJECT_ID="document3"/>
+  
+</dataset>  

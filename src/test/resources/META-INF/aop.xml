@@ -1,0 +1,17 @@
+<aspectj>
+<!--
+    <aspects>
+        <aspect name="eu.trade.repo.index.impl.ReverseIndexLogger"/>
+    </aspects>
+   
+	<weaver options="-verbose -showWeaveInfo ">
+		<include within="eu.trade.repo.index.*"/>
+		<include within="eu.trade.repo.service.*"/>
+    </weaver>
+-->
+
+	<weaver>
+		<exclude within="..*CGLIB" />
+	</weaver>
+
+</aspectj>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+       
+    <!-- User session cache configuration -->
+    <bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" p:configLocation="classpath:/security-ehcache.xml" p:shared="false" p:cacheManagerName="security-cache"/>
+    <bean id="securityCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean" p:cacheManager-ref="ehcache" p:cacheName="security-user"/>
+    
+    <!-- CMIS Security Beans -->
+	<bean id="authorization" class="eu.trade.repo.security.AuthorizationAspect" />
+	<bean id="callContextHolder" class="eu.trade.repo.security.CallContextHolderImpl" init-method="init"/>
+	<bean id="securityHandlerFactory" class="eu.trade.repo.security.SecurityHandlerFactory" init-method="init"/>
+	<bean id="security" class="eu.trade.repo.security.SecurityImpl" />
+	<bean id="permissionMappingCache" class="eu.trade.repo.security.PermissionMappingCache" />
+	<bean id="permissionCache" class="eu.trade.repo.security.PermissionCache" />
+	<bean id="accessControl" class="eu.trade.repo.security.impl.AccessControlImpl" />
+</beans>

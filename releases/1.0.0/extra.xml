@@ -1,0 +1,27 @@
+<project name="project-specific-targets"  basedir=".">
+
+    <target name="extra">
+        <!--only for dev and test-->
+        <property name="repoKeystore" value="extra/${environment}/repo.ks" />
+    	<property name="repoCrt" value="extra/${environment}/repo.crt" />
+        <property name="repoPem" value="extra/${environment}/repo.pem" />
+        <property name="serverConfig" value="extra/${environment}/server.xml" />
+        <property name="keystoreFolder" value="/data/applications/repo/.cert/" />
+
+        <echo message="Deploying security keystore."/>
+        <tstamp>
+            <format property="current.time" pattern="MM-dd-yyyy_hh:mm:ss"/>
+        </tstamp>
+
+        <sshexec host="${host}" username="${username}" password="${password}" command="mv ${tomcat_folder}/conf/server.xml ${tomcat_folder}/conf/server.xml.${current.time}" trust="true" failonerror="true" />
+        <scp file="${serverConfig}" todir="${username}@${host}:${tomcat_folder}/conf/" password="${password}" trust="true" />
+    	
+    	<!-- needed for non APR connector -->
+    	<scp file="${repoKeystore}" todir="${username}@${host}:/data/applications/repo/.cert/" password="${password}" trust="true" />
+    	<!-- needed for APR -->
+    	<scp file="${repoCrt}" todir="${username}@${host}:/data/applications/repo/.cert/" password="${password}" trust="true" />
+        <scp file="${repoPem}" todir="${username}@${host}:/data/applications/repo/.cert/" password="${password}" trust="true" />
+    </target>
+
+
+</project>

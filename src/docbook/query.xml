@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+
+		<title>Query Service</title>
+
+		<section>
+			<title>Introduction</title>
+
+			<para>The CMIS standard implemented by the Repo provides a type-based Query service which
+			allows the querying and discovery of data using a query language with a syntax similar to SQL. In
+			order to achieve this, the query service projects the CMIS Data Model into <emphasis role="bold">virtual tables</emphasis>
+			and <emphasis role="bold">virtual columns</emphasis>, such that each Object-Type defined in the Repo is projected into
+			its own virtual table and each Object-Type-Property projected into a Virtual-Column of the table:
+			</para>
+
+			<para>
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<!-- TABLE PROJECTION DIAGRAM -->
+							<imagedata fileref="images/virtual_table_projection.png"
+								scalefit="1" width="100%" contentdept="100%" />
+						</imageobject>
+						<caption>
+							<para><emphasis role="bold">Projection of the CMIS Data Model into Virtual Tables</emphasis></para>
+						</caption>
+					</mediaobject>
+				</screenshot>
+			</para>
+
+			<para>allowing queries like:</para>
+
+			<screen>        <emphasis role="bold">select * from cmis:document where cmis:author = 'John Doe'</emphasis></screen>
+
+			<para>where <emphasis role="bold">cmis:document</emphasis> and <emphasis role="bold">cmis:author</emphasis> are
+			<emphasis role="bold">VIRTUAL</emphasis> tables and columns that don't exist as actual tables in the Repo RDBMS.</para>
+
+			<para>The projection of Data Model tables into Virtual Tables is achieved at runtime (query-time), by expanding the received
+			CMIS Query (on the Virtual Tables) into a relational query (onto the actual persisted tables representing the Data Model)</para>
+
+			<para>e.g.</para>
+
+			<para><emphasis role="bold">select * from cmis:document -></emphasis></para>
+			<para><emphasis role="bold">select * from object o join object_type ot on o.object_type_id = ot.id WHERE ot.query_name = 'cmis:document'</emphasis>
+			</para>
+
+			<para>Transformation of the incoming CMIS query into the equivalent relational query is achieved by reading the incoming query, extracting the relevant,
+			<emphasis role="bold"><emphasis role="italic"> semantically meaningful words</emphasis></emphasis> (from now on, <emphasis role="bold">
+			<emphasis role="italic">Tokens</emphasis></emphasis>), e.g. <emphasis role="bold">'select'</emphasis>, <emphasis role="bold">'*'</emphasis>,
+			<emphasis role="bold">'cmis:document'</emphasis>, then generating the equivalent relational query statements.</para>
+
+			<para>Processing the tokens in the received CMIS Query in order to generate the equivalent relational query is assisted by another step
+			<emphasis role="bold">between extracting the tokens from the query and generating the output</emphasis>, that of generating an
+			<emphasis role="bold">Abstract Syntax Tree (AST)</emphasis>.</para>
+
+			<para>An AST provides an hierarchical (tree-based) representation of the query, where each node in the tree represents a token in the input:</para>
+
+			<para>
+					<screenshot>
+						<mediaobject>
+							<imageobject>
+								<!-- DIAGRAM OF ONLY INPUT QUERY  -->
+								<imagedata fileref="images/cmis_query_ast.png" scalefit="1" width="63%" align="center" />
+							</imageobject>
+							<caption>
+								<para><emphasis role="bold">Abstract Syntax Tree (AST) for query <emphasis role="italic">SELECT * FROM cmis:document WHERE cmis:name = 'John Doe'</emphasis></emphasis></para>
+							</caption>
+						</mediaobject>
+					</screenshot>
+			</para>
+
+			<para>
+				Generating an AST of the input query, which is then processed to generate the output relational query, provides various advantages:
+
+				<itemizedlist>
+					<listitem>The process of parsing the input and verifying that the syntax of the input query is correct, is decoupled from the process of generating
+					the output relational query. This greatly increases the clarity of the code, as the code for reading the input character stream, identifying
+					tokens and verifying that the syntax is correct is separated from the the code which generates the output relational query.</listitem>
+					<listitem>Generating the output query can be simplified to a process of traversing the AST of the input query, and producing equivalent relational statements
+					for every node (token) encountered in the tree.</listitem>
+					<listitem>Furthermore, using an AST allows the query service to optimize the query by detecting and removing/modifying non-optimal usage structures in the AST
+					tree structure.</listitem>
+				</itemizedlist>
+			</para>
+
+			<para>
+			The output relational statement, actually sent to the underlying RDBMS and equivalent to the input CMIS Query can then be generated by traversing (walking)
+			the AST in a recursive, depth-first manner and directly producing equivalent relational statements for every node (token) encountered in the tree.</para>
+
+			<para>Furthermore, on traversing each AST node and generating the equivalent relational statement, the generated SQL can be customized to any supported
+			RDBMS, thus allowing the Repo to utilize persistence solutions from various providers. However, this approach is difficult to maintain, as the code generating
+			the relational queries would have to be modified/updated every time a new RDBMS provider was to be supported.</para>
+
+			<para>To solve this issue, the Repo Query Service implementation utilizes the JPA Criteria API. The Java Persistence Criteria API enables the definition of
+			dynamic queries through the construction of object-graph-based query definition objects - which provide a tree-like representation of the relational query to be
+			generated - then generates the appropriate relational SQL query for the underlying RDBMS. As multiple providers can be plugged into the JPA implementation,
+			this allows the Repo Query Service to support multiple database systems out of the box without requiring changes to the query generation code.</para>
+
+			<para>Therefore, the steps involved in processing a query request are the following:</para>
+
+			<para>
+				<orderedlist>
+					<listitem><emphasis role="bold">Tokenize &amp; Lex the input CMIS Query:</emphasis> Read the input query, extract words according to the CMIS Query
+					Syntax (Lex), then generate Tokens corresponding to each word (each Token is a legal word in the query syntax, with extra information attached to it e.g. position
+					 - start/end - in the string, type of token etc).</listitem>
+					<listitem><emphasis role="bold">Parse the tokens, build the CMIS Query AST.</emphasis></listitem>
+					<listitem><emphasis role="bold">Walk the CMIS query AST, build equivalent relational query JPA AST.</emphasis></listitem>
+					<listitem><emphasis role="bold">Walk the relational JPA AST, generate relational query.</emphasis></listitem>
+				</orderedlist>
+			</para>
+
+			<para>
+				<screenshot>
+					<mediaobject>
+						<imageobject>
+							<imagedata fileref="images/ast_transformation.png" scalefit="1" width="100%" align="center" />
+						</imageobject>
+					</mediaobject>
+				</screenshot>
+			</para>
+
+			<para>
+				In the above steps, Step 4 is completely handled internally by the JPA provider implementation
+				Steps 1 &amp; 2 are handled by ANTLR, while Step 4 is handled internally by the JPA provider implementation
+			</para>
+
+		</section>
+
+		<section>
+			<title>Query interfaces/entrypoints</title>
+			<para><emphasis>To be updated in future release.</emphasis></para>
+		</section>
+
+		<section>
+			<title>Query processing steps</title>
+
+
+			<section>
+				<title>Step 1: Parse query and generate Abstract Syntax Tree (AST)</title>
+
+				<para>Generate tokens (Lexer, Tokenizer), process tokens to generate token tree. ANTLR, lexer/parser generation</para>
+			</section>
+
+			<section>
+				<title>Step 2: Process (walk) AST and generate relational query (JPA)</title>
+
+				<para>The AST generated in Step 1 (TBD: add link to previous section) provides a token tree which can then be transformed into a relational query by
+				traversing the AST and generating the equivalent SQL syntax, e.g. 'from cmis:document' -> from object join object_type on object_type.query_name = 'cmis:document'.
+				However, each relational store normally supports a SQL syntax variant for all but the most trivial queries. Therefore, in order to support the widest variety of relational
+				datastores (RDBMSs) and not couple REPO to a particular store provider, another intermediate step is required: rather than transform the AST directly into a database
+				specific SQL query, transform the AST into an AST representing the SQL language in most of it's variants, then generating the final database-specific SQL from the
+				SQL AST. -> JPA</para>
+			</section>
+		</section>
+
+
+</chapter>
+

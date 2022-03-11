@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="sq_rendition" directorySegmentName="seg_0" id="0E858E7C-6153-8ABD-EADE-2EAFB4F51C28">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2014-02-10 17:30:52 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<startWith>10000</startWith>
+</SequenceOraclev10g>

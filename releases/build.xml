@@ -1,0 +1,20 @@
+<project name="deploy" default="help">
+	<!--
+		Using common ant project defined at deploy project. Version refs/heads/master.
+		In order to use another version, you can select it modifying the value of the build.tag property.
+		Examples:
+		
+			- The last release version:
+				<property name="build.tag" value="refs/heads/master"/>
+			- The develop version (if any):
+				<property name="build.tag" value="refs/heads/develop"/>
+			- The version 1.1.1:
+				<property name="build.tag" value="refs/tags/1.1.1"/>
+	-->
+
+	<property name="build.tag" value="refs/heads/develop"/>
+	<import as="common">
+		<url url="http://devrep:8080/gitblit/raw/?r=deploy.git&amp;f=build.xml&amp;h=${build.tag}"/>
+	</import>
+
+</project>

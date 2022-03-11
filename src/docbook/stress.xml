@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+
+	<chapterinfo>
+		<author>
+			<personname>
+				<firstname>Jorge</firstname>
+				<surname>MARTIN CUERVO</surname>
+			</personname>
+		</author>
+	</chapterinfo>
+		<title>Stress tests</title>
+		<subtitle>Tests to check the performance and find an optimal configuration</subtitle>
+		
+		
+		<section>
+			<title>Stress calendar</title>
+			
+			<para>Tests executed</para>
+			<itemizedlist>
+				<listitem>04/10/2013: JVM 1.7.0-b147 32bit, 2GB memory, TOMCAT 7.0.21, 8 DB connections, H2 in filesystem</listitem>
+				<listitem>07/10/2013: JVM 1.7.0-b147 32bit, 512Mb memory, TOMCAT 7.0.21, 8 DB connections, H2 in filesystem</listitem>
+				<listitem>09/10/2013: JVM 1.7.0-7u40 64bit, 4GB memory, TOMCAT 7.0.42, 8 DB connections, H2 in filesystem</listitem>
+			</itemizedlist>
+			
+			<para>Tests planned</para>
+		<itemizedlist>
+		<listitem>10/10/2013: JVM 1.7.0-7u40 64bit, 4GB memory, TOMCAT 7.0.42, 8 DB connections, H2 in filesystem</listitem>
+		<listitem>11/10/2013: JVM 1.7.0-7u40 64bit, 2GB memory, TOMCAT 7.0.42, 8 DB connections, H2 in filesystem</listitem>
+		<listitem>14/10/2013: JVM 1.7.0-7u40 64bit, 4GB memory, TOMCAT 7.0.42, 16 DB connections, H2 in filesystem</listitem>
+		<listitem>15/10/2013: JVM 1.7.0-7u40 64bit, 2GB memory, TOMCAT 7.0.42, 16 DB connections, H2 in filesystem</listitem>
+		</itemizedlist>
+
+		<para>With the best configuration will be tested:</para>
+		<itemizedlist>
+			<listitem>16/10/2013: H2 in memory</listitem>
+			<listitem>17/10/2013: Tomcat connector NIO</listitem>
+			<listitem>18/10/2013: Tomcat connector APR</listitem>
+			<listitem>21/10/2013: Minimal level of logging</listitem>
+			<listitem>22/10/2013: Double the concurrent users (20 or more threads)</listitem>
+			<listitem>23/10/2013: Define a TCK simulating cmis dir usage.</listitem>
+		</itemizedlist>
+			
+		</section>
+		
+</chapter>
+	

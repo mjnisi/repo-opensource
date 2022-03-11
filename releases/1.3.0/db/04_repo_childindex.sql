@@ -1,0 +1,1 @@
+create unique index idx_child_object on object_child (child_object_id, object_id);

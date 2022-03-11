@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd         
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd         
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd         
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd        
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+
+	<bean id="jmxConfig" factory-bean="combinedConfig" factory-method="getConfiguration">
+		<constructor-arg type="java.lang.String" value="repo/jmxConfig" />
+	</bean>
+	<bean id="jmxProperties" class="org.apache.commons.configuration.ConfigurationConverter" factory-method="getProperties" lazy-init="false">
+		<constructor-arg>
+			<ref bean="jmxConfig" />
+		</constructor-arg>
+	</bean>
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" lazy-init="false">
+    	<property name="propertiesArray">
+	      	<list>
+	        	<ref bean="jmxProperties"/>
+	         </list>
+	    </property>
+   		<property name="ignoreUnresolvablePlaceholders" value="true"/>
+  	</bean>
+
+<!-- Logger Aspect -->
+    <bean id="statsAspect" class="eu.trade.repo.stats.RepoStatsCollector" />
+	<bean id="statsExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolExecutorFactoryBean">
+	     <property name="corePoolSize" value="${repo.jmx.stats.pool.corePoolSize}" />
+	     <property name="maxPoolSize" value="${repo.jmx.stats.pool.maxPoolSize}" />
+	     <property name="queueCapacity" value="${repo.jmx.stats.pool.queueCapacity}" />
+	</bean>
+	<bean id="logAspect" class="eu.trade.repo.index.impl.ReverseIndexLogger" />
+	<aop:config>
+		
+<!-- 		<aop:aspect id="aspectLogging" ref="logAspect" > -->
+<!-- 	    	<aop:pointcut id="pointCutServices" expression="execution( public * eu.trade.repo.service.*..*(..))" /> -->
+<!-- 	    	<aop:around method="logTimeMethod" pointcut-ref="pointCutServices" /> -->
+<!-- 		 </aop:aspect> -->
+		 <aop:aspect id="aspectPerform" ref="statsAspect" >
+	    	<aop:pointcut id="pointCutServices2" expression="execution( public * eu.trade.repo.service.*..*(..))" />
+	    	<aop:around method="invoke" pointcut-ref="pointCutServices2" />
+		 </aop:aspect>
+<!-- 		<aop:advisor advice-ref="statsAspect" pointcut="execution( public * eu.trade.repo.service.*..*(..))"/> -->
+<!-- 		<aop:advisor advice-ref="statsAspect" pointcut-ref="pointCutServices2"/> -->
+	</aop:config>
+	
+	<context:component-scan base-package="eu.trade.repo.mbean" />
+	<bean id="repoJmxExporter" class="org.springframework.jmx.export.MBeanExporter">
+		<property name="server" ref="repoMbeanServer" />
+        <property name="assembler" ref="repoJmxAssembler"/>
+        <property name="namingStrategy" ref="repoJmxNamingStrategy"/>
+        <property name="autodetect" value="true"/>
+        <property name="registrationBehaviorName" value="REGISTRATION_REPLACE_EXISTING"/>
+    </bean>
+
+    <bean id="repoJmxAttributeSource" class="org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource"/>
+
+    <!-- will create management interface using annotation metadata -->
+    <bean id="repoJmxAssembler" class="org.springframework.jmx.export.assembler.MetadataMBeanInfoAssembler">
+        <property name="attributeSource" ref="repoJmxAttributeSource"/>
+    </bean>
+    
+    <!-- will pick up the ObjectName from the annotation -->
+    <bean id="repoJmxNamingStrategy" class="org.springframework.jmx.export.naming.MetadataNamingStrategy">
+        <property name="attributeSource" ref="repoJmxAttributeSource"/>
+    </bean>
+    
+    <bean id="repoRmiRegistry" class="org.springframework.remoting.rmi.RmiRegistryFactoryBean" depends-on="propertyConfigurer">
+        <property name="port" value="${repo.jmx.rmi.port}" />
+    </bean>
+	
+	<bean id="repoJmxConnector" class="org.springframework.jmx.support.ConnectorServerFactoryBean" depends-on="repoRmiRegistry">
+        <property name="objectName" value="connector:name=rmi" />
+        <property name="serviceUrl" value="service:jmx:rmi://localhost/jndi/rmi://${repo.jmx.rmi.host}:${repo.jmx.rmi.port}/repoJmxConnector" />
+        <property name="environment">
+            <map>
+                <entry key="jmx.remote.x.password.file" value="${repo.jmx.remote.authenticationFile}" />
+                <entry key="jmx.remote.x.access.file" value="${repo.jmx.remote.authorizationFile}" />
+            </map>
+        </property>
+    </bean>
+	<bean id="repoMbeanServer" class="java.lang.management.ManagementFactory" factory-method="getPlatformMBeanServer"/>
+    
+<!--  END Loggers -->
+        	    
+</beans>

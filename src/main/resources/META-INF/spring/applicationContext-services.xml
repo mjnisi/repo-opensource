@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd         
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd         
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd         
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd        
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+    	    
+    	    
+    <!-- CMIS services -->
+	<bean id="cmisLifecycleBean" class="eu.trade.repo.web.CmisLifecycleBean"/>
+	<bean id="cmisService" class="eu.trade.repo.RepoService" scope="prototype"/>
+	<bean id="cmisServiceBeanFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+    	<property name="targetBeanName">
+	        <idref local="cmisService" />
+	    </property>
+	</bean>
+	<bean id="cmisServiceFactory" class="eu.trade.repo.RepoServiceFactory"/>
+	<bean id="cmisRepositoryService" class="eu.trade.repo.service.cmis.CmisRepositoryService"/>
+	<bean id="cmisObjectService" class="eu.trade.repo.service.cmis.CmisObjectService"/>
+	<bean id="cmisNavigationService" class="eu.trade.repo.service.cmis.CmisNavigationService"/>
+	<bean id="cmisMultiFilingService" class="eu.trade.repo.service.cmis.CmisMultiFilingService"/>
+	<bean id="cmisDiscoveryService" class="eu.trade.repo.service.cmis.CmisDiscoveryService"/>
+	<bean id="cmisVersioningService" class="eu.trade.repo.service.cmis.CmisVersioningService"/>
+	<bean id="cmisRelationshipService" class="eu.trade.repo.service.cmis.CmisRelationshipService"/>
+	<bean id="cmisPolicyService" class="eu.trade.repo.service.cmis.CmisPolicyService"/>
+	<bean id="cmisAclService" class="eu.trade.repo.service.cmis.CmisAclService"/>
+		
+	<!-- services -->
+    <bean id="multifilingService" class="eu.trade.repo.service.MultifilingService"/>
+    <bean id="aclService" class="eu.trade.repo.service.AclService"/>
+    <bean id="objectService" class="eu.trade.repo.service.ObjectService"/>
+    <bean id="repositoryService" class="eu.trade.repo.service.RepositoryService">
+    	<property name="policyImpls" ref="policyImpls" />
+    </bean>
+    <bean id="navigationService" class="eu.trade.repo.service.NavigationService"/>
+    <bean id="discoveryService" class="eu.trade.repo.service.DiscoveryService" />
+    <bean id="policyService" class="eu.trade.repo.service.PolicyService" />
+    <bean id="versioningService" class="eu.trade.repo.service.VersioningService" />
+    <bean id="relationshipService" class="eu.trade.repo.service.RelationshipService" />
+
+	<!-- Selectors and delegates -->
+    <bean id="aclSelector" class="eu.trade.repo.selectors.AclSelector"/>
+    <bean id="propertySelector" class="eu.trade.repo.selectors.PropertySelector"/>
+    <bean id="cmisObjectSelector" class="eu.trade.repo.selectors.CMISObjectSelector"/>
+    <bean id="objectTypePropertySelector" class="eu.trade.repo.selectors.ObjectTypePropertySelector"/>
+    <bean id="objectTypeRelSelector" class="eu.trade.repo.selectors.ObjectTypeRelationshipSelector"/>
+    <bean id="objectTypeSelector" class="eu.trade.repo.selectors.ObjectTypeSelector"/>
+    <bean id="permissionMappingSelector" class="eu.trade.repo.selectors.PermissionMappingSelector"/>
+    <bean id="permissionSelector" class="eu.trade.repo.selectors.PermissionSelector"/>
+    <bean id="renditionSelector" class="eu.trade.repo.selectors.RenditionSelector"/>
+    <bean id="repositorySelector" class="eu.trade.repo.selectors.RepositorySelector"/>
+    <bean id="objectParentSelector" class="eu.trade.repo.selectors.ObjectParentSelector"/>
+    <bean id="wordSelector" class="eu.trade.repo.selectors.WordSelector"/>
+    <bean id="changeEventSelector" class="eu.trade.repo.selectors.ChangeEventSelector"/>
+    
+</beans>

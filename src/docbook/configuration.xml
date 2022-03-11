@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+
+		<title>Configuration Parameters</title>
+
+		<para>The project is following the standard configuration format
+		described in the deployment process (check the wiki for further information).</para>
+
+		<para>All the resources are under
+		<filename>/config</filename>. The files are prefixed with the environment
+		and common files are under <filename>/config/common</filename>.
+		During the deployment the files under <filename>/config</filename>
+		with the prefix of the target enviroment are renamed, removing the prefix and
+		are copied with the common files to the server.</para>
+
+		<para>In this chapter you could check the explanation of the entries
+		in the configuration files.</para>
+
+		<section>
+			<title>Environment files</title>
+			<subtitle>Configuration files per environment</subtitle>
+
+			<simplesect>
+				<title>environment.properties and confidential.properties</title>
+
+				<para>In production environments the following keys are
+				divided in two files, one with confidential entries and
+				other with the non-confidential ones. In development and testing environments
+				all the keys are in the file <filename>environment.properties</filename>.</para>
+
+				<variablelist>
+					<?dbfo list-presentation="blocks"?>
+					<varlistentry>
+						<term><literal>SERVER_PATH</literal></term>
+						<listitem>
+							<para>The address of the server.</para>
+							<para>For example: <literal>https://localhost:8443</literal></para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term><literal>ADMIN_TYPE</literal></term>
+						<listitem>
+							<para>Defines the type of authentication mechanism
+							for the admin module. Currently allowed value is <literal>local</literal></para>
+							<para><literal>local</literal>: Default Spring security with InMemory
+							authentication provider (admin/admin). No proxy
+							ticket generation. See <filename>repo_admonConfig.xml/admin/local</filename></para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term><literal>REPO_DB_DRIVER</literal></term>
+						<listitem>
+							<para>JDBC driver of the main database.</para>
+							<para>For example: <literal>oracle.jdbc.OracleDriver</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_DB_URL</literal></term>
+						<listitem>
+							<para>URL of the main database.</para>
+							<para>For example: <literal>jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP) (HOST=my-db-server.oranet.net) (PORT=1530)) (CONNECT_DATA=(SERVICE_NAME=repo-service.net)))</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_DB_USERNAME</literal></term>
+						<listitem>
+							<para>Username of the main database.</para>
+							<para>For example: <literal>username</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_DB_PASSWORD</literal></term>
+						<listitem>
+							<para>Password of the main database.</para>
+							<para>For example: <literal>******</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_DB_VALIDATION</literal></term>
+						<listitem>
+							<para>SQL query to validate the main database connection.</para>
+							<para>For example: <literal>SELECT 1 FROM DUAL</literal></para>
+						</listitem>
+					</varlistentry>
+
+					<!-- TODO extract the nest usernames and password from xml to here -->
+
+					<varlistentry>
+						<term><literal>REPO_JMX_RMI_HOST</literal></term>
+						<listitem>
+							<para>JMX host</para>
+							<para>For example: <literal>localhost</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_JMX_RMI_PORT</literal></term>
+						<listitem>
+							<para>Port of the JMX</para>
+							<para>For example: <literal>1099</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_JMX_STATS_COLLECT_ON_START</literal></term>
+						<listitem>
+							<para>Start collection data of usage on startup.</para>
+							<para>For example: <literal>true</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_JMX_STATS_DEFAULTS_DIR</literal></term>
+						<listitem>
+							<para>Path to save the usage statistics.</para>
+							<para>For example: <literal>/data/applications/repo/confs/stats/</literal></para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term><literal>NEST_DEV_ENABLED</literal></term>
+						<listitem>
+							<para>Enable or disable nest-groups-dev authorisation handler.</para>
+							<para>For example: <literal>true</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>NEST_TST_ENABLED</literal></term>
+						<listitem>
+							<para>Enable or disable nest-groups-dev authorisation handler.</para>
+							<para>For example: <literal>true</literal></para>
+						</listitem>
+					</varlistentry>
+                    <varlistentry>
+						<term><literal>TRON_ENABLED</literal></term>
+						<listitem>
+							<para>Enable or disable tron authorisation handler.</para>
+							<para>For example: <literal>true</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>BUILTIN_ENABLED</literal></term>
+						<listitem>
+							<para>Enable the builtin authentication and authorization handler.</para>
+							<para>For example: <literal>true</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>MOCK_AUTHENTICATION_ENABLED</literal></term>
+						<listitem>
+							<para>Enable or disable the Mock authentication handler.</para>
+							<para>For example: <literal>true</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>ECAS_PT_AUTHENTICATION_ENABLED</literal></term>
+						<listitem>
+							<para>Enable or disable the ECAS proxy ticket authentication handler.</para>
+							<para>For example: <literal>true</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>GACA_OPS_AUTHORIZATION_ENABLED</literal></term>
+						<listitem>
+							<para>Enable or disable the GACA operations authentication handler.</para>
+							<para>For example: <literal>true</literal></para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term><literal>REPO_INDEX_DB_DRIVER</literal></term>
+						<listitem>
+							<para>JDBC driver for the trasient indexing system.</para>
+							<para>For example: <literal>org.h2.Driver</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_DB_FILE</literal></term>
+						<listitem>
+							<para>Name of the file H2 will save the data.</para>
+							<important>It is not allowed that REPO_INDEX_DB_FILE
+							contains ~ in its value.</important>
+							<para>For example: <literal>/data/applications/repo/repo.index</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_DB_URL</literal></term>
+						<listitem>
+							<para>URL of the transient indexing system.</para>
+							<para>for example: <literal>jdbc:h2:file:${REPO_INDEX_DB_FILE};
+							DB_CLOSE_DELAY=-1;MODE=ORACLE;TRACE_LEVEL_FILE=1;
+							TRACE_LEVEL_SYSTEM_OUT=0;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=TRUE;
+							MAX_COMPACT_TIME=2000;CACHE_SIZE=32768;MAX_LOG_SIZE=4;LOCK_MODE=0</literal>
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_DB_USERNAME</literal></term>
+						<listitem>
+							<para>Username of the transient indexing system.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_DB_PASSWORD</literal></term>
+						<listitem>
+							<para>Password of the transient indexing system.</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_DB_VALIDATION</literal></term>
+						<listitem>
+							<para>SQL query to validate the transient indexing database connection.</para>
+							<para>For example: <literal>SELECT 1</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_H2_SERVER_CACHED_OBJECTS</literal></term>
+						<listitem>
+							<para>Maximum number of objects that H2 can cach per session. If H2 needs to cach more objects than indicated here when dealing with the results of a query, it throws the following exception: org.h2.message.DbException: The object is already closed [90007-164] </para>
+							<para>Default if not indicated: <literal>512</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_H2_SERVER_RESULT_SET_FETCH_SIZE</literal></term>
+						<listitem>
+							<para>The result set fetch size when using the server mode.</para>
+							<para>Default if not indicated: <literal>512</literal></para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term><literal>REPO_INDEX_ENABLED_ATOMIC</literal></term>
+						<listitem>
+							<para>Controls if the indexing process is executed after
+							objects interactions. When true the indexing process adds
+							a job to the queue right after creating a document, updating
+							the stream or delete.</para>
+							<para>For example: <literal>false</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_ENABLED_BACKGROUND_JOBS</literal></term>
+						<listitem>
+							<para>Controls if the indexing background jobs will be executed.</para>
+							<para>For example: <literal>false</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_BACKGROUND_JOBS_COMPACT_DATABASE_CRON_EXPRESSION</literal></term>
+						<listitem>
+							<para>Crontab expression to define when the compacting
+							of the indexing database will be performed.</para>
+							<para>For example: <literal>0 7 * * * ?</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_BACKGROUND_JOBS_CLEAN_ORPHANS_CRON_EXPRESSION</literal></term>
+						<listitem>
+							<para>Crontab expression to define when the delete orphan job will be executed.
+							Index data without a document is cosidered orphan data.</para>
+							<para>For example: <literal>0 0/15 * * * ?</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_BACKGROUND_JOBS_RETRY_ERRORS_CRON_EXPRESSION</literal></term>
+						<listitem>
+							<para>Crontab defining when the system will execute
+							the indexing of non-indexed documents.</para>
+							<para>For example: <literal>0 0/5 * * * ?</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_BACKGROUND_JOBS_RETRY_ERRORS_MAX_ATTEMPTS</literal></term>
+						<listitem>
+							<para>Number of retries during the indexing process.</para>
+							<para>For example: <literal>2</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_BACKGROUND_JOBS_RETRY_ERRORS_QUEUE_CAPACITY_THRESHOLD</literal></term>
+						<listitem>
+							<para>Free remaining capacity below which the index background job is not executed.</para>
+							<para>For example: <literal>0.15</literal> indicates that if the background pool has less than 15% of its capacity available the job will not be executed</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_THREAD_POOL_SELECTION_LIMIT_SIZE</literal></term>
+						<listitem>
+							<para>There are two pools for indexing. One for large documents and another one for small ones. This property indicates which is the limit size to consider a document small or large (in bytes).</para>
+							<para>For example: <literal>102400</literal> means that documents smaller than 100KB are executed in the pool for small documents</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_THREAD_POOL_SMALL_TASKS_QUEUE_CAPACITY</literal></term>
+						<listitem>
+							<para>Maximum capacity of the queue of the thread pool for small documents.
+							The system will reject new indexing jobs when the queue reach this size.
+							When this is happening, the retry job will take care of this document indexes.</para>
+							<para>For example: <literal>300</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_THREAD_POOL_SMALL_TASKS_CORE_SIZE</literal></term>
+						<listitem>
+							<para>Number of initial indexing threads running in the pool for small documents.</para>
+							<para>For example: <literal>2</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_THREAD_POOL_SMALL_TASKS_MAX_SIZE</literal></term>
+						<listitem>
+							<para>Maximum capacity of the thread pool for small documents.</para>
+							<para>For example: <literal>${REPO_INDEX_THREAD_POOL_SMALL_TASKS_CORE_SIZE}</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_THREAD_POOL_SMALL_TASKS_THREAD_PRIORITY</literal></term>
+						<listitem>
+							<para>Priority for the indexing threads executed by the pool for small documents.</para>
+							<para>For example: <literal>3</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_THREAD_POOL_LARGE_TASKS_QUEUE_CAPACITY</literal></term>
+						<listitem>
+							<para>Maximum capacity of the queue of the thread pool for big documents.
+							The system will reject new indexing jobs when the queue reach this size.
+							When this is happening, the retry job will take care of this document indexes.</para>
+							<para>For example: <literal>100</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_THREAD_POOL_LARGE_TASKS_CORE_SIZE</literal></term>
+						<listitem>
+							<para>Number of initial indexing threads running in the pool for big documents.</para>
+							<para>For example: <literal>1</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_THREAD_POOL_LARGE_TASKS_MAX_SIZE</literal></term>
+						<listitem>
+							<para>Maximum capacity of the thread pool for big documents.</para>
+							<para>For example: <literal>${REPO_INDEX_THREAD_POOL_LARGE_TASKS_CORE_SIZE}</literal></para>
+						</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><literal>REPO_INDEX_THREAD_POOL_LARGE_TASKS_THREAD_PRIORITY</literal></term>
+						<listitem>
+							<para>Priority for the indexing threads executed by the pool for big documents.</para>
+							<para>For example: <literal>3</literal></para>
+						</listitem>
+					</varlistentry>
+
+
+					<varlistentry>
+						<term><literal>REPO_INDEX_DB_MAX_ACTIVE</literal></term>
+						<listitem>
+							<para>Maximum active connections of the index database connection
+							pooling. Normally this should match with the number of indexing threads.</para>
+							<para>For example: <literal>${REPO_INDEX_THREAD_POOL_CORE_SIZE}</literal></para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+
+
+
+
+			</simplesect>
+
+			<simplesect>
+				<title>log4j_repo.properties</title>
+
+			</simplesect>
+
+		</section>
+
+		<section>
+			<title>Common files</title>
+			<subtitle>Common files used in all environments</subtitle>
+
+			<simplesect>
+				<title>idx_repo.xml</title>
+			</simplesect>
+
+			<simplesect>
+				<title>jmx_access.properties</title>
+			</simplesect>
+
+			<simplesect>
+				<title>jmx_password.properties</title>
+			</simplesect>
+
+			<simplesect>
+				<title>repo_adminConfig.xml</title>
+			</simplesect>
+
+			<simplesect>
+				<title>repo_dbConfig.xml</title>
+			</simplesect>
+
+			<simplesect>
+				<title>repo_indexConfig.xml</title>
+			</simplesect>
+
+			<simplesect>
+				<title>repo_indexDbConfig.xml</title>
+			</simplesect>
+
+			<simplesect>
+				<title>repo_jmxConfig.xml</title>
+			</simplesect>
+
+			<simplesect>
+				<title>repo_ormConfig.xml</title>
+			</simplesect>
+
+			<simplesect>
+				<title>repo_productConfig.xml</title>
+			</simplesect>
+
+			<simplesect>
+				<title>repo_securityConfig.xml</title>
+			</simplesect>
+
+		</section>
+</chapter>
+

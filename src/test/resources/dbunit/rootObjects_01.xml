@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <!-- Documents under root folder: id=100 -->
+  <object ID="102" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document" INDEX_STATE_CONTENT="1" INDEX_TRIES_CONTENT="0" />
+    <property ID="100" OBJECT_ID="102" OBJECT_TYPE_PROPERTY_ID="101" VALUE="my document" NUMERIC_VALUE="1" />
+    <property ID="101" OBJECT_ID="102" OBJECT_TYPE_PROPERTY_ID="104" VALUE="cmis:document" NUMERIC_VALUE="2" />
+
+  <object ID="103" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document 2" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0"/>
+    <property ID="102" OBJECT_ID="103" OBJECT_TYPE_PROPERTY_ID="101" VALUE="my document 2" NUMERIC_VALUE="1" />
+    <property ID="103" OBJECT_ID="103" OBJECT_TYPE_PROPERTY_ID="104" VALUE="cmis:document" NUMERIC_VALUE="2" />
+
+  <object_child OBJECT_ID="101" CHILD_OBJECT_ID="102"/> 
+  <object_child OBJECT_ID="101" CHILD_OBJECT_ID="103"/> 
+  
+  <acl ID="102" OBJECT_ID="102" PRINCIPAL_ID="/test" PERMISSION_ID="102"/>
+  <acl ID="103" OBJECT_ID="102" PRINCIPAL_ID="/test" PERMISSION_ID="101"/>
+  <acl ID="104" OBJECT_ID="103" PRINCIPAL_ID="/test2" PERMISSION_ID="101"/>
+
+  <!-- Folder under root folder: id=100 -->
+  <object ID="104" OBJECT_TYPE_ID="102" CMIS_OBJECT_ID="Test Folder" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" />
+    <property ID="104" OBJECT_ID="104" OBJECT_TYPE_PROPERTY_ID="124" VALUE="my folder" NUMERIC_VALUE="1" />
+    <property ID="105" OBJECT_ID="104" OBJECT_TYPE_PROPERTY_ID="127" VALUE="cmis:folder" NUMERIC_VALUE="2" />
+    <property ID="106" OBJECT_ID="104" OBJECT_TYPE_PROPERTY_ID="134" VALUE="/my folder" NUMERIC_VALUE="3" />
+  
+  <object_child OBJECT_ID="101" CHILD_OBJECT_ID="104"/>
+   
+  <acl ID="106" OBJECT_ID="104" PRINCIPAL_ID="/test" PERMISSION_ID="101"/>
+  <acl ID="107" OBJECT_ID="104" PRINCIPAL_ID="/test2" PERMISSION_ID="101"/>
+</dataset>

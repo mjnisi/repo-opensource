@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.4" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="eu.trade.repo.service.cmis.CmisObjectService" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/service/cmis/CmisObjectService.java" binary="false" 
+    label="cmisObjectService" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="2">      
+      <position height="356" width="0" x="0" y="78"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="eu.trade.repo.service.cmis.data.in.CMISObjectBuilder" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/service/cmis/data/in/CMISObjectBuilder.java" binary="false" 
+    label="&lt;static&gt;" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="4">      
+      <position height="314" width="0" x="0" y="99"/>    
+    </execution>    
+    <execution id="7">      
+      <position height="251" width="0" x="0" y="141"/>    
+    </execution>  
+  </object>  
+  <object id="10" language="java" name="eu.trade.repo.model.Property" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/model/Property.java" binary="false" label="property" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="9">      
+      <position height="199" width="0" x="0" y="172"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="136" width="0" x="0" y="214"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" name="eu.trade.repo.search.codecs.impl.CMISStringCodec" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/search/codecs/impl/CMISStringCodec.java" binary="false" 
+    label="cmisStringCodec" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="14">      
+      <position height="84" width="0" x="0" y="245"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="21" width="0" x="0" y="287"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="build(org.apache.chemistry.opencmis.commons.data.Properties,java.lang.String):eu.trade.repo.model.CMISObject">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" 
+    operation="buildProperties(org.apache.chemistry.opencmis.commons.data.Properties):java.util.Set&lt;Property&gt;">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="8" operation="Property(eu.trade.repo.model.ObjectTypeProperty,java.lang.Object)">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="11" operation="initValue(java.lang.Object):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="normalize(java.lang.Object):java.lang.String">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="16" operation="normalize(java.lang.Object):java.lang.String">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>
+</sequence-diagram>

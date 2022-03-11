@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<permission_mapping REPOSITORY_ID="100" KEY="key:test" PERMISSION_ID="100"/>	
+</dataset>

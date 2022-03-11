@@ -1,0 +1,47 @@
+<ehcache>
+	<!-- TODO: move to config/common and extract values to environment.properties -->
+	<diskStore path="java.io.tmpdir"/>
+	
+	<defaultCache name="default" 
+		maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="300" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+		
+	<cache name="eu.trade.repo.model.Repository" 
+		maxElementsInMemory="100" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.Repository.permissions" 
+		maxElementsInMemory="2000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.Repository.objectTypes" 
+		maxElementsInMemory="5000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.Repository.permissionMappings" 
+		maxElementsInMemory="5000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.Repository.securityHandlers" 
+		maxElementsInMemory="100" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.Repository.enabledPolicies" 
+		maxElementsInMemory="200" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+		
+	<cache name="eu.trade.repo.model.ObjectType" 
+		maxElementsInMemory="1000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.ObjectType.children" 
+		maxElementsInMemory="5000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.ObjectType.objectTypeProperties" 
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.ObjectType.objectTypeRelationships" 
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+		
+	<cache name="eu.trade.repo.model.ObjectTypeProperty" 
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.ObjectTypeRelationship" 
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.Permission" 
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	<cache name="eu.trade.repo.model.PermissionMapping" 
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+		
+	<cache name="eu.trade.repo.model.SecurityHandler" 
+		maxElementsInMemory="100" eternal="true" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+		
+	<cache name="org.hibernate.cache.internal.StandardQueryCache" 
+		maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="300" overflowToDisk="false" diskPersistent="false" memoryStoreEvictionPolicy="LRU" />
+	
+	<cache name="org.hibernate.cache.spi.UpdateTimestampsCache" maxElementsInMemory="5000" eternal="true" overflowToDisk="true"/>
+
+</ehcache>

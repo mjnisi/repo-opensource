@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="object_child" directorySegmentName="seg_0" id="6087B28F-8417-938C-5F75-AAC455A87D48">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:04:53 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="child_object_id" id="BD74DE84-DCC3-933F-73C5-9BBA0FEAE2FE">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:04:53 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g" name="object_id" id="E08725CE-7517-79F6-3375-96AF5D5D8B25">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:04:53 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_child_object" id="1BEA1DE2-6203-E5E5-1591-12736B705341">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:06:29 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_fk_object_child_child" id="CB46C1E1-565B-CBA4-E016-3D3DFFDE121A">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:04:53 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="idx_fk_object_child_object" id="F74E2E96-9D80-3029-A7F1-C777DFF6AACF">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:04:53 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_object_child_object" id="AFEF1D3C-5059-8E25-3ABF-2525EE047C04">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:04:53 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="fk_object_child_child" id="F26968E2-FF0D-D5D4-5DBC-3DB8EC5D015C">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:04:53 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_object_child" id="841B2921-D4A0-D961-3B6A-0F696C08E1A9">
+<createdBy>martjoe</createdBy>
+<createdTime>2014-12-02 15:04:53 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

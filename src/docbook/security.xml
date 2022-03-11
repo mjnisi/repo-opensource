@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+
+	<title>Security</title>
+	<section>
+		<title>Introduction</title>
+		<para>The following sections will provide you with all the relevant information regarding the CMIS 1.0 compliant security model currently implemented by Trade Document Repository. Please note that it is
+		recommended to be familiar with the CMIS 1.0 specification,  especially with the following sections under the Domain Model:</para>
+		<itemizedlist>
+			<listitem>Data Model / Repository / ACL Capabilities</listitem>
+			<listitem>Data Model / Object Type / Object-Type Attributes</listitem>
+			<listitem>Data Model / Access Control</listitem>
+			<listitem>Services / Common Service Elements / Retrieving additional information (ACL, Allowable Actions)</listitem>
+			<listitem>Services / Common Service Elements / ACLs</listitem>
+			<listitem>Services / ACL Services</listitem>
+		</itemizedlist>
+		<para>
+			The <link linkend="security.section.configuration">first section</link> of this document starts explaining the default security configuration for a newly created repository, introducing
+			the key aspects to be considered in order to properly adapt such configuration for the intended use of the repository. In the <link linkend="security.section.services">next section</link>
+			the CMIS services are grouped according to their security restrictions, explaining all the relevant implementation details.
+		</para>
+		<para>
+			Later, the <link linkend="security.section.handlers">security handlers</link> are presented, detailing the multiple options available to configure the repository with its custom authentication
+			and authorisation mechanisms. Finally, the <link linkend="security.section.acl">last section</link> covers the CMIS ACL model, introducing a complete set of examples that offers a clear idea about
+			how to use it. In addition to that, a detailed description is given about the default ACL strategy offered by TDR.
+		</para>
+	</section>
+	<section>
+		<title><anchor id="security.section.configuration"/>Security configuration by repository</title>
+		<section>
+			<title>Default security properties</title>
+			<para>
+				As stated in the specification a repository can be configured in multiple ways to handle a diversity of security models. In Trade Document Repository, when a new repository is created, the following
+				security configuration options are set by default:
+			</para>
+			<variablelist>
+				<varlistentry>
+					<term>ACL capability</term>
+					<listitem><literal>manage</literal></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>ACL Propagation</term>
+					<listitem><literal>propagate</literal></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Permissions</term>
+					<listitem>
+						<simplelist>
+							<member><literal>cmis:read</literal></member>
+							<member><literal>cmis:write</literal> (implies <literal>cmis:read</literal>)</member>
+							<member><literal>cmis:all</literal> (implies <literal>cmis:read</literal> and <literal>cmis:write</literal>)</member>
+						</simplelist>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Permission Mapping</term>
+					<listitem>
+						<para>The permission mapping table is set with the default values given by the specification.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Security handlers</term>
+					<listitem>
+						<simplelist>
+							<member>Security type: <literal>simple</literal></member>
+							<member>Authentication: <literal>builtin</literal></member>
+							<member>Authorisation: <literal>builtin</literal></member>
+						</simplelist>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>
+				In addition to that, the repository's root folder is created using the <literal>cmis:folder</literal> base type. This root folder has the following ACL:
+			</para>
+			<screen>
+&lt;cmis:acl&gt;
+	&lt;cmis:permission&gt;
+		&lt;cmis:principal&gt;
+			&lt;cmis:principalId&gt;cmis:anyone&lt;/cmis:principalId&gt;
+		&lt;/cmis:principal&gt;
+		&lt;cmis:permission&gt;cmis:all&lt;/cmis:permission&gt;
+		&lt;cmis:direct&gt;true&lt;/cmis:direct&gt;
+	&lt;/cmis:permission&gt;
+&lt;/cmis:acl&gt;
+			</screen>
+		</section>
+		<section>
+			<title>How to configure the repository&apos;s security</title>
+			<para>
+				Once a repository has been created, the administration panel offers the ability to configure all the properties related with the security. Depending on the environment:
+			</para>
+			<simplelist>
+				<member><ulink url="https://[url_to_dev_server]:8443/repo/admin">https://[url_to_dev_server]:8443/repo/admin</ulink></member>
+				<member><ulink url="https://[url_to_test_server]:8443/repo/admin">https://[url_to_test_server]:8443/repo/admin</ulink></member>
+				<member><ulink url="https://[url_to_prod_server]:8443/repo/admin">https://[url_to_prod_server]:8443/repo/admin</ulink></member>
+			</simplelist>
+
+			<para>
+				The access to the administration panel is secured with credentials defined in repo_adminConfig.xml. The operations currently defined are:
+			</para>
+
+			<itemizedlist>
+				<listitem><literal>REPO.CreateRepo</literal></listitem>
+				<listitem><literal>REPO.DeleteRepo</literal></listitem>
+				<listitem><literal>REPO.ViewRepoSessions</literal></listitem>
+				<listitem><literal>REPO.ViewRepoSummary</literal></listitem>
+				<listitem><literal>REPO.ChangeRepoCapabilities</literal></listitem>
+				<listitem><literal>REPO.ChangeRepoSecurity</literal></listitem>
+				<listitem><literal>REPO.ChangeRepoMappings</literal></listitem>
+				<listitem><literal>REPO.ChangeRepoPermissions</literal></listitem>
+			</itemizedlist>
+
+			<section>
+				<title>Capabilities</title>
+
+				<para>In the capabilities tab of a repository, among other relevant capabilities for the repository, the ACL capability and ACL propagation can be changed at any time.</para>
+
+				<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/security_capabilities.png" scalefit="1" width="100%" contentdept="100%" />
+					</imageobject>
+				</mediaobject>
+			    </screenshot>
+
+				<orderedlist numeration="loweralpha">
+					<listitem>
+						<para>ACL capability <literal>none</literal></para>
+						<para>This means that the repository does not implements any access control, so any authenticated user can perform any action on any object in this repository. In addition, the ACL services are completely disabled.</para>
+					</listitem>
+					<listitem>
+						<para>ACL capability <literal>discover</literal></para>
+						<para>According to the specification this means that the repository implements some kind of access control and that the ACL for an object can be retrieved but not modified.</para>
+					</listitem>
+				</orderedlist>
+
+				<note>
+					<title>Implementation Notes</title>
+					<para>
+						In the case of TDR, the only access control system is derived from the object's ACL. Therefore, if the <literal>discover</literal> ACL capability is enforced for the repository
+						in some point after its creation, this would imply the following:
+					</para>
+					<itemizedlist>
+						<listitem>
+							<para>If the ACL propagation is <literal>propagate</literal>, then the new objects created under a folder will inherit the pre-existent folder's ACL.</para>
+							<para>
+								In the case this change was performed right after the creation of the repository, then every <literal>filed</literal> object would be created having the same ACL as the root folder, i.e.:
+								<literal>cmis:anyone</literal> - <literal>cmis:all</literal>.
+							</para>
+							<para>The difference with ACL Capability none in that case would be just that an <literal>unfiled acl controllable</literal> object couldn't be created since there is no option to set its ACL.</para>
+						</listitem>
+						<listitem>
+							<para>If the ACL propagation is <literal>objectonly</literal>, then new <literal>acl controllable</literal> objects cannot be created.</para>
+						</listitem>
+					</itemizedlist>
+					<para>For more information about ACL capabilities and propagation, see the <link linkend="security.section.acl">ACL section</link>.</para>
+				</note>
+			</section>
+
+			<section>
+				<title>Permissions</title>
+
+				<para>
+					In the permissions tab of a repository, the set of permissions can be modified. The TDR implementation imposes that the CMIS basic set of permissions (<literal>cmis:read</literal>,
+					<literal>cmis:write</literal> and <literal>cmis:all</literal>) MUST be present and with the same tree structure, being <literal>cmis:all</literal> the only root node. However,
+					this basic set can be extended adding new custom permissions. Remember, a parent permission node means that the permission implies all the descendant permissions.
+				</para>
+
+				<screenshot>
+				<mediaobject>
+					<caption>Alternative permission tree</caption>
+					<imageobject>
+						<imagedata fileref="images/security_permissions.png" scalefit="1" width="100%" contentdept="100%" />
+					</imageobject>
+				</mediaobject>
+			    </screenshot>
+
+			    <note>
+			    	Since the presence of the basic CMIS permissions is mandatory, the supported permissions capability of the repository would be <literal>basic</literal> or <literal>both</literal>, but
+			    	never <literal>repository</literal>. See the definition of the <function>getRepositoryInfo</function> service for more information.
+			    </note>
+			</section>
+
+			<section>
+				<title>Permission Mappings</title>
+
+				<para>In the mappings tab of a repository, an administrator can modify the set of minimum permissions needed to perform the set of actions defined by CMIS.</para>
+
+				<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/security_permission_mappings.png" scalefit="1" width="100%" contentdept="100%" />
+					</imageobject>
+				</mediaobject>
+			    </screenshot>
+
+			    <para>
+			    	Please note that the set of permissions related with an action key cannot be empty and, in the case of multiple permissions for the same key, please remember that a user only
+			    	needs to satisfy one of them in order to be able to perform the related action.
+			    </para>
+
+			    <para>See the <link linkend="security.section.services">CMIS Services Security section</link> to learn how the action keys are used to restrict the use of the CMIS services.</para>
+
+			</section>
+
+			<section>
+				<title>Root Folder's ACL</title>
+
+				<para>
+					The root folder’s ACL is the last component to take into account when configuring the repository’s security. As it was stated, during the repository creation the root folder’s ACL
+					is set to <literal>cmis:anyone</literal> -  <literal>cmis:all</literal>, meaning that any authenticated user can perform any action on the root folder. This default
+					ACL can be modified in order to restrict the access to the  repository using any CMIS client.
+				</para>
+
+				<example>
+					<function>applyAcl(repoId, rootFolderId, add[admin-cmis:all], remove[cmis:anyone-cmis:all], ...)</function>
+				</example>
+			</section>
+
+		</section>
+
+	</section>
+
+
+	<section>
+		<title><anchor id="security.section.services"/>CMIS services security</title>
+
+		<section>
+			<title>Non secured</title>
+
+			<para>The following two repository services are non-secured, i.e. any user can access to them.</para>
+
+			<simplelist>
+				<member><function>getRepositoryInfos</function></member>
+				<member><function>getRepositoryInfo</function></member>
+			</simplelist>
+		</section>
+
+		<section>
+			<title>Authenticated users only</title>
+
+			<para>The rest of the repository services require the user has been authenticated.</para>
+
+			<simplelist>
+				<member><function>getTypeChildren</function></member>
+				<member><function>getTypeDefinition</function></member>
+				<member><function>getTypeDescendants</function></member>
+			</simplelist>
+
+			<para>Additionally, the discovery services only require the user to be authenticated. However, in this case the service response will be determined according to the user authorization.</para>
+
+			<simplelist>
+				<member><function>query</function></member>
+				<member><function>getContentChanges</function></member>
+			</simplelist>
+
+			<note>
+				The query service returns only the objects that the user has access to their properties (<literal>CAN_GET_PROPERTIES</literal>). Additionally, regarding to the full text search, then expressions using
+				the clause <literal>contains</literal> only will return true for the objects the user has access to their content stream (<literal>CAN_GET_CONTENT_STREAM</literal>).
+			</note>
+
+		</section>
+
+		<section>
+			<title>Authorized users only</title>
+
+			<para>
+				Following is the detailed list of the current supported services that are restricted according to the user authorization, i.e. the set of user’s allowable actions
+				determined by both, the object’s ACL and the repository’s Permission Mapping. As a general example,
+			</para>
+
+			<example>
+				<para>Given an empty folder X ...</para>
+
+				<itemizedlist>
+					<listitem>
+						<para>With the following’s ACL</para>
+						<literal>[user1 / cmis:write], [cmis:user2 / cmis:all]</literal>
+					</listitem>
+
+					<listitem>
+						<para>Having the repository’s Permission Mappings</para>
+						<literal>[canDelete.Object / cmis:all], [canCreateDocuemnt.Folder / cmis:write]</literal>
+					</listitem>
+
+					<listitem>
+						<para>Having the repository’s Permissions tree</para>
+						<literal>[cmis:all > cmis:write > cmis:read]</literal>
+					</listitem>
+				</itemizedlist>
+
+				<para>Then:</para>
+
+				<itemizedlist>
+					<listitem>The user1 cannot delete the folder X, because <literal>cmis:write</literal> do not satisfies <literal>cmis:all</literal>.</listitem>
+					<listitem>The user2 can delete the folder X.</listitem>
+					<listitem>Both, the user1 and user2, can create a document inside the folder X, because <literal>cmis:write</literal> and <literal>cmis:all</literal> satisfies the minimum permission <literal>cmis:write</literal>.</listitem>
+				</itemizedlist>
+			</example>
+
+
+			<section>
+					<title>Navigation Services</title>
+
+					<variablelist><?dbfo list-presentation="blocks"?>
+					<varlistentry>
+						<term><function>getChildren</function></term>
+						<listitem>Action: <literal>CAN_GET_CHILDREN</literal></listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><function>getFolderParent</function></term>
+						<listitem>Action: <literal>CAN_GET_FOLDER_PARENT</literal></listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><function>getObjectParents</function></term>
+						<listitem>Action: <literal>CAN_GET_OBJECT_PARENTS</literal></listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><function>getCheckedOutDocs</function></term>
+						<listitem>Not yet implemented</listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><function>getDescendants</function></term>
+						<listitem>Action: <literal>CAN_GET_DESCENDANTS</literal></listitem>
+					</varlistentry>
+					<varlistentry>
+						<term><function>getFolderTree</function></term>
+						<listitem>Action: <literal>CAN_GET_DESCENDANTS</literal></listitem>
+					</varlistentry>
+					</variablelist>
+
+					<note>
+						The <function>getDescendants</function> and the <function>getFolderTree</function> do not include the contents of the subfolders where the user has no access
+						to (<literal>CAN_GET_DESCENDANTS</literal>), and also they do not include the documents the user has no access to its properties (<literal>CAN_GET_PROPERTIES</literal>).
+					</note>
+				</section>
+
+				<section>
+					<title>Object Services</title>
+
+					<variablelist><?dbfo list-presentation="blocks"?>
+					<varlistentry>
+					<term><function>createDocument</function></term>
+					<listitem>Action: <literal>CAN_CREATE_DOCUMENT</literal>
+					</listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>createDocumentFromSource</function></term>
+					<listitem>
+					Actions: <literal>CAN_CREATE_DOCUMENT</literal>,
+					<literal>CAN_GET_PROPERTIES</literal> and
+					<literal>CAN_GET_CONTENT_STREAM</literal>
+					</listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>createFolder</function></term>
+					<listitem>Action: <literal>CAN_CREATE_FOLDER</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>createPolicy</function></term>
+					<listitem>Action: <literal>CAN_CREATE_DOCUMENT</literal>
+					</listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>createRelationship</function></term>
+					<listitem>Action: <literal>CAN_CREATE_RELATIONSHIP</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>getAllowableActions</function></term>
+					<listitem>Action: <literal>CAN_GET_PROPERTIES</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>getObject</function></term>
+					<listitem>Action: <literal>CAN_GET_PROPERTIES</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>getObjectByPath</function></term>
+					<listitem>Action: <literal>CAN_GET_PROPERTIES</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>getProperties</function></term>
+					<listitem>Action: <literal>CAN_GET_PROPERTIES</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>getRenditions</function></term>
+					<listitem>Action: <literal>CAN_GET_PROPERTIES</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>getContentStream</function></term>
+					<listitem>Action: <literal>CAN_GET_CONTENT_STREAM</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>updateProperties</function></term>
+					<listitem>Action: <literal>CAN_UPDATE_PROPERTIES</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>moveObject</function></term>
+					<listitem>Action: <literal>CAN_MOVE_OBJECT</literal></listitem>
+					</varlistentry>
+
+
+					<varlistentry>
+					<term><function>setContentStream</function></term>
+					<listitem>Action: <literal>CAN_SET_CONTENT_STREAM</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>deleteContentStream</function></term>
+					<listitem>Action: <literal>CAN_DELETE_CONTENT_STREAM</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>deleteObject</function></term>
+					<listitem>Action: <literal>CAN_DELETE_OBJECT</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>deleteTree</function></term>
+					<listitem>Action: <literal>CAN_DELETE_TREE</literal></listitem>
+					</varlistentry>
+
+					</variablelist>
+
+					<note>
+						<title>Notes</title>
+
+						<itemizedlist>
+
+						<listitem>
+							The <function>createDocument</function> service is restricted with the specified action when the document is filed under a folder. If no parent folder is specified, then the document will be
+							created only if the user is authenticated and the <literal>Unfiling</literal> capability is enabled for the repository.
+						</listitem>
+
+						<listitem>
+							The authorization for the <function>createDocumentFromSource</function> service requires to meet the following conditions:
+							<itemizedlist>
+								<listitem>The <literal>CAN_CREATE_DOCUMENT</literal> allowable action for the parent folder. In the case of an unfiled document, the same restriction is applied as in the previous service.</listitem>
+								<listitem>The <literal>CAN_GET_PROPERTIES</literal> allowable action for the source document.</listitem>
+								<listitem>In the case the source document has a content stream, then the <literal>CAN_GET_CONTENT_STREAM</literal> allowable action for the source document.</listitem>
+							</itemizedlist>
+						</listitem>
+
+						<listitem>The <function>createPolicy</function> service is restricted intentionally with the action <literal>CAN_CREATE_DOCUMENT</literal>, with the same restrictions regarding an unfiled policy.</listitem>
+
+						<listitem>
+							The <function>moveObject</function> service may imply to change the ACLs of the moved document, and in the case of moving a folder, the moved subtree.
+							To see a complete description of the restrictions and consequences of moving an object, please go to ACL section.
+						</listitem>
+
+						<listitem>In the case of deleting a folder, it will only be deleted in the case of an empty folder. In other case, the <function>deleteTree</function> service should be used.</listitem>
+
+						</itemizedlist>
+					</note>
+
+				</section>
+
+				<section>
+					<title>Filing Services</title>
+
+					<para>Not yet implemented.</para>
+				</section>
+
+				<section>
+					<title>Versioning Services</title>
+
+					<variablelist><?dbfo list-presentation="blocks"?>
+
+					<varlistentry>
+					<term><function>checkOut</function></term>
+					<listitem>Action: <literal>CAN_CHECK_OUT</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>cancelCheckOut</function></term>
+					<listitem>Action: <literal>CAN_CANCEL_CHECK_OUT</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>checkIn</function></term>
+					<listitem>Action: <literal>CAN_CHECK_IN</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>getObjectOfLatestVersion</function></term>
+					<listitem>Action: <literal>CAN_GET_PROPERTIES</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>getPropertiesOfLatestVersion</function></term>
+					<listitem>Action: <literal>CAN_GET_PROPERTIES</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>getAllVersions</function></term>
+					<listitem>Action: <literal>CAN_GET_ALL_VERSIONS</literal></listitem>
+					</varlistentry>
+
+					</variablelist>
+
+					<note>
+						<title>Notes</title>
+						<itemizedlist>
+						<listitem>For the functions <function>getObjectOfLatestVersion</function> and <function>getPropertiesOfLatestVersion</function> the action restriction is applied to the last version.</listitem>
+						<listitem>For the function <function>getAllVersions</function> The action restriction is applied to the whole version series.</listitem>
+						</itemizedlist>
+					</note>
+
+				</section>
+
+				<section>
+					<title>Relationship Services</title>
+
+					<para>Not yet implemented.</para>
+				</section>
+
+				<section>
+					<title>Policy Services</title>
+
+					<para>Not yet implemented.</para>
+				</section>
+
+				<section>
+					<title>ACL Services</title>
+
+					<variablelist><?dbfo list-presentation="blocks"?>
+
+					<varlistentry>
+					<term><function>getAcl</function></term>
+					<listitem>Action: <literal>CAN_GET_ACL</literal></listitem>
+					</varlistentry>
+
+					<varlistentry>
+					<term><function>applyAcl</function></term>
+					<listitem>Action: <literal>CAN_APPLY_ACL</literal></listitem>
+					</varlistentry>
+					</variablelist>
+
+				</section>
+
+			</section>
+
+		</section>
+
+
+		<section>
+			<title><anchor id="security.section.handlers"/>Security handlers</title>
+
+			<para>
+				TDR defines two groups of security handlers: the authentication handlers, responsible for authenticating the users that tries to connect to a repository: and authorisation handlers,
+				responsible for determining the principal ids related with the authenticated user and for resolving if the authenticated user is an <literal>admin</literal> user for the repository.
+			</para>
+
+			<section>
+				<title>Admin users</title>
+				<para>
+					If an authenticated user is authorised as an <literal>admin</literal> user, then no authorisation restrictions are applied. In other words, an <literal>admin</literal> user can perform any
+					CMIS action in the same way like it has a <literal>cmis:all</literal> permission granted for every object in the repository.
+				</para>
+			</section>
+
+			<section>
+				<title>Security Handlers by repository</title>
+				<para>
+					The complete set of security handlers (at server level) are defined by the server’s configuration and cannot be modified in runtime. However, the set of security handlers associated
+					to a specific repository can be modified using the administration panel.
+				</para>
+
+				<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/security_handlers.png" scalefit="1" width="100%" contentdept="100%" />
+					</imageobject>
+				</mediaobject>
+			    </screenshot>
+			</section>
+
+
+			<section>
+				<title>Simple vs. Multiple</title>
+				<para>
+					Two security types are available for a repository in TDR. The simple security type, which implies the use of only one authentication handler and only one authorisation handler in
+					order to access to the repository; and the multiple security type, that enables the use of several authentication and authorisation handlers.
+				</para>
+
+				<screenshot>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/security_multiple.png" scalefit="1" width="100%" contentdept="100%" />
+					</imageobject>
+				</mediaobject>
+			    </screenshot>
+
+			    <para>
+			    	Please note that in order to change the repository security type, none specific entry must exists in the repository’s ACLs. I.e. the reference to the default principal
+			    	Ids (<literal>cmis:anyone</literal> and <literal>cmis:anonymous</literal>) are allowed, but any other principal Id cannot be automatically translated from one type
+			    	of security to the other. This “manual” change would imply a database migration script for both the current ACLs and the repository’s security type.
+			    </para>
+			</section>
+
+
+			<section>
+				<title>How the prefixes work for login and ACLs</title>
+
+				<section>
+					<title>Simple Security Type</title>
+					<para>
+						If the security type of a repository is simple, then the user can access directly to the repository using its username and password, also the principal Ids specified in
+						the ACL entries MUST NOT be prefixed.
+					</para>
+
+					<para>
+						For example, given a new repository with the builtin handlers and a user with username <literal>user1</literal> and password <literal>pwd1</literal> which has the role
+						<literal>regularUser</literal>, it can connect to the repository using the following credentials:
+					</para>
+
+					<itemizedlist>
+						<listitem>Default access to the unique handlers.
+							<variablelist>
+							<varlistentry><term>Username:</term><listitem><literal>user1</literal></listitem></varlistentry>
+							<varlistentry><term>Password:</term><listitem><literal>pwd1</literal></listitem></varlistentry>
+							</variablelist>
+						</listitem>
+						<listitem>Specific access to the unique handlers.
+							<variablelist>
+							<varlistentry><term>Username:</term><listitem><literal>builtin/builtin/user1</literal></listitem></varlistentry>
+							<varlistentry><term>Password:</term><listitem><literal>pwd1</literal></listitem></varlistentry>
+							</variablelist>
+						</listitem>
+					</itemizedlist>
+
+					<para>And finally, an ACL entry like <literal>[regularUser – cmis:write]</literal> is applicable to this user.</para>
+
+					<para>You can see other examples in this <link linkend="security.section.acl.examples.simple">ACL section</link>.</para>
+				</section>
+
+				<section>
+					<title>Multiple Security Type</title>
+
+					<para>
+						In the other hand, if the security type of a repository is multiple then, in every connection to the repository, the user can choose the authentication and
+						authorisation handlers to be used. In order to do so, the user needs to prefix its username with the names of the desired authentication and authorisation handlers.
+						If no prefix is provided, then the default authentication and default authorisation handler will be used.
+					</para>
+
+					<para>
+						Regarding to the principal Ids used in the ACLs for this type of security, every principal Id MUST be prefixed with the domain of the related security handler.
+						This will enable to work at the same time with principal Ids defined by multiple security handlers.
+					</para>
+
+					<para>For example, given a repository as the one you can see in the previous picture:</para>
+
+					<itemizedlist>
+						<listitem>Default authentication handler: <literal>builtin</literal>.</listitem>
+						<listitem>Default authorisation handler: <literal>Open as admin</literal>.</listitem>
+						<listitem>Available authentication handlers: <literal>mock</literal>, <literal>builtin</literal>.</listitem>
+					</itemizedlist>
+
+					<para>Please note that the prefixes used for the login are the <literal>names</literal> of the security handlers while the prefixes for the ACL entries are the <literal>domains</literal> of the security handlers.</para>
+
+					<para>In order to see a complete example of the login and ACL entries using the multiple security type, please go to this <link linkend="security.section.acl.examples.multiple">ACL section</link>.</para>
+				</section>
+			</section>
+
+
+			<section>
+				<title>Supported Authentication Handlers</title>
+
+				<para>Following is the list of authentication handler types supported by TDR. </para>
+
+				<section>
+					<title>Builtin</title>
+
+					<para>Using the server configuration files, this handler defines a fixed set of users, specifying the username and password.</para>
+					<para>
+						This handler can be used to configure the access to the repository for an application that always uses the repository in its own name, not on behalf of a final user.
+						In this way, is similar to the connection to a database where a read-write connection is commonly used whereas a read only connection can also be configured.
+					</para>
+					<para>
+						Several builtin handlers can be configured providing separate users for different repositories. However, currently the only builtin handler configured is for
+						testing purposes.
+					</para>
+				</section>
+
+				<section>
+					<title>Mock</title>
+
+					<para>Intended only for test purposes this authentication handler does not perform any authentication allowing the access to every user.</para>
+				</section>
+			</section>
+
+			<section>
+				<title>Supported Authorisation Handlers</title>
+
+				<para>Following is the list of authentication handler types supported by TDR.</para>
+
+				<section>
+					<title>Builtin</title>
+					<para>Using the server configuration files, this handler defines a fixed set of roles for a fixed set of users, specifying also whether the user is an admin user.</para>
+					<para>
+						This handler can be used to configure the access to a subset of authenticated users. For example, it can authorise a subgroup of authenticated users to access to a certain
+						repository with <literal>cmis:read</literal> permission.
+					</para>
+					<para>Several builtin handlers can be configured providing separate groups of roles for different repositories. However, currently the only builtin handler configured is for testing purposes.</para>
+				</section>
+
+				<section>
+					<title>DbAuthorizationHandler</title>
+					<para>
+						This authorisation handler use a database as the source for the user principal Ids. The configuration of these handlers specifies the database connection properties as well as the query to
+						retrieve the principal ids for the user, <literal>authoritiesByUsernameQuery</literal>. This query must return a set of strings based on only one not-named String parameter.
+					</para>
+					<example>SELECT ROLE FROM ROLES_VIEW WHERE USER = ?</example>
+					<para>
+						Please note that the question mark can appear multiple times but the same value (the username) will be used for all of them. Also, as in the example, it is a good practice to define a view
+						in the source database instead of accessing to concrete tables.
+					</para>
+					<para>Finally, please note that this authorisation handler does not provide any admin user.</para>
+				</section>
+
+				<section>
+					<title>AdminDbAuthorizationHandler</title>
+					<para>
+						This is an extension of the previous <literal>DbAuthorizationHandler</literal>, which also defines a query to find out if the user is an admin user, <literal>adminByUsernameQuery</literal>.
+						In this case, if the query returns a non-empty result set, the user is considered as an <literal>admin</literal> user.
+					</para>
+					<example>SELECT ROLE FROM ADMIN_ROLES_VIEW WHERE USER = ?</example>
+				</section>
+
+				<section>
+					<title>AdminFixedIdsDbAuthorizationHandler</title>
+					<para>
+						This is an extension of the previous <literal>DbAuthorizationHandler</literal>, which also defines a set of fixed admin principal ids. This way, if one of the principal Ids of the user provided
+						by the <literal>authoritiesByUsernameQuery</literal> matches at least one of the fixed admin principal ids, the user is considered as an <literal>admin</literal> user.
+					</para>
+				</section>
+
+				<section>
+					<title>AdminFixedIdsDbAuthorizationHandler</title>
+					<para>
+						This authorisation handler use a LDAP server as the source for the user principal Ids. The configuration of these handlers specifies the LDAP connection properties as well
+						as the parameters for quering the user groups and, optionally, the parameter to determine if the user is an admin user. The following is the list of parameters to configure this handler:
+					</para>
+
+					<variablelist>
+						<?dbfo list-presentation="blocks"?>
+
+						<varlistentry>
+							<term>domain</term>
+							<listitem><para>The authorization handler domain. Mandatory</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>java.naming.factory.initial</term>
+							<listitem><para>The <literal>javax.naming.Context.INITIAL_CONTEXT_FACTORY</literal> property. Optional, default to <literal>com.sun.jndi.ldap.LdapCtxFactory</literal>.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>java.naming.provider.url</term>
+							<listitem><para>The <literal>javax.naming.Context.PROVIDER_URL</literal> property. Mandatory.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>java.naming.security.authentication</term>
+							<listitem><para>The <literal>javax.naming.Context.SECURITY_AUTHENTICATION</literal> property. Optional, default to false.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>java.naming.security.principal</term>
+							<listitem><para>The <literal>javax.naming.Context.SECURITY_PRINCIPAL</literal> property. Mandatory.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>java.naming.security.credentials</term>
+							<listitem><para>The <literal>javax.naming.Context.SECURITY_CREADENTIALS</literal> property. Mandatory.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>groupBaseDn</term>
+							<listitem><para>Base context for the group search. Mandatory.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>groupFilterExpr</term>
+							<listitem><para>Filter expression for the group search. Note that, as maximum, only one parameter should appear in the filter (<literal>{0}</literal>), the user login name. Mandatory.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>groupAttribute</term>
+							<listitem><para>The attribute in the results that contains the value for the user's groups. Mandatory.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>groupRecursive</term>
+							<listitem><para>Whether the parent groups should be resolved or only the directly assign groups. Optional, default to false.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>adminUsers</term>
+							<listitem><para>Whether the handler should resolve admin users. If not, then <function>isAdmin()</function> returns always false.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>adminBaseDn</term>
+							<listitem><para>Base context for the admin user search. Mandatory only when adminUsers is true.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>adminFilterExpr</term>
+							<listitem><para>Filter expression for the admin search. Note that, as maximum, only one parameter should appear in the filter (<literal>{0}</literal>), the user login name. Mandatory only when adminUsers is true.</para></listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>searchTimeLimit</term>
+							<listitem><para>Time limit for any search. Optional, default to 15 seconds = <literal>15000</literal>.</para></listitem>
+						</varlistentry>
+					</variablelist>
+
+					<example>
+						<screen>
+&lt;authorizationHandler&gt;
+	&lt;name&gt;Name&lt;/name&gt;
+	&lt;enable&gt;true&lt;/enabled&gt;
+	&lt;description&gt;Description&lt;/description&gt;
+	&lt;class&gt;eu.trade.repo.security.impl.LdapAuthorizationHandler&lt;/class&gt;
+	&lt;properties&gt;
+		&lt;domain&gt;test&lt;/domain&gt;
+		&lt;java&gt;
+			&lt;naming&gt;
+				&lt;provider&gt;
+					&lt;url&gt;ldaps://host:port&lt;/url&gt;
+				&lt;/provider&gt;
+				&lt;security&gt;
+					&lt;principal&gt;readOnlyUserName&lt;/principal&gt;
+					&lt;credentials&gt;readOnlyUserPassword&lt;/credentials&gt;
+				&lt;/security&gt;
+			&lt;/naming&gt;
+		&lt;/java&gt;
+		&lt;groupBaseDn&gt;ou=groups,dc=company,dc=com&lt;/groupBaseDn&gt;
+		&lt;groupFilterExpr&gt;uniqueMember=uid={0},ou=people,dc=company,dc=com&lt;/groupFilterExpr&gt;
+		&lt;groupAttribute&gt;entryDN&lt;/groupAttribute&gt;
+	&lt;/properties&gt;
+&lt;/authorizationHandler&gt;
+						</screen>
+					</example>
+
+				</section>
+			</section>
+		</section>
+
+	<section>
+		<title><anchor id="security.section.acl"/>ACL</title>
+
+		<section>
+			<title>Introduction</title>
+
+			<para>
+				This section covers all the relevant aspects about the access control implementation in TDR. After clearly define the ACL entity in CMIS and explaining how the default CMIS principal ids are supported,
+				several examples are described showing how the repository’s security configuration and the ACLs interact in the resolution of the allowable actions over a concrete object.
+			</para>
+			<para>Finally, the current implementation for the access control is described in detail.</para>
+		</section>
+
+		<section>
+			<title>ACL definition</title>
+
+			<para>
+				CMIS defines an object’s ACL (access control list) as a set of ACEs (access control entry), where an ACE is defined by the following fields:
+			</para>
+			<itemizedlist>
+				<listitem>
+					<para>Principal Id: The ACE grants some permissions to the principal identified by this string.</para>
+				</listitem>
+				<listitem>
+					<para>Permissions: The set of permissions (among the repository’s set of permissions) granted to the principal.</para>
+				</listitem>
+				<listitem>
+					<para>isDirect: Whether this ACE has been applied directly to the object or is inherited from some parent’s ACL.</para>
+				</listitem>
+			</itemizedlist>
+
+			<para>In TDR, the CMIS ACL is translated internally to a flat representation where one ACE with N permissions is transformed in N ACEs with only one permission, as in the following example:</para>
+			<example>
+				<para>This ACE:</para>
+				<simplelist>
+					<member><literal>[ user – {cmis:read, cmis:write} – true ]</literal></member>
+				</simplelist>
+				<para>Is transformed to:</para>
+				<simplelist>
+					<member><literal>[ user – cmis:read  – true ]</literal></member>
+					<member><literal>[ user – cmis:write – true ]</literal></member>
+				</simplelist>
+			</example>
+			<para>Finally, given two ACEs for the same object, they will be equal if and only if the three fields are equal. V.g. the three following ACEs are all different:</para>
+			<simplelist>
+				<member><literal>[ user – cmis:read  – true ]</literal></member>
+				<member><literal>[ user – cmis:read  – false ]</literal></member>
+				<member><literal>[ user2 – cmis:read  – false ]</literal></member>
+			</simplelist>
+
+			<section>
+				<title>Add and remove</title>
+
+				<para>From the previous definition, add ACEs to an ACL and remove ACEs from an ACL can be seen as basic set operations:</para>
+				<simplelist>
+					<member><literal>{} + [u–p–t] = {[u–p-t]}</literal></member>
+					<member><literal>{[u–p-t]} + [u–p-t] = {[u–p-t]}</literal></member>
+					<member><literal>{[u–p-t]} + [u–p-f] = {[u–p-t], [u–p-f]}</literal></member>
+					<member><literal>{[u–p-t], [u–p-f]} - [u–p-f] = {[u–p-t]}</literal></member>
+					<member><literal>{[u–p-t]} - [u–p-f] = {[u–p-t]}</literal></member>
+					<member><literal>{[u–p-t]} - [u–p-t] = {} </literal></member>
+					<member><literal>{} + {[u–p–t]} = {[u–p-t]}</literal></member>
+					<member><literal>{[u–p-t]} + {[u–p-t]} = {[u–p-t]}</literal></member>
+					<member><literal>{[u–p-t], [u-p-f]} + {[u2–p-f], [u-p-t]} = {[u–p-t], [u–p-f], [u2–p-f]}</literal></member>
+					<member><literal>{[u–p-t], u-p-f} - {[u2–p-f], [u-p-t]} = {[u–p-f]}</literal></member>
+					<member><literal>{[u–p-t]} – {[u–p-f]} = {[u–p-t]}</literal></member>
+					<member><literal>{[u–p-t]} – {[u–p-t]} = {}</literal></member>
+				</simplelist>
+			</section>
+
+			<section>
+				<title>Inherit</title>
+
+				<para>Additionally, an object only can inherit an ACE if that ACE is present in one of its parents as a direct or inherited ACE.</para>
+			</section>
+		</section>
+
+		<section>
+			<title>Default CMIS principal ids</title>
+
+			<para>The following default principal Ids are defined by CMIS:</para>
+			<itemizedlist>
+				<listitem>
+					<para><literal>cmis:anyone</literal></para>
+					<para>Any authenticated user will have this among its set of principal Ids. Therefore, it can be used in the ACL to represent a permission granted to any user.</para>
+				</listitem>
+				<listitem>
+					<para><literal>cmis:anonymous</literal></para>
+					<para>Currently none of the implemented authentication mechanism provides with anonymous authentication.</para>
+				</listitem>
+				<listitem>
+					<para><literal>cmis:user</literal></para>
+					<para>
+						According to CMIS, the repository MAY support the use of <literal>cmis:user</literal> as a reference to the current logged user.
+						Currently this is not supported by TDR and the client MUST specify the current user username.
+					</para>
+				</listitem>
+			</itemizedlist>
+		</section>
+
+		<section>
+			<title>Example of Use</title>
+
+			<para>For the detailed description of the scenarios used in the examples go to <link linkend="security.section.annex1">Annex 1</link>.</para>
+
+			<section>
+				<title><anchor id="security.section.acl.examples.simple"/>Simple Security</title>
+
+				<section>
+					<title>Scenario 1</title>
+
+					<itemizedlist>
+						<listitem>
+							<para>Repository: <link linkend="security.section.annex1.repo1">repository01</link></para>
+						</listitem>
+						<listitem>
+							<para>Security Handlers: <link linkend="security.section.annex1.handlers1">securityHandlers01</link></para>
+						</listitem>
+						<listitem>
+							<para>Objects: <link linkend="security.section.annex1.objects1">objects01</link></para>
+						</listitem>
+					</itemizedlist>
+					<para>The following assertions applied:</para>
+					<itemizedlist>
+						<listitem>
+							<para><literal>user1</literal> can access with username: <literal>user1</literal> and password: <literal>pwd1</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> can access with username: <literal>builtin/builtin/user1</literal> and password: <literal>pwd1</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user2</literal> can access with username: <literal>user2</literal> and password: <literal>pwd2</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user</literal> can access with username: <literal>builtin/builtin/user2</literal> and password: <literal>pwd2</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user3</literal> can access with username: <literal>user3</literal> and password: <literal>pwd3</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user3</literal> can access with username: <literal>builtin/builtin/user3</literal> and password: <literal>pwd3</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> has the following principal Ids: <literal>user1, cmis:anyone, reader</literal>.</para>
+						</listitem>
+						<listitem>
+							<para><literal>user2</literal> has the following principal Ids: <literal>user2, cmis:anyone, writer</literal>.</para>
+						</listitem>
+						<listitem>
+								<para><literal>user3</literal> has the following principal Ids: <literal>user3, cmis:anyone, reader, owner</literal>.</para>
+						</listitem>
+						<listitem>
+							<para>All the users can read <literal>object01</literal>.</para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> cannot access <literal>object02</literal>. <remark>Note that <literal>test-roles/reader</literal> cannot be applied to <literal>user1</literal> because in simple security the principal Ids are not prefixed.</remark></para>
+						</listitem>
+						<listitem>
+							<para>The <literal>user2</literal> and <literal>user3</literal> can do anything with <literal>object01</literal> and with <literal>object02</literal> (write, modify, delete, apply ACL, etc.).</para>
+						</listitem>
+					</itemizedlist>
+				</section>
+
+				<section>
+					<title>Scenario 2</title>
+
+					<itemizedlist>
+						<listitem>
+							<para>Repository: <link linkend="security.section.annex1.repo2">repository02</link></para>
+						</listitem>
+						<listitem>
+							<para>Security Handlers: <link linkend="security.section.annex1.handlers1">securityHandlers01</link></para>
+						</listitem>
+						<listitem>
+							<para>Objects: <link linkend="security.section.annex1.objects1">objects01</link></para>
+						</listitem>
+					</itemizedlist>
+					<para>The following assertions applied:</para>
+					<itemizedlist>
+						<listitem>
+							<para><literal>user1</literal> can access with username: <literal>user1</literal> and password: <literal>pwd1</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> can access with username: <literal>builtin/builtin/user1</literal> and password: <literal>pwd1</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user2</literal> can access with username: <literal>user2</literal> and password: <literal>pwd2</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user</literal> can access with username: <literal>builtin/builtin/user2</literal> and password: <literal>pwd2</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user3</literal> can access with username: <literal>user3</literal> and password: <literal>pwd3</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user3</literal> can access with username: <literal>builtin/builtin/user3</literal> and password: <literal>pwd3</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> has the following principal Ids: <literal>user1, cmis:anyone, reader</literal>.</para>
+						</listitem>
+						<listitem>
+							<para><literal>user2</literal> has the following principal Ids: <literal>user2, cmis:anyone, writer</literal>.</para>
+						</listitem>
+						<listitem>
+								<para><literal>user3</literal> has the following principal Ids: <literal>user3, cmis:anyone, reader, owner</literal>.</para>
+						</listitem>
+						<listitem>
+							<para>All the users can read <literal>object01</literal>.</para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> cannot access <literal>object02</literal>.</para>
+						</listitem>
+						<listitem>
+							<para>
+								<literal>user2</literal> can do anything with <literal>object01</literal> (write, modify, etc.) but delete or apply ACL. <remark>Note that in the permission mappings for this scenario,
+								<literal>delete</literal> and <literal>applyAcl</literal> actions require the <literal>cmis:all</literal> permission.</remark>
+							</para>
+						</listitem>
+						<listitem>
+							<para>The <literal>user2</literal> can do anything with <literal>object02</literal> (write, modify, delete, apply ACL, etc.).</para>
+						</listitem>
+						<listitem>
+							<para>The <literal>user3</literal> can do anything with <literal>object01</literal> (write, modify, delete, apply ACL, etc.).</para>
+						</listitem>
+						<listitem>
+							<para>
+								<literal>user3</literal> can do anything with <literal>object02</literal> (write, modify, etc.) but delete or apply ACL. <remark>Note that in the permission mappings for this scenario,
+								<literal>delete</literal> and <literal>applyAcl</literal> actions require the <literal>cmis:all</literal> permission.</remark>
+							</para>
+						</listitem>
+					</itemizedlist>
+				</section>
+			</section>
+
+			<section>
+				<title><anchor id="security.section.acl.examples.multiple"/>Multiple Security</title>
+
+				<section>
+					<title>Scenario 1</title>
+
+					<itemizedlist>
+						<listitem>
+							<para>Repository: <link linkend="security.section.annex1.repo2">repository02</link></para>
+						</listitem>
+						<listitem>
+							<para>Security Handlers: <link linkend="security.section.annex1.handlers1">securityHandlers01</link></para>
+						</listitem>
+						<listitem>
+							<para>Objects: <link linkend="security.section.annex1.objects1">objects01</link></para>
+						</listitem>
+					</itemizedlist>
+					<para>The following assertions applied:</para>
+					<itemizedlist>
+						<listitem>
+							<para><literal>user1</literal> can access with username: <literal>user1</literal> and password: <literal>pwd1</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> can access with username: <literal>builtin/builtin/user1</literal> and password: <literal>pwd1</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user2</literal> can access with username: <literal>user2</literal> and password: <literal>pwd2</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user</literal> can access with username: <literal>builtin/builtin/user2</literal> and password: <literal>pwd2</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user3</literal> can access with username: <literal>user3</literal> and password: <literal>pwd3</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user3</literal> can access with username: <literal>builtin/builtin/user3</literal> and password: <literal>pwd3</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> has the following principal Ids: <literal>test-users/user1, cmis:anyone, test-roles/reader</literal>.</para>
+						</listitem>
+						<listitem>
+							<para><literal>user2</literal> has the following principal Ids: <literal>test-users/user2, cmis:anyone, test-roles/writer</literal>.</para>
+						</listitem>
+						<listitem>
+								<para><literal>user3</literal> has the following principal Ids: <literal>test-users/user3, cmis:anyone, test-roles/reader, test-roles/owner</literal>.</para>
+						</listitem>
+						<listitem>
+							<para>All the users can read <literal>object01</literal>.</para>
+						</listitem>
+						<listitem>
+							<para>
+								<literal>user1</literal> and <literal>user3</literal> can read <literal>object02</literal>. <remark>Note that <literal>test-roles/reader</literal> can be applied to <literal>user1</literal> and
+								<literal>user3</literal> because in multiple security the principal Ids are prefixed</remark>.
+							</para>
+						</listitem>
+						<listitem>
+							<para>
+								None of the users can modify <literal>object01</literal> or <literal>object02</literal>. <remark>Note that <literal>user2</literal>, <literal>reader</literal>, <literal>writer</literal> or
+								<literal>owner</literal> cannot be applied to any of the users.</remark>
+							</para>
+						</listitem>
+					</itemizedlist>
+				</section>
+
+			</section>
+
+			<section>
+				<title><anchor id="security.section.acl.examples.admin"/>Admin users</title>
+
+				<section>
+					<title>Scenario 1</title>
+
+					<itemizedlist>
+						<listitem>
+							<para>Repository: <link linkend="security.section.annex1.repo3">repository03</link></para>
+						</listitem>
+						<listitem>
+							<para>Security Handlers: <link linkend="security.section.annex1.handlers1">securityHandlers01</link></para>
+						</listitem>
+						<listitem>
+							<para>Objects: <link linkend="security.section.annex1.objects1">objects01</link></para>
+						</listitem>
+						<listitem>
+							<para>The users access prefixing its username with <literal>builtin/admin/</literal>.</para>
+						</listitem>
+
+					</itemizedlist>
+					<para>The following assertions applied:</para>
+					<itemizedlist>
+						<listitem>
+							<para><literal>user1</literal> can access with username: <literal>builtin/admin/user1</literal> and password: <literal>pwd1</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user</literal> can access with username: <literal>builtin/admin/user2</literal> and password: <literal>pwd2</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user3</literal> can access with username: <literal>builtin/admin/user3</literal> and password: <literal>pwd3</literal></para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> has the following principal Ids: <literal>test-users/user1, cmis:anyone</literal>.</para>
+						</listitem>
+						<listitem>
+							<para><literal>user2</literal> has the following principal Ids: <literal>test-users/user2, cmis:anyone</literal>.</para>
+						</listitem>
+						<listitem>
+								<para><literal>user3</literal> has the following principal Ids: <literal>test-users/user3, cmis:anyone</literal>.</para>
+						</listitem>
+						<listitem>
+							<para><literal>user1</literal> is an admin user.</para>
+						</listitem>
+						<listitem>
+							<para>All the users can read <literal>object01</literal>.</para>
+						</listitem>
+						<listitem>
+							<para>
+								<literal>user1</literal> can do anything with <literal>object02</literal> (write, modify, delete, apply ACL, etc.). <remark>Note that user1 is an admin user</remark>.
+							</para>
+						</listitem>
+						<listitem>
+							<para>
+								None of the other users can modify <literal>object01</literal> or <literal>object02</literal>. <remark>Note that <literal>user2, reader, writer</literal> or <literal>owner</literal> cannot be applied to any of the users.</remark>
+							</para>
+						</listitem>
+					</itemizedlist>
+				</section>
+
+			</section>
+
+		</section>
+	</section>
+
+</chapter>

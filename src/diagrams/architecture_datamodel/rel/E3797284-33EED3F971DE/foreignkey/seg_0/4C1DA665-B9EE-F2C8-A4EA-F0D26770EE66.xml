@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4C1DA665-B9EE-F2C8-A4EA-F0D26770EE66" name="fk_ref_obj_type_relationship">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:51:25 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>C5D87A7F-24AC-32F7-D343-D5E6C32F4706</importedID>
+<containerWithKeyObject>0334EB9C-5B81-BF3E-63DB-2E805E23CC9A</containerWithKeyObject>
+<deleteRule>CASCADE</deleteRule>
+<localFKIndex>080C46D0-7FD8-A949-2217-4A9135F38372</localFKIndex>
+<keyObject>7D122125-5CFD-60B1-24A9-29C43FBEC767</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <driverClassName>${REPO_DB_DRIVER}</driverClassName>
+  <url>${REPO_DB_URL}</url>
+  <username>${REPO_DB_USERNAME}</username>
+  <password>${REPO_DB_PASSWORD}</password>
+  <validationQuery>${REPO_DB_VALIDATION}</validationQuery>
+  <defaultAutoCommit>false</defaultAutoCommit>
+  <maxWait>60000</maxWait> <!-- 60 seconds to obtain a connection -->
+</configuration>
+

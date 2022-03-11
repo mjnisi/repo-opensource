@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypeFolderDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>cmis:folder</cmis:id>
+	<cmis:propertyStringDefinition>
+		<cmis:id>cmis:comments</cmis:id>
+		<cmis:localName>ln:cmis:comments</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>dn:cmis:comments</cmis:displayName>
+		<cmis:queryName>qn:cmis:comments</cmis:queryName>
+		<cmis:description>Folder comments</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+</cmis:type>

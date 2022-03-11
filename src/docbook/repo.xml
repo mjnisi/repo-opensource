@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book SYSTEM "xml/docbookx.dtd">
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0">
+<title>DIGIT Document Repository</title>
+<subtitle>Codename: REPO</subtitle>
+<bookinfo>
+	<orgname>European Commission</orgname>
+</bookinfo>
+
+
+	<xi:include href="architecture.xml"/>
+
+	<chapter>
+		<title>Data model</title>
+		<para>Data model diagram and brief explanation of the
+		tables and columns.</para>
+		<para><emphasis>To be updated further in future release.</emphasis></para>
+	</chapter>
+
+	<xi:include href="index.xml"/>
+
+	<xi:include href="query.xml"/>
+
+	<xi:include href="policy.xml"/>
+
+	<xi:include href="configuration.xml"/>
+
+	<xi:include href="installation.xml"/>
+
+	<xi:include href="security.xml"/>
+
+	<chapter>
+		<title>Configuration</title>
+		<subtitle>Capabilities detailed explanation</subtitle>
+
+		<para>List of capabilities and effect on the repository.</para>
+
+		<para>Set of capabilities tested.</para>
+		<para><emphasis>To be updated in future release.</emphasis></para>
+
+	</chapter>
+
+	<chapter>
+		<title>Versioning</title>
+
+		<para>Decisions taken in the versioning service:</para>
+
+		<para>If a version series has a PWC, only the PWC could be updated
+		(properties and stream). If a version series doesn't have a PWC only the
+		document flagged as latest version could be updated (properties and stream).
+		A document of the version series could be deleted at any time.</para>
+
+		<para>Document the validations executed when a document in the version series
+		is deleted. When deleting the latest document, the previous one becomes the
+		latest, in this case could exist another document in the folder with the same
+		name.</para>
+	</chapter>
+
+	<chapter>
+		<title>Discovery</title>
+
+		<para>Current funtionality available in the discovery service.</para>
+
+		<para>Relaxed implementation of the CMIS standard: eg. several contains() and
+		the posibility to use single value operations in multiple properties.</para>
+
+		<para>Join is not available</para>
+	</chapter>
+
+	<xi:include href="extensions.xml"/>
+
+	<chapter>
+		<title>Administration panel manual</title>
+		<para><emphasis>To be updated in future release.</emphasis></para>
+	</chapter>
+
+
+</book>

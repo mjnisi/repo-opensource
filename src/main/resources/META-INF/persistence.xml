@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+<persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+            <!-- value="create" to build a new database on each run; value="update" to modify an existing database; value="create-drop" means the same as "create" but also drops tables when Hibernate closes; value="validate" makes no changes to the database -->
+            <!-- property name="hibernate.hbm2ddl.auto" value=""/ -->
+            <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>
+            <property name="hibernate.connection.charSet" value="UTF-8"/>
+            <!-- Uncomment the following two properties for JBoss only -->
+            <!-- property name="hibernate.validator.apply_to_ddl" value="false" /-->
+            <!-- property name="hibernate.validator.autoregister_listeners" value="false" /-->
+            <property name = "hibernate.show_sql" value = "false" />
+            
+<!--             <property name ="hibernate.generate_statistics" value="true" /> -->
+<!--             <property name ="hibernate.default_batch_fetch_size" value="4" /> -->
+<!--             <property name ="hibernate.max_fetch_depth" value="5" /> -->
+            <property name ="hibernate.jdbc.batch_size" value="1000" />
+
+
+
+			<!-- cache -->
+			<property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
+			<property name="hibernate.cache.use_second_level_cache" value="true"/>
+			<property name="hibernate.cache.use_query_cache" value="true"/>
+			<property name="javax.persistence.sharedCache.mode" value="ENABLE_SELECTIVE"/>
+			<property name="hibernate.cache.default_cache_concurrency_strategy" value="read-write"/>
+
+<!--             <property name="hibernate.ejb.classcache.eu.trade.repo.model.Acl" value="read-write"/> -->
+<!--             <property name="hibernate.ejb.classcache.eu.trade.repo.model.CMISObject" value="read-write"/> -->
+<!--             <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.CMISObject.parents" value="read-write"/> -->
+<!--             <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.CMISObject.children" value="read-write"/> -->
+<!--             <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.CMISObject.properties" value="read-write"/> -->
+<!--             <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.CMISObject.renditions" value="read-write"/> -->
+            <property name="hibernate.ejb.classcache.eu.trade.repo.model.ObjectType" value="read-write"/>
+            <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.ObjectType.children" value="read-write"/>
+            <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.ObjectType.objectTypeProperties" value="read-write"/>
+            <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.ObjectType.objectTypeRelationships" value="read-write"/>
+            <property name="hibernate.ejb.classcache.eu.trade.repo.model.ObjectTypeProperty" value="read-write"/>
+            <property name="hibernate.ejb.classcache.eu.trade.repo.model.ObjectTypeRelationship" value="read-write"/>
+            <property name="hibernate.ejb.classcache.eu.trade.repo.model.Permission" value="read-write"/>
+            <property name="hibernate.ejb.classcache.eu.trade.repo.model.PermissionMapping" value="read-write"/>
+<!--             <property name="hibernate.ejb.classcache.eu.trade.repo.model.Property" value="read-write"/> -->
+<!--             <property name="hibernate.ejb.classcache.eu.trade.repo.model.Rendition" value="read-write"/> -->
+            <property name="hibernate.ejb.classcache.eu.trade.repo.model.Repository" value="read-write"/>
+            <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.Repository.permissions" value="read-write"/>
+            <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.Repository.objectTypes" value="read-write"/>
+            <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.Repository.permissionMappings" value="read-write"/>
+            <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.Repository.securityHandlers" value="read-write"/>
+            <property name="hibernate.ejb.collectioncache.eu.trade.repo.model.Repository.enabledPolicies" value="read-write"/>
+            <property name="hibernate.ejb.classcache.eu.trade.repo.model.SecurityHandler" value="read-write"/>
+             
+        </properties>
+    </persistence-unit>
+</persistence>

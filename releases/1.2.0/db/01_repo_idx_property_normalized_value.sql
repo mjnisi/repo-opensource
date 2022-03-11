@@ -1,0 +1,1 @@
+create index idx_property_normalized_value on property(object_type_property_id, normalized_value);

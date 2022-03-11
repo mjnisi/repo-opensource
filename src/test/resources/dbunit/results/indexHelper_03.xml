@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<object ID="102" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" />
+	
+	<index_word ID="1" REPOSITORY_ID="101" WORD="one"/>
+  	<index_word ID="2" REPOSITORY_ID="101" WORD="two"/>
+  	<index_word ID="3" REPOSITORY_ID="101" WORD="three"/>
+  	<index_word ID="4" REPOSITORY_ID="101" WORD="four"/>
+	
+	<index_word_object />
+	
+	<index_word_position />
+
+</dataset>

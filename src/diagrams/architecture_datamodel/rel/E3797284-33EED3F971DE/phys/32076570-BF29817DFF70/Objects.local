@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>
+   <object objectType="User" objectID="MDSYS" name="MDSYS" seqName="seg_0"/>
+   <object objectType="User" objectID="PUBLIC" name="PUBLIC" seqName="seg_0"/>
+   <object objectType="SType" objectID="47E390DE-0671-C4B1-8428-0F45CBEE18F8" name="SDO_GEOMETRY" seqName="seg_0"/>
+   <object objectType="SType" objectID="F72C39E0-D1CA-8821-2AD7-A1E95A37D3D1" name="XMLTYPE" seqName="seg_0"/>
+   <object objectType="Table" objectID="0334EB9C-5B81-BF3E-63DB-2E805E23CC9A" name="object_type_relationship" seqName="seg_0"/>
+   <object objectType="Table" objectID="0A69F5D1-AF27-AA64-9F3E-F1DFB1244D0A" name="object_secondary_type" seqName="seg_0"/>
+   <object objectType="Table" objectID="12D2A62E-7807-5FE9-273E-B68C783C5E0F" name="object" seqName="seg_0"/>
+   <object objectType="Table" objectID="2185736B-E0D4-1009-B19E-4A14247B2192" name="rendition" seqName="seg_0"/>
+   <object objectType="Table" objectID="2B684F2F-807F-C2E6-74BB-467A38370310" name="index_word_object" seqName="seg_0"/>
+   <object objectType="Table" objectID="370C0A03-F7F1-1120-B036-27A95B5F833E" name="repository" seqName="seg_0"/>
+   <object objectType="Table" objectID="4659B791-B673-FF74-0E06-0E144AD4A101" name="object_policy" seqName="seg_0"/>
+   <object objectType="Table" objectID="4907A3F5-9563-7703-CB11-C824B3CAA578" name="stream" seqName="seg_0"/>
+   <object objectType="Table" objectID="4EB581E7-306E-BD59-6209-BDADE423EEEE" name="change_event" seqName="seg_0"/>
+   <object objectType="Table" objectID="5D0098A5-53D5-20F1-06D9-1AD3FACB65E1" name="repository_policy" seqName="seg_0"/>
+   <object objectType="Table" objectID="6087B28F-8417-938C-5F75-AAC455A87D48" name="object_child" seqName="seg_0"/>
+   <object objectType="Table" objectID="7B28C71D-1BAB-0FA7-216D-D9D54266219F" name="index_word_position" seqName="seg_0"/>
+   <object objectType="Table" objectID="9B2ABF8E-68E1-44E2-9530-1CF3AD6A3A6C" name="index_word" seqName="seg_0"/>
+   <object objectType="Table" objectID="A154B55E-8057-70EF-8E73-E8A4120294B6" name="acl" seqName="seg_0"/>
+   <object objectType="Table" objectID="A7D8E9D2-6306-B809-88D9-EF6106254B1A" name="security_handler" seqName="seg_0"/>
+   <object objectType="Table" objectID="BD76911B-897B-3E0B-7226-BD6E424BFFC3" name="permission" seqName="seg_0"/>
+   <object objectType="Table" objectID="C1420617-BD15-7110-FDF6-9316A2B0F35B" name="property" seqName="seg_0"/>
+   <object objectType="Table" objectID="C9C338A7-F318-CEDA-B28E-BB7A9DEE2472" name="object_type" seqName="seg_0"/>
+   <object objectType="Table" objectID="EEBE7FA7-9568-E019-E3BD-918704329767" name="object_type_property" seqName="seg_0"/>
+   <object objectType="Table" objectID="F791BED5-62A9-DDFC-CC4A-6E77B9DD4F3C" name="permission_mapping" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="5AFD4658-8393-0891-D7CB-5E0B9EB038BF" name="sq_acl" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="0BB330DA-E2AB-5E48-4D20-676824296BC8" name="sq_change_event" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="A22918DF-3B3A-3F0F-6FB9-D0DF1D0B6C39" name="sq_index_word" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="4BBE84ED-651C-4F36-E99E-34C7AEB8F774" name="sq_index_word_object" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="E48E998D-CC32-206B-3FC5-691EAE1A497D" name="sq_object" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="BA969913-669D-9285-B24E-332B6D326072" name="sq_object_type" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="21FFA6BD-E015-DFE6-367F-BAFF757F4F2A" name="sq_object_type_property" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="D4A9D5AE-3B39-E929-0080-4327EA8EB945" name="sq_object_type_relationship" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="23FDFA25-89FC-9AD9-EBEB-543004F003EA" name="sq_permission" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="3EF3752F-9158-8BC4-D65B-6D55D71505C2" name="sq_permission_mapping" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="07957342-0C9B-366F-A53A-4AA5A5746B13" name="sq_property" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="45B45EC4-6261-3787-6A35-BF3C4FDB46F7" name="sq_rendition" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="C85E1426-58EA-B8E7-5254-9CBC65A8FB26" name="sq_repository" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="BE6D7C73-31BE-83C9-3C45-DA6A2BD95AAA" name="sq_security_handler" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>

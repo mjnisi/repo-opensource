@@ -1,0 +1,426 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C9C338A7-F318-CEDA-B28E-BB7A9DEE2472" name="object_type">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>02CF7602-7F1C-7738-3428-0E327E59A29E</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="DED28FFE-C239-B554-7783-0F2BFF635C57">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>E5E697F6-C1C2-50F0-70C6-35BB6DE7B38A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="repository_id" id="1655D8F9-772F-9476-B668-DC3075E9BE3D">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>F6315793-D26B-E1BD-10C9-D95B1FAF8CCF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>58A38DE6-FAE5-364E-0796-6332A69CC252</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36A1E0F0-5C39-7D0A-845D-700B36AA3B28" referredColumn="58A38DE6-FAE5-364E-0796-6332A69CC252"/>
+</associations>
+</Column>
+<Column name="cmis_id" id="1813F53F-928C-D268-4E82-7CC758425B6B">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>FF13E718-828C-3F9B-31BA-A5F8808C1288</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F53E3946-BA60-3523-D7AA-0D79B2599AAE</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="local_name" id="7ABC7C53-4E21-0288-E8D7-5E2CFBD09D74">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>E610C576-315B-78C1-701E-2E232D83B87E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F53E3946-BA60-3523-D7AA-0D79B2599AAE</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="local_namespace" id="F652ADA9-649F-DB00-AC5E-CC8DF81701BD">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>76B7AF91-CB47-DA56-F434-FF3F713FD1DB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F53E3946-BA60-3523-D7AA-0D79B2599AAE</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="query_name" id="3343FFD4-4227-0EC5-1299-D7EC0ECA9AA5">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>2A85C1C9-DD36-CBE8-104A-15A120C862E0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F53E3946-BA60-3523-D7AA-0D79B2599AAE</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="display_name" id="D5AE5D66-483E-93CA-44C0-43D7E47F654D">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>2E4C5869-5BD3-BB11-E8FF-77E00CAFFA0E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F53E3946-BA60-3523-D7AA-0D79B2599AAE</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="base_id" id="DE53EA42-62C1-BDF0-8068-E74847C00322">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>F6BE48B8-1008-DABB-5397-545482ECAC5E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>DED28FFE-C239-B554-7783-0F2BFF635C57</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B6A99813-2EAA-7CE9-A530-0CB50AA9FCBB" referredColumn="DED28FFE-C239-B554-7783-0F2BFF635C57"/>
+</associations>
+</Column>
+<Column name="parent_id" id="855F0A3A-0264-C57F-ABEC-A7C056F7A28E">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>F25A8E0B-6AD2-5028-B8B8-51260E36BDB3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>DED28FFE-C239-B554-7783-0F2BFF635C57</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C827252D-A05B-1712-3299-5177B37C70E3" referredColumn="DED28FFE-C239-B554-7783-0F2BFF635C57"/>
+</associations>
+</Column>
+<Column name="description" id="0A1316DE-6980-D7D5-4378-7B9EBFB2B716">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>3721F3BD-51AF-3503-E2B8-E48DCA0F576B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F53E3946-BA60-3523-D7AA-0D79B2599AAE</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="creatable" id="37342212-E00C-3AA6-5581-CA9A963CCF1B">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>15E6665C-46DD-7D9F-722E-497376F3E51F</importedID>
+<defaultValue>&apos;F&apos;</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>27CBCFF2-A6B4-EEB8-DB26-82EAE806CBB8</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fileable" id="1911879F-D58B-2D2F-D746-333386141740">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>0D9DB280-7A74-A541-0A6F-8A74B86FA20D</importedID>
+<defaultValue>&apos;F&apos;</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>27CBCFF2-A6B4-EEB8-DB26-82EAE806CBB8</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="queryable" id="562831E5-F70F-771A-E916-7DF74E899026">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>48416036-7231-CE7D-5D44-BF811C03104A</importedID>
+<defaultValue>&apos;F&apos;</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>27CBCFF2-A6B4-EEB8-DB26-82EAE806CBB8</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="controllable_policy" id="49815A61-D440-CD87-0119-D21B19CFCD99">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>7C4A47DD-4B2A-E928-AD2E-85C39AD63E15</importedID>
+<defaultValue>&apos;F&apos;</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>27CBCFF2-A6B4-EEB8-DB26-82EAE806CBB8</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="controllable_acl" id="21235ACA-F8FF-9265-5C6A-376D38ECAB34">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>51431C3D-6F1A-606E-F8E8-297F6A48E8FB</importedID>
+<defaultValue>&apos;F&apos;</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>27CBCFF2-A6B4-EEB8-DB26-82EAE806CBB8</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fulltext_indexed" id="71FDEA3A-82A1-FF72-6D5F-3C637E6478A8">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>CBE94F55-E335-4833-8693-FA69E7BDB985</importedID>
+<defaultValue>&apos;F&apos;</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>27CBCFF2-A6B4-EEB8-DB26-82EAE806CBB8</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="included_in_supertype_query" id="8204FA8D-59D7-3E79-CA0A-19225A46486F">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>F3CCE800-4B3A-D2DE-F648-5C4548CD86E4</importedID>
+<defaultValue>&apos;F&apos;</defaultValue>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>27CBCFF2-A6B4-EEB8-DB26-82EAE806CBB8</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="versionable" id="F2317BC1-57F7-C5AE-551B-615B668BF91C">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>BF1B9714-A32B-8003-6FFD-0914AA6A2DC1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>27CBCFF2-A6B4-EEB8-DB26-82EAE806CBB8</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="content_stream_allowed" id="E88FEC29-66B8-B690-847B-54F19E82186B">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>E9CDE771-4925-624D-905F-80F7F79C51F9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F53E3946-BA60-3523-D7AA-0D79B2599AAE</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7D122125-5CFD-60B1-24A9-29C43FBEC767" name="pk_object_type">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>F77275C8-D4A4-97F6-306D-F456C9C09F72</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DED28FFE-C239-B554-7783-0F2BFF635C57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1962C6B0-80D1-9C42-E5A6-4B96C1D885DA" name="uq_object_type_cmis">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>47CB7767-B330-593A-97A3-16444D50C09B</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1655D8F9-772F-9476-B668-DC3075E9BE3D"/>
+<colUsage columnID="1813F53F-928C-D268-4E82-7CC758425B6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="692087CB-763D-D206-68A8-1A509E2ABB96" name="uq_object_type_qname">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>85DBA2DE-57EA-48FD-4D43-B0F5097E9AAE</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1655D8F9-772F-9476-B668-DC3075E9BE3D"/>
+<colUsage columnID="3343FFD4-4227-0EC5-1299-D7EC0ECA9AA5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F916E40-57E4-41A2-54A9-8A07FFE59490" name="idx_fk_object_type_repository">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>8F73E021-056E-75A0-0865-9AE95EC1C192</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1655D8F9-772F-9476-B668-DC3075E9BE3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7785269-CD0A-E793-7FCA-5BC4DA13D3F7" name="idx_fk_object_type_base_id">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>AB634793-6F70-0181-35FC-CA813187C0A3</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE53EA42-62C1-BDF0-8068-E74847C00322"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78267143-5BC1-D46F-F1BF-3BEFFF4B87D4" name="idx_fk_object_type_parent_id">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>D08E842F-3D3B-0FA9-20DF-94617FFEC6D6</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="855F0A3A-0264-C57F-ABEC-A7C056F7A28E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80707096-DC48-05AD-FD02-8D699A16D7E8" name="fk_object_type_base_id">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE53EA42-62C1-BDF0-8068-E74847C00322"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4AD1CBF-62E4-DEB2-05B3-D1D1606040E8" name="fk_object_type_parent_id">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="855F0A3A-0264-C57F-ABEC-A7C056F7A28E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9D7ACA76-4212-1D8E-75D0-DF77F018E3CC" name="fk_object_type_repository">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1655D8F9-772F-9476-B668-DC3075E9BE3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="ck_creatable" directorySegmentName="seg_0" id="C9BBEF3A-E3B5-E24A-ACA6-E58F4E9EE116">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>BECE5260-A9B1-2DEE-D767-96D6F076062F</importedID>
+<rule>creatable in (&apos;F&apos;, &apos;T&apos;)</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="ck_fileable" directorySegmentName="seg_0" id="E1938459-D1B5-F9BA-958B-B2C78AE903CF">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>E7235331-0459-D840-4E15-2BA7E24DFA26</importedID>
+<rule>fileable in (&apos;F&apos;, &apos;T&apos;)</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="ck_queryable" directorySegmentName="seg_0" id="EC625EF6-EFD9-56E8-51DE-38394B03E0A3">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>45DAE652-9A65-9C64-4CAE-35FA0457336E</importedID>
+<rule>queryable in (&apos;F&apos;, &apos;T&apos;)</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="ck_controllable_policy" directorySegmentName="seg_0" id="AE6D26E4-3ACC-A810-3735-9E0D75A676BA">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>18879514-D293-D149-34E3-090F2997834C</importedID>
+<rule>controllable_policy in (&apos;F&apos;, &apos;T&apos;)</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="ck_controllable_acl" directorySegmentName="seg_0" id="4380EDB0-C9A7-88C4-A6E1-B2E18559035C">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>81943CEE-DB3A-C9D0-9974-98D4FFDF3E0E</importedID>
+<rule>controllable_acl in (&apos;F&apos;, &apos;T&apos;)</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="ck_fulltext_indexed" directorySegmentName="seg_0" id="5FC38B87-1EB8-6E69-A956-9CA9A9D240BE">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>E0A934A0-BF9E-F106-6B01-8CD88210CEA0</importedID>
+<rule>fulltext_indexed in (&apos;F&apos;, &apos;T&apos;)</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="ck_included_in_supertype_query" directorySegmentName="seg_0" id="2F5455DC-1395-0652-9C75-8908116820E7">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>DA6495FC-28BA-2D21-C9AE-4562C9EC78ED</importedID>
+<rule>included_in_supertype_query in (&apos;F&apos;, &apos;T&apos;)</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="ck_versionable" directorySegmentName="seg_0" id="B1E2E78D-2873-2910-BFFA-595BFD9B6E9A">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>3091F99D-4016-87D3-3443-E570FBE1A2C9</importedID>
+<rule>versionable is null or versionable in (&apos;F&apos;, &apos;T&apos;)</rule>
+</tableCheckConstraint>
+<tableCheckConstraint class="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" name="ck_content_stream_allowed" directorySegmentName="seg_0" id="833CC41D-5865-87F8-03B6-59ABB141646B">
+<sourceDDLFile>01_repo_genesisStructure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-27 16:52:20 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>754848D1-A877-B471-3C53-6074D56C994B</importedID>
+<rule>content_stream_allowed in (&apos;notallowed&apos;, &apos;allowed&apos;,&apos;required&apos;)</rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

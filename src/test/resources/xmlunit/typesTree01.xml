@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tree xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:document>
+		<MyDocType1>
+			<MyDocType1.1>
+				<MyDocType1.1.1/>
+				<MyDocType1.1.2/>
+			</MyDocType1.1>
+			<MyDocType1.2/>
+		</MyDocType1>
+		<MyDocType2>
+			<MyDocType2.1/>
+			<MyDocType2.2/>
+			<MyDocType2.3/>
+			<MyDocType2.4/>
+			<MyDocType2.5/>
+			<MyDocType2.6/>
+			<MyDocType2.7/>
+			<MyDocType2.8/>
+			<MyDocType2.9/>
+		</MyDocType2>
+		<ComplexType/>
+		<DocumentTopLevel>
+			<DocumentLevel1>
+				<DocumentLevel2/>
+			</DocumentLevel1>
+		</DocumentTopLevel>
+		<VersionableType/>
+	</cmis:document>
+	<cmis:relationship/>
+	<cmis:folder/>
+	<cmis:policy/>
+</tree>

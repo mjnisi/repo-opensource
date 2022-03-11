@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<object_child />
+    <object OBJECT_TYPE_ID="102" CMIS_OBJECT_ID="/"/>
+    <object OBJECT_TYPE_ID="110" CMIS_OBJECT_ID="generatedId-1"/>
+</dataset>

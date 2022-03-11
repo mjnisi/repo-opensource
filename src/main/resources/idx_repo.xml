@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<header>
+		<result />
+		<lookups>
+			<lookup config-prefix="expr" config-class="org.apache.commons.configuration.interpol.ExprLookup">
+				<variables>
+					<variable name="Thread" value="Class:java.lang.Thread" />
+				</variables>
+			</lookup>
+		</lookups>
+	</header>
+	<override>
+
+		<properties fileName="confidential.properties" config-optional="true" delimiterParsingDisabled="true" />
+		<properties fileName="environment.properties" />
+
+		<xml config-name="repo/dbConfig" fileName="repo_dbConfig.xml" delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" />
+		</xml>
+
+		<xml config-name="repo/dbGacaConfig" fileName="repo_dbGacaConfig.xml" delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" />
+		</xml>
+
+		<xml config-name="repo/adminConfig" fileName="repo_adminConfig.xml" delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" />
+		</xml>
+
+		<xml config-name="repo/securityConfig" fileName="repo_securityConfig.xml" delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" />
+		</xml>
+
+		<xml config-name="repo/jmxConfig" fileName="repo_jmxConfig.xml" delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" />
+		</xml>
+
+		<xml config-name="repo/indexConfig" fileName="repo_indexConfig.xml" delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" />
+		</xml>
+		
+		<xml config-name="repo/indexDbConfig" fileName="repo_indexDbConfig.xml" delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" />
+		</xml>
+		
+		<xml config-name="repo/productConfig" fileName="repo_productConfig.xml" delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" />
+		</xml>
+		
+		<xml config-name="repo/ormConfig" fileName="repo_ormConfig.xml" delimiterParsingDisabled="true">
+			<reloadingStrategy refreshDelay="10000" config-class="org.apache.commons.configuration.reloading.FileChangedReloadingStrategy" />
+		</xml>
+	</override>
+</configuration>

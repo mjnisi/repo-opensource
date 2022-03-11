@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <object OBJECT_TYPE_ID="103" CMIS_OBJECT_ID="generatedId-1"/>
+    
+    <property OBJECT_TYPE_PROPERTY_ID="151" VALUE="My Policy"/>
+    <property OBJECT_TYPE_PROPERTY_ID="154" VALUE="cmis:policy"/>
+    <property OBJECT_TYPE_PROPERTY_ID="160" VALUE="my test policy!"/>
+    <property OBJECT_TYPE_PROPERTY_ID="156" VALUE="1970-01-01T00:00:00.000Z"/>
+    <property OBJECT_TYPE_PROPERTY_ID="158" VALUE="1970-01-01T00:00:00.000Z"/>
+	<property OBJECT_TYPE_PROPERTY_ID="153" VALUE="cmis:policy"/>
+    <property OBJECT_TYPE_PROPERTY_ID="152" VALUE="generatedId-1"/>
+    <property OBJECT_TYPE_PROPERTY_ID="155" VALUE="test"/>
+    <property OBJECT_TYPE_PROPERTY_ID="157" VALUE="test"/>
+    <property OBJECT_TYPE_PROPERTY_ID="159" VALUE="generatedId-2"/>    
+</dataset>

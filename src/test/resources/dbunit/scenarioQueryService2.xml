@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset depends="scenarioQueryService, scenarioQueryService1">
+  
+  <object_type ID="22" REPOSITORY_ID="1" CMIS_ID="test:hiddenSubfolder" LOCAL_NAME="test:hiddenSubfolder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="test:hiddenSubfolder" DISPLAY_NAME="test:hiddenSubfolder" BASE_ID="2" PARENT_ID="21" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="F" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  
+  <object INDEX_STATE_CONTENT="0" ID="116" OBJECT_TYPE_ID="22" CMIS_OBJECT_ID="hiddenTestFolder"/>
+  <property ID="114" OBJECT_ID="116" OBJECT_TYPE_PROPERTY_ID="28" VALUE="Allen" NUMERIC_VALUE="0" NORMALIZED_VALUE="allen" /> <!-- cmis:createdBy -->
+  <property ID="115" OBJECT_ID="116" OBJECT_TYPE_PROPERTY_ID="51" VALUE="3.0" NUMERIC_VALUE="3.0" NORMALIZED_VALUE=""  /><!-- cmis:numberField -->
+  
+</dataset>

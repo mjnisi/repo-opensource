@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<object_type_property OBJECT_TYPE_ID="101" CMIS_ID="prop:test1" LOCAL_NAME="prop:test" QUERY_NAME="test:query1" DESCRIPTION="Name of the property" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="T" QUERYABLE="T" ORDERABLE="T" DISPLAY_NAME="prop:test" DEFAULT_VALUE="prop:test" />	
+	<object_type_property OBJECT_TYPE_ID="101" CMIS_ID="prop:test2" LOCAL_NAME="prop:test" QUERY_NAME="test:query2" DESCRIPTION="Name of the property" PROPERTY_TYPE="decimal" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="T" QUERYABLE="T" ORDERABLE="T" DISPLAY_NAME="prop:test" DEFAULT_VALUE="prop:test" />
+	<object_type_property OBJECT_TYPE_ID="101" CMIS_ID="prop:test3" LOCAL_NAME="prop:test" QUERY_NAME="test:query3" DESCRIPTION="Name of the property" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="T" QUERYABLE="T" ORDERABLE="T" DISPLAY_NAME="prop:test" DEFAULT_VALUE="prop:test" />
+</dataset>

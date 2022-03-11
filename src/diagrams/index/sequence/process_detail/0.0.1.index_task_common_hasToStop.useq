@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.4" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="eu.trade.repo.index.impl.ops.AbstractIndexOperator" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/ops/AbstractIndexOperator.java" binary="false" 
+    label="contentIndexOperator" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1040" y="0"/>    
+    <execution id="2">      
+      <position height="268" width="0" x="0" y="85"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="eu.trade.repo.index.impl.IndexTaskImpl" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/IndexTaskImpl.java" binary="false" label="indexTaskImpl" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="100" y="0"/>    
+    <execution id="4">      
+      <position height="226" width="7" x="61" y="106"/>    
+    </execution>  
+  </object>  
+  <object id="8" language="java" name="eu.trade.repo.index.impl.IndexSynchronizerImpl" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/IndexSynchronizerImpl.java" binary="false" 
+    label="indexSynchronizer" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="7">      
+      <position height="157" width="0" x="0" y="154"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="21" width="0" x="0" y="196"/>    
+    </execution>  
+  </object>  
+  <object id="13" language="java" name="eu.trade.repo.index.impl.IndexOperationTypeSynchronizer" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/IndexOperationTypeSynchronizer.java" binary="false" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="12">      
+      <position height="63" width="0" x="0" y="227"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="java.util.concurrent.ConcurrentHashMap" project="repo" 
+    file="C:/Program Files/Java/jdk1.7.0_09/jre/lib/rt.jar" binary="true" label="indexWaitingMap" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="15">      
+      <position height="21" width="0" x="0" y="248"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="hasToStop():boolean">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" 
+    operation="isOtherTaskWaiting(eu.trade.repo.index.model.IndexOperation.IndexOperationType,java.lang.Integer):boolean">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="9" 
+    operation="getSynchronizer(eu.trade.repo.index.model.IndexOperation.IndexOperationType):eu.trade.repo.index.impl.IndexOperationTypeSynchronizer">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="isOtherTaskWaiting(java.lang.Integer):boolean">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="14" operation="get(java.lang.Object):V">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>
+</sequence-diagram>

@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B2ABF8E-68E1-44E2-9530-1CF3AD6A3A6C" name="index_word">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>639AF3A3-C1BB-221F-F0A5-142FF43EB3E1</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="28848244-317E-E370-B8DD-D28B0B027589">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>AF5A1A3F-F3E8-736E-3E3B-58960DB97C81</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="repository_id" id="6CDB6F6C-17C4-A476-8987-965C128584FB">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>4CCB4DC1-F691-47E8-8A75-668D81110257</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>A9306353-E505-82A6-25BA-E0DB3F520983</domain>
+<delegate>58A38DE6-FAE5-364E-0796-6332A69CC252</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F35ED2C9-5DE2-DC78-1CA5-907BE6821692" referredColumn="58A38DE6-FAE5-364E-0796-6332A69CC252"/>
+</associations>
+</Column>
+<Column name="word" id="C57866A1-7B8A-1EE3-195B-7E88F25250DE">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>8964E016-140A-EFFD-38EF-D5BB2099E433</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>91ED2161-B98F-FA04-18DB-E2685FE7663B</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="96E1F4D0-BCEB-4685-BC30-0F491AB58538" name="pk_index_word">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>86DA2772-5900-4530-B4ED-CCAB6C3EEE2F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="28848244-317E-E370-B8DD-D28B0B027589"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78728F14-A5A9-DC2F-3AC4-D7433E784055" name="idx_fk_index_word_repository">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>8EB76ED1-CABE-E4E5-230C-4FF3C513037C</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6CDB6F6C-17C4-A476-8987-965C128584FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9DC0DBC4-AE7A-2074-CED7-11E475E6677E" name="idx_index_word">
+<sourceDDLFile>01_repo_structure.sql</sourceDDLFile>
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-30 13:29:45 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<importedID>4C009F63-B272-6910-3EA8-1BB6E5E89002</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C57866A1-7B8A-1EE3-195B-7E88F25250DE"/>
+<colUsage columnID="6CDB6F6C-17C4-A476-8987-965C128584FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="58B1BF67-2DCD-D0DE-12EE-B1BA1A06CAAF" name="fk_index_word_repository">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-07-09 16:41:42 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6CDB6F6C-17C4-A476-8987-965C128584FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

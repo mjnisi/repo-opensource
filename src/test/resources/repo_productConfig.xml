@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- Configuration for the product properties. -->
+	<product>
+		<vendor>DG TRADE</vendor>
+		<name>TDR</name>
+		<version>1.0</version>
+		<thinClientUri></thinClientUri> <!-- If available this is the uri for a web client interface. Something like: ${SERVER_PATH}/repo/client/ -->
+		<maxContentSize>1073741824</maxContentSize> <!-- 1 GB. Currently 2GB at maximum due to Integer.MAX_VALUE: see org.springframework.jdbc.support.lob.LobCreator -->
+		<maxItemsTypes>50</maxItemsTypes>
+		<depthTypes>-1</depthTypes> <!-- Unlimited -->
+		<maxItemsObjects>-1</maxItemsObjects> <!-- Unlimited -->
+		<depthObjects>10</depthObjects>
+	</product>
+</configuration>

@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <repository ID="10200" CMIS_ID="tron_dev" NAME="tron_dev" DESCRIPTION="TRON Dev" C_GET_DESCENDANTS="T" C_GET_FOLDER_TREE="T" C_CONTENT_STREAM_UPDATABILITY="anytime" C_CHANGES="all" C_RENDITIONS="read" C_MULTIFILING="T" C_UNFILING="T" C_VERSION_SPECIFIC_FILING="F" C_PWC_UPDATABLE="T" C_PWC_SEARCHABLE="T" C_ALL_VERSIONS_SEARCHABLE="T" C_QUERY="bothcombined" C_JOIN="innerandouter" C_ACL="manage" C_ACL_PROPAGATION="propagate" SECURITY_TYPE="MULTIPLE" AUTHENTICATION_HANDLER="mock" AUTHORISATION_HANDLER="builtin"/>
+  <object_type ID="10559" REPOSITORY_ID="10200" CMIS_ID="cmis:document" LOCAL_NAME="cmis:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:document" DISPLAY_NAME="cmis:document" BASE_ID="10559" DESCRIPTION="cmis:document" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="10560" REPOSITORY_ID="10200" CMIS_ID="cmis:folder" LOCAL_NAME="cmis:folder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:folder" DISPLAY_NAME="cmis:folder" BASE_ID="10560" DESCRIPTION="cmis:folder" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" CONTENT_STREAM_ALLOWED="notallowed"/>
+  <object_type_property ID="13300" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:name" DISPLAY_NAME="cmis:name" DESCRIPTION="Name of the Object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13301" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:description" LOCAL_NAME="cmis:description" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:description" DISPLAY_NAME="cmis:description" DESCRIPTION="Description of the Object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13302" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectId" DISPLAY_NAME="cmis:objectId" DESCRIPTION="Id of the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13303" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:baseTypeId" DISPLAY_NAME="cmis:baseTypeId" DESCRIPTION="Id of the base object-type for the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13304" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectTypeId" DISPLAY_NAME="cmis:objectTypeId" DESCRIPTION="Id of the object&apos;s type" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13305" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:secondaryObjectTypeIds" LOCAL_NAME="cmis:secondaryObjectTypeIds" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:secondaryObjectTypeIds" DISPLAY_NAME="cmis:secondaryObjectTypeIds" DESCRIPTION="Ids of the object&apos;s secondary types" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>
+  <object_type_property ID="13306" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:createdBy" DISPLAY_NAME="cmis:createdBy" DESCRIPTION="User who created the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13307" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:creationDate" DISPLAY_NAME="cmis:creationDate" DESCRIPTION="DateTime when the object was created" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13308" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModifiedBy" DISPLAY_NAME="cmis:lastModifiedBy" DESCRIPTION="User who last modified the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13309" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModificationDate" DISPLAY_NAME="cmis:lastModificationDate" DESCRIPTION="DateTime when the object was last modified" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13310" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:changeToken" DISPLAY_NAME="cmis:changeToken" DESCRIPTION="Opaque token used for optimistic locking and concurrency checking" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object_type_property ID="13311" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:isImmutable" LOCAL_NAME="cmis:isImmutable" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isImmutable" DISPLAY_NAME="cmis:isImmutable" DESCRIPTION="TRUE if the repository MUST throw and error at any attempt to update or delete the object" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13312" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:isLatestVersion" LOCAL_NAME="cmis:isLatestVersion" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isLatestVersion" DISPLAY_NAME="cmis:isLatestVersion" DESCRIPTION="If the Document object is the Latest Version in its Version Series" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13313" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:isMajorVersion" LOCAL_NAME="cmis:isMajorVersion" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isMajorVersion" DISPLAY_NAME="cmis:isMajorVersion" DESCRIPTION="If the Document object is a Major Version in its Version Series" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13314" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:isLatestMajorVersion" LOCAL_NAME="cmis:isLatestMajorVersion" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isLatestMajorVersion" DISPLAY_NAME="cmis:isLatestMajorVersion" DESCRIPTION="If the Document object is the Latest Major Version in its Version Series" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13315" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:isPrivateWorkingCopy" LOCAL_NAME="cmis:isPrivateWorkingCopy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isPrivateWorkingCopy" DISPLAY_NAME="cmis:isPrivateWorkingCopy" DESCRIPTION="If the Document object is a Private Working Copy" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13316" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:versionLabel" LOCAL_NAME="cmis:versionLabel" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:versionLabel" DISPLAY_NAME="cmis:versionLabel" DESCRIPTION="Textual description the position of an individual object with respect to the version series" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13317" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:versionSeriesId" LOCAL_NAME="cmis:versionSeriesId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:versionSeriesId" DISPLAY_NAME="cmis:versionSeriesId" DESCRIPTION="ID of the Version Series for this Object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13318" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:isVersionSeriesCheckedOut" LOCAL_NAME="cmis:isVersionSeriesCheckedOut" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isVersionSeriesCheckedOut" DISPLAY_NAME="cmis:isVersionSeriesCheckedOut" DESCRIPTION="If there currenly exists a Private Working Copy for this Version Series" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13319" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:versionSeriesCheckedOutBy" LOCAL_NAME="cmis:versionSeriesCheckedOutBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:versionSeriesCheckedOutBy" DISPLAY_NAME="cmis:versionSeriesCheckedOutBy" DESCRIPTION="If IsVersionSeriesCheckedOut then an identifier for the user who created the Private Working Copy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13320" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:versionSeriesCheckedOutId" LOCAL_NAME="cmis:versionSeriesCheckedOutId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:versionSeriesCheckedOutId" DISPLAY_NAME="cmis:versionSeriesCheckedOutId" DESCRIPTION="If IsVersionSeriesCheckedOut the Identifier for the Private Working Copy" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13321" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:checkinComment" LOCAL_NAME="cmis:checkinComment" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:checkinComment" DISPLAY_NAME="cmis:checkinComment" DESCRIPTION="Textual comment associated with the given version" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13322" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:contentStreamLength" LOCAL_NAME="cmis:contentStreamLength" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:contentStreamLength" DISPLAY_NAME="cmis:contentStreamLength" DESCRIPTION="Length of the content stream (in bytes)" PROPERTY_TYPE="integer" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13323" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:contentStreamMimeType" LOCAL_NAME="cmis:contentStreamMimeType" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:contentStreamMimeType" DISPLAY_NAME="cmis:contentStreamMimeType" DESCRIPTION="MIME type of the Content Stream" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13324" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:contentStreamFileName" LOCAL_NAME="cmis:contentStreamFileName" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:contentStreamFileName" DISPLAY_NAME="cmis:contentStreamFileName" DESCRIPTION="File name of the Content Stream" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13325" OBJECT_TYPE_ID="10559" CMIS_ID="cmis:contentStreamId" LOCAL_NAME="cmis:contentStreamId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:contentStreamId" DISPLAY_NAME="cmis:contentStreamId" DESCRIPTION="Id of the stream" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13326" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:name" DISPLAY_NAME="cmis:name" DESCRIPTION="Name of the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13327" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:description" LOCAL_NAME="cmis:description" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:description" DISPLAY_NAME="cmis:description" DESCRIPTION="Description of the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13328" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectId" DISPLAY_NAME="cmis:objectId" DESCRIPTION="Id of the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13329" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:baseTypeId" DISPLAY_NAME="cmis:baseTypeId" DESCRIPTION="Id of the base object-type for the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13330" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectTypeId" DISPLAY_NAME="cmis:objectTypeId" DESCRIPTION="Id of the object&apos;s type" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13331" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:secondaryObjectTypeIds" LOCAL_NAME="cmis:secondaryObjectTypeIds" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:secondaryObjectTypeIds" DISPLAY_NAME="cmis:secondaryObjectTypeIds" DESCRIPTION="Ids of the object&apos;s secondary types" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>
+  <object_type_property ID="13332" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:createdBy" DISPLAY_NAME="cmis:createdBy" DESCRIPTION="User who created the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13333" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:creationDate" DISPLAY_NAME="cmis:creationDate" DESCRIPTION="Date Time when the object was created" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13334" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModifiedBy" DISPLAY_NAME="cmis:lastModifiedBy" DESCRIPTION="User who last modified the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13335" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModificationDate" DISPLAY_NAME="cmis:lastModificationDate" DESCRIPTION="Date Time when the object was last modified" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13336" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:changeToken" DISPLAY_NAME="cmis:changeToken" DESCRIPTION="Token used for optimistic locking and concurrency checking" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object_type_property ID="13337" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:parentId" LOCAL_NAME="cmis:parentId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:parentId" DISPLAY_NAME="cmis:parentId" DESCRIPTION="PropertyType.ID.value() of the parent folder of the folder" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>
+  <object_type_property ID="13338" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:path" LOCAL_NAME="cmis:path" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:path" DISPLAY_NAME="cmis:path" DESCRIPTION="The fully qualified path to this folder" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="13339" OBJECT_TYPE_ID="10560" CMIS_ID="cmis:allowedChildObjectTypeIds" LOCAL_NAME="cmis:allowedChildObjectTypeIds" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:allowedChildObjectTypeIds" DISPLAY_NAME="cmis:allowedChildObjectTypeIds" DESCRIPTION="Id&apos;s of the set of Object-types that can be created, moved or filed into this folder" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object ID="47100" OBJECT_TYPE_ID="10560" CMIS_OBJECT_ID="53d538441e4b3ce664a5508a776b0fe15de2363a" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="1" INDEX_TRIES_METADATA="0"/>
+  <object ID="47101" OBJECT_TYPE_ID="10560" CMIS_OBJECT_ID="a4f2bbca5cb52e7de6bcc92d56f13b25d71bdfa4" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="1" INDEX_TRIES_METADATA="0"/>
+  <object ID="47250" OBJECT_TYPE_ID="10560" CMIS_OBJECT_ID="6749d23164225e7f1eff01d1644d05ab41476f0" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="1" INDEX_TRIES_METADATA="0"/>
+  <object ID="47802" OBJECT_TYPE_ID="10560" CMIS_OBJECT_ID="4591a57f84fe5235701ec38b5e56078899f76c58" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="1" INDEX_TRIES_METADATA="0"/>
+  <object ID="47803" OBJECT_TYPE_ID="10560" CMIS_OBJECT_ID="202d2d4d18f889c87276f72a0e5472e623089200" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="1" INDEX_TRIES_METADATA="0"/>
+  <object ID="47573" OBJECT_TYPE_ID="10560" CMIS_OBJECT_ID="4fce3803afbc21911fa628f3d60ea964b0fd586b" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="1" INDEX_TRIES_METADATA="0"/>
+  <object ID="47099" OBJECT_TYPE_ID="10560" CMIS_OBJECT_ID="b616f67dcc1626ef4f4e0c26a7f224162ba07304" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="1" INDEX_TRIES_METADATA="0"/>
+  <object ID="47823" OBJECT_TYPE_ID="10560" CMIS_OBJECT_ID="8c82a61058b5c6030b99c93b33faf33a28e82ea4" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" INDEX_STATE_METADATA="1" INDEX_TRIES_METADATA="0"/>
+  <property ID="559547" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13326" VALUE="Notifications" NUMERIC_VALUE="0" NORMALIZED_VALUE="notifications"/>
+  <property ID="559548" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13330" VALUE="cmis:folder" NUMERIC_VALUE="0" NORMALIZED_VALUE="cmis:folder"/>
+  <property ID="559549" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13333" VALUE="2014-09-26T09:46:52.354Z" NUMERIC_VALUE="0"/>
+  <property ID="559550" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13335" VALUE="2014-09-26T09:46:52.354Z" NUMERIC_VALUE="0"/>
+  <property ID="559551" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13329" VALUE="cmis:folder" NUMERIC_VALUE="0"/>
+  <property ID="559552" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13328" VALUE="a4f2bbca5cb52e7de6bcc92d56f13b25d71bdfa4" NUMERIC_VALUE="0"/>
+  <property ID="559553" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13332" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="559554" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13334" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="559555" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13336" VALUE="52a74505b334c770a25174cc7a86df0471565e07" NUMERIC_VALUE="0" NORMALIZED_VALUE="52a74505b334c770a25174cc7a86df0471565e07"/>
+  <property ID="559556" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13338" VALUE="/TRON/Notifications" NUMERIC_VALUE="0" NORMALIZED_VALUE="/tron/notifications"/>
+  <property ID="559557" OBJECT_ID="47101" OBJECT_TYPE_PROPERTY_ID="13337" VALUE="53d538441e4b3ce664a5508a776b0fe15de2363a" NUMERIC_VALUE="0"/>
+  <property ID="574704" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13326" VALUE="ECDB" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecdb"/>
+  <property ID="574705" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13330" VALUE="cmis:folder" NUMERIC_VALUE="0" NORMALIZED_VALUE="cmis:folder"/>
+  <property ID="574706" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13333" VALUE="2014-09-26T10:08:54.113Z" NUMERIC_VALUE="0"/>
+  <property ID="574707" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13335" VALUE="2014-09-26T10:08:54.113Z" NUMERIC_VALUE="0"/>
+  <property ID="574708" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13329" VALUE="cmis:folder" NUMERIC_VALUE="0"/>
+  <property ID="574709" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13328" VALUE="4591a57f84fe5235701ec38b5e56078899f76c58" NUMERIC_VALUE="0"/>
+  <property ID="574710" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13332" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="574711" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13334" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="574712" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13336" VALUE="9105435974d7ca507f4deccde3982c3ead0471a8" NUMERIC_VALUE="0" NORMALIZED_VALUE="9105435974d7ca507f4deccde3982c3ead0471a8"/>
+  <property ID="574713" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13338" VALUE="/TRON/ECDB" NUMERIC_VALUE="0" NORMALIZED_VALUE="/tron/ecdb"/>
+  <property ID="574714" OBJECT_ID="47802" OBJECT_TYPE_PROPERTY_ID="13337" VALUE="53d538441e4b3ce664a5508a776b0fe15de2363a" NUMERIC_VALUE="0"/>
+  <property ID="559526" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13326" VALUE="rootFolder" NUMERIC_VALUE="0" NORMALIZED_VALUE="rootfolder"/>
+  <property ID="559527" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13328" VALUE="b616f67dcc1626ef4f4e0c26a7f224162ba07304" NUMERIC_VALUE="0"/>
+  <property ID="559528" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13329" VALUE="cmis:folder" NUMERIC_VALUE="0"/>
+  <property ID="559529" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13330" VALUE="cmis:folder" NUMERIC_VALUE="0"/>
+  <property ID="559530" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13332" VALUE="admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="admin"/>
+  <property ID="559531" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13333" VALUE="2014-09-26T09:30:03.157Z" NUMERIC_VALUE="0"/>
+  <property ID="559532" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13334" VALUE="admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="admin"/>
+  <property ID="559533" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13335" VALUE="2014-09-26T09:30:03.157Z" NUMERIC_VALUE="0"/>
+  <property ID="559534" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13336" VALUE="8d3cb07d740f9612fa02a8fda18ddb8451901111" NUMERIC_VALUE="0" NORMALIZED_VALUE="8d3cb07d740f9612fa02a8fda18ddb8451901111"/>
+  <property ID="559535" OBJECT_ID="47099" OBJECT_TYPE_PROPERTY_ID="13338" VALUE="/" NUMERIC_VALUE="0" NORMALIZED_VALUE="/"/>
+  <property ID="561869" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13335" VALUE="2014-09-26T09:50:33.453Z" NUMERIC_VALUE="0"/>
+  <property ID="561866" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13326" VALUE="Submissions" NUMERIC_VALUE="0" NORMALIZED_VALUE="submissions"/>
+  <property ID="561867" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13330" VALUE="cmis:folder" NUMERIC_VALUE="0" NORMALIZED_VALUE="cmis:folder"/>
+  <property ID="561868" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13333" VALUE="2014-09-26T09:50:33.453Z" NUMERIC_VALUE="0"/>
+  <property ID="561870" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13329" VALUE="cmis:folder" NUMERIC_VALUE="0"/>
+  <property ID="561871" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13328" VALUE="6749d23164225e7f1eff01d1644d05ab41476f0" NUMERIC_VALUE="0"/>
+  <property ID="561872" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13332" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="561873" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13334" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="561874" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13336" VALUE="2934c6baa4cc2dfcf4ad46def7fc1e8114dd58df" NUMERIC_VALUE="0" NORMALIZED_VALUE="2934c6baa4cc2dfcf4ad46def7fc1e8114dd58df"/>
+  <property ID="561875" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13338" VALUE="/TRON/Submissions" NUMERIC_VALUE="0" NORMALIZED_VALUE="/tron/submissions"/>
+  <property ID="561876" OBJECT_ID="47250" OBJECT_TYPE_PROPERTY_ID="13337" VALUE="53d538441e4b3ce664a5508a776b0fe15de2363a" NUMERIC_VALUE="0"/>
+  <property ID="574715" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13326" VALUE="2014" NUMERIC_VALUE="0" NORMALIZED_VALUE="2014"/>
+  <property ID="574716" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13330" VALUE="cmis:folder" NUMERIC_VALUE="0" NORMALIZED_VALUE="cmis:folder"/>
+  <property ID="574717" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13333" VALUE="2014-09-26T10:08:55.071Z" NUMERIC_VALUE="0"/>
+  <property ID="574718" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13335" VALUE="2014-09-26T10:08:55.071Z" NUMERIC_VALUE="0"/>
+  <property ID="574719" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13329" VALUE="cmis:folder" NUMERIC_VALUE="0"/>
+  <property ID="574720" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13328" VALUE="202d2d4d18f889c87276f72a0e5472e623089200" NUMERIC_VALUE="0"/>
+  <property ID="574721" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13332" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="574722" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13334" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="574723" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13336" VALUE="a9c72f646141cf1f12188ec145e4c8ba5f142c6" NUMERIC_VALUE="0" NORMALIZED_VALUE="a9c72f646141cf1f12188ec145e4c8ba5f142c6"/>
+  <property ID="574724" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13338" VALUE="/TRON/ECDB/2014" NUMERIC_VALUE="0" NORMALIZED_VALUE="/tron/ecdb/2014"/>
+  <property ID="574725" OBJECT_ID="47803" OBJECT_TYPE_PROPERTY_ID="13337" VALUE="4591a57f84fe5235701ec38b5e56078899f76c58" NUMERIC_VALUE="0"/>
+  <property ID="559536" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13326" VALUE="TRON" NUMERIC_VALUE="0" NORMALIZED_VALUE="tron"/>
+  <property ID="559537" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13330" VALUE="cmis:folder" NUMERIC_VALUE="0" NORMALIZED_VALUE="cmis:folder"/>
+  <property ID="559538" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13333" VALUE="2014-09-26T09:45:44.445Z" NUMERIC_VALUE="0"/>
+  <property ID="559539" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13335" VALUE="2014-09-26T09:45:44.445Z" NUMERIC_VALUE="0"/>
+  <property ID="559540" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13329" VALUE="cmis:folder" NUMERIC_VALUE="0"/>
+  <property ID="559541" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13328" VALUE="53d538441e4b3ce664a5508a776b0fe15de2363a" NUMERIC_VALUE="0"/>
+  <property ID="559542" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13332" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="559543" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13334" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="559544" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13336" VALUE="9373ed1f5afd180bc0cedf1ebb83a947a348f6b7" NUMERIC_VALUE="0" NORMALIZED_VALUE="9373ed1f5afd180bc0cedf1ebb83a947a348f6b7"/>
+  <property ID="559545" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13338" VALUE="/TRON" NUMERIC_VALUE="0" NORMALIZED_VALUE="/tron"/>
+  <property ID="559546" OBJECT_ID="47100" OBJECT_TYPE_PROPERTY_ID="13337" VALUE="b616f67dcc1626ef4f4e0c26a7f224162ba07304" NUMERIC_VALUE="0"/>
+  <property ID="567262" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13335" VALUE="2014-09-26T10:00:03.286Z" NUMERIC_VALUE="0"/>
+  <property ID="567259" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13326" VALUE="Trade Defence Non Confidential Files" NUMERIC_VALUE="0" NORMALIZED_VALUE="trade defence non confidential files"/>
+  <property ID="567260" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13330" VALUE="cmis:folder" NUMERIC_VALUE="0" NORMALIZED_VALUE="cmis:folder"/>
+  <property ID="567261" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13333" VALUE="2014-09-26T10:00:03.286Z" NUMERIC_VALUE="0"/>
+  <property ID="567263" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13329" VALUE="cmis:folder" NUMERIC_VALUE="0"/>
+  <property ID="567264" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13328" VALUE="4fce3803afbc21911fa628f3d60ea964b0fd586b" NUMERIC_VALUE="0"/>
+  <property ID="567265" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13332" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="567266" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13334" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="567267" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13336" VALUE="ab55eb276efe67c2cbfb28c6fda02a1af2df075d" NUMERIC_VALUE="0" NORMALIZED_VALUE="ab55eb276efe67c2cbfb28c6fda02a1af2df075d"/>
+  <property ID="567268" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13338" VALUE="/TRON/Trade Defence Non Confidential Files" NUMERIC_VALUE="0" NORMALIZED_VALUE="/tron/trade defence non confidential files"/>
+  <property ID="567269" OBJECT_ID="47573" OBJECT_TYPE_PROPERTY_ID="13337" VALUE="53d538441e4b3ce664a5508a776b0fe15de2363a" NUMERIC_VALUE="0"/>
+  <property ID="575055" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13335" VALUE="2014-09-26T10:09:31.108Z" NUMERIC_VALUE="0"/>
+  <property ID="575052" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13326" VALUE="ECDB Support" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecdb support"/>
+  <property ID="575053" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13330" VALUE="cmis:folder" NUMERIC_VALUE="0" NORMALIZED_VALUE="cmis:folder"/>
+  <property ID="575054" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13333" VALUE="2014-09-26T10:09:31.108Z" NUMERIC_VALUE="0"/>
+  <property ID="575056" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13329" VALUE="cmis:folder" NUMERIC_VALUE="0"/>
+  <property ID="575057" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13328" VALUE="8c82a61058b5c6030b99c93b33faf33a28e82ea4" NUMERIC_VALUE="0"/>
+  <property ID="575058" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13332" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="575059" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13334" VALUE="ecas/admin" NUMERIC_VALUE="0" NORMALIZED_VALUE="ecas/admin"/>
+  <property ID="575060" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13336" VALUE="d9cb564b50c45cd008cf13cbbe823a1cef5912c0" NUMERIC_VALUE="0" NORMALIZED_VALUE="d9cb564b50c45cd008cf13cbbe823a1cef5912c0"/>
+  <property ID="575061" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13338" VALUE="/TRON/ECDB Support" NUMERIC_VALUE="0" NORMALIZED_VALUE="/tron/ecdb support"/>
+  <property ID="575062" OBJECT_ID="47823" OBJECT_TYPE_PROPERTY_ID="13337" VALUE="53d538441e4b3ce664a5508a776b0fe15de2363a" NUMERIC_VALUE="0"/>
+  <permission ID="10261" REPOSITORY_ID="10200" NAME="cmis:all" DESCRIPTION="All"/>
+  <permission ID="10262" REPOSITORY_ID="10200" NAME="cmis:write" DESCRIPTION="Write" PARENT_ID="10261"/>
+  <permission ID="10263" REPOSITORY_ID="10200" NAME="cmis:read" DESCRIPTION="Read" PARENT_ID="10262"/>
+  <acl ID="65999" OBJECT_ID="47101" PRINCIPAL_ID="cmis:anyone" PERMISSION_ID="10263" IS_DIRECT="F"/>
+  <acl ID="69435" OBJECT_ID="47802" PRINCIPAL_ID="tron/cn=export credit,ou=tron,ou=groups,dc=example,dc=com" PERMISSION_ID="10263" IS_DIRECT="T"/>
+  <acl ID="69436" OBJECT_ID="47802" PRINCIPAL_ID="tron/cn=export credit admin,ou=tron,ou=groups,dc=example,dc=com" PERMISSION_ID="10261" IS_DIRECT="T"/>
+  <acl ID="69440" OBJECT_ID="47803" PRINCIPAL_ID="tron/cn=export credit admin,ou=tron,ou=groups,dc=example,dc=com" PERMISSION_ID="10261" IS_DIRECT="F"/>
+  <acl ID="69441" OBJECT_ID="47803" PRINCIPAL_ID="tron/cn=export credit,ou=tron,ou=groups,dc=example,dc=com" PERMISSION_ID="10263" IS_DIRECT="F"/>
+  <acl ID="65996" OBJECT_ID="47100" PRINCIPAL_ID="cmis:anyone" PERMISSION_ID="10263" IS_DIRECT="T"/>
+  <acl ID="65993" OBJECT_ID="47099" PRINCIPAL_ID="cmis:anyone" PERMISSION_ID="10261" IS_DIRECT="T"/>
+  <acl ID="66513" OBJECT_ID="47250" PRINCIPAL_ID="cmis:anyone" PERMISSION_ID="10263" IS_DIRECT="F"/>
+  <acl ID="69539" OBJECT_ID="47823" PRINCIPAL_ID="cmis:anyone" PERMISSION_ID="10263" IS_DIRECT="F"/>
+  <acl ID="69540" OBJECT_ID="47823" PRINCIPAL_ID="tron/cn=export credit,ou=tron,ou=groups,dc=example,dc=com" PERMISSION_ID="10263" IS_DIRECT="T"/>
+  <acl ID="69541" OBJECT_ID="47823" PRINCIPAL_ID="tron/cn=export credit admin,ou=tron,ou=groups,dc=example,dc=com" PERMISSION_ID="10261" IS_DIRECT="T"/>
+  <acl ID="68300" OBJECT_ID="47573" PRINCIPAL_ID="cmis:anyone" PERMISSION_ID="10263" IS_DIRECT="F"/>
+  <object_child OBJECT_ID="47100" CHILD_OBJECT_ID="47101"/>
+  <object_child OBJECT_ID="47100" CHILD_OBJECT_ID="47802"/>
+  <object_child OBJECT_ID="47100" CHILD_OBJECT_ID="47250"/>
+  <object_child OBJECT_ID="47802" CHILD_OBJECT_ID="47803"/>
+  <object_child OBJECT_ID="47100" CHILD_OBJECT_ID="47823"/>
+  <object_child OBJECT_ID="47099" CHILD_OBJECT_ID="47100"/>
+  <object_child OBJECT_ID="47100" CHILD_OBJECT_ID="47573"/>
+  <permission_mapping ID="11614" REPOSITORY_ID="10200" KEY="canAddPolicy.Policy" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11615" REPOSITORY_ID="10200" KEY="canCheckout.Document" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11616" REPOSITORY_ID="10200" KEY="canGetObjectRelationships.Object" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11617" REPOSITORY_ID="10200" KEY="canCreateRelationship.Target" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11618" REPOSITORY_ID="10200" KEY="canDeleteContent.Document" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11619" REPOSITORY_ID="10200" KEY="canGetParents.Folder" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11620" REPOSITORY_ID="10200" KEY="canCheckin.Document" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11621" REPOSITORY_ID="10200" KEY="canGetFolderParent.Object" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11622" REPOSITORY_ID="10200" KEY="canCreateFolder.Folder" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11623" REPOSITORY_ID="10200" KEY="canCancelCheckout.Document" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11624" REPOSITORY_ID="10200" KEY="canDeleteTree.Folder" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11625" REPOSITORY_ID="10200" KEY="canCreateDocument.Folder" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11626" REPOSITORY_ID="10200" KEY="canGetProperties.Object" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11627" REPOSITORY_ID="10200" KEY="canGetDescendents.Folder" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11628" REPOSITORY_ID="10200" KEY="canGetACL.Object" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11629" REPOSITORY_ID="10200" KEY="canMove.Source" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11630" REPOSITORY_ID="10200" KEY="canGetAppliedPolicies.Object" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11631" REPOSITORY_ID="10200" KEY="canRemovePolicy.Object" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11632" REPOSITORY_ID="10200" KEY="canAddToFolder.Object" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11633" REPOSITORY_ID="10200" KEY="canDelete.Object" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11634" REPOSITORY_ID="10200" KEY="canRemovePolicy.Policy" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11635" REPOSITORY_ID="10200" KEY="canRemoveFromFolder.Object" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11636" REPOSITORY_ID="10200" KEY="canMove.Object" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11637" REPOSITORY_ID="10200" KEY="canSetContent.Document" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11638" REPOSITORY_ID="10200" KEY="canApplyACL.Object" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11639" REPOSITORY_ID="10200" KEY="canUpdateProperties.Object" PERMISSION_ID="10262"/>
+  <permission_mapping ID="11640" REPOSITORY_ID="10200" KEY="canAddToFolder.Folder" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11641" REPOSITORY_ID="10200" KEY="canGetAllVersions.VersionSeries" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11642" REPOSITORY_ID="10200" KEY="canCreateRelationship.Source" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11643" REPOSITORY_ID="10200" KEY="canMove.Target" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11644" REPOSITORY_ID="10200" KEY="canRemoveFromFolder.Folder" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11645" REPOSITORY_ID="10200" KEY="canGetChildren.Folder" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11646" REPOSITORY_ID="10200" KEY="canViewContent.Object" PERMISSION_ID="10263"/>
+  <permission_mapping ID="11647" REPOSITORY_ID="10200" KEY="canAddPolicy.Object" PERMISSION_ID="10263"/>
+</dataset>

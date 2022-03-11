@@ -1,0 +1,12 @@
+5 Threads 
+0 seconds delay
+1 time
+
+	Only once
+		Access to the first repository
+		If the test folder doesn't exist create the folder.
+		If the test subfolder doesn't exist create the folder.
+
+
+At the end of the test one test folder and only one test subfolder must exist.
+This test will fail if the validation of unique names by folder in the creation method is not properly synchronized.

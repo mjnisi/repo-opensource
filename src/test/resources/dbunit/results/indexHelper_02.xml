@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+ <object ID="203" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document WITH STREAM 3" INDEX_STATE_CONTENT="1" INDEX_TRIES_CONTENT="0"/>
+ 
+ 	<index_word REPOSITORY_ID="100" WORD="convinience"/>
+    <index_word REPOSITORY_ID="100" WORD="indexing"/>
+    <index_word REPOSITORY_ID="100" WORD="process"/>
+    <index_word REPOSITORY_ID="100" WORD="test"/>
+    <index_word REPOSITORY_ID="100" WORD="text"/>
+    <index_word REPOSITORY_ID="100" WORD="the"/>
+    <index_word REPOSITORY_ID="100" WORD="to"/>
+	
+	<index_word_object OBJECT_ID="203" property_id="-1" object_type_property_id="-1" FREQUENCY="1" sqrt_frequency="1" />
+  	<index_word_object OBJECT_ID="203" property_id="-1" object_type_property_id="-1" FREQUENCY="1" sqrt_frequency="1" />
+  	<index_word_object OBJECT_ID="203" property_id="-1" object_type_property_id="-1" FREQUENCY="1" sqrt_frequency="1" />
+  	<index_word_object OBJECT_ID="203" property_id="-1" object_type_property_id="-1" FREQUENCY="1" sqrt_frequency="1" />
+  	<index_word_object OBJECT_ID="203" property_id="-1" object_type_property_id="-1" FREQUENCY="1" sqrt_frequency="1" />
+  	<index_word_object OBJECT_ID="203" property_id="-1" object_type_property_id="-1" FREQUENCY="1" sqrt_frequency="1" />
+  	<index_word_object OBJECT_ID="203" property_id="-1" object_type_property_id="-1"  FREQUENCY="1" sqrt_frequency="1" />
+	
+	<index_word_position POSITION="1" STEP="1" />
+	<index_word_position POSITION="2" STEP="1" />
+	<index_word_position POSITION="3" STEP="1" />
+	<index_word_position POSITION="4" STEP="1" />
+	<index_word_position POSITION="5" STEP="1" />
+	<index_word_position POSITION="6" STEP="1" />
+	<index_word_position POSITION="7" STEP="1" />
+	
+</dataset>

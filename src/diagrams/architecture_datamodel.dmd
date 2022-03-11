@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="repo" id="1C11692D-52D4-BB50-024A-6E076C9D338B" version="3.5">
+<createdBy>martjoe</createdBy>
+<createdTime>2013-05-02 08:32:05 UTC</createdTime>
+<ownerDesignName>repo</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>1C11692D-52D4-BB50-024A-6E076C9D338B</designId>
+</OSDM_Design>

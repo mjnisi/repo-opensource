@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+	<index_word REPOSITORY_ID="101" WORD="one"/>
+    <index_word REPOSITORY_ID="101" WORD="two"/>
+    <index_word REPOSITORY_ID="101" WORD="three"/>
+    <index_word REPOSITORY_ID="101" WORD="four"/>
+	
+	<index_word_object ID="1" WORD_ID="1" OBJECT_ID="102" property_id="-1" object_type_property_id="-1" FREQUENCY="2" />
+  	<index_word_object ID="2" WORD_ID="2" OBJECT_ID="102" property_id="-1" object_type_property_id="-1" FREQUENCY="1" />
+  	<index_word_object ID="3" WORD_ID="3" OBJECT_ID="102" property_id="-1" object_type_property_id="-1" FREQUENCY="1" />
+  	<index_word_object ID="4" WORD_ID="4" OBJECT_ID="102" property_id="-1" object_type_property_id="-1" FREQUENCY="1" />
+	
+	<index_word_position WORD_OBJECT_ID="1" POSITION="1" STEP="1" />
+	<index_word_position WORD_OBJECT_ID="2" POSITION="2" STEP="1" />
+	<index_word_position WORD_OBJECT_ID="3" POSITION="3" STEP="1" />
+	<index_word_position WORD_OBJECT_ID="4" POSITION="4" STEP="1" />
+	<index_word_position WORD_OBJECT_ID="1" POSITION="5" STEP="1" />
+
+</dataset>

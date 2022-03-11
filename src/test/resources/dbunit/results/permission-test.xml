@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<permission REPOSITORY_ID="100" NAME="test:permission1" DESCRIPTION="test permission" PARENT_ID="101"/>	
+</dataset>

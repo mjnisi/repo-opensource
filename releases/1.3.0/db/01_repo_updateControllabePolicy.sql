@@ -1,0 +1,1 @@
+update object_type set controllable_policy='T' where cmis_id != 'cmis:secondary';

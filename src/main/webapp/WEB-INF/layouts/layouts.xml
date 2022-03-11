@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+    <definition name="serverAlive" template="/WEB-INF/views/serverAlive.jsp">
+    </definition>
+
+    <definition name="main.full" template="/WEB-INF/layouts/default.jsp">
+        <put-attribute name="layout-head" value="/WEB-INF/views/admin/layout-head.jsp" />
+        <put-attribute name="layout-sidebar" value="/WEB-INF/views/admin/layout-sidebar.jsp" />
+        <put-attribute name="layout-content" value="" />
+    </definition>
+
+    <definition name="adminMain" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/index.jsp" />
+    </definition>
+
+    <definition name="statusPage" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/statusPage.jsp" />
+    </definition>
+
+    <definition name="capabilities" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/capabilities.jsp" />
+    </definition>
+
+    <definition name="renditions" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/renditions.jsp" />
+    </definition>
+
+    <definition name="security" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/security.jsp" />
+    </definition>
+
+    <definition name="permissions" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/permissions.jsp" />
+    </definition>
+
+    <definition name="mappings" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/mappings.jsp" />
+    </definition>
+
+    <definition name="policies" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/policies.jsp" />
+    </definition>
+
+    <definition name="delete" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/delete.jsp" />
+    </definition>
+
+    <definition name="newRepository" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/newRepository.jsp" />
+    </definition>
+
+    <definition name="newRepositoryConfirmation" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/newRepositoryConfirm.jsp" />
+    </definition>
+
+    <definition name="sessions" extends="main.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/admin/sessions.jsp" />
+    </definition>
+
+    <definition name="ticket.full" template="/WEB-INF/layouts/default.jsp">
+        <put-attribute name="layout-head" value="/WEB-INF/views/ticket/layout-head.jsp" />
+        <put-attribute name="layout-sidebar" value="/WEB-INF/views/ticket/layout-sidebar.jsp" />
+        <put-attribute name="layout-content" value="" />
+    </definition>
+    
+    <definition name="newTicket" extends="ticket.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/ticket/newTicket.jsp" />
+    </definition>
+
+    <definition name="newTicketConfirmation" extends="ticket.full">
+        <put-attribute name="layout-content" value="/WEB-INF/views/ticket/newTicketConfirm.jsp" />
+    </definition>
+</tiles-definitions>

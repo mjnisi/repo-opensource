@@ -1,0 +1,9 @@
+#ROLE_CODE|OPERATION_CODE
+REPO.Admin|REPO.CreateRepo
+REPO.Admin|REPO.DeleteRepo
+REPO.Admin|REPO.ChangeRepoCapabilities
+REPO.Admin|REPO.ChangeRepoSecurity
+REPO.Admin|REPO.ViewRepoSessions
+REPO.Admin|REPO.ViewRepoSummary
+REPO.Admin|REPO.ManageAllFiles
+REPO.FilingAdmin|REPO.ManageAllFiles

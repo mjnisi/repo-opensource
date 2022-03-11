@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="01_repo_structure_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10" id="20F0A10A-EF59-84C9-664F-DABA3488538A">
+         <createdBy>martjoe</createdBy>
+         <createdTime>2013-09-27 11:53:50 UTC</createdTime>
+         <ownerDesignName>architecture_datamodel</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>10</dataTypeSize>
+         <fileName>01_repo_structure_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_4000" id="3F7779E2-1707-FE6F-CDF5-C1011A4C8FDE">
+         <createdBy>martjoe</createdBy>
+         <createdTime>2013-07-09 16:41:42 UTC</createdTime>
+         <ownerDesignName>repo</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>4000</dataTypeSize>
+         <fileName>01_repo_structure_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_200" id="91ED2161-B98F-FA04-18DB-E2685FE7663B">
+         <createdBy>martjoe</createdBy>
+         <createdTime>2013-07-09 16:41:42 UTC</createdTime>
+         <ownerDesignName>repo</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>200</dataTypeSize>
+         <fileName>01_repo_structure_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Timestamp_6_0_0" id="C5FC028B-5D57-2000-0FB4-3284314EC042">
+         <createdBy>martjoe</createdBy>
+         <createdTime>2013-10-18 11:40:55 UTC</createdTime>
+         <ownerDesignName>architecture_datamodel</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>6</dataTypePrecision>
+         <fileName>01_repo_structure_Domains</fileName>
+         <logicalDatatype>LOGDT015</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20" id="DCA70339-3ED7-F803-B8FC-902C052E0A96">
+         <createdBy>martjoe</createdBy>
+         <createdTime>2013-09-27 11:53:50 UTC</createdTime>
+         <ownerDesignName>architecture_datamodel</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>20</dataTypeSize>
+         <fileName>01_repo_structure_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

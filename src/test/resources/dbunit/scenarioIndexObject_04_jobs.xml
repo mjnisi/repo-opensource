@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    
+    <object ID="201" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test index 1" INDEX_STATE_CONTENT="0" INDEX_TRIES_CONTENT="0" />
+        <property ID="2010" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="101" VALUE="test1" NUMERIC_VALUE="1" />
+        <property ID="2011" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="104" VALUE="cmis:document" NUMERIC_VALUE="2" />
+    
+    	<stream ID="201" DATA="TXT_FILE_MARK_5"/>
+  		
+  		<property ID="2012" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="120" VALUE="5" NUMERIC_VALUE="5" />
+  		<property ID="2013" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="121" VALUE="plain/text" NUMERIC_VALUE="0" />
+  		<property ID="2014" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="122" VALUE="textFileMark4.txt" NUMERIC_VALUE="0" />
+  		<property ID="2015" OBJECT_ID="201" OBJECT_TYPE_PROPERTY_ID="123" VALUE="201" NUMERIC_VALUE="201" />
+  		
+    
+    <object ID="202" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test index 2" INDEX_STATE_CONTENT="2" INDEX_TRIES_CONTENT="1"/>
+    	<property ID="2020" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="101" VALUE="test2" NUMERIC_VALUE="1" />
+    	<property ID="2021" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="104" VALUE="cmis:document" NUMERIC_VALUE="2" />
+    
+     	<stream ID="202" DATA="TXT_FILE_MARK_5"/>
+  		
+  		<property ID="2022" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="120" VALUE="5" NUMERIC_VALUE="5" />
+  		<property ID="2023" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="121" VALUE="plain/text" NUMERIC_VALUE="0" />
+  		<property ID="2024" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="122" VALUE="textFileMark5.txt" NUMERIC_VALUE="0" />
+  		<property ID="2025" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="123" VALUE="202" NUMERIC_VALUE="202" />
+  		
+  		
+  	<object ID="203" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test index 3" INDEX_STATE_CONTENT="2" INDEX_TRIES_CONTENT="3" />
+    	<property ID="2030" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="101" VALUE="test3" NUMERIC_VALUE="1" />
+    	<property ID="2031" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="104" VALUE="cmis:document" NUMERIC_VALUE="2" />
+    
+   	 	<stream ID="203" DATA="TXT_FILE_MARK_4"/>
+  		
+  		<property ID="2032" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="120" VALUE="7" NUMERIC_VALUE="7" />
+  		<property ID="2033" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="121" VALUE="plain/text" NUMERIC_VALUE="0" />
+  		<property ID="2034" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="122" VALUE="textFileMark4.txt" NUMERIC_VALUE="0" />
+  		<property ID="2035" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="123" VALUE="203" NUMERIC_VALUE="203" />	
+  	
+	
+	<acl ID="112" OBJECT_ID="201" PRINCIPAL_ID="/test1" PERMISSION_ID="102"/>
+    <acl ID="113" OBJECT_ID="201" PRINCIPAL_ID="/test1" PERMISSION_ID="101"/>
+    
+    <acl ID="114" OBJECT_ID="202" PRINCIPAL_ID="/test2" PERMISSION_ID="102"/>
+    <acl ID="115" OBJECT_ID="202" PRINCIPAL_ID="/test2" PERMISSION_ID="101"/>
+    
+    <acl ID="116" OBJECT_ID="203" PRINCIPAL_ID="/test3" PERMISSION_ID="102"/>
+    <acl ID="117" OBJECT_ID="203" PRINCIPAL_ID="/test3" PERMISSION_ID="101"/>
+    
+     <object_child OBJECT_ID="101" CHILD_OBJECT_ID="201"/> 
+  	 <object_child OBJECT_ID="101" CHILD_OBJECT_ID="202"/> 
+  	 <object_child OBJECT_ID="101" CHILD_OBJECT_ID="203"/> 
+  
+  <index_word />
+  <index_word_object />
+  <index_word_position />
+</dataset>

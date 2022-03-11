@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypeFolderDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>slk:caseFolder</cmis:id>
+	<cmis:localName>slk:caseFolder</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>slk:caseFolder</cmis:displayName>
+	<cmis:queryName>slk:caseFolder</cmis:queryName>
+	<cmis:description>slk:caseFolder</cmis:description>
+	<cmis:baseId>cmis:folder</cmis:baseId>
+	<cmis:parentId>cmis:folder</cmis:parentId>
+	<cmis:creatable>true</cmis:creatable>
+	<cmis:fileable>true</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>true</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>false</cmis:controllablePolicy>
+	<cmis:controllableACL>true</cmis:controllableACL>
+	
+	<cmis:propertyStringDefinition>
+		<cmis:id>slk:caseName</cmis:id>
+		<cmis:localName>slk:caseName</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:caseName</cmis:displayName>
+		<cmis:queryName>slk:caseName</cmis:queryName>
+		<cmis:description>Case Name</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>oncreate</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+	
+	<cmis:propertyIntegerDefinition>
+		<cmis:id>slk:nbOfDocuments</cmis:id>
+		<cmis:localName>slk:nbOfDocuments</cmis:localName>
+		<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+		<cmis:displayName>slk:nbOfDocuments</cmis:displayName>
+		<cmis:queryName>slk:nbOfDocuments</cmis:queryName>
+		<cmis:description>Number of documents</cmis:description>
+		<cmis:propertyType>integer</cmis:propertyType>
+		<cmis:cardinality>single</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:inherited>false</cmis:inherited>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyIntegerDefinition>
+
+</cmis:type>

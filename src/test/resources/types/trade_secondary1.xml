@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cmis:type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:type="cmis:cmisTypeItemDefinitionType" xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/">
+	<cmis:id>trade:secondary1</cmis:id>
+	<cmis:localName>trade:secondary1</cmis:localName>
+	<cmis:localNamespace>http://ec.europa.eu/trade/repo</cmis:localNamespace>
+	<cmis:displayName>trade:secondary1</cmis:displayName>
+	<cmis:queryName>trade:secondary1</cmis:queryName>
+	<cmis:description>Trade secondary 1</cmis:description>
+	<cmis:baseId>cmis:secondary</cmis:baseId>
+	<cmis:parentId>trade:secondary</cmis:parentId>
+	<cmis:creatable>false</cmis:creatable>
+	<cmis:fileable>false</cmis:fileable>
+	<cmis:queryable>true</cmis:queryable>
+	<cmis:fulltextIndexed>true</cmis:fulltextIndexed>
+	<cmis:includedInSupertypeQuery>true</cmis:includedInSupertypeQuery>
+	<cmis:controllablePolicy>false</cmis:controllablePolicy>
+	<cmis:controllableACL>false</cmis:controllableACL>
+	<cmis:propertyStringDefinition>
+		<cmis:id>trade:secondary1</cmis:id>
+		<cmis:localName>trade:secondary1</cmis:localName>
+		<cmis:displayName>trade:secondary1</cmis:displayName>
+		<cmis:queryName>trade:secondary1</cmis:queryName>
+		<cmis:description>Property</cmis:description>
+		<cmis:propertyType>string</cmis:propertyType>
+		<cmis:cardinality>multi</cmis:cardinality>
+		<cmis:updatability>readwrite</cmis:updatability>
+		<cmis:required>false</cmis:required>
+		<cmis:queryable>true</cmis:queryable>
+		<cmis:orderable>true</cmis:orderable>
+	</cmis:propertyStringDefinition>
+</cmis:type>

@@ -1,0 +1,1 @@
+create index idx_change_event_repository on change_event(repository_id, id);

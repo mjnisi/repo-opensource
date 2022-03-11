@@ -1,0 +1,8 @@
+# APP_CODE, OPERATION_CODE, NAME, DESCRIPTION
+REPO|REPO.CreateRepo|REPO.CreateRepo|Create new repository
+REPO|REPO.DeleteRepo|REPO.DeleteRepo|Delete a repository
+REPO|REPO.ChangeRepoCapabilities|REPO.ChangeRepoCapabilities|Change the repository capabilities
+REPO|REPO.ChangeRepoSecurity|REPO.ChangeRepoSecurity|Change the repository security handlers
+REPO|REPO.ViewRepoSessions|REPO.ViewRepoSessions|View repository user sessions
+REPO|REPO.ViewRepoSummary|REPO.ViewRepoSummary|View repository summary
+REPO|REPO.ManageAllFiles|REPO.ManageAllFiles|Manage all files of the repository, for having full access like administrators

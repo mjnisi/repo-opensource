@@ -1,0 +1,27 @@
+Server:
+  Save repo.ks in /data/applications/repo/.cert/ folder.
+  Uncomment the definition of the https connector in the server.xml configuration file. Add keystoreFile and keystorePass attributes:
+
+  <Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
+                 maxThreads="150" scheme="https" secure="true"
+                 clientAuth="false" sslProtocol="TLS"
+                 keystoreFile="/data/applications/repo/.cert/repo.ks"
+                 keystorePass="changeit"/>
+
+Client (In the case you are not already trusting in NON-PROD ECAS Certificate Authority):
+  JVM
+   To connect to the server from java application (like Workbench) you need to install the certificate in the JVM:
+   keytool -import -alias repo -file c:\Dev\repo.crt -keystore "c:\Program Files\Java\jdk1.7.0_03\jre\lib\security\cacerts"
+   Make sure that paths to cacerts file and repo.crt are correct.
+
+  Firefox
+   Firefox will download certificate from server automatically. Open https page (for example: https://serverdev.trade.cec.eu.int:8443/repo/serverAlive.jsp) and accept the certificate.
+
+  Internet Explorer
+    Certificate should be installed manually with the following procedure:
+    1. Open IE Internet Options, choose Content tab and click Certificates
+    2. Choose Trusted Root certification Authorities and click Import
+    3. Specify the file to import (repo.crt)
+    4. Verify that certificate is stored in Trusted Root Certification Authorities store
+    5. Connect to repository thru https to verify the certificate installation
+

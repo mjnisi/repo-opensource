@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.4" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="eu.trade.repo.index.txsync.IndexTransactionSynchronization" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/txsync/IndexTransactionSynchronization.java" binary="false" 
+    label="indexTransactionSynchronization" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="2">      
+      <position height="733" width="212" x="5" y="99"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="eu.trade.repo.index.impl.IndexImpl" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/IndexImpl.java" binary="false" label="indexImpl" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="4">      
+      <position height="691" width="107" x="221" y="120"/>    
+    </execution>    
+    <execution id="7">      
+      <position height="628" width="0" x="0" y="162"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="367" width="0" x="0" y="214"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="157" width="0" x="0" y="612"/>    
+    </execution>  
+  </object>  
+  <object id="34" language="java" name="eu.trade.repo.index.IndexSynchronizer" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/IndexSynchronizer.java" binary="false" label="indexSynchronizer" 
+    type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="29">      
+      <position height="21" width="0" x="0" y="643"/>    
+    </execution>  
+  </object>  
+  <object id="35" language="java" name="eu.trade.repo.index.IndexExecutorSelector" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/IndexExecutorSelector.java" binary="false" 
+    label="indexExecutorSelector" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="31">      
+      <position height="21" width="0" x="0" y="685"/>    
+    </execution>  
+  </object>  
+  <object id="36" language="java" name="org.springframework.core.task.TaskExecutor" project="repo" 
+    file="C:/Dev/.m2/repository/org/springframework/spring-core/3.2.3.RELEASE/spring-core-3.2.3.RELEASE.jar" 
+    binary="true" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="33">      
+      <position height="21" width="0" x="0" y="727"/>    
+    </execution>  
+  </object>  
+  <object id="37" language="java" name="eu.trade.repo.index.IndexTaskServiceFactory" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/IndexTaskServiceFactory.java" binary="false" label="taskFactory" 
+    type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="13">      
+      <position height="21" width="0" x="0" y="245"/>    
+    </execution>  
+  </object>  
+  <object id="38" language="java" name="eu.trade.repo.index.IndexTask" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/IndexTask.java" binary="false" label="indexTask" type="interface" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="15">      
+      <position height="21" width="0" x="0" y="287"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="21" width="0" x="0" y="329"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="21" width="0" x="0" y="371"/>    
+    </execution>    
+    <execution id="21">      
+      <position height="21" width="0" x="0" y="413"/>    
+    </execution>    
+    <execution id="23">      
+      <position height="21" width="0" x="0" y="455"/>    
+    </execution>    
+    <execution id="25">      
+      <position height="21" width="0" x="0" y="497"/>    
+    </execution>    
+    <execution id="27">      
+      <position height="21" width="0" x="0" y="539"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="executeOperation(java.lang.Integer,java.lang.Integer,java.lang.String,java.math.BigInteger,boolean,eu.trade.repo.index.model.IndexOperation):void">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" 
+    operation="executeIfAllowed(java.lang.Integer,java.lang.Integer,java.lang.String,java.math.BigInteger,boolean,eu.trade.repo.index.model.IndexOperation,boolean,java.lang.String):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="8" 
+    operation="createTask(java.lang.Integer,java.lang.Integer,java.lang.String,java.math.BigInteger,boolean,eu.trade.repo.index.model.IndexOperation,java.lang.String):eu.trade.repo.index.IndexTask">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" operation="executeIfAllowed(eu.trade.repo.index.IndexTask,boolean):void">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="getIndexService():eu.trade.repo.index.IndexTask">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" operation="setRepositoryId(java.lang.Integer):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" operation="setObjectId(java.lang.Integer):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="18" operation="setOperation(eu.trade.repo.index.model.IndexOperation):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>  
+  <message id="20" operation="setFileName(java.lang.String):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>  
+  <message id="22" operation="setFileSize(java.math.BigInteger):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="23"/>  
+  </message>  
+  <message id="24" operation="setUpdateObjectIndexInfo(boolean):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="25"/>  
+  </message>  
+  <message id="26" operation="setOwner(java.lang.String):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="27"/>  
+  </message>  
+  <message id="28" operation="putInQueue(eu.trade.repo.index.IndexTask,boolean):boolean">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="29"/>  
+  </message>  
+  <message id="30" operation="getTaskExecutor(eu.trade.repo.index.IndexTask):org.springframework.core.task.TaskExecutor">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="31"/>  
+  </message>  
+  <message id="32" operation="execute(java.lang.Runnable):void">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="33"/>  
+  </message>
+</sequence-diagram>

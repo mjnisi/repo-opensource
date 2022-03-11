@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+ <repository ID="100" CMIS_ID="test_repo_02" NAME="test_repo_01" DESCRIPTION="Test repository 01" C_GET_DESCENDANTS="F" C_GET_FOLDER_TREE="F" C_CONTENT_STREAM_UPDATABILITY="anytime" C_CHANGES="none" C_RENDITIONS="none" C_MULTIFILING="F" C_UNFILING="F" C_VERSION_SPECIFIC_FILING="F" C_PWC_UPDATABLE="F" C_PWC_SEARCHABLE="F" C_ALL_VERSIONS_SEARCHABLE="F" C_QUERY="none" C_JOIN="none" C_ACL="none"/>
+ 
+ <object_type ID="101" REPOSITORY_ID="100" CMIS_ID="cmis:document" LOCAL_NAME="cmis:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:document" DISPLAY_NAME="cmis:document" BASE_ID="101"  CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+ 
+ <object_type_property ID="101" OBJECT_TYPE_ID="101" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" QUERY_NAME="cmis:name" DESCRIPTION="Name of the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="102" OBJECT_TYPE_ID="101" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" QUERY_NAME="cmis:objectId" DESCRIPTION="Id of the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>                                                                                  
+  <object_type_property ID="103" OBJECT_TYPE_ID="101" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" QUERY_NAME="cmis:baseTypeId" DESCRIPTION="Id of the base object-type for the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="104" OBJECT_TYPE_ID="101" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" QUERY_NAME="cmis:objectTypeId" DESCRIPTION="Id of the object&apos;s type" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="105" OBJECT_TYPE_ID="101" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" QUERY_NAME="cmis:createdBy" DESCRIPTION="User who created the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="106" OBJECT_TYPE_ID="101" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" QUERY_NAME="cmis:creationDate" DESCRIPTION="DateTime when the object was created" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="107" OBJECT_TYPE_ID="101" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" QUERY_NAME="cmis:lastModifiedBy" DESCRIPTION="User who last modified the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="108" OBJECT_TYPE_ID="101" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" QUERY_NAME="cmis:lastModificationDate" DESCRIPTION="DateTime when the object was last modified" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="109" OBJECT_TYPE_ID="101" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" QUERY_NAME="cmis:changeToken" DESCRIPTION="Opaque token used for optimistic locking and concurrency checking" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object_type_property ID="110" OBJECT_TYPE_ID="101" CMIS_ID="cmis:isImmutable" LOCAL_NAME="cmis:isImmutable" QUERY_NAME="cmis:isImmutable" DESCRIPTION="TRUE if the repository MUST throw and error at any attempt to update or delete the object" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="111" OBJECT_TYPE_ID="101" CMIS_ID="cmis:isLatestVersion" LOCAL_NAME="cmis:isLatestVersion" QUERY_NAME="cmis:isLatestVersion" DESCRIPTION="See section 0" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="112" OBJECT_TYPE_ID="101" CMIS_ID="cmis:isMajorVersion" LOCAL_NAME="cmis:isMajorVersion" QUERY_NAME="cmis:isMajorVersion" DESCRIPTION="See section 0" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="113" OBJECT_TYPE_ID="101" CMIS_ID="cmis:isLatestMajorVersion" LOCAL_NAME="cmis:isLatestMajorVersion" QUERY_NAME="cmis:isLatestMajorVersion" DESCRIPTION="See section 0" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="114" OBJECT_TYPE_ID="101" CMIS_ID="cmis:versionLabel" LOCAL_NAME="cmis:versionLabel" QUERY_NAME="cmis:versionLabel" DESCRIPTION="See section 0" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="115" OBJECT_TYPE_ID="101" CMIS_ID="cmis:versionSeriesId" LOCAL_NAME="cmis:versionSeriesId" QUERY_NAME="cmis:versionSeriesId" DESCRIPTION="See section 0" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="116" OBJECT_TYPE_ID="101" CMIS_ID="cmis:isVersionSeriesCheckedOut" LOCAL_NAME="cmis:isVersionSeriesCheckedOut" QUERY_NAME="cmis:isVersionSeriesCheckedOut" DESCRIPTION="See section 0" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="117" OBJECT_TYPE_ID="101" CMIS_ID="cmis:versionSeriesCheckedOutBy" LOCAL_NAME="cmis:versionSeriesCheckedOutBy" QUERY_NAME="cmis:versionSeriesCheckedOutBy" DESCRIPTION="See section 0" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="118" OBJECT_TYPE_ID="101" CMIS_ID="cmis:versionSeriesCheckedOutId" LOCAL_NAME="cmis:versionSeriesCheckedOutId" QUERY_NAME="cmis:versionSeriesCheckedOutId" DESCRIPTION="See section 0" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="119" OBJECT_TYPE_ID="101" CMIS_ID="cmis:checkinComment" LOCAL_NAME="cmis:checkinComment" QUERY_NAME="cmis:checkinComment" DESCRIPTION="See section 0" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="120" OBJECT_TYPE_ID="101" CMIS_ID="cmis:contentStreamLength" LOCAL_NAME="cmis:contentStreamLength" QUERY_NAME="cmis:contentStreamLength" DESCRIPTION="Length of the content stream (in bytes)" PROPERTY_TYPE="integer" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="121" OBJECT_TYPE_ID="101" CMIS_ID="cmis:contentStreamMimeType" LOCAL_NAME="cmis:contentStreamMimeType" QUERY_NAME="cmis:contentStreamMimeType" DESCRIPTION="MIME type of the Content Stream" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="122" OBJECT_TYPE_ID="101" CMIS_ID="cmis:contentStreamFileName" LOCAL_NAME="cmis:contentStreamFileName" QUERY_NAME="cmis:contentStreamFileName" DESCRIPTION="File name of the Content Stream" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="123" OBJECT_TYPE_ID="101" CMIS_ID="cmis:contentStreamId" LOCAL_NAME="cmis:contentStreamId" QUERY_NAME="cmis:contentStreamId" DESCRIPTION="Id of the stream" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  
+  
+ 	
+  <object ID="200" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document 1"/>
+  <object ID="201" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document 2"/>
+  <object ID="202" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document WITH STREAM"/>
+  <object ID="203" OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="Test Document WITH EMPTY STREAM"/>
+  
+  <stream ID="202" DATA="TXT_FILE_MARK_1"/>
+  <property ID="1" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="120" VALUE="63" NUMERIC_VALUE="63" />
+  <property ID="2" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="121" VALUE="plain/text" NUMERIC_VALUE="0" />
+  <property ID="3" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="122" VALUE="TextTestFile" NUMERIC_VALUE="0" />
+  <property ID="4" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="123" VALUE="202" NUMERIC_VALUE="202" />
+  <property ID="9" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="107" VALUE="admin" NUMERIC_VALUE="0" />
+  <property ID="10" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="111" VALUE="1" NUMERIC_VALUE="1" />
+  <property ID="12" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="116" VALUE="0" NUMERIC_VALUE="0" />
+  <property ID="13" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="114" VALUE="1.0" NUMERIC_VALUE="0" />
+
+  <property ID="14" OBJECT_ID="200" OBJECT_TYPE_PROPERTY_ID="111" VALUE="1" NUMERIC_VALUE="1" />
+  <property ID="15" OBJECT_ID="200" OBJECT_TYPE_PROPERTY_ID="116" VALUE="0" NUMERIC_VALUE="0" />
+  <property ID="16" OBJECT_ID="200" OBJECT_TYPE_PROPERTY_ID="114" VALUE="1.0" NUMERIC_VALUE="0" />
+  
+  
+<!--   <property ID="10" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="108" VALUE="0" NUMERIC_VALUE="0" /> Empty value is the same as null in oracle that is the same as not set property -->
+  <property ID="11" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="109" VALUE="123" NUMERIC_VALUE="0" />
+  
+  
+  <stream ID="203" DATA="TXT_FILE_MARK_3"/>
+  <property ID="5" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="120" VALUE="0" NUMERIC_VALUE="0" />
+  <property ID="6" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="121" VALUE="plain/text" NUMERIC_VALUE="0" />
+  <property ID="7" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="122" VALUE="TextTestFile3" NUMERIC_VALUE="0" />
+  <property ID="8" OBJECT_ID="203" OBJECT_TYPE_PROPERTY_ID="123" VALUE="203" NUMERIC_VALUE="203" />
+
+</dataset>
+
+
+<!-- 
+<dataset>
+  <object ID="200" OBJECT_TYPE_ID="10" CMIS_OBJECT_ID="Test Document 1"/>
+  <object ID="201" OBJECT_TYPE_ID="10" CMIS_OBJECT_ID="Test Document 2"/>
+  <object ID="202" OBJECT_TYPE_ID="10" CMIS_OBJECT_ID="Test Document WITH STREAM"/>
+  
+  <object_child OBJECT_ID="99" CHILD_OBJECT_ID="200"/>
+  <object_child OBJECT_ID="99" CHILD_OBJECT_ID="201"/>
+  <object_child OBJECT_ID="99" CHILD_OBJECT_ID="202"/>
+
+  <stream ID="202" DATA="TXT_FILE_MARK_1"/>
+  <property ID="201" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="120" VALUE="63" NUMERIC_VALUE="63" />
+  <property ID="202" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="121" VALUE="TEXT" NUMERIC_VALUE="0" />
+  <property ID="203" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="122" VALUE="TextTestFile.txt" NUMERIC_VALUE="0" />
+  <property ID="204" OBJECT_ID="202" OBJECT_TYPE_PROPERTY_ID="123" VALUE="202" NUMERIC_VALUE="202" />
+</dataset>
+ -->
+ 

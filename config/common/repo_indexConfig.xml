@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<index>
+		<documentWordLimit>100000</documentWordLimit>
+		<pageSizes>
+			<!-- number of tokens read from content to transfer into transient table.  -->
+			<tokenSegment>10000</tokenSegment>
+			<!-- number of transient data(words) read to transfer into permanent tables. Maximum value allowed (oracle restriction): 1000 -->
+			<wordPage>1000</wordPage>
+			<!-- number of transient data (word position) read to transfer into permanent tables.  -->
+			<wordPositionPage>10000</wordPositionPage>
+			<!-- number of word-object to delete at a time. Maximum value allowed (oracle restriction): 1000 -->
+			<deletePage>1000</deletePage>
+		</pageSizes>
+		<fetchSize>
+			<content>10000</content>
+			<!--  recommended the same value as wordPositionPage -->
+			<transient>10000</transient>
+			<!--  recommended the same value as wordPage -->
+			<permanentIndex>1000</permanentIndex>
+		</fetchSize>
+		<pool>
+			<selection>
+				<limitSize>${REPO_INDEX_THREAD_POOL_SELECTION_LIMIT_SIZE}</limitSize>
+			</selection>
+			<metadataTasks>
+				<corePoolSize>${REPO_INDEX_THREAD_POOL_METADATA_TASKS_CORE_SIZE}</corePoolSize>
+				<maxPoolSize>${REPO_INDEX_THREAD_POOL_METADATA_TASKS_MAX_SIZE}</maxPoolSize>
+				<queueCapacity>${REPO_INDEX_THREAD_POOL_METADATA_TASKS_QUEUE_CAPACITY}</queueCapacity>
+				<threadPriority>${REPO_INDEX_THREAD_POOL_METADATA_TASKS_THREAD_PRIORITY}</threadPriority>
+			</metadataTasks>
+			<smallTasks>
+				<corePoolSize>${REPO_INDEX_THREAD_POOL_SMALL_TASKS_CORE_SIZE}</corePoolSize>
+				<maxPoolSize>${REPO_INDEX_THREAD_POOL_SMALL_TASKS_MAX_SIZE}</maxPoolSize>
+				<queueCapacity>${REPO_INDEX_THREAD_POOL_SMALL_TASKS_QUEUE_CAPACITY}</queueCapacity>
+				<threadPriority>${REPO_INDEX_THREAD_POOL_SMALL_TASKS_THREAD_PRIORITY}</threadPriority>
+			</smallTasks>
+			<largeTasks>
+				<corePoolSize>${REPO_INDEX_THREAD_POOL_LARGE_TASKS_CORE_SIZE}</corePoolSize>
+				<maxPoolSize>${REPO_INDEX_THREAD_POOL_LARGE_TASKS_MAX_SIZE}</maxPoolSize>
+				<queueCapacity>${REPO_INDEX_THREAD_POOL_LARGE_TASKS_QUEUE_CAPACITY}</queueCapacity>
+				<threadPriority>${REPO_INDEX_THREAD_POOL_LARGE_TASKS_THREAD_PRIORITY}</threadPriority>
+			</largeTasks>
+		</pool>
+		<background>
+			<enabled>${REPO_INDEX_ENABLED_BACKGROUND_JOBS}</enabled>
+			<cleanOrphans>
+				<cronExpression>${REPO_INDEX_BACKGROUND_JOBS_CLEAN_ORPHANS_CRON_EXPRESSION}</cronExpression>
+			</cleanOrphans>
+			<retryInErrorIndexes>
+				<cronExpression>
+					<content>${REPO_INDEX_BACKGROUND_JOBS_RETRY_ERRORS_CONTENT_CRON_EXPRESSION}</content>
+					<metadata>${REPO_INDEX_BACKGROUND_JOBS_RETRY_ERRORS_METADATA_CRON_EXPRESSION}</metadata>
+				</cronExpression>
+				<maxAttempts>${REPO_INDEX_BACKGROUND_JOBS_RETRY_ERRORS_MAX_ATTEMPTS}</maxAttempts>
+				<!-- 
+				percentage of the thread queue representing the number of threads remaining to fill the queue, below which the 'retryInErrorIndexes' background job is not executed
+				WARNING!! This is only used if the index task executor implementation is org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor. Otherwise, this thresold 
+				is ignored.
+				-->
+				<remainingQueueCapacityThreshold>${REPO_INDEX_BACKGROUND_JOBS_RETRY_ERRORS_QUEUE_CAPACITY_THRESHOLD}</remainingQueueCapacityThreshold>
+			</retryInErrorIndexes>			
+			<compactTransientDatabase>
+				<cronExpression>${REPO_INDEX_BACKGROUND_JOBS_COMPACT_DATABASE_CRON_EXPRESSION}</cronExpression>
+			</compactTransientDatabase>	
+		</background>
+		<atomic>
+			<enabled>${REPO_INDEX_ENABLED_ATOMIC}</enabled>
+		</atomic>
+	</index>
+</configuration>
+

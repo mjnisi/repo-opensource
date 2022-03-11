@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<security>
+        <!--
+            Users are defined here. 
+            There are 2 places for it:
+            1) Authentication handler - where usernames and passwords are defined
+            2) Authorisation handler - where privileges are defined for each user
+         -->
+		<authenticationHandler>
+			<name>builtin</name>
+			<description>Predefined set of users for administration tasks.</description>
+			<enabled>true</enabled>
+			<class>eu.trade.repo.security.impl.BuiltinAuthenticationHandler</class>
+		    <properties>
+				<user>
+					<name>*</name> <!-- allows any username -->
+					<password>admin_dev</password>
+				</user>
+				<domain>admin</domain>
+			</properties>
+		</authenticationHandler>
+		<authorizationHandler>
+			<name>builtin</name>
+			<description>Predefined set of Principal Ids for builtin users.</description>
+			<enabled>true</enabled>
+			<class>eu.trade.repo.security.impl.BuiltinAuthorizationHandler</class>
+			<properties>
+				<user>
+					<name>admin</name>
+					<isAdmin>true</isAdmin>
+					<principalIds></principalIds>
+				</user>
+			</properties>
+		</authorizationHandler>
+        <cacheEnabled>true</cacheEnabled>
+        <userSessionLimit>4</userSessionLimit>
+	</security>
+</configuration>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <repository ID="1" CMIS_ID="test_repo_02" NAME="test_repo_01" DESCRIPTION="Test repository 01" C_GET_DESCENDANTS="F" C_GET_FOLDER_TREE="F" C_CONTENT_STREAM_UPDATABILITY="none" C_CHANGES="none" C_RENDITIONS="none" C_MULTIFILING="F" C_UNFILING="F" C_VERSION_SPECIFIC_FILING="F" C_PWC_UPDATABLE="F" C_PWC_SEARCHABLE="F" C_ALL_VERSIONS_SEARCHABLE="F" C_QUERY="none" C_JOIN="none" C_ACL="none"/>
+  <object_type ID="1" REPOSITORY_ID="1" CMIS_ID="cmis:document" LOCAL_NAME="cmis:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:document" DISPLAY_NAME="cmis:document" BASE_ID="1" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="2" REPOSITORY_ID="1" CMIS_ID="cmis:folder" LOCAL_NAME="cmis:folder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:folder" DISPLAY_NAME="cmis:folder" BASE_ID="2" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T"/>
+  <object_type ID="3" REPOSITORY_ID="1" CMIS_ID="cmis:policy" LOCAL_NAME="cmis:policy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:policy" DISPLAY_NAME="cmis:policy" BASE_ID="3" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T"/>
+  <object_type ID="4" REPOSITORY_ID="1" CMIS_ID="cmis:relationship" LOCAL_NAME="cmis:relationship" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:relationship" DISPLAY_NAME="cmis:relationship" BASE_ID="4" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T"/>
+  <object_type ID="5" REPOSITORY_ID="1" CMIS_ID="nest:document" LOCAL_NAME="nest:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="nest:document" DISPLAY_NAME="nest:document" BASE_ID="1" PARENT_ID="1" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="6" REPOSITORY_ID="1" CMIS_ID="nest:special_document" LOCAL_NAME="nest:special_document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="nest:special_document" DISPLAY_NAME="nest:special_document" BASE_ID="5" PARENT_ID="5" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="7" REPOSITORY_ID="1" CMIS_ID="tron:document" LOCAL_NAME="tron:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="tron:document" DISPLAY_NAME="tron:document" BASE_ID="1" PARENT_ID="1" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="8" REPOSITORY_ID="1" CMIS_ID="nest:folder" LOCAL_NAME="nest:folder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="nest:folder" DISPLAY_NAME="nest:folder" BASE_ID="2" PARENT_ID="2" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object ID="1" OBJECT_TYPE_ID="1" CMIS_OBJECT_ID="document_test_index&#xA;" INDEX_STATE_CONTENT="0"/>
+  <stream />
+ 
+  <index_word/>
+  <index_word_object/>
+  <index_word_position/>
+</dataset>

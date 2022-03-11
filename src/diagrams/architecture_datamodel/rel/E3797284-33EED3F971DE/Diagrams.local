@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="main_view" objectID="C51D32AE-A0B9-5CCD-91ED-FA455CCB4AE2" name="01_repo_genesisStructure" visible="true"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.4" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="eu.trade.repo.index.impl.ops.MetadataIndexOperator" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/ops/MetadataIndexOperator.java" binary="false" 
+    label="contentIndexOperator" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1040" y="0"/>    
+    <execution id="2">      
+      <position height="307" width="0" x="0" y="95"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="eu.trade.repo.delegates.JPAIndexDelegate" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/delegates/JPAIndexDelegate.java" binary="false" label="jpaIndexDelegate" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1193" y="0"/>    
+    <execution id="4">      
+      <position height="265" width="126" x="1196" y="116"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="121" width="0" x="0" y="200"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="javax.persistence.EntityManager" project="repo" 
+    file="C:/Dev/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar" 
+    binary="true" label="entityManager" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="7">      
+      <position height="21" width="0" x="0" y="137"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="21" width="0" x="0" y="339"/>    
+    </execution>  
+  </object>  
+  <object id="17" language="java" name="eu.trade.repo.model.CMISObject" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/model/CMISObject.java" binary="false" label="obj" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="13">      
+      <position height="21" width="0" x="0" y="231"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="21" width="0" x="0" y="279"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="updateObjectIndexingState(java.lang.Integer,eu.trade.repo.model.IndexingState,eu.trade.repo.index.model.IndexOperation.IndexOperationType):void">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="find(java.lang.Class&lt;T&gt;,java.lang.Object):T">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="8" 
+    operation="setIndexState(eu.trade.repo.model.CMISObject,eu.trade.repo.model.IndexingState,eu.trade.repo.index.model.IndexOperation.IndexOperationType):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" operation="merge(T):T">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="setIndexStateMetadata(java.lang.Integer):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="14" operation="setIndexTriesMetadata(java.lang.Integer):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>
+</sequence-diagram>

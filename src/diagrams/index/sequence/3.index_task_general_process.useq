@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.4" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="eu.trade.repo.index.impl.IndexTaskImpl" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/IndexTaskImpl.java" binary="false" label="indexTaskImpl" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="100" y="0"/>    
+    <execution id="2">      
+      <position height="1050" width="107" x="5" y="115"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="987" width="107" x="5" y="157"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="914" width="0" x="0" y="209"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="21" width="7" x="61" y="591"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="21" width="7" x="61" y="635"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="63" width="7" x="61" y="523"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="21" width="7" x="61" y="755"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="21" width="7" x="61" y="810"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="21" width="7" x="61" y="886"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="21" width="7" x="55" y="958"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="eu.trade.repo.index.IndexSynchronizer" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/IndexSynchronizer.java" binary="false" label="indexSynchronizer" 
+    type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="15">      
+      <position height="21" width="0" x="0" y="544"/>    
+    </execution>  
+  </object>  
+  <object id="21" language="java" name="eu.trade.repo.index.IndexOperatorFactory" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/IndexOperatorFactory.java" binary="false" label="operatorFactory" 
+    type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="8">      
+      <position height="21" width="0" x="0" y="308"/>    
+    </execution>  
+  </object>  
+  <object id="22" language="java" name="eu.trade.repo.index.impl.ops.AbstractIndexOperator" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/ops/AbstractIndexOperator.java" binary="false" 
+    label="contentIndexOperator" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1040" y="0"/>    
+    <execution id="10">      
+      <position height="756" width="149" x="386" y="346"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="188" width="0" x="0" y="509"/>    
+    </execution>    
+    <execution id="29">      
+      <position height="290" width="0" x="0" y="791"/>    
+    </execution>    
+    <execution id="32">      
+      <position height="21" width="0" x="0" y="559"/>    
+    </execution>    
+    <execution id="41">      
+      <position height="21" width="0" x="0" y="851"/>    
+    </execution>    
+    <execution id="44">      
+      <position height="21" width="0" x="0" y="926"/>    
+    </execution>    
+    <execution id="47">      
+      <position height="21" width="0" x="0" y="1001"/>    
+    </execution>  
+  </object>  
+  <object id="50" language="java" name="eu.trade.repo.delegates.JDBCIndexTransientContentDelegate" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/delegates/JDBCIndexTransientContentDelegate.java" binary="false" 
+    label="jdbcIndexTransientContentDelegate" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="982" y="0"/>  
+  </object>  
+  <object id="51" language="java" name="eu.trade.repo.delegates.JDBCIndexDelegate" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/delegates/JDBCIndexDelegate.java" binary="false" label="jdbcIndexDelegate" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1476" y="0"/>    
+    <execution id="35">      
+      <position height="21" width="135" x="1473" y="611"/>    
+    </execution>  
+  </object>  
+  <object id="52" language="java" name="eu.trade.repo.delegates.JPAIndexDelegate" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/delegates/JPAIndexDelegate.java" binary="false" label="jpaIndexDelegate" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1193" y="0"/>    
+    <execution id="24">      
+      <position height="21" width="126" x="1196" y="402"/>    
+    </execution>    
+    <execution id="38">      
+      <position height="21" width="126" x="1196" y="655"/>    
+    </execution>    
+    <execution id="49">      
+      <position height="21" width="126" x="1537" y="1039"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="run():void">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="doIndex():void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="getOperator(eu.trade.repo.index.model.IndexOperation.IndexOperationType):eu.trade.repo.index.IndexPartOperator">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="createIndexPart(eu.trade.repo.index.IndexTask):void">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="14" 
+    operation="isOtherTaskWaiting(eu.trade.repo.index.model.IndexOperation.IndexOperationType,java.lang.Integer):boolean">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="23" 
+    operation="getObjectIndexingState(java.lang.Integer,eu.trade.repo.index.model.IndexOperation.IndexOperationType):eu.trade.repo.model.IndexingState">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="25" 
+    operation="cleanIndexPart(eu.trade.repo.index.IndexTask,eu.trade.repo.model.IndexingState):eu.trade.repo.model.IndexingState">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>  
+  <message id="27" operation="hasToStop():boolean">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="28" operation="createIndexInternal(eu.trade.repo.index.IndexTask,eu.trade.repo.model.IndexingState):void">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="29"/>  
+  </message>  
+  <message id="30" operation="hasToStop():boolean">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="31" operation="deleteTransientIndexPartByObjectId(java.lang.Integer,int):void">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="32"/>  
+  </message>  
+  <message id="33" operation="hasToStop():boolean">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="34" 
+    operation="deletePermanentIndexPart(java.lang.Integer,int,eu.trade.repo.index.model.IndexOperation.IndexOperationType):int">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="35"/>  
+  </message>  
+  <message id="36" operation="isUpdateObjectIndexInfo():boolean">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="37" 
+    operation="updateObjectIndexingState(java.lang.Integer,eu.trade.repo.model.IndexingState,eu.trade.repo.index.model.IndexOperation.IndexOperationType):void">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="38"/>  
+  </message>  
+  <message id="39" operation="hasToStop():boolean">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="40" operation="processToTransientIndexPart(eu.trade.repo.index.IndexTask):boolean">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="41"/>  
+  </message>  
+  <message id="42" operation="hasToStop():boolean">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="43" operation="storeToPermanentIndex(java.lang.Integer,java.lang.Integer):void">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="44"/>  
+  </message>  
+  <message id="45" operation="hasToStop():boolean">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>  
+  <message id="46" operation="deleteTransientIndexPartByObjectId(java.lang.Integer,int):void">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="47"/>  
+  </message>  
+  <message id="48" 
+    operation="updateObjectIndexingState(java.lang.Integer,eu.trade.repo.model.IndexingState,eu.trade.repo.index.model.IndexOperation.IndexOperationType):void">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="49"/>  
+  </message>
+</sequence-diagram>

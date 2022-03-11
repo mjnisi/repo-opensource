@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<admin>
+		<local>
+			<!-- Username and password for the admin user in the web interface XXX -->
+			<username>username</username>
+			<password>******</password>
+		</local>
+	</admin>
+</configuration>

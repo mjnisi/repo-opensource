@@ -1,0 +1,18 @@
+50 Threads 
+200 seconds delay (1 thread every 4 seconds)
+10 times
+
+	Only once
+		Access to the first repository
+		If the test folder exist, the first thread should delete it.
+		If the test folder doesn't exist, the first thread should create it.
+
+	Loop
+		Creates a 7891 bytes document (different names by thread and loop).
+		Gets the object by path and extracts the object id from the response.
+		If there is no error the object id is not empty and then:
+			- Gets the object properties.
+			- Gets the object parents.
+			- Deletes the object.
+
+At the end of the test one test folder must exist and it must be empty.

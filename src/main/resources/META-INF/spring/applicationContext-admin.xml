@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!--  
+		Note: Currently we are using the Spring active profile: "web". This is needed because the current 3.1 version is not able to call 
+		to eu.trade.repo.util.spring.EnvironmentApplicationContextInitializer in the test environment causing the placeholders from environment.properties 
+		to be undefined when loading the context.
+		In the Spring version 3.2 that class can be called from the @ContextConfiguration in the test classes, avoiding the need to use the web profile.
+	-->
+    <beans profile="web">
+		<import resource="classpath:/META-INF/spring/applicationContext-admin-${ADMIN_TYPE}.xml" />
+    </beans>
+
+</beans>

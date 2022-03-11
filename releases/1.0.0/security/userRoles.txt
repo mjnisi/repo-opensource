@@ -1,0 +1,7 @@
+# LOGIN, ROLE_CODE, IS_LOCKED, DATE_FROM, DATE_TO
+martjoe|REPO.Admin|false||
+porrjai|REPO.Admin|false||
+abascis|REPO.Admin|false||
+azaridi|REPO.Admin|false||
+kardaal|REPO.Admin|false||
+hadamto|REPO.Admin|false||

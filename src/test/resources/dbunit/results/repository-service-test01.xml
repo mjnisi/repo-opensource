@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<repository id="10000" CMIS_ID="repo001a" 
+		NAME="repo001a"
+		DESCRIPTION="repo001a" 
+		C_GET_DESCENDANTS="T"
+		C_GET_FOLDER_TREE="T" 
+		C_CONTENT_STREAM_UPDATABILITY="anytime" 
+		C_CHANGES="objectidsonly"
+		C_RENDITIONS="read" 
+		C_MULTIFILING="T" 
+		C_UNFILING="T"
+		C_VERSION_SPECIFIC_FILING="T" 
+		C_PWC_UPDATABLE="T" 
+		C_PWC_SEARCHABLE="T"
+		C_ALL_VERSIONS_SEARCHABLE="T" 
+		C_QUERY="bothcombined" 
+		C_JOIN="innerandouter" 
+		C_ACL="manage" 
+		C_ACL_PROPAGATION="propagate"/>
+
+	<object_type id="10000" CMIS_ID="cmis:document"
+		LOCAL_NAME="cmis:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+		QUERY_NAME="cmis:document" DISPLAY_NAME="cmis:document" CREATABLE="T"
+		FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T"
+		FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T"
+		CONTENT_STREAM_ALLOWED="allowed" />
+	<object_type id="10001" CMIS_ID="cmis:folder"
+		LOCAL_NAME="cmis:folder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+		QUERY_NAME="cmis:folder" DISPLAY_NAME="cmis:folder" CREATABLE="T"
+		FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T"
+		FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" 
+		CONTENT_STREAM_ALLOWED="notallowed"/>
+	<object_type id="10002" CMIS_ID="cmis:relationship"
+		LOCAL_NAME="cmis:relationship" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+		QUERY_NAME="cmis:relationship" DISPLAY_NAME="cmis:relationship" CREATABLE="T"
+		FILEABLE="F" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T"
+		FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" 
+		CONTENT_STREAM_ALLOWED="notallowed"/>
+	<object_type id="10003" CMIS_ID="cmis:policy"
+		LOCAL_NAME="cmis:policy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+		QUERY_NAME="cmis:policy" DISPLAY_NAME="cmis:policy" CREATABLE="T"
+		FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T"
+		FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" 
+		CONTENT_STREAM_ALLOWED="notallowed"/>
+	<object_type id="10004" CMIS_ID="cmis:item"
+		LOCAL_NAME="cmis:item" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+		QUERY_NAME="cmis:item" DISPLAY_NAME="cmis:item" CREATABLE="T"
+		FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T" CONTROLLABLE_ACL="T"
+		FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" 
+		CONTENT_STREAM_ALLOWED="notallowed"/>
+	<object_type id="10005" CMIS_ID="cmis:secondary"
+		LOCAL_NAME="cmis:secondary" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo"
+		QUERY_NAME="cmis:secondary" DISPLAY_NAME="cmis:secondary" CREATABLE="F"
+		FILEABLE="F" QUERYABLE="T" CONTROLLABLE_POLICY="F" CONTROLLABLE_ACL="F"
+		FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" 
+		CONTENT_STREAM_ALLOWED="notallowed"/>
+
+  <object_type_property id="10000" object_type_id="10000" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" QUERY_NAME="cmis:name" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10001" object_type_id="10000" CMIS_ID="cmis:description" LOCAL_NAME="cmis:description" QUERY_NAME="cmis:description" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10002" object_type_id="10000" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" QUERY_NAME="cmis:objectId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10003" object_type_id="10000" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" QUERY_NAME="cmis:baseTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10004" object_type_id="10000" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" QUERY_NAME="cmis:objectTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10005" object_type_id="10000" CMIS_ID="cmis:secondaryObjectTypeIds" LOCAL_NAME="cmis:secondaryObjectTypeIds" QUERY_NAME="cmis:secondaryObjectTypeIds" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>  
+  <object_type_property id="10006" object_type_id="10000" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" QUERY_NAME="cmis:createdBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10007" object_type_id="10000" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" QUERY_NAME="cmis:creationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10008" object_type_id="10000" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" QUERY_NAME="cmis:lastModifiedBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10009" object_type_id="10000" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" QUERY_NAME="cmis:lastModificationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10010" object_type_id="10000" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" QUERY_NAME="cmis:changeToken" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object_type_property id="10011" object_type_id="10000" CMIS_ID="cmis:isImmutable" LOCAL_NAME="cmis:isImmutable" QUERY_NAME="cmis:isImmutable" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10012" object_type_id="10000" CMIS_ID="cmis:isLatestVersion" LOCAL_NAME="cmis:isLatestVersion" QUERY_NAME="cmis:isLatestVersion" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10013" object_type_id="10000" CMIS_ID="cmis:isMajorVersion" LOCAL_NAME="cmis:isMajorVersion" QUERY_NAME="cmis:isMajorVersion" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10014" object_type_id="10000" CMIS_ID="cmis:isLatestMajorVersion" LOCAL_NAME="cmis:isLatestMajorVersion" QUERY_NAME="cmis:isLatestMajorVersion" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10015" object_type_id="10000" CMIS_ID="cmis:isPrivateWorkingCopy" LOCAL_NAME="cmis:isPrivateWorkingCopy" QUERY_NAME="cmis:isPrivateWorkingCopy" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10016" object_type_id="10000" CMIS_ID="cmis:versionLabel" LOCAL_NAME="cmis:versionLabel" QUERY_NAME="cmis:versionLabel" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10017" object_type_id="10000" CMIS_ID="cmis:versionSeriesId" LOCAL_NAME="cmis:versionSeriesId" QUERY_NAME="cmis:versionSeriesId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10018" object_type_id="10000" CMIS_ID="cmis:isVersionSeriesCheckedOut" LOCAL_NAME="cmis:isVersionSeriesCheckedOut" QUERY_NAME="cmis:isVersionSeriesCheckedOut" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10019" object_type_id="10000" CMIS_ID="cmis:versionSeriesCheckedOutBy" LOCAL_NAME="cmis:versionSeriesCheckedOutBy" QUERY_NAME="cmis:versionSeriesCheckedOutBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10020" object_type_id="10000" CMIS_ID="cmis:versionSeriesCheckedOutId" LOCAL_NAME="cmis:versionSeriesCheckedOutId" QUERY_NAME="cmis:versionSeriesCheckedOutId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10021" object_type_id="10000" CMIS_ID="cmis:checkinComment" LOCAL_NAME="cmis:checkinComment" QUERY_NAME="cmis:checkinComment" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10022" object_type_id="10000" CMIS_ID="cmis:contentStreamLength" LOCAL_NAME="cmis:contentStreamLength" QUERY_NAME="cmis:contentStreamLength" PROPERTY_TYPE="integer" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10023" object_type_id="10000" CMIS_ID="cmis:contentStreamMimeType" LOCAL_NAME="cmis:contentStreamMimeType" QUERY_NAME="cmis:contentStreamMimeType" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10024" object_type_id="10000" CMIS_ID="cmis:contentStreamFileName" LOCAL_NAME="cmis:contentStreamFileName" QUERY_NAME="cmis:contentStreamFileName" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10025" object_type_id="10000" CMIS_ID="cmis:contentStreamId" LOCAL_NAME="cmis:contentStreamId" QUERY_NAME="cmis:contentStreamId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  
+  <object_type_property id="10026" object_type_id="10001" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" QUERY_NAME="cmis:name" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10027" object_type_id="10001" CMIS_ID="cmis:description" LOCAL_NAME="cmis:description" QUERY_NAME="cmis:description" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10028" object_type_id="10001" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" QUERY_NAME="cmis:objectId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10029" object_type_id="10001" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" QUERY_NAME="cmis:baseTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10030" object_type_id="10001" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" QUERY_NAME="cmis:objectTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10031" object_type_id="10001" CMIS_ID="cmis:secondaryObjectTypeIds" LOCAL_NAME="cmis:secondaryObjectTypeIds" QUERY_NAME="cmis:secondaryObjectTypeIds" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>  
+  <object_type_property id="10032" object_type_id="10001" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" QUERY_NAME="cmis:createdBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10033" object_type_id="10001" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" QUERY_NAME="cmis:creationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10034" object_type_id="10001" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" QUERY_NAME="cmis:lastModifiedBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10035" object_type_id="10001" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" QUERY_NAME="cmis:lastModificationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10036" object_type_id="10001" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" QUERY_NAME="cmis:changeToken" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object_type_property id="10037" object_type_id="10001" CMIS_ID="cmis:parentId" LOCAL_NAME="cmis:parentId" QUERY_NAME="cmis:parentId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>
+  <object_type_property id="10038" object_type_id="10001" CMIS_ID="cmis:path" LOCAL_NAME="cmis:path" QUERY_NAME="cmis:path" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10039" object_type_id="10001" CMIS_ID="cmis:allowedChildObjectTypeIds" LOCAL_NAME="cmis:allowedChildObjectTypeIds" QUERY_NAME="cmis:allowedChildObjectTypeIds" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+ 
+  <object_type_property id="10040" object_type_id="10002" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" QUERY_NAME="cmis:name" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10041" object_type_id="10002" CMIS_ID="cmis:description" LOCAL_NAME="cmis:description" QUERY_NAME="cmis:description" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10042" object_type_id="10002" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" QUERY_NAME="cmis:objectId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10043" object_type_id="10002" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" QUERY_NAME="cmis:baseTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10044" object_type_id="10002" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" QUERY_NAME="cmis:objectTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10045" object_type_id="10002" CMIS_ID="cmis:secondaryObjectTypeIds" LOCAL_NAME="cmis:secondaryObjectTypeIds" QUERY_NAME="cmis:secondaryObjectTypeIds" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>  
+  <object_type_property id="10046" object_type_id="10002" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" QUERY_NAME="cmis:createdBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10047" object_type_id="10002" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" QUERY_NAME="cmis:creationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10048" object_type_id="10002" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" QUERY_NAME="cmis:lastModifiedBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10049" object_type_id="10002" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" QUERY_NAME="cmis:lastModificationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10050" object_type_id="10002" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" QUERY_NAME="cmis:changeToken" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object_type_property id="10051" object_type_id="10002" CMIS_ID="cmis:sourceId" LOCAL_NAME="cmis:sourceId" QUERY_NAME="cmis:sourceId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10052" object_type_id="10002" CMIS_ID="cmis:targetId" LOCAL_NAME="cmis:targetId" QUERY_NAME="cmis:targetId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+ 
+  <object_type_property id="10053" object_type_id="10003" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" QUERY_NAME="cmis:name" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10054" object_type_id="10003" CMIS_ID="cmis:description" LOCAL_NAME="cmis:description" QUERY_NAME="cmis:description" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10055" object_type_id="10003" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" QUERY_NAME="cmis:objectId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10056" object_type_id="10003" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" QUERY_NAME="cmis:baseTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10057" object_type_id="10003" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" QUERY_NAME="cmis:objectTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10058" object_type_id="10003" CMIS_ID="cmis:secondaryObjectTypeIds" LOCAL_NAME="cmis:secondaryObjectTypeIds" QUERY_NAME="cmis:secondaryObjectTypeIds" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>  
+  <object_type_property id="10059" object_type_id="10003" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" QUERY_NAME="cmis:createdBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10060" object_type_id="10003" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" QUERY_NAME="cmis:creationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10061" object_type_id="10003" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" QUERY_NAME="cmis:lastModifiedBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10062" object_type_id="10003" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" QUERY_NAME="cmis:lastModificationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10063" object_type_id="10003" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" QUERY_NAME="cmis:changeToken" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+  <object_type_property id="10064" object_type_id="10003" CMIS_ID="cmis:policyText" LOCAL_NAME="cmis:policyText" QUERY_NAME="cmis:policyText" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+ 
+  <object_type_property id="10065" object_type_id="10004" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" QUERY_NAME="cmis:name" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10066" object_type_id="10004" CMIS_ID="cmis:description" LOCAL_NAME="cmis:description" QUERY_NAME="cmis:description" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10067" object_type_id="10004" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" QUERY_NAME="cmis:objectId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10068" object_type_id="10004" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" QUERY_NAME="cmis:baseTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10069" object_type_id="10004" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" QUERY_NAME="cmis:objectTypeId" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10070" object_type_id="10004" CMIS_ID="cmis:secondaryObjectTypeIds" LOCAL_NAME="cmis:secondaryObjectTypeIds" QUERY_NAME="cmis:secondaryObjectTypeIds" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readwrite" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>  
+  <object_type_property id="10071" object_type_id="10004" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" QUERY_NAME="cmis:createdBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10072" object_type_id="10004" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" QUERY_NAME="cmis:creationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10073" object_type_id="10004" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" QUERY_NAME="cmis:lastModifiedBy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10074" object_type_id="10004" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" QUERY_NAME="cmis:lastModificationDate" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property id="10075" object_type_id="10004" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" QUERY_NAME="cmis:changeToken" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="F" ORDERABLE="F"/>
+ 
+  <permission id="10000" NAME="cmis:all" DESCRIPTION="All"/>
+  <permission id="10001" NAME="cmis:write" DESCRIPTION="Write" parent_id="10000"/>
+  <permission id="10002" NAME="cmis:read" DESCRIPTION="Read" parent_id="10001"/>
+  
+  <permission_mapping id="10000" KEY="canGetDescendents.Folder" permission_id="10002"/>
+  <permission_mapping id="10001" KEY="canGetChildren.Folder" permission_id="10002"/>
+  <permission_mapping id="10002" KEY="canGetFolderParent.Object" permission_id="10002"/>
+  <permission_mapping id="10003" KEY="canGetParents.Folder" permission_id="10002"/>
+  <permission_mapping id="10004" KEY="canCreateDocument.Folder" permission_id="10002"/>
+  <permission_mapping id="10005" KEY="canCreateFolder.Folder" permission_id="10002"/>
+  <permission_mapping id="10006" KEY="canCreateRelationship.Source" permission_id="10002"/>
+  <permission_mapping id="10007" KEY="canCreateRelationship.Target" permission_id="10002"/>
+  <permission_mapping id="10008" KEY="canGetProperties.Object" permission_id="10002"/>
+  <permission_mapping id="10009" KEY="canUpdateProperties.Object" permission_id="10001"/>
+  <permission_mapping id="10010" KEY="canMove.Object" permission_id="10001"/>
+  <permission_mapping id="10011" KEY="canMove.Target" permission_id="10002"/>
+  <permission_mapping id="10012" KEY="canMove.Source" permission_id="10002"/>
+  <permission_mapping id="10013" KEY="canDelete.Object" permission_id="10001"/>
+  <permission_mapping id="10014" KEY="canViewContent.Object" permission_id="10001"/>
+  <permission_mapping id="10015" KEY="canSetContent.Document" permission_id="10001"/>
+  <permission_mapping id="10016" KEY="canDeleteContent.Document" permission_id="10001"/>
+  <permission_mapping id="10017" KEY="canDeleteTree.Folder" permission_id="10001"/>
+  <permission_mapping id="10018" KEY="canAddToFolder.Object" permission_id="10002"/>
+  <permission_mapping id="10019" KEY="canAddToFolder.Folder" permission_id="10002"/>
+  <permission_mapping id="10020" KEY="canRemoveFromFolder.Object" permission_id="10002"/>
+  <permission_mapping id="10021" KEY="canRemoveFromFolder.Folder" permission_id="10002"/>
+  <permission_mapping id="10022" KEY="canCheckout.Document" permission_id="10001"/>
+  <permission_mapping id="10023" KEY="canCancelCheckout.Document" permission_id="10001"/>
+  <permission_mapping id="10024" KEY="canCheckin.Document" permission_id="10001"/>
+  <permission_mapping id="10025" KEY="canGetAllVersions.VersionSeries" permission_id="10002"/>
+  <permission_mapping id="10026" KEY="canGetObjectRelationships.Object" permission_id="10002"/>
+  <permission_mapping id="10027" KEY="canAddPolicy.Object" permission_id="10002"/>
+  <permission_mapping id="10028" KEY="canAddPolicy.Policy" permission_id="10002"/>
+  <permission_mapping id="10029" KEY="canRemovePolicy.Object" permission_id="10002"/>
+  <permission_mapping id="10030" KEY="canRemovePolicy.Policy" permission_id="10002"/>
+  <permission_mapping id="10031" KEY="canGetAppliedPolicies.Object" permission_id="10002"/>
+  <permission_mapping id="10032" KEY="canGetACL.Object" permission_id="10002"/>
+  <permission_mapping id="10033" KEY="canApplyACL.Object" permission_id="10001"/>
+  
+  <object id="10000" object_type_id="10001" CMIS_OBJECT_ID="generatedId-1"/>
+  <property object_id="10000" object_type_property_id="10026" value="rootFolder"/>
+  <property object_id="10000" object_type_property_id="10028" value="generatedId-1"/>
+  <property object_id="10000" object_type_property_id="10029" value="cmis:folder"/>
+  <property object_id="10000" object_type_property_id="10030" value="cmis:folder"/>
+  <property object_id="10000" object_type_property_id="10032" value="admin"/>
+  <property object_id="10000" object_type_property_id="10033" value="1970-01-01T00:00:00.000Z"/>
+  <property object_id="10000" object_type_property_id="10034" value="admin"/>
+  <property object_id="10000" object_type_property_id="10035" value="1970-01-01T00:00:00.000Z"/>
+  <property object_id="10000" object_type_property_id="10036" value="generatedId-2"/>
+  <property object_id="10000" object_type_property_id="10038" value="/"/>
+  
+  <acl id="10000" principal_id="cmis:anyone" permission_id="10000"/>
+  
+</dataset>

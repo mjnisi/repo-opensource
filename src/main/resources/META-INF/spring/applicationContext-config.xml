@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd         
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd         
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd         
+       http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd        
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+
+	<bean id="configBuilder" class="org.apache.commons.configuration.DefaultConfigurationBuilder">
+		<constructor-arg type="java.lang.String" value="idx_repo.xml" />
+	</bean>
+	<bean id="combinedConfig" factory-bean="configBuilder" factory-method="getConfiguration"/>
+
+	<bean id="dbProperties" class="org.apache.commons.configuration.ConfigurationConverter" factory-method="getProperties">
+		<constructor-arg>
+			<bean id="propertiesInternal" factory-bean="combinedConfig" factory-method="getConfiguration">
+				<constructor-arg type="java.lang.String" value="repo/dbConfig" />
+			</bean>
+		</constructor-arg>
+	</bean>
+        	    
+	<bean id="gacaDbProperties" class="org.apache.commons.configuration.ConfigurationConverter" factory-method="getProperties">
+		<constructor-arg>
+			<bean id="propertiesInternal" factory-bean="combinedConfig" factory-method="getConfiguration">
+				<constructor-arg type="java.lang.String" value="repo/dbGacaConfig" />
+			</bean>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="adminProperties" class="org.apache.commons.configuration.ConfigurationConverter" factory-method="getProperties">
+		<constructor-arg>
+			<bean id="propertiesInternal" factory-bean="combinedConfig" factory-method="getConfiguration">
+				<constructor-arg type="java.lang.String" value="repo/adminConfig" />
+			</bean>
+		</constructor-arg>
+	</bean>
+</beans>

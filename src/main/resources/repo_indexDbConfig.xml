@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <driverClassName>${REPO_INDEX_DB_DRIVER}</driverClassName>
+  <url>${REPO_INDEX_DB_URL}</url>
+  <username>${REPO_INDEX_DB_USERNAME}</username>
+  <password>${REPO_INDEX_DB_PASSWORD}</password>
+  <validationQuery>${REPO_INDEX_DB_VALIDATION}</validationQuery>
+  <defaultAutoCommit>false</defaultAutoCommit>
+  <maxWait>60000</maxWait> <!-- 60 seconds to obtain a connection -->
+  <maxActive>${REPO_INDEX_DB_MAX_ACTIVE}</maxActive>
+  <minIdle>1</minIdle>
+  <testOnBorrow>true</testOnBorrow>
+  <removeAbandoned>true</removeAbandoned>
+  <logAbandoned>true</logAbandoned>
+  <removeAbandonedTimeout>300</removeAbandonedTimeout> 
+  <!-- in seconds -->
+</configuration>
+

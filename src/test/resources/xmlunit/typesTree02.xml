@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tree xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/"
+	xmlns:slk="http://ec.europa.eu/trade/repo/sherlock/" 
+	xmlns:nest="http://ec.europa.eu/trade/repo/nest/"
+	xmlns:trade="http://ec.europa.eu/trade/repo/trade/">
+	<cmis:document>
+		<slk:publishedAttachment/>
+		<nest:document/>
+		<trade:document>
+			<trade:attachment/>
+		</trade:document>
+	</cmis:document>
+	<cmis:relationship>
+		<trade:fav/>
+	</cmis:relationship>
+	<cmis:folder>
+		<slk:caseFolder/>
+		<trade:folder>
+			<trade:subfolder/>
+		</trade:folder>
+		<trade:folder2/>
+		<trade:email/>
+	</cmis:folder>
+	<cmis:policy/>
+</tree>

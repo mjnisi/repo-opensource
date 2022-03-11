@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  	<object_child OBJECT_ID="99" CHILD_OBJECT_ID="10001" />
+  	<object_child OBJECT_ID="99" CHILD_OBJECT_ID="10002"  />
+  	<object_child OBJECT_ID="10002" CHILD_OBJECT_ID="10003"/>
+  	
+    <object OBJECT_TYPE_ID="102" CMIS_OBJECT_ID="/"/>
+    <object OBJECT_TYPE_ID="120" CMIS_OBJECT_ID="generatedId-1"/>
+    <object OBJECT_TYPE_ID="121" CMIS_OBJECT_ID="generatedId-2"/>
+    <object OBJECT_TYPE_ID="121" CMIS_OBJECT_ID="generatedId-3"/>
+    <object OBJECT_TYPE_ID="110" CMIS_OBJECT_ID="generatedId-4"/>
+    <object OBJECT_TYPE_ID="101" CMIS_OBJECT_ID="generatedId-5"/>
+</dataset>

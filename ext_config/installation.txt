@@ -1,0 +1,22 @@
+
+
+Installation, Tomcat 8.5 
+
+This is based on a 'standalone' instance of Tomcat. No manager, no GUI, no web interface.
+
+1) Execute the three SQL-scripts against the database (01_repo_structure.sql, 02_repo_scoreView_oracle.sql and 03_repo_updateAncestorsView_oracle.sql) to create the schema.
+2) Unpack the war-file in [CATALINA_HOME]/webapps/[APP_BASE] - where APP_BASE is the name you have chosen for the application
+3) Add the four config files (environment.properties, repo_adminConfig.xml, repo_securityConfig.xml and log4j_repo.properties) to [CATALINA_HOME]/webapps/[APP_BASE]/WEB-INF/classes (See later for config)
+4) Change paths in log4j_repo.properties (there are 3 of them) to where the log files should be placed.
+5) Add your Oracle JDBC driver to either [CATALINA_HOME]/lib or [CATALINA_HOME]/webapps/[APP_BASE]/WEB-INF/lib
+6) Start Tomcat. In a standard install the web app can be accessed on http://localhost:8080/[APP_BASE]/
+
+In managed environments 2) and 3) will be different. In any case the three config files must be in the root of the classpath of the web application.
+
+Configuration files
+environment.properties - contains general settings.
+repo_adminConfig.xml - defines the admin user for the web interface.
+repo_securityConfig.xml - defines users and roles.
+
+The config files are documented/commented.
+ 

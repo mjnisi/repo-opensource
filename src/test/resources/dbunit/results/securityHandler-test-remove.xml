@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<repository ID="100" CMIS_ID="test_repo_02" NAME="test_repo_02" DESCRIPTION="Test repository 01" C_GET_DESCENDANTS="F" C_GET_FOLDER_TREE="F" C_CONTENT_STREAM_UPDATABILITY="none" C_CHANGES="objectidsonly" C_RENDITIONS="none" C_MULTIFILING="F" C_UNFILING="F" C_VERSION_SPECIFIC_FILING="F" C_PWC_UPDATABLE="F" C_PWC_SEARCHABLE="F" C_ALL_VERSIONS_SEARCHABLE="F" C_QUERY="none" C_JOIN="none" C_ACL="none" security_type="MULTIPLE" authentication_handler="builtin" authorisation_handler="builtin" />	
+	<security_handler/>	
+</dataset>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<security>
+		<cacheEnabled>true</cacheEnabled>
+		<userSessionLimit>4</userSessionLimit>
+		<authenticationHandler>
+			<name>builtin</name> <!-- see eu.trade.repo.util.Constants#BUILTIN -->
+			<description>Predefined set of users for administration tasks.</description>
+			<enabled>${BUILTIN_ENABLED}</enabled>
+			<class>eu.trade.repo.security.impl.BuiltinAuthenticationHandler</class>
+			<properties>
+				<user>
+					<name>admin</name>
+					<password>admin</password>
+				</user>
+				<user>
+					<name>test</name>
+					<password>test</password>
+				</user>
+				<user>
+					<name>test2</name>
+					<password>test2</password>
+				</user>
+			</properties>
+		</authenticationHandler>
+		<authenticationHandler>
+			<name>mock</name>
+			<description>Always authenticates any user. Should be used only for testing purposes.</description>
+			<enabled>${MOCK_AUTHENTICATION_ENABLED}</enabled>
+			<class>eu.trade.repo.security.impl.MockAuthenticationHandler</class>
+			<properties>
+				<domain>ecas</domain> <!-- mocked domain -->
+				<delay>500</delay> <!-- authentication delay in milliseconds -->
+			</properties>
+		</authenticationHandler>
+		<authenticationHandler>
+			<name>otp-test</name>
+			<description>It authenticates any user/password combination but only once. Only for JUnit testing purposes</description>
+			<enabled>true</enabled>
+			<class>eu.trade.repo.security.impl.OTPAuthenticationHandler</class>
+			<properties></properties>
+		</authenticationHandler>
+		<authenticationHandler>
+			<name>ecas-pt</name> <!-- Authentication handler for ECAS users using the username and proxy ticket -->
+			<description>Authenticates a user using the ECAS Proxy Ticket protocol. The Proxy Ticket should be specified in the password field.</description>
+			<enabled>${ECAS_PT_AUTHENTICATION_ENABLED}</enabled>
+			<class>eu.trade.repo.security.impl.EcasTicketAuthenticationHandler</class>
+			<properties>
+				<configFile>ecas-proxy-validation.properties</configFile> <!-- Ecas proxy validation configuration file -->
+				<targetService>${PROXY_TARGET_SERVICE}</targetService> <!-- The target service that the proxy ticket was generated for. It is the same for all the environments. -->
+				<domain>ecas</domain>
+			</properties>
+		</authenticationHandler>
+		<authorizationHandler>
+			<name>builtin</name> <!-- see eu.trade.repo.util.Constants#BUILTIN -->
+			<description>Predefined set of Principal Ids for builtin users.</description>
+			<enabled>${BUILTIN_ENABLED}</enabled>
+			<class>eu.trade.repo.security.impl.BuiltinAuthorizationHandler</class>
+			<properties>
+				<user>
+					<name>admin</name>
+					<isAdmin>true</isAdmin>
+					<principalIds></principalIds>
+				</user>
+				<user>
+					<name>test</name>
+					<isAdmin>false</isAdmin>
+					<principalIds>reader,writer</principalIds>
+				</user>
+				<user>
+					<name>test2</name>
+					<isAdmin>false</isAdmin>
+					<principalIds>nest.admin,reader</principalIds>
+				</user>
+			</properties>
+		</authorizationHandler>
+		<authorizationHandler>
+			<name>gaca-ops</name>
+			<description>The set of Principal Ids for the user are all the users' GACA operations</description>
+			<enabled>${GACA_OPS_AUTHORIZATION_ENABLED}</enabled>
+			<class>eu.trade.repo.security.impl.DbAuthorizationHandler</class>
+			<properties>
+				<domain>gaca</domain>
+				<datasource>
+					<driverClassName>${GACA_DB_DRIVER}</driverClassName>
+	        		<url>${GACA_DB_URL}</url>
+	        		<username>${GACA_DB_USERNAME}</username>
+	        		<password>${GACA_DB_PASSWORD}</password>
+	        	</datasource>
+				<authoritiesByUsernameQuery>
+					select unique O.OPERATION_CODE
+                	from USERS U, USER_ROLES UR, ROLES R, ROLE_OPERATIONS RO, OPERATIONS O
+                	where U.USER_ID = UR.USER_ID
+                	and UR.ROLE_ID = R.ROLE_ID
+                	and R.ROLE_ID = RO.ROLE_ID
+                	and RO.OPERATION_ID = O.OPERATION_ID
+                	and U.LOGIN = ?
+				</authoritiesByUsernameQuery>
+			</properties>
+		</authorizationHandler>
+		<authorizationHandler>
+			<name>nest-groups-dev</name>
+			<enabled>${NEST_DEV_ENABLED}</enabled>
+			<description>The set of Principal Ids for the user are defined by NEST DEV</description>
+			<class>eu.trade.repo.security.impl.LdapAuthorizationHandler</class>
+			<properties>
+				<domain>nest</domain>
+				<!-- Dir Context properties as defined in javax.naming.Context -->
+				<java>
+					<naming>
+						<!-- Default value
+							<factory>
+								<initial>com.sun.jndi.ldap.LdapCtxFactory</initial>
+							</factory>
+				 -->
+						<provider>
+							<url>ldap://url_to_ldap:1234</url>
+						</provider>
+						<security>
+							<!-- Default value
+								<authentication>simple</authentication>
+							-->
+							<principal>cn=Directory Manager</principal>
+							<credentials>******</credentials>
+						</security>
+					</naming>
+				</java>
+
+				<groupBaseDn>ou=nest,ou=Groups,dc=example,dc=com</groupBaseDn>
+				<groupFilterExpr>uniqueMember=uid={0},*</groupFilterExpr>
+				<groupAttribute>entryDN</groupAttribute>
+				<groupRecursive>true</groupRecursive>
+				<adminUsers>true</adminUsers>
+				<adminBaseDn>ou=special users,dc=example,dc=com</adminBaseDn>
+				<adminFilterExpr>uid={0}</adminFilterExpr>
+
+				<!-- Default value 15 seconds
+					<searchTimeLimit>15000</searchTimeLimit>
+				-->
+			</properties>
+		</authorizationHandler>
+		<authorizationHandler>
+			<name>nest-groups-tst</name>
+			<description>The set of Principal Ids for the user are defined by NEST TEST</description>
+			<enabled>${NEST_TST_ENABLED}</enabled>
+			<class>eu.trade.repo.security.impl.LdapAuthorizationHandler</class>
+			<properties>
+				<domain>nest</domain>
+				<!-- Dir Context properties as defined in javax.naming.Context -->
+				<java>
+					<naming>
+						<!-- Default value
+							<factory>
+								<initial>com.sun.jndi.ldap.LdapCtxFactory</initial>
+							</factory>
+						-->
+						<provider>
+							<url>ldap://url_to_ldap:1234</url>
+						</provider>
+						<security>
+							<!-- Default value
+								<authentication>simple</authentication>
+							-->
+							<principal>cn=Directory Manager</principal>
+							<credentials>******</credentials>
+						</security>
+					</naming>
+				</java>
+
+				<groupBaseDn>ou=nest,ou=Groups,dc=example,dc=com</groupBaseDn>
+				<groupFilterExpr>uniqueMember=uid={0},*</groupFilterExpr>
+				<groupAttribute>entryDN</groupAttribute>
+				<groupRecursive>true</groupRecursive>
+				<adminUsers>true</adminUsers>
+				<adminBaseDn>ou=special users,dc=example,dc=com</adminBaseDn>
+				<adminFilterExpr>uid={0}</adminFilterExpr>
+
+				<!-- Default value 15 seconds
+					<searchTimeLimit>15000</searchTimeLimit>
+				-->
+			</properties>
+		</authorizationHandler>
+	</security>
+</configuration>

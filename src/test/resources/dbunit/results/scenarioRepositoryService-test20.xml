@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+  <object_type ID="8" REPOSITORY_ID="1" CMIS_ID="cmis:document" LOCAL_NAME="cmis:document" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:document" DISPLAY_NAME="cmis:document" BASE_ID="08" DESCRIPTION="cmis:document" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="F" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" VERSIONABLE="T" CONTENT_STREAM_ALLOWED="allowed"/>
+  <object_type ID="9" REPOSITORY_ID="1" CMIS_ID="cmis:folder" LOCAL_NAME="cmis:folder" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:folder" DISPLAY_NAME="cmis:folder" BASE_ID="09" DESCRIPTION="cmis:folder" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="F" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" CONTENT_STREAM_ALLOWED="notallowed"/>
+  <object_type ID="10" REPOSITORY_ID="1" CMIS_ID="cmis:relationship" LOCAL_NAME="cmis:relationship" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:relationship" DISPLAY_NAME="cmis:relationship" BASE_ID="10" DESCRIPTION="cmis:relationship" CREATABLE="T" FILEABLE="F" QUERYABLE="T" CONTROLLABLE_POLICY="F" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" CONTENT_STREAM_ALLOWED="notallowed"/>
+  <object_type ID="11" REPOSITORY_ID="1" CMIS_ID="cmis:policy" LOCAL_NAME="cmis:policy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:policy" DISPLAY_NAME="cmis:policy" BASE_ID="11" DESCRIPTION="cmis:policy" CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="F" CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="T" INCLUDED_IN_SUPERTYPE_QUERY="T" CONTENT_STREAM_ALLOWED="notallowed"/>
+  
+  <object_type_property ID="60" OBJECT_TYPE_ID="8" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:name" DISPLAY_NAME="cmis:name" DESCRIPTION="Name of the Object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="94" OBJECT_TYPE_ID="9" CMIS_ID="cmis:allowedChildObjectTypeIds" LOCAL_NAME="cmis:allowedChildObjectTypeIds" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:allowedChildObjectTypeIds" DISPLAY_NAME="cmis:allowedChildObjectTypeIds" DESCRIPTION="Id&apos;s of the set of Object-types that can be created, moved or filed into this folder" PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="F"/>
+  <object_type_property ID="95" OBJECT_TYPE_ID="10" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:name" DISPLAY_NAME="cmis:name" DESCRIPTION="Name of the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="61" OBJECT_TYPE_ID="8" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectId" DISPLAY_NAME="cmis:objectId" DESCRIPTION="Id of the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="62" OBJECT_TYPE_ID="8" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:baseTypeId" DISPLAY_NAME="cmis:baseTypeId" DESCRIPTION="Id of the base object-type for the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="63" OBJECT_TYPE_ID="8" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectTypeId" DISPLAY_NAME="cmis:objectTypeId" DESCRIPTION="Id of the object&apos;s type" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="64" OBJECT_TYPE_ID="8" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:createdBy" DISPLAY_NAME="cmis:createdBy" DESCRIPTION="User who created the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="65" OBJECT_TYPE_ID="8" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:creationDate" DISPLAY_NAME="cmis:creationDate" DESCRIPTION="DateTime when the object was created" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="66" OBJECT_TYPE_ID="8" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModifiedBy" DISPLAY_NAME="cmis:lastModifiedBy" DESCRIPTION="User who last modified the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="67" OBJECT_TYPE_ID="8" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModificationDate" DISPLAY_NAME="cmis:lastModificationDate" DESCRIPTION="DateTime when the object was last modified" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="68" OBJECT_TYPE_ID="8" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:changeToken" DISPLAY_NAME="cmis:changeToken" DESCRIPTION="Opaque token used for optimistic locking and concurrency checking" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="69" OBJECT_TYPE_ID="8" CMIS_ID="cmis:isImmutable" LOCAL_NAME="cmis:isImmutable" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isImmutable" DISPLAY_NAME="cmis:isImmutable" DESCRIPTION="TRUE if the repository MUST throw and error at any attempt to update or delete the object" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="70" OBJECT_TYPE_ID="8" CMIS_ID="cmis:isLatestVersion" LOCAL_NAME="cmis:isLatestVersion" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isLatestVersion" DISPLAY_NAME="cmis:isLatestVersion" DESCRIPTION="If the Document object is the Latest Version in its Version Series" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="71" OBJECT_TYPE_ID="8" CMIS_ID="cmis:isMajorVersion" LOCAL_NAME="cmis:isMajorVersion" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isMajorVersion" DISPLAY_NAME="cmis:isMajorVersion" DESCRIPTION="If the Document object is a Major Version in its Version Series" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="72" OBJECT_TYPE_ID="8" CMIS_ID="cmis:isLatestMajorVersion" LOCAL_NAME="cmis:isLatestMajorVersion" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isLatestMajorVersion" DISPLAY_NAME="cmis:isLatestMajorVersion" DESCRIPTION="If the Document object is the Latest Major Version in its Version Series" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="73" OBJECT_TYPE_ID="8" CMIS_ID="cmis:versionLabel" LOCAL_NAME="cmis:versionLabel" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:versionLabel" DISPLAY_NAME="cmis:versionLabel" DESCRIPTION="Textual description the position of an individual object with respect to the version series" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="74" OBJECT_TYPE_ID="8" CMIS_ID="cmis:versionSeriesId" LOCAL_NAME="cmis:versionSeriesId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:versionSeriesId" DISPLAY_NAME="cmis:versionSeriesId" DESCRIPTION="ID of the Version Series for this Object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="75" OBJECT_TYPE_ID="8" CMIS_ID="cmis:isVersionSeriesCheckedOut" LOCAL_NAME="cmis:isVersionSeriesCheckedOut" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:isVersionSeriesCheckedOut" DISPLAY_NAME="cmis:isVersionSeriesCheckedOut" DESCRIPTION="If there currenly exists a Private Working Copy for this Version Series" PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="76" OBJECT_TYPE_ID="8" CMIS_ID="cmis:versionSeriesCheckedOutBy" LOCAL_NAME="cmis:versionSeriesCheckedOutBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:versionSeriesCheckedOutBy" DISPLAY_NAME="cmis:versionSeriesCheckedOutBy" DESCRIPTION="If IsVersionSeriesCheckedOut then an identifier for the user who created the Private Working Copy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="77" OBJECT_TYPE_ID="8" CMIS_ID="cmis:versionSeriesCheckedOutId" LOCAL_NAME="cmis:versionSeriesCheckedOutId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:versionSeriesCheckedOutId" DISPLAY_NAME="cmis:versionSeriesCheckedOutId" DESCRIPTION="If IsVersionSeriesCheckedOut the Identifier for the Private Working Copy" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="78" OBJECT_TYPE_ID="8" CMIS_ID="cmis:checkinComment" LOCAL_NAME="cmis:checkinComment" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:checkinComment" DISPLAY_NAME="cmis:checkinComment" DESCRIPTION="Textual comment associated with the given version" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="79" OBJECT_TYPE_ID="8" CMIS_ID="cmis:contentStreamLength" LOCAL_NAME="cmis:contentStreamLength" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:contentStreamLength" DISPLAY_NAME="cmis:contentStreamLength" DESCRIPTION="Length of the content stream (in bytes)" PROPERTY_TYPE="integer" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="80" OBJECT_TYPE_ID="8" CMIS_ID="cmis:contentStreamMimeType" LOCAL_NAME="cmis:contentStreamMimeType" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:contentStreamMimeType" DISPLAY_NAME="cmis:contentStreamMimeType" DESCRIPTION="MIME type of the Content Stream" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="81" OBJECT_TYPE_ID="8" CMIS_ID="cmis:contentStreamFileName" LOCAL_NAME="cmis:contentStreamFileName" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:contentStreamFileName" DISPLAY_NAME="cmis:contentStreamFileName" DESCRIPTION="File name of the Content Stream" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="82" OBJECT_TYPE_ID="8" CMIS_ID="cmis:contentStreamId" LOCAL_NAME="cmis:contentStreamId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:contentStreamId" DISPLAY_NAME="cmis:contentStreamId" DESCRIPTION="Id of the stream" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="83" OBJECT_TYPE_ID="9" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:name" DISPLAY_NAME="cmis:name" DESCRIPTION="Name of the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="84" OBJECT_TYPE_ID="9" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectId" DISPLAY_NAME="cmis:objectId" DESCRIPTION="Id of the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="85" OBJECT_TYPE_ID="9" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:baseTypeId" DISPLAY_NAME="cmis:baseTypeId" DESCRIPTION="Id of the base object-type for the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="86" OBJECT_TYPE_ID="9" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectTypeId" DISPLAY_NAME="cmis:objectTypeId" DESCRIPTION="Id of the object&apos;s type" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="87" OBJECT_TYPE_ID="9" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:createdBy" DISPLAY_NAME="cmis:createdBy" DESCRIPTION="User who created the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="88" OBJECT_TYPE_ID="9" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:creationDate" DISPLAY_NAME="cmis:creationDate" DESCRIPTION="Date Time when the object was created" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="89" OBJECT_TYPE_ID="9" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModifiedBy" DISPLAY_NAME="cmis:lastModifiedBy" DESCRIPTION="User who last modified the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="90" OBJECT_TYPE_ID="9" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModificationDate" DISPLAY_NAME="cmis:lastModificationDate" DESCRIPTION="Date Time when the object was last modified" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="91" OBJECT_TYPE_ID="9" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:changeToken" DISPLAY_NAME="cmis:changeToken" DESCRIPTION="Token used for optimistic locking and concurrency checking" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="92" OBJECT_TYPE_ID="9" CMIS_ID="cmis:parentId" LOCAL_NAME="cmis:parentId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:parentId" DISPLAY_NAME="cmis:parentId" DESCRIPTION="PropertyType.ID.value() of the parent folder of the folder" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="93" OBJECT_TYPE_ID="9" CMIS_ID="cmis:path" LOCAL_NAME="cmis:path" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:path" DISPLAY_NAME="cmis:path" DESCRIPTION="The fully qualified path to this folder" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="96" OBJECT_TYPE_ID="10" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectId" DISPLAY_NAME="cmis:objectId" DESCRIPTION="Id of the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="97" OBJECT_TYPE_ID="10" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:baseTypeId" DISPLAY_NAME="cmis:baseTypeId" DESCRIPTION="Id of the base object-type for the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="98" OBJECT_TYPE_ID="10" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectTypeId" DISPLAY_NAME="cmis:objectTypeId" DESCRIPTION="Id of the object&apos;s type" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="99" OBJECT_TYPE_ID="10" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:createdBy" DISPLAY_NAME="cmis:createdBy" DESCRIPTION="User who created the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="100" OBJECT_TYPE_ID="10" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:creationDate" DISPLAY_NAME="cmis:creationDate" DESCRIPTION="Date Time when the object was created" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="101" OBJECT_TYPE_ID="10" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModifiedBy" DISPLAY_NAME="cmis:lastModifiedBy" DESCRIPTION="User who last modified the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="102" OBJECT_TYPE_ID="10" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModificationDate" DISPLAY_NAME="cmis:lastModificationDate" DESCRIPTION="Date Time when the object was last modified" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="103" OBJECT_TYPE_ID="10" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:changeToken" DISPLAY_NAME="cmis:changeToken" DESCRIPTION="Token used for optimistic locking and concurrency checking" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="104" OBJECT_TYPE_ID="10" CMIS_ID="cmis:sourceId" LOCAL_NAME="cmis:sourceId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:sourceId" DISPLAY_NAME="cmis:sourceId" DESCRIPTION="ID of the source object of the relationship" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="105" OBJECT_TYPE_ID="10" CMIS_ID="cmis:targetId" LOCAL_NAME="cmis:targetId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:targetId" DISPLAY_NAME="cmis:targetId" DESCRIPTION="ID of the target object of the relationship" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="106" OBJECT_TYPE_ID="11" CMIS_ID="cmis:name" LOCAL_NAME="cmis:name" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:name" DISPLAY_NAME="cmis:name" DESCRIPTION="Name of the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="107" OBJECT_TYPE_ID="11" CMIS_ID="cmis:objectId" LOCAL_NAME="cmis:objectId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectId" DISPLAY_NAME="cmis:objectId" DESCRIPTION="Id of the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="108" OBJECT_TYPE_ID="11" CMIS_ID="cmis:baseTypeId" LOCAL_NAME="cmis:baseTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:baseTypeId" DISPLAY_NAME="cmis:baseTypeId" DESCRIPTION="Id of the base object-type for the object" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="109" OBJECT_TYPE_ID="11" CMIS_ID="cmis:objectTypeId" LOCAL_NAME="cmis:objectTypeId" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:objectTypeId" DISPLAY_NAME="cmis:objectTypeId" DESCRIPTION="Id of the object&apos;s type" PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="oncreate" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="110" OBJECT_TYPE_ID="11" CMIS_ID="cmis:createdBy" LOCAL_NAME="cmis:createdBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:createdBy" DISPLAY_NAME="cmis:createdBy" DESCRIPTION="User who created the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="111" OBJECT_TYPE_ID="11" CMIS_ID="cmis:creationDate" LOCAL_NAME="cmis:creationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:creationDate" DISPLAY_NAME="cmis:creationDate" DESCRIPTION="Date Time when the object was created" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="112" OBJECT_TYPE_ID="11" CMIS_ID="cmis:lastModifiedBy" LOCAL_NAME="cmis:lastModifiedBy" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModifiedBy" DISPLAY_NAME="cmis:lastModifiedBy" DESCRIPTION="User who last modified the object" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="113" OBJECT_TYPE_ID="11" CMIS_ID="cmis:lastModificationDate" LOCAL_NAME="cmis:lastModificationDate" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:lastModificationDate" DISPLAY_NAME="cmis:lastModificationDate" DESCRIPTION="Date Time when the object was last modified" PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="114" OBJECT_TYPE_ID="11" CMIS_ID="cmis:changeToken" LOCAL_NAME="cmis:changeToken" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:changeToken" DISPLAY_NAME="cmis:changeToken" DESCRIPTION="Token used for optimistic locking and concurrency checking" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readonly" REQUIRED="F" QUERYABLE="T" ORDERABLE="T"/>
+  <object_type_property ID="115" OBJECT_TYPE_ID="11" CMIS_ID="cmis:policyText" LOCAL_NAME="cmis:policyText" LOCAL_NAMESPACE="http://ec.europa.eu/trade/repo" QUERY_NAME="cmis:policyText" DISPLAY_NAME="cmis:policyText" DESCRIPTION="User-friendly description of the policy" PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite" REQUIRED="T" QUERYABLE="T" ORDERABLE="T"/>
+
+
+	<object_type ID="10000" REPOSITORY_ID="1" CMIS_ID="ComplexType"
+		LOCAL_NAME="ComplexType" LOCAL_NAMESPACE="http://apache.org"
+		QUERY_NAME="ComplexType" DISPLAY_NAME="Complex type with properties, Level 1"
+		BASE_ID="8" PARENT_ID="8" DESCRIPTION="Builtin InMemory type definition ComplexType"
+		CREATABLE="T" FILEABLE="T" QUERYABLE="T" CONTROLLABLE_POLICY="T"
+		CONTROLLABLE_ACL="T" FULLTEXT_INDEXED="F" INCLUDED_IN_SUPERTYPE_QUERY="T"
+		VERSIONABLE="F" CONTENT_STREAM_ALLOWED="allowed" />
+
+	<object_type_property ID="10000" OBJECT_TYPE_ID="10000"
+		CMIS_ID="BooleanProp" LOCAL_NAME="BooleanProp" QUERY_NAME="BooleanProp"
+		DISPLAY_NAME="Sample Boolean Property" DESCRIPTION="This is a Sample Boolean Property property."
+		PROPERTY_TYPE="boolean" CARDINALITY="single" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="T" />
+
+	<object_type_property ID="10001" OBJECT_TYPE_ID="10000"
+		CMIS_ID="BooleanPropMV" LOCAL_NAME="BooleanPropMV" QUERY_NAME="BooleanPropMV"
+		DISPLAY_NAME="Sample Boolean multi-value Property" DESCRIPTION="This is a Sample Boolean multi-value Property property."
+		PROPERTY_TYPE="boolean" CARDINALITY="multi" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="F" />
+
+	<object_type_property ID="10002" OBJECT_TYPE_ID="10000"
+		CMIS_ID="DateTimeProp" LOCAL_NAME="DateTimeProp" QUERY_NAME="DateTimeProp"
+		DISPLAY_NAME="Sample DateTime Property" DESCRIPTION="This is a Sample DateTime Property property."
+		PROPERTY_TYPE="datetime" CARDINALITY="single" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="T" />
+
+	<object_type_property ID="10003" OBJECT_TYPE_ID="10000"
+		CMIS_ID="DateTimePropMV" LOCAL_NAME="DateTimePropMV" QUERY_NAME="DateTimePropMV"
+		DISPLAY_NAME="Sample DateTime multi-value Property" DESCRIPTION="This is a Sample DateTime multi-value Property property."
+		PROPERTY_TYPE="datetime" CARDINALITY="multi" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="F" />
+
+	<object_type_property ID="10004" OBJECT_TYPE_ID="10000"
+		CMIS_ID="DecimalProp" LOCAL_NAME="DecimalProp" QUERY_NAME="DecimalProp"
+		DISPLAY_NAME="Sample Decimal Property" DESCRIPTION="This is a Sample Decimal Property property."
+		PROPERTY_TYPE="decimal" CARDINALITY="single" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="T" />
+
+	<object_type_property ID="10005" OBJECT_TYPE_ID="10000"
+		CMIS_ID="DecimalPropMV" LOCAL_NAME="DecimalPropMV" QUERY_NAME="DecimalPropMV"
+		DISPLAY_NAME="Sample Decimal multi-value Property" DESCRIPTION="This is a Sample Decimal multi-value Property property."
+		PROPERTY_TYPE="decimal" CARDINALITY="multi" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="F" />
+
+	<object_type_property ID="10006" OBJECT_TYPE_ID="10000"
+		CMIS_ID="HtmlProp" LOCAL_NAME="HtmlProp" QUERY_NAME="HtmlProp"
+		DISPLAY_NAME="Sample Html Property" DESCRIPTION="This is a Sample Html Property property."
+		PROPERTY_TYPE="html" CARDINALITY="single" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="T" />
+
+	<object_type_property ID="10007" OBJECT_TYPE_ID="10000"
+		CMIS_ID="HtmlPropMV" LOCAL_NAME="HtmlPropMV" QUERY_NAME="HtmlPropMV"
+		DISPLAY_NAME="Sample Html multi-value Property" DESCRIPTION="This is a Sample Html multi-value Property property."
+		PROPERTY_TYPE="html" CARDINALITY="multi" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="F" />
+
+	<object_type_property ID="10008" OBJECT_TYPE_ID="10000"
+		CMIS_ID="IdProp" LOCAL_NAME="IdProp" QUERY_NAME="IdProp"
+		DISPLAY_NAME="Sample Id Property" DESCRIPTION="This is a Sample Id Property property."
+		PROPERTY_TYPE="id" CARDINALITY="single" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="T" />
+
+	<object_type_property ID="10009" OBJECT_TYPE_ID="10000"
+		CMIS_ID="IdPropMV" LOCAL_NAME="IdPropMV" QUERY_NAME="IdPropMV"
+		DISPLAY_NAME="Sample Id Html multi-value Property" DESCRIPTION="This is a Sample Id Html multi-value Property property."
+		PROPERTY_TYPE="id" CARDINALITY="multi" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="F" />
+
+	<object_type_property ID="10010" OBJECT_TYPE_ID="10000"
+		CMIS_ID="IntProp" LOCAL_NAME="IntProp" QUERY_NAME="IntProp"
+		DISPLAY_NAME="Sample Int Property" DESCRIPTION="This is a Sample Int Property property."
+		PROPERTY_TYPE="integer" CARDINALITY="single" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="T" />
+
+	<object_type_property ID="10011" OBJECT_TYPE_ID="10000"
+		CMIS_ID="IntPropMV" LOCAL_NAME="IntPropMV" QUERY_NAME="IntPropMV"
+		DISPLAY_NAME="Sample Int multi-value Property" DESCRIPTION="This is a Sample Int multi-value Property property."
+		PROPERTY_TYPE="integer" CARDINALITY="multi" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="F" />
+
+	<object_type_property ID="10012" OBJECT_TYPE_ID="10000"
+		CMIS_ID="StringProp" LOCAL_NAME="StringProp" QUERY_NAME="StringProp"
+		DISPLAY_NAME="Sample String Property" DESCRIPTION="This is a Sample String Property property."
+		PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="T" />
+
+	<object_type_property ID="10013" OBJECT_TYPE_ID="10000"
+		CMIS_ID="UriProp" LOCAL_NAME="UriProp" QUERY_NAME="UriProp"
+		DISPLAY_NAME="Sample Uri Property" DESCRIPTION="This is a Sample Uri Property property."
+		PROPERTY_TYPE="uri" CARDINALITY="single" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="T" />
+
+	<object_type_property ID="10014" OBJECT_TYPE_ID="10000"
+		CMIS_ID="UriPropMV" LOCAL_NAME="UriPropMV" QUERY_NAME="UriPropMV"
+		DISPLAY_NAME="Sample Uri multi-value Property" DESCRIPTION="This is a Sample Uri multi-value Property property."
+		PROPERTY_TYPE="uri" CARDINALITY="multi" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="F" />
+
+	<object_type_property ID="10015" OBJECT_TYPE_ID="10000"
+		CMIS_ID="PickListProp" LOCAL_NAME="PickListProp" QUERY_NAME="PickListProp"
+		DISPLAY_NAME="Sample Pick List Property" DESCRIPTION="This is a Sample Pick List Property property."
+		PROPERTY_TYPE="string" CARDINALITY="single" UPDATABILITY="readwrite"
+		REQUIRED="F" QUERYABLE="T" ORDERABLE="T" DEFAULT_VALUE="blue"
+		OPEN_CHOICE="F" CHOICES="red;green;blue;black"/>
+
+</dataset>

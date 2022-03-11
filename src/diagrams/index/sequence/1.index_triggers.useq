@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.4" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="eu.trade.repo.RepoService" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/RepoService.java" binary="false" label="repoService" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="2">      
+      <position height="304" width="0" x="0" y="78"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="241" width="0" x="0" y="120"/>    
+    </execution>  
+  </object>  
+  <object id="7" language="java" name="eu.trade.repo.index.txsync.IndexTransactionSynchronization" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/txsync/IndexTransactionSynchronization.java" binary="false" 
+    label="indexTransactionSynchronization" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="199" width="0" x="0" y="141"/>    
+    </execution>  
+  </object>  
+  <object id="10" language="java" name="eu.trade.repo.index.impl.IndexImpl" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/IndexImpl.java" binary="false" label="indexImpl" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="9">      
+      <position height="157" width="0" x="0" y="162"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="94" width="0" x="0" y="204"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="21" width="0" x="0" y="256"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="createDocument(java.lang.String,org.apache.chemistry.opencmis.commons.data.Properties,java.lang.String,org.apache.chemistry.opencmis.commons.data.ContentStream,org.apache.chemistry.opencmis.commons.enums.VersioningState,java.util.List&lt;java.lang.String&gt;,org.apache.chemistry.opencmis.commons.data.Acl,org.apache.chemistry.opencmis.commons.data.Acl,org.apache.chemistry.opencmis.commons.data.ExtensionsData):java.lang.String">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="afterCommit():void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="8" 
+    operation="executeOperation(java.lang.Integer,java.lang.Integer,java.lang.String,java.math.BigInteger,boolean,eu.trade.repo.index.model.IndexOperation):void">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="11" 
+    operation="executeIfAllowed(java.lang.Integer,java.lang.Integer,java.lang.String,java.math.BigInteger,boolean,eu.trade.repo.index.model.IndexOperation,boolean,java.lang.String):void">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="13" operation="executeIfAllowed(eu.trade.repo.index.IndexTask,boolean):void">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>
+</sequence-diagram>

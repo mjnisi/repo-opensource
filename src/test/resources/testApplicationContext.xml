@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+	                    http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+	                    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+    					http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+	
+	<!-- Import App's context files -->
+
+	<import resource="classpath:/META-INF/spring/applicationContext.xml" />
+
+	<bean id="testConnectionConfig" class="eu.trade.repo.TestConnectionConfig">
+		<constructor-arg type="java.lang.String" value="dbunit.properties"/>
+		<qualifier value="testConnectionConfig" />
+	</bean>
+	<bean id="dbEmbeddedProperties" class="eu.trade.repo.TestConnectionConfig">
+		<constructor-arg type="java.lang.String" value="dbunittransient.properties"/>
+		<qualifier value="dbEmbeddedProperties" />
+	</bean>
+	<!-- Create database -->
+
+	<jdbc:initialize-database data-source="dataSource" enabled="true" ignore-failures="ALL">
+		<jdbc:script location="file:releases/1.3.0/db/consolidated/01_repo_structure.sql" />
+		<jdbc:script location="file:releases/1.3.0/db/consolidated/02_repo_scoreView_H2.sql" />
+		<jdbc:script location="file:releases/1.3.0/db/consolidated/03_repo_updateAncestorsView_H2.sql" />
+	</jdbc:initialize-database>
+
+	<!-- provides a H2 console to look into the db if necessary -->
+	<!--bean id="org.h2.tools.Server-WebServer" class="org.h2.tools.Server" 
+		factory-method="createWebServer" depends-on="dataSource" init-method="start" 
+		lazy-init="false"> <constructor-arg value="-web,-webPort,8082" /> </bean -->
+        
+    <!-- starts H2 in TCP server mode, connect with any DB tool
+         jdbc:h2:tcp://localhost:8043/mem:test;IFEXISTS=TRUE
+    -->
+    <bean id="org.h2.tools.Server-WebServer" class="org.h2.tools.Server"
+                                             factory-method="createTcpServer"
+                                             depends-on="dataSource"
+                                             init-method="start"
+                                             destroy-method="stop"
+                                             lazy-init="false">
+        <constructor-arg value="-tcp,-tcpAllowOthers,-tcpPort,8045" />
+    </bean>
+
+	<!-- utility service -->
+	<bean id="utilService" class="eu.trade.repo.test.util.UtilityServices" />
+	
+	<!-- Test selectors -->
+	<bean id="aclselector" class="eu.trade.repo.selectors.AclTestSelector"/>
+	<bean id="repositoryTestSelector" class="eu.trade.repo.selectors.RepositoryTestSelector"/>
+
+    <!-- Cleaner: add all beans that should be cleaned at the end of a test extending BaseTestClass (application scope caches, not thread scope). -->
+	<bean id="testCleaner" class="eu.trade.repo.util.Cleaner">
+    	<property name="cleanables">
+	        <list>
+            	<ref bean="permissionMappingCache" />
+            	<ref bean="permissionCache" />
+            	<ref bean="repositoryService" />
+            	<ref bean="mockRepositoryService" />
+        	</list>
+    	</property>
+	</bean>
+
+	<bean id="mockGenerator" class="eu.trade.repo.id.IDGeneratorMock" />
+	<bean id="mockCurrentDate" class="eu.trade.repo.test.util.TestCurrentDate"/>
+
+	<bean id="mockRepositoryService" class="eu.trade.repo.service.RepositoryService">
+		<property name="generator" ref="mockGenerator" />
+		<property name="currentDate" ref="mockCurrentDate" />
+		
+		<property name="policyImpls" ref="mockPolicyImpls" />
+	</bean>
+	
+	<bean id="policyMonitor" class="eu.trade.repo.policyimpl.PolicyMonitor"/>
+	
+	<util:map id="mockPolicyImpls" value-type="eu.trade.repo.policy.AbstractBasePolicy">
+      <entry key="trade:quotaPolicy">
+      	<bean class="eu.trade.repo.policy.impl.QuotaPolicy"/>
+      </entry>
+      <entry key="A">
+      	<bean class="eu.trade.repo.policyimpl.APolicy"/>
+      </entry>
+      <entry key="B">
+      	<bean class="eu.trade.repo.policyimpl.BPolicy"/>
+      </entry>
+   </util:map>
+   <alias name="mockPolicyImpls" alias="policyImpls"/>
+	
+	<bean id="mockCmisObjectService" class="eu.trade.repo.service.cmis.CmisObjectService">
+		<property name="objectService" ref="mockObjectService" />
+	</bean>
+	<alias name="mockCmisObjectService" alias="cmisObjectService" />
+	
+	<bean id="mockObjectService" class="eu.trade.repo.service.ObjectService">
+		<property name="currentDate" ref="mockCurrentDate" />
+		<property name="generator" ref="mockGenerator" />
+	</bean>
+
+	<bean id="mockVersioningService" class="eu.trade.repo.service.VersioningService">
+		<property name="currentDate" ref="mockCurrentDate" />
+		<property name="generator" ref="mockGenerator" />
+	</bean>
+	
+	<bean id="stubRepoIndexTriggersDelegate" class="eu.trade.repo.index.bug.StubIndexTriggersDelegate">	    
+	</bean>
+	<alias name="stubRepoIndexTriggersDelegate" alias="repoIndexTriggersDelegate" />
+
+	<bean id="indexTaskExecutor" class="org.springframework.core.task.SyncTaskExecutor">
+		<qualifier value="taskExecutorSmallTasks" />
+	</bean>
+	
+	<bean id="indexTaskExecutorLarge" class="org.springframework.core.task.SyncTaskExecutor">
+		<qualifier value="taskExecutorLargeTasks" />
+	</bean>
+	
+	<bean id="indexTaskExecutorMetadata" class="org.springframework.core.task.SyncTaskExecutor">
+		<qualifier value="taskExecutorMetadataTasks" />
+	</bean>
+		
+	<bean id="indexBackgroundJob1" class="eu.trade.repo.index.jobs.CleanOrphanIndexesJob" />
+	<bean id="indexBackgroundJob2" class="eu.trade.repo.index.jobs.CleanOrphanIndexesJob" />
+	
+	<bean id="index" class="eu.trade.repo.index.impl.IndexImpl" />
+	
+	<bean id="indexDelegateHelperThrowException" class="eu.trade.repo.delegates.JDBCIndexDelegateHelper"/>
+	
+	<bean id="cmis11Migrate" class="eu.trade.repo.migration.CMIS11Migrate"/>
+	
+	<bean id="concreteQuery" class="eu.trade.repo.query.ConcreteQueryImpl">
+		<lookup-method name="createPropertiesAnalyzer" bean="propertiesAnalyzer"/>
+    	<lookup-method name="createFullTextAnalyzer" bean="fullTextAnalyzer"/>
+    	    	
+	</bean>	
+	
+	<!-- bean id="counterDelegateFake" class="eu.trade.repo.delegates.IndexCounterDelegateFake" /-->
+</beans>

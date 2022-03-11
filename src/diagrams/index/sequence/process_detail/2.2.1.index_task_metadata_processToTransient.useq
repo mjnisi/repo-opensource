@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.4" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="eu.trade.repo.index.impl.ops.MetadataIndexOperator" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/impl/ops/MetadataIndexOperator.java" binary="false" 
+    label="contentIndexOperator" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1040" y="0"/>    
+    <execution id="2">      
+      <position height="910" width="0" x="0" y="78"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="847" width="0" x="0" y="120"/>    
+    </execution>  
+  </object>  
+  <object id="9" language="java" name="eu.trade.repo.delegates.JPAIndexDelegate" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/delegates/JPAIndexDelegate.java" binary="false" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="6">      
+      <position height="113" width="0" x="0" y="161"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="javax.persistence.EntityManager" project="repo" 
+    file="C:/Dev/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar" 
+    binary="true" label="entityManager" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="11">      
+      <position height="21" width="0" x="0" y="182"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" name="javax.persistence.TypedQuery" project="repo" 
+    file="C:/Dev/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar" 
+    binary="true" type="interface" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="13">      
+      <position height="21" width="0" x="0" y="232"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="eu.trade.repo.delegates.JDBCIndexTransientMetadataDelegate" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/delegates/JDBCIndexTransientMetadataDelegate.java" binary="false" 
+    label="jdbcIndexTransientContentDelegate" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="982" y="0"/>    
+    <execution id="8">      
+      <position height="597" width="244" x="687" y="349"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="21" width="0" x="0" y="389"/>    
+    </execution>    
+    <execution id="34">      
+      <position height="166" width="0" x="0" y="759"/>    
+    </execution>    
+    <execution id="40">      
+      <position height="21" width="0" x="0" y="883"/>    
+    </execution>  
+  </object>  
+  <object id="41" language="java" name="eu.trade.repo.search.analyzers.FullTextAnalyzer" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/search/analyzers/FullTextAnalyzer.java" binary="false" label="analyzer" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="20">      
+      <position height="21" width="0" x="0" y="429"/>    
+    </execution>  
+  </object>  
+  <object id="42" language="java" name="eu.trade.repo.model.Property" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/model/Property.java" binary="false" label="property" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="22">      
+      <position height="21" width="0" x="0" y="476"/>    
+    </execution>  
+  </object>  
+  <object id="43" language="java" name="java.io.StringReader" project="repo" 
+    file="C:/Program Files/Java/jdk1.7.0_09/jre/lib/rt.jar" binary="true" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="24">      
+      <position height="21" width="0" x="0" y="515"/>    
+    </execution>  
+  </object>  
+  <object id="44" language="java" name="org.apache.lucene.util.AttributeSource" project="repo" 
+    file="C:/Dev/.m2/repository/org/apache/lucene/lucene-core/4.3.0/lucene-core-4.3.0.jar" binary="true" label="stream" 
+    type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="26">      
+      <position height="21" width="0" x="0" y="545"/>    
+    </execution>    
+    <execution id="28">      
+      <position height="21" width="0" x="0" y="584"/>    
+    </execution>    
+    <execution id="32">      
+      <position height="21" width="0" x="0" y="670"/>    
+    </execution>  
+  </object>  
+  <object id="45" language="java" name="eu.trade.repo.index.model.TransientDTO" project="repo" 
+    file="/repo/src/main/java/eu/trade/repo/index/model/TransientDTO.java" binary="false" label="token" type="class" 
+    autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="30">      
+      <position height="21" width="0" x="0" y="625"/>    
+    </execution>  
+  </object>  
+  <object id="46" language="java" name="org.springframework.transaction.support.AbstractPlatformTransactionManager" 
+    project="repo" file="C:/Dev/.m2/repository/org/springframework/spring-tx/3.2.3.RELEASE/spring-tx-3.2.3.RELEASE.jar" 
+    binary="true" label="transactionManager" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="36">      
+      <position height="21" width="0" x="0" y="790"/>    
+    </execution>  
+  </object>  
+  <object id="47" language="java" name="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate" 
+    project="repo" 
+    file="C:/Dev/.m2/repository/org/springframework/spring-jdbc/3.2.3.RELEASE/spring-jdbc-3.2.3.RELEASE.jar" 
+    binary="true" label="jdbcTemplate" type="class" autoSize="true">    
+    <position height="0" width="0" x="0" y="0"/>    
+    <execution id="38">      
+      <position height="21" width="0" x="0" y="827"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="processToTransientIndexPart(eu.trade.repo.index.IndexTask):boolean">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="obtainPropertyListByObjectId(java.lang.Integer):java.util.List&lt;Property&gt;">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" 
+    operation="processMetadataToTransientIndex(java.lang.Integer,java.lang.Integer,java.util.List&lt;eu.trade.repo.model.Property&gt;):boolean">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="10" 
+    operation="createNamedQuery(java.lang.String,java.lang.Class&lt;T&gt;):javax.persistence.TypedQuery&lt;T&gt;">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" operation="getResultList():java.util.List&lt;X&gt;">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="17" operation="createFullTextAnalyzer():org.apache.lucene.analysis.Analyzer">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="19" operation="tokenStream(java.lang.String,java.io.Reader):org.apache.lucene.analysis.TokenStream">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="21" operation="getTypedValue()">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" operation="StringReader(java.lang.String)">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="25">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>  
+  <message id="27">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="29" operation="TransientDTO(java.lang.String,int,int,int,java.lang.Integer,java.lang.Integer)">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="30"/>  
+  </message>  
+  <message id="31">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="32"/>  
+  </message>  
+  <message id="33" 
+    operation="writeTransientSegment(java.lang.String,java.lang.Integer,java.util.List&lt;eu.trade.repo.index.model.TransientDTO&gt;):int[]">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="34"/>  
+  </message>  
+  <message id="35" 
+    operation="getTransaction(org.springframework.transaction.TransactionDefinition):org.springframework.transaction.TransactionStatus">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="36"/>  
+  </message>  
+  <message id="37" 
+    operation="batchUpdate(java.lang.String,org.springframework.jdbc.core.namedparam.SqlParameterSource[]):int[]">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="38"/>  
+  </message>  
+  <message id="39" operation="commit(org.springframework.transaction.TransactionStatus):void">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="40"/>  
+  </message>
+</sequence-diagram>
