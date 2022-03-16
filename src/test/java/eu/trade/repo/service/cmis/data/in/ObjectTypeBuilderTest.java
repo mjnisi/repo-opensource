@@ -413,15 +413,15 @@ public class ObjectTypeBuilderTest {
 		ObjectType objectType = ObjectTypeBuilder.build(def, "repo01");
 		Assert.assertEquals(objectType.getObjectTypeRelationships().size(), 0);
 		
-		def.setAllowedSourceTypes(Arrays.asList(new String[] {"s1", "s2"}));
+		def.setAllowedSourceTypes(Arrays.asList("s1", "s2"));
 		objectType = ObjectTypeBuilder.build(def, "repo01");
 		Assert.assertEquals(objectType.getObjectTypeRelationships().size(), 2);
 		
-		def.setAllowedTargetTypes(Arrays.asList(new String[] {"t1"}));
+		def.setAllowedTargetTypes(Arrays.asList("t1"));
 		objectType = ObjectTypeBuilder.build(def, "repo01");
 		Assert.assertEquals(objectType.getObjectTypeRelationships().size(), 3);
 		
-		def.setAllowedTargetTypes(Arrays.asList(new String[] {"t2", "t3"}));
+		def.setAllowedTargetTypes(Arrays.asList("t2", "t3"));
 		objectType = ObjectTypeBuilder.build(def, "repo01");
 		ObjectTypeRelationship[] otr = objectType.getObjectTypeRelationships().toArray(new ObjectTypeRelationship[0]);
 		Assert.assertEquals(otr.length, 4);
@@ -658,7 +658,7 @@ public class ObjectTypeBuilderTest {
 		objectType = ObjectTypeBuilder.build(def, "repo01");
 		Assert.assertNull(getObjectTypeProperty(objectType, "string-id").getDefaultValue());
 
-		propDef.setDefaultValue(Arrays.asList(new String[] {"new-default3", "new-default4"}));
+		propDef.setDefaultValue(Arrays.asList("new-default3", "new-default4"));
 		objectType = ObjectTypeBuilder.build(def, "repo01");
 		Assert.assertEquals(getObjectTypeProperty(objectType, "string-id").getDefaultValue(), "new-default3");
 
@@ -1119,8 +1119,8 @@ public class ObjectTypeBuilderTest {
 		def.setIsFulltextIndexed(true);
 		def.setIsIncludedInSupertypeQuery(true);
 		
-		def.setAllowedSourceTypes(Arrays.asList(new String[] {"source1", "source2"}));
-		def.setAllowedTargetTypes(Arrays.asList(new String[] {"target1", "target2"}));
+		def.setAllowedSourceTypes(Arrays.asList("source1", "source2"));
+		def.setAllowedTargetTypes(Arrays.asList("target1", "target2"));
 		
 		if(withProperties) {
 			buildDocumentTypeDefinitionProperties(def);

@@ -114,7 +114,7 @@ public class JiraBug267Test extends BaseTestClass {
 		CMISObject folder = new CMISObject(new ObjectType("cmis:folder"));
 		folder.addProperty(getTestProperty(folderName, TEST_REPO_2, Constants.TYPE_CMIS_FOLDER, PropertyIds.NAME));
 		folder.addProperty(getTestProperty("cmis:folder", TEST_REPO_2, Constants.TYPE_CMIS_FOLDER, PropertyIds.OBJECT_TYPE_ID));
-		return cmisObjectService.createFolder(TEST_REPO_2, PropertiesBuilder.build(folder), "/", null, createAcl(true, Arrays.asList(new String [] {TestConstants.TEST_USER}), "cmis:read"), null, null);
+		return cmisObjectService.createFolder(TEST_REPO_2, PropertiesBuilder.build(folder), "/", null, createAcl(true, Arrays.asList(TestConstants.TEST_USER), "cmis:read"), null, null);
 	}
 	
 	/**
@@ -135,13 +135,9 @@ public class JiraBug267Test extends BaseTestClass {
 	 */
 	private void deleteFolder(String folderCmisId, boolean expectingException) {
 		//setting up behavior before actual folder deletion 
-		if (expectingException) {
-			//forcing index layer to throw an Exception 
-			stubIndexTriggersDelegate.setRaiseException(true);
-		} else {
-			//letting the index layer executing the actual code 
-			stubIndexTriggersDelegate.setRaiseException(false);
-		}
+		//forcing index layer to throw an Exception
+		//letting the index layer executing the actual code
+		stubIndexTriggersDelegate.setRaiseException(expectingException);
 		
 		cmisObjectService.deleteObject(TEST_REPO_2, folderCmisId, true, null);
 	}

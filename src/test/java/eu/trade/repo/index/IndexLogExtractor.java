@@ -15,7 +15,7 @@ import org.apache.commons.logging.LogFactory;
 
 public class IndexLogExtractor {
 
-	private static Log log = LogFactory.getLog(IndexLogExtractor.class);
+	private static final Log log = LogFactory.getLog(IndexLogExtractor.class);
 
 	private static final String LINE_PREFIX_BEGIN_OPERATION_LOG = "BEGIN. eu.trade.repo.index.impl.IndexHelper.indexFromScratch";
 	private static final String LINE_PREFIX_WRITING_PAGE_LOG = ">>>> Writing index page ";
@@ -162,22 +162,22 @@ public class IndexLogExtractor {
 
 	//>> END. ExecutionTime: 5.372 s. eu.trade.repo.index.impl.IndexHelper.indexFromScratch (operation: INDEX; repoId: 10020; objId: 953173; fileName: SHERPA - TDI dynamic pages 2 0 - screen specifications 0.1.9.doc)
 	private boolean isEndOperationLog(String line){
-		return (null != line)? line.contains(LINE_PREFIX_END_OPERATION_LOG) : false;
+		return null != line && line.contains(LINE_PREFIX_END_OPERATION_LOG);
 	}
 
 	//>>>> Writing index page 0 for documentId: 953176 
 	private boolean isWritingIndexPageLog(String line){
-		return (null != line)? line.contains(LINE_PREFIX_WRITING_PAGE_LOG) : false;
+		return null != line && line.contains(LINE_PREFIX_WRITING_PAGE_LOG);
 	}
 
 	//Index DONE for document 979957. Result state: Not indexable
 	private boolean isIndexDoneLog(String line){
-		return (null != line)? line.contains(LINE_INDEX_DONE_LOG) : false;
+		return null != line && line.contains(LINE_INDEX_DONE_LOG);
 	}
 
 	//16:05:17,611 [indexTaskExecutor-2] INFO [index.impl.ReverseIndexLogger]  - BEGIN. eu.trade.repo.index.impl.IndexHelper.indexFromScratch (operation: INDEX; repoId: 10043; objId: 10067; fileName: CMIS-v1.1-cs01.pdf)
 	private boolean isBeginOperationLog(String line){
-		return (null != line)? line.contains(LINE_PREFIX_BEGIN_OPERATION_LOG) : false;
+		return null != line && line.contains(LINE_PREFIX_BEGIN_OPERATION_LOG);
 	}
 
 	private void processBeginLineToIndexMap(String line, Map<String, LogInfo> indexMap, String defaultDate){

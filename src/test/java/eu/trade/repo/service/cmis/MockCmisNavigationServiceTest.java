@@ -82,22 +82,22 @@ public class MockCmisNavigationServiceTest {
 	
 	static String CMIS_ID_PREFIX = "cmisId:";
 	
-	private String mockObjectId = "mockObjectId";
-	private String mockRepositoryId = "mockRepositoryId";
-	private String mockFolderId = "mockFolderId";
-	private String mockFilter = "mockFilter";
-	private String mockOrderBy = "mockOrderBy";				
-	private String mockRenditionFilter = "mockRenditionFilter";		
-	private BigInteger mockMaxItems =  new BigInteger("100");
-	private BigInteger mockSkipCount = new BigInteger("0");
-	private ExtensionsData mockExtension = mock(ExtensionsData.class);		
-	private Map<String, Set<CMISObject>> mockRelationshipMappings = mock(Map.class);
-	private AllowableActions mockAllowableActions = mock(AllowableActions.class);
-	private Page<CMISObject> expectedChildrenPage = getPage(10, getCMISObject(240), getCMISObject(157));
-	private Set<CMISObject> expectedCheckedOutObjects = getObjectResults(getCMISObject(40), getCMISObject(12), getCMISObject(670));
-	private CMISObject expectedObjectParents = getCMISObjectWithParents(100, 10, 20);	
-	private BigInteger depth = new BigInteger("2");
-	private Tree expectedTree = getTree();
+	private final String mockObjectId = "mockObjectId";
+	private final String mockRepositoryId = "mockRepositoryId";
+	private final String mockFolderId = "mockFolderId";
+	private final String mockFilter = "mockFilter";
+	private final String mockOrderBy = "mockOrderBy";
+	private final String mockRenditionFilter = "mockRenditionFilter";
+	private final BigInteger mockMaxItems =  new BigInteger("100");
+	private final BigInteger mockSkipCount = new BigInteger("0");
+	private final ExtensionsData mockExtension = mock(ExtensionsData.class);
+	private final Map<String, Set<CMISObject>> mockRelationshipMappings = mock(Map.class);
+	private final AllowableActions mockAllowableActions = mock(AllowableActions.class);
+	private final Page<CMISObject> expectedChildrenPage = getPage(10, getCMISObject(240), getCMISObject(157));
+	private final Set<CMISObject> expectedCheckedOutObjects = getObjectResults(getCMISObject(40), getCMISObject(12), getCMISObject(670));
+	private final CMISObject expectedObjectParents = getCMISObjectWithParents(100, 10, 20);
+	private final BigInteger depth = new BigInteger("2");
+	private final Tree expectedTree = getTree();
 		
 	@Captor
 	private ArgumentCaptor<String> captorRequestRepository;
@@ -307,8 +307,8 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(240, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(157, PropertyIds.TARGET_ID)});
 		
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("240"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("157"))).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "240")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "157")).thenReturn(Collections.singleton(expectedRelationshipObject));
 		
 		ObjectInFolderList actualObjectInFolderList = getChildren(true, false, IncludeRelationships.BOTH);
 		
@@ -352,8 +352,8 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(240, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(157, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("240"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("157"))).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "240")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "157")).thenReturn(null);
 		
 		ObjectInFolderList actualObjectInFolderList = getChildren(true, false, IncludeRelationships.SOURCE);
 		
@@ -385,8 +385,8 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(240, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(157, PropertyIds.TARGET_ID)});
 		
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("240"))).thenReturn(null);
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("157"))).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "240")).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "157")).thenReturn(Collections.singleton(expectedRelationshipObject));
 		
 		ObjectInFolderList actualObjectInFolderList = getChildren(true, false, IncludeRelationships.TARGET);
 		
@@ -501,9 +501,9 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(40, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(12, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("40"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("12"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("670"))).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "40")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "12")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "670")).thenReturn(null);
 		
 		ObjectList actualObjectList = getCheckedOutDocs(true, IncludeRelationships.BOTH);
 		assertGetCheckedOutDocs_nonEmptyResults(actualObjectList, true, IncludeRelationships.BOTH);
@@ -535,9 +535,9 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(40, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(12, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("40"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("12"))).thenReturn(null);
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("670"))).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "40")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "12")).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "670")).thenReturn(null);
 				
 		ObjectList actualObjectList = getCheckedOutDocs(true, IncludeRelationships.SOURCE);
 		assertGetCheckedOutDocs_nonEmptyResults(actualObjectList, true, IncludeRelationships.SOURCE);
@@ -569,9 +569,9 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(40, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(12, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("40"))).thenReturn(null);
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("12"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("670"))).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "40")).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "12")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "670")).thenReturn(null);
 		
 		ObjectList actualObjectList = getCheckedOutDocs(true, IncludeRelationships.TARGET);
 		assertGetCheckedOutDocs_nonEmptyResults(actualObjectList, true, IncludeRelationships.TARGET);
@@ -643,8 +643,8 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(10, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(20, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("10"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("20"))).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "10")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "20")).thenReturn(Collections.singleton(expectedRelationshipObject));
 		
 		List<ObjectParentData> actualObjectParentData = getObjectParents(true, IncludeRelationships.BOTH);
 		
@@ -677,8 +677,8 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(10, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(20, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("10"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("20"))).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "10")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "20")).thenReturn(null);
 		
 		List<ObjectParentData> actualObjectParentData = getObjectParents(true, IncludeRelationships.SOURCE);
 		
@@ -710,8 +710,8 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(10, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(20, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("10"))).thenReturn(null);
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("20"))).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "10")).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "20")).thenReturn(Collections.singleton(expectedRelationshipObject));
 		
 		List<ObjectParentData> actualObjectParentData = getObjectParents(true, IncludeRelationships.TARGET);
 		
@@ -816,8 +816,8 @@ public class MockCmisNavigationServiceTest {
 		Map<String, List<String>> expectedObjectRelationshipMapping = getObjectRelationshipMapping(new Integer[]{20, 30}, new Integer[]{111, 111});
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(20, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(30, PropertyIds.TARGET_ID)});
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("20"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("30"))).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "20")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "30")).thenReturn(Collections.singleton(expectedRelationshipObject));
 				
 		when(navigationService.getTree(mockRepositoryId, mockFolderId, depth, true, false, false)).thenReturn(expectedTree);
 		
@@ -853,8 +853,8 @@ public class MockCmisNavigationServiceTest {
 		Map<String, List<String>> expectedObjectRelationshipMapping = getObjectRelationshipMapping(new Integer[]{20, 30}, new Integer[]{111, null});
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(20, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(30, PropertyIds.TARGET_ID)});
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("20"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("30"))).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "20")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "30")).thenReturn(null);
 				
 		when(navigationService.getTree(mockRepositoryId, mockFolderId, depth, true, false, false)).thenReturn(expectedTree);
 		
@@ -890,8 +890,8 @@ public class MockCmisNavigationServiceTest {
 		Map<String, List<String>> expectedObjectRelationshipMapping = getObjectRelationshipMapping(new Integer[]{20, 30}, new Integer[]{null, 111});
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(20, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(30, PropertyIds.TARGET_ID)});
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("20"))).thenReturn(null);
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("30"))).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "20")).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "30")).thenReturn(Collections.singleton(expectedRelationshipObject));
 				
 		when(navigationService.getTree(mockRepositoryId, mockFolderId, depth, true, false, false)).thenReturn(expectedTree);
 		
@@ -1002,8 +1002,8 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(20, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(30, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("20"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("30"))).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "20")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "30")).thenReturn(Collections.singleton(expectedRelationshipObject));
 				
 		when(navigationService.getTree(mockRepositoryId, mockFolderId, depth, true, true, false)).thenReturn(expectedTree);
 		
@@ -1040,8 +1040,8 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(20, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(30, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("20"))).thenReturn(Collections.singleton(expectedRelationshipObject));
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("30"))).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "20")).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "30")).thenReturn(null);
 				
 		when(navigationService.getTree(mockRepositoryId, mockFolderId, depth, true, true, false)).thenReturn(expectedTree);
 		
@@ -1078,8 +1078,8 @@ public class MockCmisNavigationServiceTest {
 		CMISObject expectedRelationshipObject = getExpectedRelationshipObject(111, new RelationshipInfo[] {new RelationshipInfo(20, PropertyIds.SOURCE_ID)
 																										, new RelationshipInfo(30, PropertyIds.TARGET_ID)});
 						
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("20"))).thenReturn(null);
-		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + new String("30"))).thenReturn(Collections.singleton(expectedRelationshipObject));
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "20")).thenReturn(null);
+		when(mockRelationshipMappings.get(CMIS_ID_PREFIX + "30")).thenReturn(Collections.singleton(expectedRelationshipObject));
 				
 		when(navigationService.getTree(mockRepositoryId, mockFolderId, depth, true, true, false)).thenReturn(expectedTree);
 		

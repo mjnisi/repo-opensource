@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class TestConnectionConfig {
 
-	private Properties properties;
+	private final Properties properties;
 	
 	public static final String DBUNIT_DATABASE_SCHEMA = "DBUNIT_DATABASE_SCHEMA";
 	public static final String DBUNIT_DATATYPE_FACTORY = "DBUNIT_DATATYPE_FACTORY";

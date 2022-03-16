@@ -339,20 +339,20 @@ public class CmisObjectServiceTest extends BaseTestClass {
 		folderA.addProperty(getTestProperty("FolderA", TEST_REPO_2, Constants.TYPE_CMIS_FOLDER, PropertyIds.NAME));
 		folderA.addProperty(getTestProperty("cmis:folder", TEST_REPO_2, Constants.TYPE_CMIS_FOLDER, PropertyIds.OBJECT_TYPE_ID));
 		
-		String folderAId = cmisObjectService.createFolder(TEST_REPO_2, PropertiesBuilder.build(folderA), "6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, createAcl(true, Arrays.asList(new String [] {TestConstants.TEST_USER}), "cmis:read"), null, null);
+		String folderAId = cmisObjectService.createFolder(TEST_REPO_2, PropertiesBuilder.build(folderA), "6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, createAcl(true, Arrays.asList(TestConstants.TEST_USER), "cmis:read"), null, null);
 		
 		CMISObject folderB = new CMISObject(new ObjectType("cmis:folder"));
 		folderB.addProperty(getTestProperty("FolderB", TEST_REPO_2, Constants.TYPE_CMIS_FOLDER, PropertyIds.NAME));
 		folderB.addProperty(getTestProperty("cmis:folder", TEST_REPO_2, Constants.TYPE_CMIS_FOLDER, PropertyIds.OBJECT_TYPE_ID));
 		
-		String folderBId = cmisObjectService.createFolder(TEST_REPO_2, PropertiesBuilder.build(folderB), folderAId, null, createAcl(true, Arrays.asList(new String [] {TestConstants.TEST2_USER}), "cmis:read"), null, null);
+		String folderBId = cmisObjectService.createFolder(TEST_REPO_2, PropertiesBuilder.build(folderB), folderAId, null, createAcl(true, Arrays.asList(TestConstants.TEST2_USER), "cmis:read"), null, null);
 		
 		//folderC
 		CMISObject folderC = new CMISObject(new ObjectType("cmis:folder"));
 		folderC.addProperty(getTestProperty("FolderBC", TEST_REPO_2, Constants.TYPE_CMIS_FOLDER, PropertyIds.NAME));
 		folderC.addProperty(getTestProperty("cmis:folder", TEST_REPO_2, Constants.TYPE_CMIS_FOLDER, PropertyIds.OBJECT_TYPE_ID));
 		
-		String folderCId = cmisObjectService.createFolder(TEST_REPO_2, PropertiesBuilder.build(folderC), folderBId, null, createAcl(true, Arrays.asList(new String [] {TestConstants.TEST_USER, TestConstants.TEST2_USER}), "cmis:read"), null, null);
+		String folderCId = cmisObjectService.createFolder(TEST_REPO_2, PropertiesBuilder.build(folderC), folderBId, null, createAcl(true, Arrays.asList(TestConstants.TEST_USER, TestConstants.TEST2_USER), "cmis:read"), null, null);
 		
 		
 		CMISObject document = new CMISObject(new ObjectType("cmis:document"));
@@ -363,10 +363,10 @@ public class CmisObjectServiceTest extends BaseTestClass {
 		String documentId = cmisObjectService.createDocument(TEST_REPO_2, PropertiesBuilder.build(document), folderCId, null, null, null, null, null, null);
 		
 		//remove acl
-		cmisAclService.applyAcl(TEST_REPO_2, documentId, null, createAcl(false, Arrays.asList(new String [] {TestConstants.TEST2_USER}), "cmis:read"), AclPropagation.REPOSITORYDETERMINED, null);
+		cmisAclService.applyAcl(TEST_REPO_2, documentId, null, createAcl(false, Arrays.asList(TestConstants.TEST2_USER), "cmis:read"), AclPropagation.REPOSITORYDETERMINED, null);
 		
 		//apply acl to FolderA
-		cmisAclService.applyAcl(TEST_REPO_2, folderAId, createAcl(true, Arrays.asList(new String [] {TestConstants.TEST2_USER}), "cmis:read"), null, AclPropagation.REPOSITORYDETERMINED, null);
+		cmisAclService.applyAcl(TEST_REPO_2, folderAId, createAcl(true, Arrays.asList(TestConstants.TEST2_USER), "cmis:read"), null, AclPropagation.REPOSITORYDETERMINED, null);
 		
 		//verify acl propagation
 		ObjectData obj = cmisObjectService.getObject(TEST_REPO_2, documentId, null, false, IncludeRelationships.NONE, null, false, true, null);
@@ -403,7 +403,7 @@ public class CmisObjectServiceTest extends BaseTestClass {
 		
 		try {
 			cmisObjectService.createDocument(TEST_REPO_2, PropertiesBuilder.build(doc), 
-					"6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, null, null, createAcl(true, Arrays.asList(new String [] {TestConstants.TEST_USER, TestConstants.TEST2_USER})), null, null);
+					"6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, null, null, createAcl(true, Arrays.asList(TestConstants.TEST_USER, TestConstants.TEST2_USER)), null, null);
 		} catch(CmisConstraintException e) {
 			
 			//TODO: we should define error codes, this is too fragile
@@ -432,7 +432,7 @@ public class CmisObjectServiceTest extends BaseTestClass {
 		
 		try {
 			cmisObjectService.createFolder(TEST_REPO_2, PropertiesBuilder.build(doc), 
-					"6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, createAcl(true, Arrays.asList(new String [] {TestConstants.TEST_USER, TestConstants.TEST2_USER})), null, null);
+					"6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, createAcl(true, Arrays.asList(TestConstants.TEST_USER, TestConstants.TEST2_USER)), null, null);
 		} catch(CmisConstraintException e) {
 			
 			//TODO: we should define error codes, this is too fragile
@@ -459,14 +459,14 @@ public class CmisObjectServiceTest extends BaseTestClass {
 		doc.addProperty(getTestProperty("From document", TEST_REPO_2, Constants.TYPE_CMIS_DOCUMENT, PropertyIds.NAME));
 		doc.addProperty(getTestProperty("cmis:document", TEST_REPO_2, Constants.TYPE_CMIS_DOCUMENT, PropertyIds.OBJECT_TYPE_ID));
 		
-		String doc1Id = cmisObjectService.createDocument(TEST_REPO_2, PropertiesBuilder.build(doc), "6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, null, null, createAcl(true, Arrays.asList(new String [] {TestConstants.TEST_USER, TestConstants.TEST2_USER})), null, null);
+		String doc1Id = cmisObjectService.createDocument(TEST_REPO_2, PropertiesBuilder.build(doc), "6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, null, null, createAcl(true, Arrays.asList(TestConstants.TEST_USER, TestConstants.TEST2_USER)), null, null);
 		
 		doc = new CMISObject(new ObjectType("nest:document"));
 
 		doc.addProperty(getTestProperty("To document", TEST_REPO_2, Constants.TYPE_CMIS_DOCUMENT, PropertyIds.NAME));
 		doc.addProperty(getTestProperty("nest:document", TEST_REPO_2, Constants.TYPE_CMIS_DOCUMENT, PropertyIds.OBJECT_TYPE_ID));
 		
-		String doc2Id = cmisObjectService.createDocument(TEST_REPO_2, PropertiesBuilder.build(doc), "6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, null, null, createAcl(true, Arrays.asList(new String [] {TestConstants.TEST_USER, TestConstants.TEST2_USER})), null, null);
+		String doc2Id = cmisObjectService.createDocument(TEST_REPO_2, PropertiesBuilder.build(doc), "6bf5f28c10a4cad545a52b9f7160fc59d731fbe5", null, null, null, createAcl(true, Arrays.asList(TestConstants.TEST_USER, TestConstants.TEST2_USER)), null, null);
 		
 		//create relationship between docs
 		String relId = createRelationship(doc1Id, doc2Id,"tdr:pdf_attachment", "Document with PDF attachment", true, "cmis:anyone");

@@ -27,8 +27,8 @@ import eu.trade.repo.model.ObjectType;
 
 public class CmisMultiFilingServiceTest extends BaseTestClass {
 	
-	private String repositoryId = "tron_dev";
-	private ExtensionsData mockExtension = mock(ExtensionsData.class);
+	private final String repositoryId = "tron_dev";
+	private final ExtensionsData mockExtension = mock(ExtensionsData.class);
 		
 	@Autowired
 	private MultiFilingService cmisMultiFilingService;

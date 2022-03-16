@@ -58,10 +58,10 @@ public class APolicy extends AbstractBasePolicy {
 		
 		if(context.getPolicyState() == PolicyState.AFTER) {
 			policyMonitor.incrementCounter();
-			policyMonitor.addMessage("A AFTER (createItem) " + ids.toString());
+			policyMonitor.addMessage("A AFTER (createItem) " + ids);
 		} else if(context.getPolicyState() == PolicyState.BEFORE) {
 			policyMonitor.incrementCounter();
-			policyMonitor.addMessage("A BEFORE (createItem) " + ids.toString());
+			policyMonitor.addMessage("A BEFORE (createItem) " + ids);
 		}
 		
 		return null;

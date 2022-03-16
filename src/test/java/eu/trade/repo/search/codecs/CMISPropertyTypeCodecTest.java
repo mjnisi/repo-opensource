@@ -61,13 +61,13 @@ public class CMISPropertyTypeCodecTest extends BaseTestClass {
 		
 		assertTrue(CMISDateTimeCodec.class.isAssignableFrom(codec.getClass()));
 
-		String encodedDate = codec.<String, Date>encode(testDateTime.toDate());
+		String encodedDate = codec.encode(testDateTime.toDate());
 		assertEquals("1970-01-01T00:00:00.000Z", encodedDate);
 		
-		encodedDate = codec.<String, GregorianCalendar>encode(testDateTime.toGregorianCalendar());
+		encodedDate = codec.encode(testDateTime.toGregorianCalendar());
 		assertEquals("1970-01-01T00:00:00.000Z", encodedDate);
 		
-		encodedDate = codec.<String, String>encode(dateTimeCMISQueryFormat);
+		encodedDate = codec.encode(dateTimeCMISQueryFormat);
 		assertEquals("1970-01-01T00:00:00.000Z", encodedDate);
 		
 		Calendar calendar = codec.decode(encodedDate);

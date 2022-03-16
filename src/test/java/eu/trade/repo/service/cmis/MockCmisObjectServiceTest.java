@@ -100,12 +100,12 @@ public class MockCmisObjectServiceTest {
 	final private String mockRepositoryId = "mockRepositoryId";
 	final private String mockFolderId = "mockFolderId";
 	final private String mockSourceId = "mockSourceId";
-	private ContentStream mockContentStream = mock(ContentStream.class);
-	private VersioningState mockVersioningState = VersioningState.NONE;	 
-	private List<String> mockPolicies = mock(List.class);
-	private Acl mockAddAces = mock(Acl.class);
-	private Acl mockRemoveAcces = mock(Acl.class);
- 	private ExtensionsData mockExtension = mock(ExtensionsData.class);
+	private final ContentStream mockContentStream = mock(ContentStream.class);
+	private final VersioningState mockVersioningState = VersioningState.NONE;
+	private final List<String> mockPolicies = mock(List.class);
+	private final Acl mockAddAces = mock(Acl.class);
+	private final Acl mockRemoveAcces = mock(Acl.class);
+ 	private final ExtensionsData mockExtension = mock(ExtensionsData.class);
  	 	
  	@Captor
  	private ArgumentCaptor<CMISObject> actualCaptorCmisObject;

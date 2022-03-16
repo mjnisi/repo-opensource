@@ -26,9 +26,9 @@ import eu.trade.repo.TestConstants;
 
 public class CmisNavigationServiceTest extends BaseTestClass {
 	
-	private String repositoryId = "tron_dev";
-	private ExtensionsData mockExtension = mock(ExtensionsData.class);
-	private String mockRenditionFilter = "mockRenditionFilter";
+	private final String repositoryId = "tron_dev";
+	private final ExtensionsData mockExtension = mock(ExtensionsData.class);
+	private final String mockRenditionFilter = "mockRenditionFilter";
 	
 	@Override
 	@Before
@@ -165,7 +165,7 @@ public class CmisNavigationServiceTest extends BaseTestClass {
 	}
 	
 	private void assertActualAgainstExpected(String[] expectedCmisIds_asArray, List<ObjectInFolderContainer> actualResults) {
-		List<String> expectedCmisIds_asList = Arrays.asList(expectedCmisIds_asArray);
+		String[] expectedCmisIds_asList = expectedCmisIds_asArray;
 		List<String> actualIds = new ArrayList();
 		for (ObjectInFolderContainer actualResult : actualResults) {			
 			actualIds.add(actualResult.getObject().getObject().getId());	
@@ -176,7 +176,7 @@ public class CmisNavigationServiceTest extends BaseTestClass {
 	}
 	
 	private void assertActualAgainstExpected(String[] expectedCmisIds_asArray, ObjectInFolderList actualObjectInFolderList) {
-		List<String> expectedCmisIds_asList = Arrays.asList(expectedCmisIds_asArray);
+		String[] expectedCmisIds_asList = expectedCmisIds_asArray;
 		List<String> actualIds = new ArrayList();
 		for (ObjectInFolderData actualResult : actualObjectInFolderList.getObjects()) {			
 			actualIds.add(actualResult.getObject().getId());	

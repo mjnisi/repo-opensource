@@ -40,12 +40,12 @@ public class Create1000Relationships {
 			List<Ace> ace = new ArrayList<Ace>();
 			AccessControlEntryImpl acei = new AccessControlEntryImpl();
 			acei.setPrincipal(new AccessControlPrincipalDataImpl("kardaal"));
-			acei.setPermissions(Arrays.asList(new String[] {"cmis:all"}));
+			acei.setPermissions(Arrays.asList("cmis:all"));
 			ace.add(acei);
 
 			acei = new AccessControlEntryImpl();
 			acei.setPrincipal(new AccessControlPrincipalDataImpl("martjoe"));
-			acei.setPermissions(Arrays.asList(new String[] {"cmis:all"}));
+			acei.setPermissions(Arrays.asList("cmis:all"));
 			ace.add(acei);
 
 			session.createRelationship(properties, Collections.EMPTY_LIST, ace, Collections.EMPTY_LIST);
@@ -62,12 +62,12 @@ public class Create1000Relationships {
 		List<Ace> ace = new ArrayList<Ace>();
 		AccessControlEntryImpl acei = new AccessControlEntryImpl();
 		acei.setPrincipal(new AccessControlPrincipalDataImpl("hadamto"));
-		acei.setPermissions(Arrays.asList(new String[] {"cmis:all"}));
+		acei.setPermissions(Arrays.asList("cmis:all"));
 		ace.add(acei);
 		
 		acei = new AccessControlEntryImpl();
 		acei.setPrincipal(new AccessControlPrincipalDataImpl("martjoe"));
-		acei.setPermissions(Arrays.asList(new String[] {"cmis:all"}));
+		acei.setPermissions(Arrays.asList("cmis:all"));
 		ace.add(acei);
 		
 		session.createRelationship(properties, Collections.EMPTY_LIST, ace, Collections.EMPTY_LIST);

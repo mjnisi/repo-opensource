@@ -31,7 +31,7 @@ public class TestPolicies {
 		properties.put("trade:quota", new BigInteger("12345"));
 		properties.put("name", Arrays.asList(new String[] { "house", "tree"}));*/
 		
-		Policy pol = (Policy)folder.createPolicy(properties);
+		Policy pol = folder.createPolicy(properties);
 	}
 	
 	

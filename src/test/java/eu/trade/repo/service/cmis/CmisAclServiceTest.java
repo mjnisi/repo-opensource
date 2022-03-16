@@ -30,9 +30,9 @@ import eu.trade.repo.service.cmis.data.out.AclBuilder;
 
 public class CmisAclServiceTest extends BaseTestClass {
 
-	private String repositoryId = "tron_dev";
+	private final String repositoryId = "tron_dev";
 	
-	private ExtensionsData mockExtension = mock(ExtensionsData.class);
+	private final ExtensionsData mockExtension = mock(ExtensionsData.class);
 	
 	@Override
 	@Before
@@ -91,7 +91,7 @@ public class CmisAclServiceTest extends BaseTestClass {
 	 */
 	@Test	
 	public void testApplyAcl_noRemoval_noAdding_onNoAcl() {		
-		Set<eu.trade.repo.model.Acl> emptyAcl = Collections.<eu.trade.repo.model.Acl>emptySet();
+		Set<eu.trade.repo.model.Acl> emptyAcl = Collections.emptySet();
 		Acl resultFromEmptyAcl = AclBuilder.build(emptyAcl, false);
 		
 		assert_emptyResult(cmisAclService.applyAcl(repositoryId, "282a94d493643b6dda03f56d2e0f51fbdfe4083", resultFromEmptyAcl, resultFromEmptyAcl, AclPropagation.OBJECTONLY, mockExtension));
@@ -109,7 +109,7 @@ public class CmisAclServiceTest extends BaseTestClass {
 		String[] expectedPermissionName = new String[] {"cmis:read", "cmis:all"};
 		Map<String, String> expectedMapping = getExpectedMapping(new AclDefinition(expectedPrincipalId[0], expectedPermissionName[0])
 																,new AclDefinition(expectedPrincipalId[1], expectedPermissionName[1]));		
-		Set<eu.trade.repo.model.Acl> emptyAcl = Collections.<eu.trade.repo.model.Acl>emptySet();
+		Set<eu.trade.repo.model.Acl> emptyAcl = Collections.emptySet();
 		Acl resultFromEmptyAcl = AclBuilder.build(emptyAcl, false);
 		
 		assert_nonEmptyResult( expectedMapping, cmisAclService.applyAcl(repositoryId, "7e34082628445aee97f42e5bd2d3445a56e54b83", resultFromEmptyAcl, resultFromEmptyAcl, AclPropagation.OBJECTONLY, mockExtension));				
@@ -133,7 +133,7 @@ public class CmisAclServiceTest extends BaseTestClass {
 		String objectCmisId = "282a94d493643b6dda03f56d2e0f51fbdfe4083";
 		String[] expectedPrincipalId = new String[] {"tron/cn=export credit,ou=tron,ou=groups,dc=example,dc=com", "tron/cn=export credit admin,ou=tron,ou=groups,dc=example,dc=com"};
 		String[] expectedPermissionName = new String[] {"cmis:read", "cmis:all"};
-		Set<eu.trade.repo.model.Acl> emptyAcl = Collections.<eu.trade.repo.model.Acl>emptySet();
+		Set<eu.trade.repo.model.Acl> emptyAcl = Collections.emptySet();
 		Acl resultFromEmptyAcl = AclBuilder.build(emptyAcl, false);
 
 		// scenario1 
@@ -237,8 +237,8 @@ public class CmisAclServiceTest extends BaseTestClass {
 	}
 	
 	class AclDefinition {
-		private String principalId;
-		private String permissionName;
+		private final String principalId;
+		private final String permissionName;
 		public AclDefinition(String principalId, String permissionName) {
 			this.principalId = principalId;
 			this.permissionName = permissionName;

@@ -296,7 +296,7 @@ public class QueryParserTest {
         
         CMISParser.cmis_query_return r = parser.cmis_query();
         
-        CommonTree ast = (CommonTree)r.getTree();
+        CommonTree ast = r.getTree();
         
         log.debug(printTree(ast));
         log.debug(printTreeInline(ast));
@@ -328,7 +328,7 @@ public class QueryParserTest {
 	 * helper methods
 	 -------------------------------------------------------------------------*/
 	
-	private static Log log = LogFactory.getLog(QueryParserTest.class);
+	private static final Log log = LogFactory.getLog(QueryParserTest.class);
 	
     private static String printTreeInline(CommonTree tree) {
 		StringBuffer sb = new StringBuffer();
@@ -369,7 +369,7 @@ public class QueryParserTest {
 		}
 
 		//print node description: type code followed by token text
-		sb.append(sb.toString() + " " + t + " " + tree.getText() + "\n");
+		sb.append(sb + " " + t + " " + tree.getText() + "\n");
 
 		//print all children
 		if (tree.getChildren() != null) {

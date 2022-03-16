@@ -1511,7 +1511,7 @@ public class ObjectServiceTest extends BaseLobTestClass {
 		properties.addProperty(new PropertyIdImpl(PropertyIds.OBJECT_TYPE_ID, "cmis:item"));
 		
 		properties.addProperty(new PropertyIdImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, "tag"));
-		properties.addProperty(new PropertyStringImpl("name", Arrays.asList(new String[] { "book", "tree"})));
+		properties.addProperty(new PropertyStringImpl("name", Arrays.asList("book", "tree")));
 		
 		//create in the root
 		CMISObject cmisObject = CMISObjectBuilder.build(properties, "c97ed305a3314e74eb72523bb5417fcdb140d57c");
@@ -1607,7 +1607,7 @@ public class ObjectServiceTest extends BaseLobTestClass {
 		
 		//remove one secondary from item3
 		properties = new PropertiesImpl();
-		properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList(new String[] { "tag" })));
+		properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList("tag")));
 		objectService.updateProperties("secondary", "f3f258ea8556127a33db258725b593c0a22a9a5b", properties);
 		
 		compareTable("property", "scenarioSecondaryTypes02-removeproperty.xml");
@@ -1635,7 +1635,7 @@ public class ObjectServiceTest extends BaseLobTestClass {
 		
 		//remove trade:secondary1 of item5 
 		PropertiesImpl properties = new PropertiesImpl();
-		properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList(new String[] {"trade:secondary2"})));
+		properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList("trade:secondary2")));
 		objectService.updateProperties("secondary", "2074a56c74f222866f3e3dfe744fd70b74605a96", properties);
 		
 		compareTable("property", "scenarioSecondaryTypes02-path.xml");
@@ -1654,7 +1654,7 @@ public class ObjectServiceTest extends BaseLobTestClass {
 
 		try {
 			PropertiesImpl properties = new PropertiesImpl();
-			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList(new String[] {"cmis:document"})));
+			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList("cmis:document")));
 			objectService.updateProperties("secondary", "2074a56c74f222866f3e3dfe744fd70b74605a96", properties);
 			Assert.fail();
 		} catch (CmisConstraintException e) {
@@ -1663,7 +1663,7 @@ public class ObjectServiceTest extends BaseLobTestClass {
 		
 		try {
 			PropertiesImpl properties = new PropertiesImpl();
-			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList(new String[] {"cmis:secondary"})));
+			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList("cmis:secondary")));
 			objectService.updateProperties("secondary", "2074a56c74f222866f3e3dfe744fd70b74605a96", properties);
 			Assert.fail();
 		} catch (CmisConstraintException e) {
@@ -1672,7 +1672,7 @@ public class ObjectServiceTest extends BaseLobTestClass {
 
 		try {
 			PropertiesImpl properties = new PropertiesImpl();
-			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList(new String[] {"xxx:yyy"})));
+			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList("xxx:yyy")));
 			objectService.updateProperties("secondary", "2074a56c74f222866f3e3dfe744fd70b74605a96", properties);
 			Assert.fail();
 		} catch (CmisConstraintException e) {
@@ -1750,7 +1750,7 @@ public class ObjectServiceTest extends BaseLobTestClass {
 
 		try {
 			PropertiesImpl properties = new PropertiesImpl();
-			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList(new String[] {"cmis:document"})));
+			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList("cmis:document")));
 			
 			versioningService.checkIn("secondary", id, true, properties, null, "checking comment", 
 					new ArrayList<String>(), new HashSet<Acl>(), new HashSet<Acl>());
@@ -1761,7 +1761,7 @@ public class ObjectServiceTest extends BaseLobTestClass {
 		
 		try {
 			PropertiesImpl properties = new PropertiesImpl();
-			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList(new String[] {"cmis:secondary"})));
+			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList("cmis:secondary")));
 			
 			versioningService.checkIn("secondary", id, true, properties, null, "checking comment", 
 					new ArrayList<String>(), new HashSet<Acl>(), new HashSet<Acl>());
@@ -1773,7 +1773,7 @@ public class ObjectServiceTest extends BaseLobTestClass {
 
 		try {
 			PropertiesImpl properties = new PropertiesImpl();
-			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList(new String[] {"xxx:yyy"})));
+			properties.addProperty(new PropertyStringImpl(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, Arrays.asList("xxx:yyy")));
 			
 			versioningService.checkIn("secondary", id, true, properties, null, "checking comment", 
 					new ArrayList<String>(), new HashSet<Acl>(), new HashSet<Acl>());

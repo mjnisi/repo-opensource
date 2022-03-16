@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 import javax.sql.DataSource;
 
@@ -168,11 +169,11 @@ public class BaseLobTestClass extends BaseTestClass{
 
 	private IDataSet applyLobReplacements(IDataSet dataSet) throws Exception{
 		ReplacementDataSet tmpExpReplacementDataSet = new ReplacementDataSet(dataSet);
-		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_1, TXT_FILE_CONTENT_1.getBytes("UTF-8")); // this row also needs to be in the getDataSet method
-		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_2, TXT_FILE_CONTENT_2.getBytes("UTF-8"));
-		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_3, TXT_FILE_CONTENT_3.getBytes("UTF-8"));
-		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_4, TXT_FILE_CONTENT_4.getBytes("UTF-8"));
-		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_5, TXT_FILE_CONTENT_5.getBytes("UTF-8"));
+		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_1, TXT_FILE_CONTENT_1.getBytes(StandardCharsets.UTF_8)); // this row also needs to be in the getDataSet method
+		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_2, TXT_FILE_CONTENT_2.getBytes(StandardCharsets.UTF_8));
+		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_3, TXT_FILE_CONTENT_3.getBytes(StandardCharsets.UTF_8));
+		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_4, TXT_FILE_CONTENT_4.getBytes(StandardCharsets.UTF_8));
+		tmpExpReplacementDataSet.addReplacementObject(TXT_FILE_MARK_5, TXT_FILE_CONTENT_5.getBytes(StandardCharsets.UTF_8));
 		return tmpExpReplacementDataSet;
 	}
 

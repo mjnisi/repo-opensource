@@ -44,7 +44,7 @@ import eu.trade.repo.model.Repository;
 
 public class CmisRepositoryServiceTest extends BaseTestClass {
 
-	private static final int BASIC_TYPES_COUNT = ((BaseTypeId []) BASE_TYPE_CMIS_10.toArray()).length; 
+	private static final int BASIC_TYPES_COUNT = BASE_TYPE_CMIS_10.toArray().length;
 
 	@Autowired
 	private RepositoryService cmisRepositoryService;
@@ -364,7 +364,7 @@ public class CmisRepositoryServiceTest extends BaseTestClass {
 		XMLUnit.setIgnoreWhitespace(true);
 		XMLUnit.setIgnoreDiffBetweenTextAndCDATA(true);
 		Diff diff = XMLUnit.compareXML(new FileReader("src/test/resources/xmlunit/typesTree01.xml"), typesTreeDump);
-		Assert.assertTrue("Differences found: " + diff.toString(), diff.similar());
+		Assert.assertTrue("Differences found: " + diff, diff.similar());
 	}
 	
 	/**
@@ -415,7 +415,7 @@ public class CmisRepositoryServiceTest extends BaseTestClass {
 		XMLUnit.setIgnoreWhitespace(true);
 		XMLUnit.setIgnoreDiffBetweenTextAndCDATA(true);
 		Diff diff = XMLUnit.compareXML(new FileReader("src/test/resources/xmlunit/typesTree02.xml"), typesTreeDump);
-		Assert.assertTrue("Differences found: " + diff.toString(), diff.similar());
+		Assert.assertTrue("Differences found: " + diff, diff.similar());
 	}
 	
 	

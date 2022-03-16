@@ -96,7 +96,7 @@ public abstract class AbstractCmisAclService {
 	}	
 
 	protected Set<eu.trade.repo.model.Acl> getEmptyAcl() {		
-		return Collections.<eu.trade.repo.model.Acl>emptySet();
+		return Collections.emptySet();
 		
 	}
 	

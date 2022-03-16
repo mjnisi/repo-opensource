@@ -693,7 +693,7 @@ public class QueryTest extends BaseTestClass {
 		for(Integer objectId : cmisObjects) {
 			CMISObject obj = utilService.find(CMISObject.class,objectId);
 			Property property = propertySelector.getObjectPropertyByQueryName(obj.getCmisObjectId(), "cmis:numberField");
-			BigDecimal current = property.<BigDecimal>getTypedValue();
+			BigDecimal current = property.getTypedValue();
 			BigDecimal expected = new BigDecimal("3.0");
 			//expected.equals(current) is returning false because is comparing 3 and 3.0
 			assertTrue(expected.compareTo(current) == 0);
@@ -843,7 +843,7 @@ public class QueryTest extends BaseTestClass {
 		 * 22			111			3.0						foobar
 		 * 22			113			3.0						Allen
 		 */
-		List<Integer> first = Arrays.asList(new Integer[] {102, 110, 115, 114});
+		List<Integer> first = Arrays.asList(102, 110, 115, 114);
 		assertTrue(first.contains(results[0].intValue()));
 		assertEquals(113, results[5].intValue());
 
@@ -933,7 +933,7 @@ public class QueryTest extends BaseTestClass {
 		 */
 		results = resultSet.toArray(new Integer[resultSet.size()]);
 		assertEquals(7, results.length);
-		List<Integer> first = Arrays.asList(new Integer[] {102, 111, 112, 113, 114, 115} );
+		List<Integer> first = Arrays.asList(102, 111, 112, 113, 114, 115);
 		assertTrue(first.contains(results[0].intValue()));
 		assertEquals(110, results[6].intValue());
 

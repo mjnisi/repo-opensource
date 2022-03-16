@@ -6,7 +6,7 @@ import java.util.List;
 public class PolicyMonitor {
 	
 	private int counter = 0;
-	private List<String> messages = new ArrayList<String>();
+	private final List<String> messages = new ArrayList<String>();
 	
 	public void reset() {
 		counter = 0;

@@ -18,10 +18,10 @@ import eu.trade.repo.service.interfaces.IMultifilingService;
 
 public class MockCmisMultiFilingServiceTest {
 	
-	private String mockObjectId = "mockObjectId";
-	private String mockRepositoryId = "mockRepositoryId";
-	private String mockFolderId = "mockFolderId";
-	private ExtensionsData mockExtension = mock(ExtensionsData.class);	
+	private final String mockObjectId = "mockObjectId";
+	private final String mockRepositoryId = "mockRepositoryId";
+	private final String mockFolderId = "mockFolderId";
+	private final ExtensionsData mockExtension = mock(ExtensionsData.class);
 	
 	@InjectMocks
 	private CmisMultiFilingService cmisMultiFilingService;

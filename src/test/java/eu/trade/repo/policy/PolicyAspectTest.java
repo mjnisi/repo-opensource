@@ -210,7 +210,7 @@ public class PolicyAspectTest extends BaseTestClass {
 		Assert.assertEquals(2, policyMonitor.getCounter());
 		Assert.assertEquals(2, policyMonitor.getMessages().size());
 		Assert.assertTrue(policyMonitor.getMessages().containsAll(
-				Arrays.asList(new String[] {"A BEFORE (createFolder)", "A AFTER (createFolder)"})));
+				Arrays.asList("A BEFORE (createFolder)", "A AFTER (createFolder)")));
 		
 	}
 	

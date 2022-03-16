@@ -16,11 +16,11 @@ public class JobGetObjectByPath extends BaseJob implements Runnable {
 
 	private static final Logger LOG = LoggerFactory.getLogger(JobGetObjectByPath.class);
 	
-	private List<String> ids;
-	private String label;
-	private Session session;
-	private CountDownLatch countDownLatch;
-	private List<Exception> exceptionCollector;
+	private final List<String> ids;
+	private final String label;
+	private final Session session;
+	private final CountDownLatch countDownLatch;
+	private final List<Exception> exceptionCollector;
 
 	public JobGetObjectByPath(List<String> ids, String label,
 			   CountDownLatch countDownLatch,

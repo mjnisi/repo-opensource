@@ -98,7 +98,7 @@ public class TypeUtil {
 				canCreateBoolProperty = true;
 			}
 
-			System.out.println("Repository can create property of : " + propCreatable.toString());
+			System.out.println("Repository can create property of : " + propCreatable);
 		}
 
 		assert canCreateStringProperty : "String is not one of the createable properties.";
@@ -743,9 +743,9 @@ public class TypeUtil {
 
 	public static class TestStringChoice implements Choice<String> {
 
-		private String displayName;
-		private List<String> value;
-		private List<Choice<String>> choices;
+		private final String displayName;
+		private final List<String> value;
+		private final List<Choice<String>> choices;
 
 		public TestStringChoice(String displayName, List<String> value, List<Choice<String>> choices) {
 			this.displayName = displayName;

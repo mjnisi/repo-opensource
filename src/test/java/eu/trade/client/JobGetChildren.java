@@ -18,11 +18,11 @@ public class JobGetChildren extends BaseJob implements Runnable {
 
 	private static final Logger LOG = LoggerFactory.getLogger(JobGetChildren.class);
 	
-	private List<String> ids;
-	private String label;
-	private Session session;
-	private CountDownLatch countDownLatch;
-	private List<Exception> exceptionCollector;
+	private final List<String> ids;
+	private final String label;
+	private final Session session;
+	private final CountDownLatch countDownLatch;
+	private final List<Exception> exceptionCollector;
 
 	public JobGetChildren(List<String> ids, String label,
 			   CountDownLatch countDownLatch,
